@@ -39,7 +39,7 @@ show_cleaner_type_menu() {
             cleaner_type="Safe"
             ;;
         2)
-            cleaner_type="cleaner2"
+            cleaner_type="Pro"
             ;;
         3)
             cleaner_type="cleaner3"
