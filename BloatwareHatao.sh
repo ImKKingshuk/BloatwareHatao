@@ -45,7 +45,7 @@ show_cleaner_type_menu() {
             cleaner_type="Ultra"
             ;;
         4)
-            cleaner_type="cleaner4"
+            cleaner_type="Manual"
             ;;
         5)
             echo "Exiting..."
