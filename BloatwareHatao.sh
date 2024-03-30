@@ -199,9 +199,9 @@ show_os_version_menu() {
             echo "3. Honor MagicUI 8"
             ;;
         "motorola")
-            echo "1. Motorola MyUX 1.0"
-            echo "2. Motorola MyUX 2.0"
-            echo "3. Motorola MyUX 3.0"
+            echo "1. Motorola MyUX 12"
+            echo "2. Motorola MyUX 13"
+            echo "3. Motorola HelloUI 1"
             ;;
     esac
 
