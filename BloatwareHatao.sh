@@ -184,9 +184,9 @@ show_os_version_menu() {
             echo "3. OPPO ColorOS 14"
             ;;
         "realme")
-            echo "1. Realme RealmeUI 1.0"
-            echo "2. Realme RealmeUI 2.0"
-            echo "3. Realme RealmeUI 3.0"
+            echo "1. Realme RealmeUI 3"
+            echo "2. Realme RealmeUI 4"
+            echo "3. Realme RealmeUI 5"
             ;;
         "nothing")
             echo "1. NothingOS 1.0"
