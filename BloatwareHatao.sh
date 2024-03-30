@@ -36,7 +36,7 @@ show_cleaner_type_menu() {
 
     case $cleaner_type_choice in
         1)
-            cleaner_type="cleaner1"
+            cleaner_type="Safe"
             ;;
         2)
             cleaner_type="cleaner2"
