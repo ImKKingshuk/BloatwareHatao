@@ -42,7 +42,7 @@ show_cleaner_type_menu() {
             cleaner_type="Pro"
             ;;
         3)
-            cleaner_type="cleaner3"
+            cleaner_type="Ultra"
             ;;
         4)
             cleaner_type="cleaner4"
