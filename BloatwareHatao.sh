@@ -164,9 +164,9 @@ show_os_version_menu() {
             echo "3. Samsung OneUI 6.0"
             ;;
         "xiaomi")
-            echo "1. Xiaomi MIUI 10"
-            echo "2. Xiaomi MIUI 11"
-            echo "3. Xiaomi MIUI 12"
+            echo "1. Xiaomi MIUI 13"
+            echo "2. Xiaomi MIUI 14"
+            echo "3. Xiaomi HyperOS 1"
             ;;
         "oneplus")
             echo "1. OnePlus OxygenOS 9.0"
