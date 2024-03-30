@@ -169,9 +169,9 @@ show_os_version_menu() {
             echo "3. Xiaomi HyperOS 1"
             ;;
         "oneplus")
-            echo "1. OnePlus OxygenOS 9.0"
-            echo "2. OnePlus OxygenOS 10.0"
-            echo "3. OnePlus OxygenOS 11.0"
+            echo "1. OnePlus OxygenOS 12"
+            echo "2. OnePlus OxygenOS 13"
+            echo "3. OnePlus OxygenOS 14"
             ;;
         "vivo")
             echo "1. Vivo FuntouchOS 9.0"
