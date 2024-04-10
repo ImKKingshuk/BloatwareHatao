@@ -12,6 +12,7 @@ declare -a bloatware=(
     "com.xiaomi.joyose"
     "com.xiaomi.mipicks"
     "com.xiaomi.payment"
+    "com.xiaomi.migameservice"
     "cn.wps.xiaomi.abroad.lite"
     "in.amazon.mShop.android.shopping"
     "com.netflix.partner.activation"
