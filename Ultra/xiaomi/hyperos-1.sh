@@ -9,6 +9,7 @@ declare -a bloatware=(
     "com.miui.yellowpage"
     "com.miui.wallpaper.overlay"
     "com.miui.newmidrive"
+    "com.miui.videoplayer.overlay"
     "com.mi.globalbrowser"
     "com.miui.player"
     "com.xiaomi.glgm"
