@@ -17,6 +17,8 @@ declare -a bloatware=(
     "com.opera.branding"
     "com.opera.branding.news"
     "com.opera.mini.native"
+    "com.opera.preinstall"
+    "com.facebook.katana"
 
     # Add more bloatware package names as needed
 )
