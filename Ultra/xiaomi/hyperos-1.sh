@@ -13,6 +13,7 @@ declare -a bloatware=(
     "com.miui.video"
     "com.miui.miservice"
     "com.miui.fmservice"
+    "com.miui.daemon"
     "com.miui.fm"
     "com.mi.globalbrowser"
     "com.miui.player"
