@@ -16,6 +16,7 @@ declare -a bloatware=(
     "com.opera.app.news"
     "com.opera.branding"
     "com.opera.branding.news"
+    "com.opera.mini.native"
 
     # Add more bloatware package names as needed
 )
