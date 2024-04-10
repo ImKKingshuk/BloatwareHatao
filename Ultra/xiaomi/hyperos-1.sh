@@ -19,6 +19,7 @@ declare -a bloatware=(
     "com.miui.bugreport"
     "com.miui.huanji"
     "com.miui.fm"
+    "com.miui.cit"
     "com.mi.globalbrowser"
     "com.miui.player"
     "com.xiaomi.glgm"
