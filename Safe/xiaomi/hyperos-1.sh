@@ -24,6 +24,7 @@ declare -a bloatware=(
     "com.facebook.system"
     "com.miui.analytics"
     "com.google.android.videos"
+    "com.google.android.youtube"
 
     # Add more bloatware package names as needed
 )
