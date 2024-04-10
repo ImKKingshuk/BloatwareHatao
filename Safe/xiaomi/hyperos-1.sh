@@ -20,6 +20,7 @@ declare -a bloatware=(
     "com.opera.preinstall"
     "com.facebook.katana"
     "com.facebook.appmanager"
+    "com.facebook.services"
 
     # Add more bloatware package names as needed
 )
