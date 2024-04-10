@@ -7,6 +7,7 @@ declare -a bloatware=(
     "com.miui.msa.global"
     "com.miui.videoplayer"
     "com.miui.yellowpage"
+    "com.miui.wallpaper.overlay"
     "com.mi.globalbrowser"
     "com.miui.player"
     "com.xiaomi.glgm"
