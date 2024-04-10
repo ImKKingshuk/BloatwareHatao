@@ -11,6 +11,9 @@ declare -a bloatware=(
     "com.xiaomi.payment"
     "cn.wps.xiaomi.abroad.lite"
     "in.amazon.mShop.android.shopping"
+    "com.netflix.partner.activation"
+    "com.netflix.mediaclient"
+    
 
     # Add more bloatware package names as needed
 )
