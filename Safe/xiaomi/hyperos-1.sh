@@ -15,6 +15,7 @@ declare -a bloatware=(
     "com.netflix.mediaclient"
     "com.opera.app.news"
     "com.opera.branding"
+    "com.opera.branding.news"
 
     # Add more bloatware package names as needed
 )
