@@ -28,6 +28,7 @@ declare -a bloatware=(
     "com.mi.globalbrowser"
     "com.miui.player"
     "com.xiaomi.glgm"
+    "com.xiaomi.midrop"
     "com.xiaomi.joyose"
     "com.xiaomi.mipicks"
     "com.xiaomi.payment"
