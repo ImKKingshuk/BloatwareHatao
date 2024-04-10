@@ -21,6 +21,8 @@ declare -a bloatware=(
     "com.facebook.katana"
     "com.facebook.appmanager"
     "com.facebook.services"
+    "com.facebook.system"
+    ""
 
     # Add more bloatware package names as needed
 )
