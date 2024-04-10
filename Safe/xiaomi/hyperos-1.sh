@@ -28,6 +28,10 @@ declare -a bloatware=(
     "com.google.android.apps.meetings"
     "com.google.android.apps.docs"
     "com.google.android.apps.maps"
+    "com.google.android.apps.photos"
+
+
+
 
     # Add more bloatware package names as needed
 )
