@@ -17,6 +17,7 @@ declare -a bloatware=(
     "com.miui.cleaner"
     "com.miui.cleanmaster"
     "com.miui.bugreport"
+    "com.miui.huanji"
     "com.miui.fm"
     "com.mi.globalbrowser"
     "com.miui.player"
