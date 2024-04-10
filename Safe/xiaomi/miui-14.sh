@@ -27,7 +27,7 @@ declare -a bloatware=(
     "com.facebook.services"
     "com.facebook.system"
    
-    "com.google.android.videos"
+   
     # Add more bloatware package names as needed
 )
 
