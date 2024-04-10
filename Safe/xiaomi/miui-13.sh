@@ -2,9 +2,33 @@
 
  
 declare -a bloatware=(
-    "com.samsung.bloatware1"
-    "com.samsung.bloatware2"
-    "com.samsung.bloatware3"
+     "com.miui.android.fashiongallery"
+    "com.miui.bugreport"
+  
+    "com.miui.videoplayer"
+    "com.mi.globalbrowser"
+    "com.miui.player"
+    "com.xiaomi.glgm"
+ 
+    "com.xiaomi.mipicks"
+    "com.xiaomi.payment"
+    "com.xiaomi.migameservice"
+    "cn.wps.xiaomi.abroad.lite"
+    "in.amazon.mShop.android.shopping"
+    "com.netflix.partner.activation"
+    "com.netflix.mediaclient"
+    "com.opera.app.news"
+    "com.opera.branding"
+    "com.opera.branding.news"
+    "com.opera.mini.native"
+    "com.opera.preinstall"
+    "com.facebook.katana"
+    "com.facebook.appmanager"
+    "com.facebook.services"
+    "com.facebook.system"
+   
+    "com.google.android.videos"
+  
     # Add more bloatware package names as needed
 )
 

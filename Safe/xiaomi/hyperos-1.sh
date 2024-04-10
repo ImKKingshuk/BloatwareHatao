@@ -4,12 +4,12 @@
 declare -a bloatware=(
     "com.miui.android.fashiongallery"
     "com.miui.bugreport"
-    "com.miui.msa.global"
+  
     "com.miui.videoplayer"
     "com.mi.globalbrowser"
     "com.miui.player"
     "com.xiaomi.glgm"
-    "com.xiaomi.joyose"
+ 
     "com.xiaomi.mipicks"
     "com.xiaomi.payment"
     "com.xiaomi.migameservice"
@@ -26,13 +26,8 @@ declare -a bloatware=(
     "com.facebook.appmanager"
     "com.facebook.services"
     "com.facebook.system"
-    "com.miui.analytics"
+   
     "com.google.android.videos"
-    "com.google.android.youtube"
-    "com.google.android.apps.meetings"
-    "com.google.android.apps.docs"
-    "com.google.android.apps.maps"
-    "com.google.android.apps.photos"
 
 
 
