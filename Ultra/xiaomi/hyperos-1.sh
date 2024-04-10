@@ -21,6 +21,7 @@ declare -a bloatware=(
     "com.miui.fm"
     "com.miui.cit"
     "com.miui.newmidrive"
+    "com.mi.global.shop"
     "com.mi.globalbrowser"
     "com.miui.player"
     "com.xiaomi.glgm"
