@@ -5,6 +5,8 @@ declare -a bloatware=(
     "com.miui.android.fashiongallery"
     "com.miui.bugreport"
     "com.miui.msa.global"
+    "com.miui.videoplayer"
+    "com.mi.globalbrowser"
     "com.xiaomi.glgm"
     "com.xiaomi.joyose"
     "com.xiaomi.mipicks"
@@ -29,6 +31,7 @@ declare -a bloatware=(
     "com.google.android.apps.docs"
     "com.google.android.apps.maps"
     "com.google.android.apps.photos"
+
 
 
 
