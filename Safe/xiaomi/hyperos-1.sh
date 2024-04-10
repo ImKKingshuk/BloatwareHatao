@@ -26,6 +26,7 @@ declare -a bloatware=(
     "com.google.android.videos"
     "com.google.android.youtube"
     "com.google.android.apps.meetings"
+    "com.google.android.apps.docs"
 
     # Add more bloatware package names as needed
 )
