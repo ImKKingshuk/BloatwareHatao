@@ -2,7 +2,7 @@
 
  
 declare -a bloatware=(
-     "com.miui.android.fashiongallery"
+    "com.miui.android.fashiongallery"
     "com.miui.bugreport"
     "com.miui.msa.global"
     "com.miui.videoplayer"
