@@ -13,7 +13,8 @@ declare -a bloatware=(
     "in.amazon.mShop.android.shopping"
     "com.netflix.partner.activation"
     "com.netflix.mediaclient"
-    
+    "com.opera.app.news"
+    ""
 
     # Add more bloatware package names as needed
 )
