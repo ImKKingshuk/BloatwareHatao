@@ -20,6 +20,7 @@ declare -a bloatware=(
     "com.vivo.appstore"
     "com.vivo.assistant"
     "com.vivo.browser"
+    "com.vivo.email"
     "com.vivo.compass"
     "com.vivo.collage"
     "com.opera.preinstall"
