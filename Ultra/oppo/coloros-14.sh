@@ -17,6 +17,7 @@ declare -a bloatware=(
     "com.opera.preinstall"
     "com.google.android.apps.youtube.music"
     "com.google.android.calendar"
+    "com.google.android.keep"
 
 
 
