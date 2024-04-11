@@ -20,6 +20,7 @@ declare -a bloatware=(
     "com.google.android.keep"
     "com.google.android.youtube"
     "com.google.android.apps.photos"
+    "com.google.android.apps.maps"
 
 
 
