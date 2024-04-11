@@ -20,6 +20,7 @@ declare -a bloatware=(
     "com.vivo.appstore"
     "com.vivo.assistant"
     "com.vivo.browser"
+    "com.vivo.collage"
     "com.opera.preinstall"
     "com.google.android.apps.youtube.music"
     "com.google.android.calendar"
