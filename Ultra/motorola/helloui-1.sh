@@ -2,6 +2,7 @@
 
  
 declare -a bloatware=(
+    
     "com.samsung.bloatware1"
     "com.samsung.bloatware2"
     "com.samsung.bloatware3"
