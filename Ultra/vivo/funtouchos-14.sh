@@ -22,6 +22,7 @@ declare -a bloatware=(
     "com.vivo.browser"
     "com.vivo.email"
     "com.vivo.FMRadio"
+    "com.vivo.gallery"
     "com.vivo.compass"
     "com.vivo.collage"
     "com.opera.preinstall"
