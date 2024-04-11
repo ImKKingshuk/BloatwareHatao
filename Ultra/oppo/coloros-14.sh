@@ -11,6 +11,7 @@ declare -a bloatware=(
     "com.oppo.partnerbrowsercustomizations"
     "com.oppo.sos"
     "com.oppo.usageDump"
+    "com.dropboxchmod"
     "com.nearme.browser"
     "com.nearme.gamecenter"
     "com.nearme.statistics.rom"
@@ -25,6 +26,7 @@ declare -a bloatware=(
     "com.google.android.apps.docs"
     "com.facebook.system"
     "com.facebook.services"
+    "com.facebook.appmanager"
 
 
 
