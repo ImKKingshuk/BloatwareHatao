@@ -15,6 +15,8 @@ declare -a bloatware=(
     "com.nearme.gamecenter"
     "com.nearme.statistics.rom"
     "com.opera.preinstall"
+    "com.google.android.apps.youtube.music"
+    "com.google.android.calendar"
 
 
 
