@@ -9,6 +9,7 @@ declare -a bloatware=(
     "com.oppo.market"
     "com.oppo.music"
     "com.oppo.partnerbrowsercustomizations"
+    "com.oppo.sos"
 
 
 
