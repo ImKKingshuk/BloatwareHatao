@@ -12,6 +12,7 @@ declare -a bloatware=(
     "com.baidu.input_vivo"
     "com.android.notes"
     "com.android.filemanager"
+    "com.android.chrome"
     "com.android.BBKClock"
     "com.android.bbklog"
     "com.opera.preinstall"
