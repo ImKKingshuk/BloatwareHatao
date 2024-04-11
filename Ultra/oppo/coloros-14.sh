@@ -12,6 +12,7 @@ declare -a bloatware=(
     "com.oppo.sos"
     "com.oppo.usageDump"
     "com.coloros.wallet"
+    "com.coloros.video"
     "com.dropboxchmod"
     "com.nearme.browser"
     "com.nearme.gamecenter"
