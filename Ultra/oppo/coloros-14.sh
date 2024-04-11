@@ -19,6 +19,8 @@ declare -a bloatware=(
     "com.coloros.safesdkproxy"
     "com.coloros.ocrscanner"
     "com.coloros.oshare"
+    "com.coloros.healthcheck"
+    "com.coloros.compass2"
     "com.coloros.soundrecorder"
     "com.coloros.smartdrive"
     "com.dropboxchmod"
