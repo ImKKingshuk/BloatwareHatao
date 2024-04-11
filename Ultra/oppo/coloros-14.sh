@@ -19,6 +19,7 @@ declare -a bloatware=(
     "com.google.android.calendar"
     "com.google.android.keep"
     "com.google.android.youtube"
+    "com.google.android.apps.photos"
 
 
 
