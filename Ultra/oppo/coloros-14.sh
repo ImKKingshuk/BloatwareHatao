@@ -17,6 +17,7 @@ declare -a bloatware=(
     "com.coloros.screenrecorder"
     "com.coloros.sauhelper"
     "com.coloros.safesdkproxy"
+    "com.coloros.oshare"
     "com.coloros.soundrecorder"
     "com.coloros.smartdrive"
     "com.dropboxchmod"
