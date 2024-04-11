@@ -4,6 +4,7 @@
 declare -a bloatware=(
 
     "com.bbk.calendar"
+    "com.android.bbkmusic"
     "com.opera.preinstall"
     "com.google.android.apps.youtube.music"
     "com.google.android.calendar"
