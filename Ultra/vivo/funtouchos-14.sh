@@ -15,6 +15,7 @@ declare -a bloatware=(
     "com.android.chrome"
     "com.android.BBKClock"
     "com.android.bbklog"
+    "com.ibimuyu.lockscreen"
     "com.opera.preinstall"
     "com.google.android.apps.youtube.music"
     "com.google.android.calendar"
