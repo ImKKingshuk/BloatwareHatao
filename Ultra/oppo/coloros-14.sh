@@ -10,6 +10,7 @@ declare -a bloatware=(
     "com.oppo.music"
     "com.oppo.partnerbrowsercustomizations"
     "com.oppo.sos"
+    "com.oppo.usageDump"
 
 
 
