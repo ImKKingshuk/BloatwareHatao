@@ -14,6 +14,7 @@ declare -a bloatware=(
     "com.coloros.wallet"
     "com.coloros.video"
     "com.coloros.soundrecorder"
+    "com.coloros.smartdrive"
     "com.dropboxchmod"
     "com.nearme.browser"
     "com.nearme.gamecenter"
