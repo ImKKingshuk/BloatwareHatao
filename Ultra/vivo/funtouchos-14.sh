@@ -23,6 +23,7 @@ declare -a bloatware=(
     "com.vivo.browser"
     "com.vivo.widget.calendar"
     "com.vivo.email"
+    "com.vivo.weather.provider"
     "com.vivo.website"
     "com.vivo.FMRadio"
     "com.vivo.vivokaraoke"
