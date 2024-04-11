@@ -18,6 +18,7 @@ declare -a bloatware=(
     "com.ibimuyu.lockscreen"
     "com.iqoo.engineermode"
     "com.vivo.appstore"
+    "com.vivo.assistant"
     "com.opera.preinstall"
     "com.google.android.apps.youtube.music"
     "com.google.android.calendar"
