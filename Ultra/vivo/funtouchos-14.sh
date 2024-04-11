@@ -21,6 +21,7 @@ declare -a bloatware=(
     "com.vivo.assistant"
     "com.vivo.motormode"
     "com.vivo.browser"
+    "com.vivo.widget.calendar"
     "com.vivo.email"
     "com.vivo.FMRadio"
     "com.vivo.vivokaraoke"
