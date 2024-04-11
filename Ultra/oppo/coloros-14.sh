@@ -21,10 +21,12 @@ declare -a bloatware=(
     "com.coloros.oshare"
     "com.coloros.healthcheck"
     "com.coloros.compass2"
+    
     "com.coloros.avastofferwall"
     "com.coloros.soundrecorder"
     "com.coloros.smartdrive"
     "com.dropboxchmod"
+    "com.caf.fmradio"
     "com.nearme.browser"
     "com.nearme.gamecenter"
     "com.nearme.statistics.rom"
