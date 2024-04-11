@@ -2,9 +2,14 @@
 
  
 declare -a bloatware=(
-    "com.samsung.bloatware1"
-    "com.samsung.bloatware2"
-    "com.samsung.bloatware3"
+    "com.heytap.browser"
+    "com.heytap.habit.analysis"
+    "com.heytap.cloud"
+
+
+
+
+
     # Add more bloatware package names as needed
 )
 
