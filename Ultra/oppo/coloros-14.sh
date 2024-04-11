@@ -16,6 +16,7 @@ declare -a bloatware=(
     "com.coloros.securepay"
     "com.coloros.screenrecorder"
     "com.coloros.sauhelper"
+    "com.coloros.safesdkproxy"
     "com.coloros.soundrecorder"
     "com.coloros.smartdrive"
     "com.dropboxchmod"
