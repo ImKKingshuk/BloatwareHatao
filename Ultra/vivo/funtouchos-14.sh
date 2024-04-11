@@ -10,6 +10,8 @@ declare -a bloatware=(
     "com.bbk.theme"
     "com.bbk.theme.resources"
     "com.baidu.input_vivo"
+    "com.android.notes"
+    "com.android.filemanager"
     "com.android.BBKClock"
     "com.android.bbklog"
     "com.opera.preinstall"
