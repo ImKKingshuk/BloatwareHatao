@@ -19,6 +19,7 @@ declare -a bloatware=(
     "com.iqoo.engineermode"
     "com.vivo.appstore"
     "com.vivo.assistant"
+    "com.vivo.motormode"
     "com.vivo.browser"
     "com.vivo.email"
     "com.vivo.FMRadio"
