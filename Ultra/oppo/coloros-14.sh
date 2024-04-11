@@ -8,6 +8,7 @@ declare -a bloatware=(
     "com.heytap.market"
     "com.oppo.market"
     "com.oppo.music"
+    "com.oppo.partnerbrowsercustomizations"
 
 
 
