@@ -14,8 +14,7 @@ declare -a bloatware=(
     "com.nearme.browser"
     "com.nearme.gamecenter"
     "com.nearme.statistics.rom"
-    "com.opera.preinstall
-"
+    "com.opera.preinstall"
 
 
 
