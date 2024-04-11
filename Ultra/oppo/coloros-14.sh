@@ -13,6 +13,9 @@ declare -a bloatware=(
     "com.oppo.usageDump"
     "com.nearme.browser"
     "com.nearme.gamecenter"
+    "com.nearme.statistics.rom"
+    "com.opera.preinstall
+"
 
 
 
