@@ -11,6 +11,7 @@ declare -a bloatware=(
     "com.oppo.partnerbrowsercustomizations"
     "com.oppo.sos"
     "com.oppo.usageDump"
+    "com.coloros.wallet"
     "com.dropboxchmod"
     "com.nearme.browser"
     "com.nearme.gamecenter"
