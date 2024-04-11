@@ -22,6 +22,8 @@ declare -a bloatware=(
     "com.google.android.apps.photos"
     "com.google.android.apps.maps"
     "com.google.android.apps.magazines"
+    "com.google.android.apps.docs"
+    "com.facebook.system"
 
 
 
