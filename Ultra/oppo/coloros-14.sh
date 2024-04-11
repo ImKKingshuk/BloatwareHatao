@@ -6,6 +6,8 @@ declare -a bloatware=(
     "com.heytap.habit.analysis"
     "com.heytap.cloud"
     "com.heytap.market"
+    "com.oppo.market"
+    "com.oppo.music"
 
 
 
