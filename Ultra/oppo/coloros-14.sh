@@ -24,6 +24,7 @@ declare -a bloatware=(
     "com.google.android.apps.magazines"
     "com.google.android.apps.docs"
     "com.facebook.system"
+    "com.facebook.services"
 
 
 
