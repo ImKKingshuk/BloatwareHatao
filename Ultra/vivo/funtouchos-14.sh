@@ -6,6 +6,7 @@ declare -a bloatware=(
     "com.bbk.calendar"
     "com.android.bbkmusic"
     "com.android.bbkcalculator"
+    "com.android.bbksoundrecorder"
     "com.android.BBKClock"
     "com.android.bbklog"
     "com.opera.preinstall"
