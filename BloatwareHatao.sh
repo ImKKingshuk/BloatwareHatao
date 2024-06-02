@@ -159,9 +159,9 @@ show_os_version_menu() {
 
     case $manufacturer in
         "samsung")
-            echo "1. Samsung OneUI 4.0"
+            echo "1. Samsung OneUI 6.0"
             echo "2. Samsung OneUI 5.0"
-            echo "3. Samsung OneUI 6.0"
+            echo "3. Samsung OneUI 4.0"
             ;;
         "xiaomi")
             echo "1. Xiaomi MIUI 13"
