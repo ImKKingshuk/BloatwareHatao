@@ -2,11 +2,9 @@
 
 BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodbye to unwanted bloatware on your Android device with BloatwareHatao. Cleanse your device effortlessly, reclaiming space and enhancing performance. 💪✨ Take control of your smartphone experience with BloatwareHatao!
 
-## What's New (v1.0.1)
+## What's New (v1.0.2)
 
-- Added Multiple Cleaner Options for Different Levels of Bloatware Removal
-- Enhanced User Interface for Easy Navigation
-- Added Manual Bloatware Cleaner for Custom APK Removal
+- Added Support for Meizu FlymeOS
 - Improved Manufacturer and OS Version Selection
 
 ## Features
