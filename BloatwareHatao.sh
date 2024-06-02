@@ -178,7 +178,7 @@ show_os_version_menu() {
             ;;
         "huawei")
             echo "1. Huawei EMUI 14"
-            echo "2. Xiaomi MIUI 14"
+            echo "2. Huawei EMUI 13"
             echo "3. Xiaomi MIUI 13"
             ;;
         "oneplus")
