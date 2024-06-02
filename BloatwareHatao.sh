@@ -204,8 +204,8 @@ show_os_version_menu() {
             echo "3. Motorola HelloUI 1"
             ;;
         "meizu")
-            echo "1. Motorola MyUX 12"
-            echo "2. Motorola MyUX 13"
+            echo "1. Meizu FlymeOS 9"
+            echo "2. Meizu FlymeOS 10"
             echo "3. Motorola HelloUI 1"
             ;;
     esac
