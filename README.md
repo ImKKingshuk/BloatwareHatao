@@ -17,7 +17,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - 🛠️ **Easy-to-Use Interface**: Simple, interactive prompts for seamless bloatware removal.
 - 📁 **Manufacturer & OS Version Selection**: Choose your device manufacturer and OS version for precise bloatware removal.
 
-## Device OEM / OS
+## Device OEM / OS Support
 
 - Samsung : OneUI
 - Xioami : HyperOS, MIUI
