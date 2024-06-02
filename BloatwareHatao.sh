@@ -174,9 +174,9 @@ show_os_version_menu() {
             echo "3. OnePlus OxygenOS 12"
             ;;
         "vivo")
-            echo "1. Vivo FuntouchOS 12"
+            echo "1. Vivo FuntouchOS 14"
             echo "2. Vivo FuntouchOS 13"
-            echo "3. Vivo FuntouchOS 14"
+            echo "3. Vivo FuntouchOS 12"
             ;;
         "oppo")
             echo "1. OPPO ColorOS 12"
