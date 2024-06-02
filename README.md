@@ -21,6 +21,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 
 - Samsung : OneUI
 - Xioami : HyperOS, MIUI
+- Huawei : EMUI
 - OnePlus : OxygenOS
 - Vivo : OriginOS, FuntouchOS
 - Oppo : ColorOS
