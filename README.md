@@ -24,6 +24,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - OnePlus : OxygenOS
 - Vivo : OriginOS, FuntouchOS
 - Oppo : ColorOS
+- Nothing : NothingOS
 
 ## Requirements
 
