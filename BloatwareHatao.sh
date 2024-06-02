@@ -119,31 +119,31 @@ show_manufacturer_menu() {
         3)
             manufacturer="huawei"
             ;;
-        3)
+        4)
             manufacturer="oneplus"
             ;;
-        4)
+        5)
             manufacturer="vivo"
             ;;
-        5)
+        6)
             manufacturer="oppo"
             ;;
-        6)
+        7)
             manufacturer="realme"
             ;;
-        7)
+        8)
             manufacturer="nothing"
             ;;
-        8)
+        9)
             manufacturer="honor"
             ;;
-        9)
+        10)
             manufacturer="motorola"
             ;;
-        10)
+        11)
             manufacturer="meizu"
             ;;
-        11)
+        12)
             echo "Exiting..."
             exit
             ;;
