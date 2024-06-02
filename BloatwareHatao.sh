@@ -199,9 +199,9 @@ show_os_version_menu() {
             echo "3. Honor MagicOS 6"
             ;;
         "motorola")
-            echo "1. Motorola MyUX 12"
-            echo "2. Motorola MyUX 13"
-            echo "3. Motorola HelloUI 1"
+            echo "1. Motorola HelloUI 1"
+            echo "2. Motorola MyUX 14"
+            echo "3. Motorola MyUX 13"
             ;;
         "meizu")
             echo "1. Meizu FlymeAIOS 11"
