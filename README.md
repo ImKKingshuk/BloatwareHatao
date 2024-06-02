@@ -27,6 +27,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - Nothing : NothingOS
 - Honor: MagicOS
 - Motorola : HelloUI, MyUX
+- Realme : RealmeUI
 
 ## Requirements
 
