@@ -137,7 +137,7 @@ show_manufacturer_menu() {
             manufacturer="motorola"
             ;;
         10)
-            manufacturer="motorola"
+            manufacturer="meizu"
             ;;
         11)
             echo "Exiting..."
