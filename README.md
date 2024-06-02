@@ -26,6 +26,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - Oppo : ColorOS
 - Nothing : NothingOS
 - Honor: MagicOS
+- Motorola : HelloUI, MyUX
 
 ## Requirements
 
