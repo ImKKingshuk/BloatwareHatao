@@ -117,6 +117,9 @@ show_manufacturer_menu() {
             manufacturer="xiaomi"
             ;;
         3)
+            manufacturer="huawei"
+            ;;
+        3)
             manufacturer="oneplus"
             ;;
         4)
