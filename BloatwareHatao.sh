@@ -203,6 +203,11 @@ show_os_version_menu() {
             echo "2. Motorola MyUX 13"
             echo "3. Motorola HelloUI 1"
             ;;
+        "meizu")
+            echo "1. Motorola MyUX 12"
+            echo "2. Motorola MyUX 13"
+            echo "3. Motorola HelloUI 1"
+            ;;
     esac
 
     echo "4. Back"
