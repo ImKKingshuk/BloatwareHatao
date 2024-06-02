@@ -189,9 +189,9 @@ show_os_version_menu() {
             echo "3. Realme RealmeUI 3"
             ;;
         "nothing")
-            echo "1. NothingOS 1"
-            echo "2. NothingOS 2"
-            echo "3. NothingOS 2.5"
+            echo "1. NothingOS 3"
+            echo "2. NothingOS 2.5"
+            echo "3. NothingOS 2"
             ;;
         "honor")
             echo "1. Honor MagicUI 6"
