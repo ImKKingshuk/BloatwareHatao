@@ -25,6 +25,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - Vivo : OriginOS, FuntouchOS
 - Oppo : ColorOS
 - Nothing : NothingOS
+- Honor: MagicOS
 
 ## Requirements
 
