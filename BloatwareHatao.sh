@@ -194,9 +194,9 @@ show_os_version_menu() {
             echo "3. NothingOS 2"
             ;;
         "honor")
-            echo "1. Honor MagicUI 6"
+            echo "1. Honor MagicUI 8"
             echo "2. Honor MagicUI 7"
-            echo "3. Honor MagicUI 8"
+            echo "3. Honor MagicUI 6"
             ;;
         "motorola")
             echo "1. Motorola MyUX 12"
