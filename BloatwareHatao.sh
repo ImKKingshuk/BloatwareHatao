@@ -179,9 +179,9 @@ show_os_version_menu() {
             echo "3. Vivo FuntouchOS 12"
             ;;
         "oppo")
-            echo "1. OPPO ColorOS 12"
+            echo "1. OPPO ColorOS 14"
             echo "2. OPPO ColorOS 13"
-            echo "3. OPPO ColorOS 14"
+            echo "3. OPPO ColorOS 12"
             ;;
         "realme")
             echo "1. Realme RealmeUI 3"
