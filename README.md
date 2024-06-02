@@ -28,6 +28,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - Honor: MagicOS
 - Motorola : HelloUI, MyUX
 - Realme : RealmeUI
+- Meizu : FlymeAIOS
 
 ## Requirements
 
