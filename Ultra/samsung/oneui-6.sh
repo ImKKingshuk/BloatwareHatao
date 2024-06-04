@@ -2,7 +2,7 @@
 
  
 declare -a bloatware=(
-    "com.samsung.bloatware1"
+   
     "com.google.android.apps.youtube.music"
     "com.google.android.calendar"
     "com.google.android.keep"
