@@ -1,6 +1,24 @@
 #!/bin/bash
 
 
+print_banner() {
+    local banner=(
+        "******************************************"
+        "*              BloatwareHatao            *"
+        "*     Android Bloatware Removal Tool     *"
+        "*                  v1.2.1                *"
+        "*      ----------------------------      *"
+        "*                        by @ImKKingshuk *"
+        "* Github- https://github.com/ImKKingshuk *"
+        "******************************************"
+    )
+    local width=$(tput cols)
+    for line in "${banner[@]}"; do
+        printf "%*s\n" $(((${#line} + width) / 2)) "$line"
+    done
+    echo
+}
+
 remove_bloatware() {
     manufacturer=$1
     os_version=$2
@@ -257,15 +275,7 @@ show_os_version_menu() {
 }
 
 
-    echo "******************************************"
-echo -e  "* \e[48;5;52m\e[1m  BloatwareHatao \e[0m *"
-    echo "*     Android Bloatware Removal Too      *"
-    echo "*      ----------------------------      *"
-    echo "*                        by @ImKKingshuk *"
-    echo "* Github- https://github.com/ImKKingshuk *"
-    echo "******************************************"
 
-
-
+print_banner
 
 show_cleaner_type_menu
