@@ -5,7 +5,7 @@ print_banner() {
         "******************************************"
         "*              BloatwareHatao            *"
         "*     Android Bloatware Removal Tool     *"
-        "*                  v1.3.1                *"
+        "*                  v1.5.1                *"
         "*      ----------------------------      *"
         "*                        by @ImKKingshuk *"
         "* Github- https://github.com/ImKKingshuk *"
@@ -18,13 +18,34 @@ print_banner() {
     echo
 }
 
+check_for_updates() {
+    local current_version=$(cat version.txt)
+    local latest_version=$(curl -sSL "https://raw.githubusercontent.com/ImKKingshuk/BloatwareHatao/main/version.txt")
+
+    if [ "$latest_version" != "$current_version" ]; then
+        echo "A new version ($latest_version) is available. Updating Tool... Please Wait..."
+        update_tool
+    else
+        echo "You are using the latest version ($current_version)."
+    fi
+}
+
+update_tool() {
+    local repo_url="https://raw.githubusercontent.com/ImKKingshuk/BloatwareHatao/main"
+    curl -sSL "$repo_url/BloatwareHatao.sh" -o BloatwareHatao.sh
+    curl -sSL "$repo_url/version.txt" -o version.txt
+
+    echo "Tool has been updated to the latest version."
+    exec bash BloatwareHatao.sh
+}
+
 remove_bloatware() {
     local manufacturer=$1
     local os_version=$2
     local cleaner_type=$3
     local script_path="https://raw.githubusercontent.com/ImKKingshuk/BloatwareHatao/main/$cleaner_type/$manufacturer/$os_version.sh"
 
-    echo "Fetching bloatware removal script for $manufacturer $os_version ($cleaner_type)..."
+    echo "Fetching bloatware removal script for OEM:$manufacturer OS:$os_version Cleaner:$cleaner_type... Please Wait..."
     curl -sSL "$script_path" | bash
 
     if [ $? -eq 0 ]; then
@@ -311,4 +332,5 @@ show_os_version_menu() {
 }
 
 print_banner
+check_for_updates
 show_cleaner_type_menu
