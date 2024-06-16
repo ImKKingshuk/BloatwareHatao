@@ -157,7 +157,7 @@ show_os_version_menu() {
             echo "3. FuntouchOS 12"
             ;;
         "oppo")
-            echo "1. ColorOS 6"
+            echo "1. ColorOS 14"
             echo "2. ColorOS 7"
             echo "3. ColorOS 8"
             ;;
