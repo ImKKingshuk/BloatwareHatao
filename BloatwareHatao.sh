@@ -287,9 +287,9 @@ show_os_version_menu() {
             ;;
         "motorola")
             case $os_choice in
-                1) os_version="myux-1" ;;
-                2) os_version="myux-2" ;;
-                3) os_version="myux-3" ;;
+                1) os_version="helloui-1" ;;
+                2) os_version="myux-13" ;;
+                3) os_version="myux-12" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
                 5) echo "Exiting..."; exit ;;
                 *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
