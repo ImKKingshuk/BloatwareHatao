@@ -197,9 +197,9 @@ show_os_version_menu() {
     case $manufacturer in
         "samsung")
             case $os_choice in
-                1) os_version="oneui-1" ;;
-                2) os_version="oneui-2" ;;
-                3) os_version="oneui-3" ;;
+                1) os_version="oneui-6" ;;
+                2) os_version="oneui-5" ;;
+                3) os_version="oneui-4" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
                 5) echo "Exiting..."; exit ;;
                 *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
