@@ -172,7 +172,7 @@ show_os_version_menu() {
             echo "3. NothingOS 1"
             ;;
         "honor")
-            echo "1. MagicUI 2"
+            echo "1. MagicUI 8"
             echo "2. MagicUI 3"
             echo "3. MagicUI 4"
             ;;
