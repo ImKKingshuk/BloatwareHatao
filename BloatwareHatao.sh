@@ -247,7 +247,7 @@ show_os_version_menu() {
             ;;
         "oppo")
             case $os_choice in
-                1) os_version="coloros-6" ;;
+                1) os_version="coloros-14" ;;
                 2) os_version="coloros-7" ;;
                 3) os_version="coloros-8" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
