@@ -257,7 +257,7 @@ show_os_version_menu() {
             ;;
         "realme")
             case $os_choice in
-                1) os_version="realmeui-1" ;;
+                1) os_version="realmeui-5" ;;
                 2) os_version="realmeui-2" ;;
                 3) os_version="realmeui-3" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
