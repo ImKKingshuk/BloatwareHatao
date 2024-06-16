@@ -182,9 +182,9 @@ show_os_version_menu() {
             echo "3. MyUX 12"
             ;;
         "meizu")
-            echo "1. FlymeOS 9"
+            echo "1. FlymeAIOS 11"
             echo "2. FlymeOS 10"
-            echo "3. FlymeOS 11"
+            echo "3. FlymeOS 9"
             ;;
     esac
 
