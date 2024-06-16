@@ -35,9 +35,11 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 
 ## Requirements
 
-- Android Device with ADB Enabled
+- macOS, Linux, Windows
 - Bash-compatible environment.
 - Internet connectivity for fetching manufacturer-specific bloatware removal scripts.
+- Android Device with [ADB (Android Debug Bridge)](https://developer.android.com/tools/adb) Enabled
+- [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools) installed properly and added to your system's PATH.
 
 ## Usage
 
