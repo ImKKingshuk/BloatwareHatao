@@ -177,9 +177,9 @@ show_os_version_menu() {
             echo "3. MagicUI 6"
             ;;
         "motorola")
-            echo "1. MyUX 1"
-            echo "2. MyUX 2"
-            echo "3. MyUX 3"
+            echo "1. HelloUI 1"
+            echo "2. MyUX 13"
+            echo "3. MyUX 12"
             ;;
         "meizu")
             echo "1. FlymeOS 9"
