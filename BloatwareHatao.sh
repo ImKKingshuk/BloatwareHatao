@@ -158,8 +158,8 @@ show_os_version_menu() {
             ;;
         "oppo")
             echo "1. ColorOS 14"
-            echo "2. ColorOS 7"
-            echo "3. ColorOS 8"
+            echo "2. ColorOS 13"
+            echo "3. ColorOS 12"
             ;;
         "realme")
             echo "1. RealmeUI 1"
