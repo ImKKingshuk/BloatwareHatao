@@ -217,7 +217,7 @@ show_os_version_menu() {
             ;;
         "huawei")
             case $os_choice in
-                1) os_version="emui-12" ;;
+                1) os_version="emui-14" ;;
                 2) os_version="emui-13" ;;
                 3) os_version="emui-14" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
