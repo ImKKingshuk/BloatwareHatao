@@ -173,7 +173,7 @@ show_os_version_menu() {
             ;;
         "honor")
             echo "1. MagicUI 8"
-            echo "2. MagicUI 3"
+            echo "2. MagicUI 7"
             echo "3. MagicUI 4"
             ;;
         "motorola")
