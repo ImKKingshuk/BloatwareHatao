@@ -299,7 +299,7 @@ show_os_version_menu() {
             case $os_choice in
                 1) os_version="flymeaios-11" ;;
                 2) os_version="flymeos-10" ;;
-                3) os_version="flymeos-11" ;;
+                3) os_version="flymeos-9" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
                 5) echo "Exiting..."; exit ;;
                 *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
