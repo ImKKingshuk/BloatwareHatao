@@ -1,12 +1,12 @@
 <h1 align="center">BloatwareHatao</h1> 
-<h3 align="center">v1.3.1</h3>
+<h3 align="center">v1.5.1</h3>
 
 BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodbye to unwanted bloatware on your Android device with BloatwareHatao. Cleanse your device effortlessly, reclaiming space and enhancing performance. 💪✨ Take control of your smartphone experience with BloatwareHatao!
 
-## What's New (v1.3.1)
+## What's New (v1.5.1)
 
-- Fixed Some Bugs
-- Improved Manufacturer and OS Version Selection
+- **Added Updater**: Automatically checks for the latest version of BloatwareHatao and updates itself.
+- **Bug Fixes**: General improvements and bug fixes for a smoother experience.
 
 ## Features
 
@@ -15,6 +15,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - ⚡ **Pro Bloatware Cleaner**: Dive deeper with extra cleaning options for a thorough bloatware removal.
 - 🌟 **Ultra Bloatware Cleaner**: For extreme cleaning, select the ultra cleaner option to rid your device of every trace of bloatware.
 - 💼 **Manual Bloatware Cleaner**: Enter the APK package name to remove specific bloatware manually.
+- 🔄 **Auto Updates**: Automatically checks for updates and updates itself to ensure you have the latest version of BloatwareHatao.
 - 🛠️ **Easy-to-Use Interface**: Simple, interactive prompts for seamless bloatware removal.
 - 📁 **Manufacturer & OS Version Selection**: Choose your device manufacturer and OS version for precise bloatware removal.
 
