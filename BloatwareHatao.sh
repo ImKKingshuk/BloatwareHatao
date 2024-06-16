@@ -152,9 +152,9 @@ show_os_version_menu() {
             echo "3. OxygenOS 12"
             ;;
         "vivo")
-            echo "1. FuntouchOS 11"
-            echo "2. FuntouchOS 10"
-            echo "3. FuntouchOS 9"
+            echo "1. FuntouchOS 14"
+            echo "2. FuntouchOS 13"
+            echo "3. FuntouchOS 12"
             ;;
         "oppo")
             echo "1. ColorOS 6"
