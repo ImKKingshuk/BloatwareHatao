@@ -163,7 +163,7 @@ show_os_version_menu() {
             ;;
         "realme")
             echo "1. RealmeUI 5"
-            echo "2. RealmeUI 2"
+            echo "2. RealmeUI 4"
             echo "3. RealmeUI 3"
             ;;
         "nothing")
