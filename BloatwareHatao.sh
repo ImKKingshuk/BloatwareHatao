@@ -162,7 +162,7 @@ show_os_version_menu() {
             echo "3. ColorOS 12"
             ;;
         "realme")
-            echo "1. RealmeUI 1"
+            echo "1. RealmeUI 5"
             echo "2. RealmeUI 2"
             echo "3. RealmeUI 3"
             ;;
