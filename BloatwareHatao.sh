@@ -167,9 +167,9 @@ show_os_version_menu() {
             echo "3. RealmeUI 3"
             ;;
         "nothing")
-            echo "1. NothingOS 1"
+            echo "1. NothingOS 3"
             echo "2. NothingOS 2"
-            echo "3. NothingOS 3"
+            echo "3. NothingOS 1"
             ;;
         "honor")
             echo "1. MagicUI 2"
