@@ -279,7 +279,7 @@ show_os_version_menu() {
             case $os_choice in
                 1) os_version="magicos-8" ;;
                 2) os_version="magicos-7" ;;
-                3) os_version="magicui-4" ;;
+                3) os_version="magicos-6" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
                 5) echo "Exiting..."; exit ;;
                 *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
