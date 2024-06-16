@@ -277,7 +277,7 @@ show_os_version_menu() {
             ;;
         "honor")
             case $os_choice in
-                1) os_version="magicui-2" ;;
+                1) os_version="magicos-8" ;;
                 2) os_version="magicui-3" ;;
                 3) os_version="magicui-4" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
