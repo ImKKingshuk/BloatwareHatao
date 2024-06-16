@@ -267,7 +267,7 @@ show_os_version_menu() {
             ;;
         "nothing")
             case $os_choice in
-                1) os_version="nothingos-1" ;;
+                1) os_version="nothingos-3" ;;
                 2) os_version="nothingos-2" ;;
                 3) os_version="nothingos-3" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
