@@ -297,7 +297,7 @@ show_os_version_menu() {
             ;;
         "meizu")
             case $os_choice in
-                1) os_version="flymeos-9" ;;
+                1) os_version="flymeaios-11" ;;
                 2) os_version="flymeos-10" ;;
                 3) os_version="flymeos-11" ;;
                 4) show_manufacturer_menu "$cleaner_type"; return ;;
