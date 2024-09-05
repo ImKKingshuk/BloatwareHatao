@@ -22,7 +22,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 ## Device OEM / OS Support
 
 - Samsung : OneUI
-- Xioami : HyperOS, MIUI
+- Xiaomi : HyperOS, MIUI
 - Huawei : EMUI
 - OnePlus : OxygenOS
 - Vivo : OriginOS, FuntouchOS
@@ -31,6 +31,7 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - Honor: MagicOS
 - Motorola : HelloUI, MyUX
 - Realme : RealmeUI
+- Meizu : FlymeAIOS
 - Meizu : FlymeAIOS
 
 ## Requirements
