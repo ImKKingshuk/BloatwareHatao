@@ -23,14 +23,15 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 
 - Samsung : OneUI
 - Huawei : EMUI
+- Honor: MagicOS
 - Xiaomi : HyperOS, MIUI
 - OnePlus : OxygenOS
+- Realme : RealmeUI
 - Vivo : OriginOS, FuntouchOS
 - Oppo : ColorOS
 - Nothing : NothingOS
-- Honor: MagicOS
+
 - Motorola : HelloUI, MyUX
-- Realme : RealmeUI
 - Meizu : FlymeAIOS
 - Infinix : XOS
 - Nio : SkyUI
