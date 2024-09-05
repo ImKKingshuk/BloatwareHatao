@@ -33,7 +33,8 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - Realme : RealmeUI
 - Meizu : FlymeAIOS
 - Infinix : XOS
-- Nio
+- Nio : SkyUI
+- Zte : MyOS
 
 ## Requirements
 
