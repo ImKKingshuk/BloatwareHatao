@@ -5,7 +5,7 @@ print_banner() {
         "******************************************"
         "*              BloatwareHatao            *"
         "*     Android Bloatware Removal Tool     *"
-        "*                  v1.5.3                *"
+        "*                  v1.5.4                *"
         "*      ----------------------------      *"
         "*                        by @ImKKingshuk *"
         "* Github- https://github.com/ImKKingshuk *"
