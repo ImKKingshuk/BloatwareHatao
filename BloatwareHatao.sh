@@ -138,7 +138,8 @@ show_manufacturer_menu() {
         9) manufacturer="honor" ;;
         10) manufacturer="motorola" ;;
         11) manufacturer="meizu" ;;
-        12) echo "Exiting..."; exit ;;
+        12) manufacturer="infinix" ;;
+        13) echo "Exiting..."; exit ;;
         *) echo "Invalid choice. Please try again."; show_manufacturer_menu "$cleaner_type" ;;
     esac
 
