@@ -1,12 +1,11 @@
 <h1 align="center">BloatwareHatao</h1> 
-<h3 align="center">v1.5.3</h3>
+<h3 align="center">v1.5.4</h3>
 
 BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodbye to unwanted bloatware on your Android device with BloatwareHatao. Cleanse your device effortlessly, reclaiming space and enhancing performance. 💪✨ Take control of your smartphone experience with BloatwareHatao!
 
-## What's New (v1.5.1)
+## What's New (v1.5.4)
 
-- **Added Updater**: Automatically checks for the latest version of BloatwareHatao and updates itself.
-- **Bug Fixes**: General improvements and bug fixes for a smoother experience.
+- **Added New Device OEM / OS Support**: Infinix (XOS 14, XOS 13, XOS 12)
 
 ## Features
 
