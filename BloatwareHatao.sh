@@ -122,7 +122,8 @@ show_manufacturer_menu() {
     echo "9. Honor"
     echo "10. Motorola"
     echo "11. Meizu"
-    echo "12. Exit"
+    echo "12. Infinix"
+    echo "13. Exit"
     echo "--------------------------------------"
     read -p "Enter your choice: " manufacturer_choice
 
