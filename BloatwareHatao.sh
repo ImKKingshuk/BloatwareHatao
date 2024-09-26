@@ -207,6 +207,11 @@ show_os_version_menu() {
             echo "2. FlymeOS 10"
             echo "3. FlymeOS 9"
             ;;
+        "infinix")
+            echo "1. XOS 14"
+            echo "2. XOS 13"
+            echo "3. XOS 12"
+            ;;
     esac
 
     echo "4. Back"
