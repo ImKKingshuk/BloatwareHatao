@@ -1,353 +1,484 @@
 #!/bin/bash
 
-print_banner() {
-    local banner=(
-        "******************************************"
-        "*              BloatwareHatao            *"
-        "*     Android Bloatware Removal Tool     *"
-        "*                  v1.5.4                *"
-        "*      ----------------------------      *"
-        "*                        by @ImKKingshuk *"
-        "* Github- https://github.com/ImKKingshuk *"
-        "******************************************"
-    )
-    local width=$(tput cols)
-    for line in "${banner[@]}"; do
-        printf "%*s\n" $(((${#line} + width) / 2)) "$line"
+# BloatwareHatao v2.0.0 - Ultimate Android Bloatware Removal Tool
+# Main script that orchestrates all modules
+
+# Set script directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Source modules
+source "$SCRIPT_DIR/lib/ui.sh"
+source "$SCRIPT_DIR/lib/utils.sh"
+source "$SCRIPT_DIR/lib/core.sh"
+source "$SCRIPT_DIR/lib/data.sh"
+
+# Main function
+main() {
+    # Initialize
+    init_logging
+    load_config
+    set_verbose_mode "$DEFAULT_VERBOSE"
+    setup_error_handling
+
+    # Parse command line arguments
+    parse_args "$@"
+
+    # Show banner
+    print_banner
+
+    # Validate dependencies
+    validate_dependencies
+
+    # Check for updates if enabled
+    if [ "$DEFAULT_AUTO_UPDATE" = true ]; then
+        check_for_updates
+    fi
+
+    # Check device connection
+    if ! check_device_connected; then
+        show_error "No device connected. Please connect your Android device and try again."
+        exit 1
+    fi
+
+    # Main menu
+    show_main_menu
+}
+
+show_pre_removal_audit_menu() {
+    show_info "Pre-removal Audit"
+    print_divider
+    show_info "Review package list before removing anything."
+
+    local cleaner_options=("Safe" "Pro" "Ultra")
+    show_menu "Select Cleaner Type" "${cleaner_options[@]}"
+    local cleaner_choice=$(get_choice ${#cleaner_options[@]})
+    local cleaner_type="${cleaner_options[$((cleaner_choice-1))]}"
+
+    local manufacturer_options=()
+    local manufacturer_count=$(get_manufacturer_count)
+    for ((i=1; i<=manufacturer_count; i++)); do
+        manufacturer_options+=("$(get_manufacturer_name $i)")
     done
+    show_menu "Select Manufacturer" "${manufacturer_options[@]}"
+    local manufacturer_choice=$(get_choice ${#manufacturer_options[@]})
+    local manufacturer=$(get_manufacturer_name $manufacturer_choice)
+
+    local os_raw_options=$(get_os_versions "$manufacturer")
+    local os_display_options=()
+    local os_slug_options=()
+    while IFS='|' read -r display slug; do
+        [ -z "$display" ] && continue
+        os_display_options+=("$display")
+        os_slug_options+=("$slug")
+    done <<EOF
+$os_raw_options
+EOF
+
+    show_menu "Select OS Version" "${os_display_options[@]}"
+    local os_choice=$(get_choice ${#os_display_options[@]})
+    local os_display="${os_display_options[$((os_choice-1))]}"
+    local os_version="${os_slug_options[$((os_choice-1))]}"
+
+    if preview_bloatware "$manufacturer" "$os_version" "$cleaner_type"; then
+        show_info "Audit complete for $manufacturer $os_display ($cleaner_type)."
+    fi
+}
+
+# Parse command line arguments
+parse_args() {
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            --help|-h)
+                show_help
+                exit 0
+                ;;
+            --version|-v)
+                echo "BloatwareHatao v2.0.0"
+                exit 0
+                ;;
+            --dry-run)
+                set_dry_run
+                shift
+                ;;
+            --device-info)
+                show_device_info
+                exit 0
+                ;;
+            --smart-wizard)
+                smart_removal_wizard
+                finalize_and_exit 0
+                ;;
+            --audit)
+                shift
+                run_audit_cli "$@"
+                finalize_and_exit 0
+                ;;
+            --health)
+                show_device_health_snapshot
+                finalize_and_exit 0
+                ;;
+            --planner)
+                show_cleaning_planner
+                finalize_and_exit 0
+                ;;
+            --report)
+                display_session_report
+                finalize_and_exit 0
+                ;;
+            --backup)
+                create_backup
+                exit 0
+                ;;
+            --restore)
+                show_restore_menu
+                exit 0
+                ;;
+            --log)
+                show_logs
+                exit 0
+                ;;
+            --stats)
+                show_stats
+                exit 0
+                ;;
+            *)
+                show_error "Unknown option: $1"
+                show_help
+                exit 1
+                ;;
+        esac
+    done
+}
+
+# Show device information
+show_device_info() {
+    show_info "Connected Device Information:"
+    echo "=============================="
+    get_device_info
+}
+
+# Show logs
+show_logs() {
+    if [ -f "$LOG_FILE" ]; then
+        show_info "Recent Logs:"
+        echo "=============="
+        tail -20 "$LOG_FILE"
+    else
+        show_info "No logs found"
+    fi
+}
+
+# Main menu
+show_main_menu() {
+    local options=(
+        "Standard Bloatware Removal (Interactive)"
+        "Smart Removal Wizard"
+        "Manual Package Removal"
+        "Pre-removal Audit"
+        "Batch Removal from File"
+        "Create Custom Removal Script"
+        "Backup & Restore"
+        "Device Information"
+        "Device Health Snapshot"
+        "Cleaning Planner"
+        "View Logs & Statistics"
+        "Settings & Configuration"
+        "Exit"
+    )
+
+    while true; do
+        show_menu "BloatwareHatao Main Menu" "${options[@]}"
+        local choice=$(get_choice ${#options[@]})
+
+        case $choice in
+            1) show_standard_removal_menu ;;
+            2) smart_removal_wizard ;;
+            3) show_manual_removal_menu ;;
+            4) show_pre_removal_audit_menu ;;
+            5) show_batch_removal_menu ;;
+            6) show_custom_script_menu ;;
+            7) show_backup_restore_menu ;;
+            8) show_device_info ;;
+            9) show_device_health_snapshot ;;
+            10) show_cleaning_planner ;;
+            11) show_logs_stats_menu ;;
+            12) show_settings_menu ;;
+            13) show_info "Goodbye!"; finalize_and_exit 0 ;;
+        esac
+
+        echo
+        read -p "Press Enter to continue..."
+    done
+}
+
+# Standard removal menu (manufacturer selection)
+show_standard_removal_menu() {
+    show_info "Standard Bloatware Removal"
+
+    # Select cleaner type
+    local cleaner_options=("Safe & Recommended" "Pro (Extra Cleaning)" "Ultra (Extreme Cleaning)")
+    show_menu "Select Cleaner Type" "${cleaner_options[@]}"
+    local cleaner_choice=$(get_choice ${#cleaner_options[@]})
+    local cleaner_type=$(cleaner_display_to_dir "${cleaner_options[$((cleaner_choice-1))]}")
+
+    # Select manufacturer
+    local manufacturer_options=()
+    local manufacturer_count=$(get_manufacturer_count)
+    for ((i=1; i<=manufacturer_count; i++)); do
+        manufacturer_options+=("$(get_manufacturer_name $i)")
+    done
+    show_menu "Select Manufacturer" "${manufacturer_options[@]}"
+    local manufacturer_choice=$(get_choice ${#manufacturer_options[@]})
+    local manufacturer=$(get_manufacturer_name $manufacturer_choice)
+
+    # Select OS version
+    local os_raw_options=$(get_os_versions "$manufacturer")
+    local os_display_options=()
+    local os_slug_options=()
+    local idx=0
+
+    while IFS='|' read -r display slug; do
+        [ -z "$display" ] && continue
+        os_display_options+=("$display")
+        os_slug_options+=("$slug")
+        idx=$((idx + 1))
+    done <<EOF
+$os_raw_options
+EOF
+
+    if [ ${#os_display_options[@]} -eq 0 ]; then
+        show_error "No OS options available for $manufacturer"
+        return
+    fi
+
+    show_menu "Select OS Version for $manufacturer" "${os_display_options[@]}"
+    local os_choice=$(get_choice ${#os_display_options[@]})
+    local os_display="${os_display_options[$((os_choice-1))]}"
+    local os_version="${os_slug_options[$((os_choice-1))]}"
+
+    show_info "Selected: $manufacturer $os_display ($cleaner_type)"
+
+    if confirm_action "Proceed with removal?"; then
+        if [ "$DRY_RUN" = true ]; then
+            show_dry_run_notice "No packages will be uninstalled"
+        fi
+        if ! remove_bloatware "$manufacturer" "$os_version" "$cleaner_type"; then
+            show_warning "Removal script unavailable or failed for $manufacturer $os_display ($cleaner_type)."
+        fi
+    fi
+}
+
+# Manual removal menu
+show_manual_removal_menu() {
+    show_info "Manual Package Removal"
+    echo "Enter package name (e.g., com.google.android.youtube)"
+    echo "Leave empty to cancel"
     echo
+
+    while true; do
+        read -p "Package name: " package
+        if [ -z "$package" ]; then
+            break
+        fi
+        manual_remove "$package"
+        echo
+    done
 }
 
-check_for_updates() {
-    local current_version=$(cat version.txt)
-    local latest_version=$(curl -sSL "https://raw.githubusercontent.com/ImKKingshuk/BloatwareHatao/main/version.txt")
+# Batch removal menu
+show_batch_removal_menu() {
+    show_info "Batch Removal from File"
+    echo "Enter path to file containing package names (one per line)"
+    echo "Comments starting with # are ignored"
+    echo
 
-    if [ "$latest_version" != "$current_version" ]; then
-        echo "A new version ($latest_version) is available. Updating Tool... Please Wait..."
-        update_tool
+    read -p "File path: " file_path
+    if [ -f "$file_path" ]; then
+        local packages=($(load_package_list "$file_path"))
+        if [ ${#packages[@]} -gt 0 ]; then
+            show_info "Found ${#packages[@]} packages in $file_path"
+            if confirm_action "Remove all packages?"; then
+                batch_remove "${packages[@]}"
+            fi
+        else
+            show_error "No valid packages found in file"
+        fi
     else
-        echo "You are using the latest version ($current_version)."
+        show_error "File not found: $file_path"
     fi
 }
 
-update_tool() {
-    local repo_url="https://raw.githubusercontent.com/ImKKingshuk/BloatwareHatao/main"
-    curl -sSL "$repo_url/BloatwareHatao.sh" -o BloatwareHatao.sh
-    curl -sSL "$repo_url/version.txt" -o version.txt
+# Custom script menu
+show_custom_script_menu() {
+    show_info "Create Custom Removal Script"
+    read -p "Script name: " script_name
+    if [ -z "$script_name" ]; then
+        return
+    fi
 
-    echo "Tool has been updated to the latest version."
-    exec bash BloatwareHatao.sh
-}
+    echo "Enter package names (one per line, empty line to finish):"
+    local packages=()
+    while true; do
+        read -p "Package: " package
+        if [ -z "$package" ]; then
+            break
+        fi
+        if validate_package_name "$package"; then
+            packages+=("$package")
+        else
+            show_warning "Invalid package name: $package"
+        fi
+    done
 
-remove_bloatware() {
-    local manufacturer=$1
-    local os_version=$2
-    local cleaner_type=$3
-    local script_path="https://raw.githubusercontent.com/ImKKingshuk/BloatwareHatao/main/$cleaner_type/$manufacturer/$os_version.sh"
-
-    echo "Fetching bloatware removal script for OEM:$manufacturer OS:$os_version Cleaner:$cleaner_type... Please Wait..."
-    curl -sSL "$script_path" | bash
-
-    if [ $? -eq 0 ]; then
-        echo "Bloatware removal completed successfully."
+    if [ ${#packages[@]} -gt 0 ]; then
+        create_custom_script "$script_name" "${packages[@]}"
     else
-        echo "Error occurred during bloatware removal."
+        show_warning "No packages specified"
     fi
 }
 
-remove_bloatware_manual() {
-    local package_name=$1
+# Backup and restore menu
+show_backup_restore_menu() {
+    local options=("Create Backup" "Restore from Backup" "List Backups" "Back to Main Menu")
+    show_menu "Backup & Restore" "${options[@]}"
+    local choice=$(get_choice ${#options[@]})
 
-    echo "Attempting to remove bloatware with package name: $package_name"
-    adb shell pm uninstall --user 0 "$package_name"
+    case $choice in
+        1) create_backup ;;
+        2) show_restore_menu ;;
+        3) list_backups ;;
+        4) return ;;
+    esac
+}
 
-    if [ $? -eq 0 ]; then
-        echo "Bloatware removal completed successfully."
+# Show restore menu
+show_restore_menu() {
+    show_info "Available Backups:"
+    if [ -d "$BACKUP_DIR" ]; then
+        local backups=($(ls -t "$BACKUP_DIR"/*.txt 2>/dev/null))
+        if [ ${#backups[@]} -gt 0 ]; then
+            for i in "${!backups[@]}"; do
+                echo "$((i+1)). ${backups[$i]##*/}"
+            done
+            echo
+            read -p "Select backup number (or 0 to cancel): " choice
+            if [ "$choice" -gt 0 ] && [ "$choice" -le ${#backups[@]} ]; then
+                restore_from_backup "${backups[$((choice-1))]}"
+            fi
+        else
+            show_info "No backups found"
+        fi
     else
-        echo "Error occurred during bloatware removal."
+        show_info "No backups directory found"
     fi
 }
 
-show_cleaner_type_menu() {
-    echo "Select the cleaner type:"
-    echo "1. Bloatware Cleaner (Safe & Recommended)"
-    echo "2. Pro Bloatware Cleaner (Extra Cleaning)"
-    echo "3. Ultra Bloatware Cleaner (Extreme Cleaning)"
-    echo "4. Manual Bloatware Cleaner (Enter APK pkg & Clean)"
-    echo "5. Exit"
-    echo "--------------------------------------"
-    read -p "Enter your choice: " cleaner_type_choice
-
-    case $cleaner_type_choice in
-        1) cleaner_type="Safe" ;;
-        2) cleaner_type="Pro" ;;
-        3) cleaner_type="Ultra" ;;
-        4) manual_cleaner_menu ;;
-        5) echo "Exiting..."; exit ;;
-        *) echo "Invalid choice. Please try again."; show_cleaner_type_menu ;;
-    esac
-
-    show_manufacturer_menu "$cleaner_type"
+# List backups
+list_backups() {
+    if [ -d "$BACKUP_DIR" ]; then
+        show_info "Available Backups:"
+        ls -la "$BACKUP_DIR"
+    else
+        show_info "No backups found"
+    fi
 }
 
-manual_cleaner_menu() {
-    echo "Manual Bloatware Cleaner"
-    echo "Enter the package name of the bloatware APK:"
-    echo "Example: com.example.bloatware"
-    echo "--------------------------------------"
-    read -p "Package Name: " package_name
+# Logs and stats menu
+show_logs_stats_menu() {
+    local options=(
+        "View Recent Logs"
+        "Show Statistics"
+        "View Session Report"
+        "List Rescue Lists"
+        "Clear Logs"
+        "Back to Main Menu"
+    )
+    show_menu "Logs & Statistics" "${options[@]}"
+    local choice=$(get_choice ${#options[@]})
 
-    echo "You have entered the package name: $package_name"
-    read -p "Are you sure you want to remove this bloatware? (Yes/No): " confirmation
-
-    case $confirmation in
-        [Yy][Ee][Ss]) remove_bloatware_manual "$package_name" ;;
-        [Nn][Oo]) echo "Bloatware removal cancelled." ;;
-        *) echo "Invalid choice. Bloatware removal cancelled." ;;
+    case $choice in
+        1) show_logs ;;
+        2) show_stats ;;
+        3) display_session_report ;;
+        4) list_rescue_lists ;;
+        5) clear_logs ;;
+        6) return ;;
     esac
 }
 
-show_manufacturer_menu() {
-    local cleaner_type=$1
-
-    echo "Select your device manufacturer:"
-    echo "1. Samsung"
-    echo "2. Xiaomi"
-    echo "3. Huawei"
-    echo "4. OnePlus"
-    echo "5. Vivo"
-    echo "6. OPPO"
-    echo "7. Realme"
-    echo "8. Nothing"
-    echo "9. Honor"
-    echo "10. Motorola"
-    echo "11. Meizu"
-    echo "12. Infinix"
-    echo "13. Exit"
-    echo "--------------------------------------"
-    read -p "Enter your choice: " manufacturer_choice
-
-    case $manufacturer_choice in
-        1) manufacturer="samsung" ;;
-        2) manufacturer="xiaomi" ;;
-        3) manufacturer="huawei" ;;
-        4) manufacturer="oneplus" ;;
-        5) manufacturer="vivo" ;;
-        6) manufacturer="oppo" ;;
-        7) manufacturer="realme" ;;
-        8) manufacturer="nothing" ;;
-        9) manufacturer="honor" ;;
-        10) manufacturer="motorola" ;;
-        11) manufacturer="meizu" ;;
-        12) manufacturer="infinix" ;;
-        13) echo "Exiting..."; exit ;;
-        *) echo "Invalid choice. Please try again."; show_manufacturer_menu "$cleaner_type" ;;
-    esac
-
-    show_os_version_menu "$manufacturer" "$cleaner_type"
+# Clear logs
+clear_logs() {
+    if confirm_action "Clear all logs?"; then
+        > "$LOG_FILE"
+        show_success "Logs cleared"
+    fi
 }
 
-show_os_version_menu() {
-    local manufacturer=$1
-    local cleaner_type=$2
+# Settings menu
+show_settings_menu() {
+    show_info "Settings & Configuration"
 
-    echo "Select your $manufacturer's OS version:"
+    echo "Current settings:"
+    echo "  Dry run mode: $DEFAULT_DRY_RUN"
+    echo "  Auto backup: $DEFAULT_BACKUP_BEFORE_REMOVE"
+    echo "  Verbose output: $DEFAULT_VERBOSE"
+    echo "  Auto update: $DEFAULT_AUTO_UPDATE"
+    echo
 
-    case $manufacturer in
-        "samsung")
-            echo "1. OneUI 6"
-            echo "2. OneUI 5"
-            echo "3. OneUI 4"
-            ;;
-        "xiaomi")
-            echo "1. HyperOS 1"
-            echo "2. MIUI 14"
-            echo "3. MIUI 13"
-            ;;
-        "huawei")
-            echo "1. EMUI 14"
-            echo "2. EMUI 13"
-            echo "3. EMUI 12"
-            ;;
-        "oneplus")
-            echo "1. OxygenOS 14"
-            echo "2. OxygenOS 13"
-            echo "3. OxygenOS 12"
-            ;;
-        "vivo")
-            echo "1. FuntouchOS 14"
-            echo "2. FuntouchOS 13"
-            echo "3. FuntouchOS 12"
-            ;;
-        "oppo")
-            echo "1. ColorOS 14"
-            echo "2. ColorOS 13"
-            echo "3. ColorOS 12"
-            ;;
-        "realme")
-            echo "1. RealmeUI 5"
-            echo "2. RealmeUI 4"
-            echo "3. RealmeUI 3"
-            ;;
-        "nothing")
-            echo "1. NothingOS 3"
-            echo "2. NothingOS 2"
-            echo "3. NothingOS 1"
-            ;;
-        "honor")
-            echo "1. MagicUI 8"
-            echo "2. MagicUI 7"
-            echo "3. MagicUI 6"
-            ;;
-        "motorola")
-            echo "1. HelloUI 1"
-            echo "2. MyUX 13"
-            echo "3. MyUX 12"
-            ;;
-        "meizu")
-            echo "1. FlymeAIOS 11"
-            echo "2. FlymeOS 10"
-            echo "3. FlymeOS 9"
-            ;;
-        "infinix")
-            echo "1. XOS 14"
-            echo "2. XOS 13"
-            echo "3. XOS 12"
-            ;;
+    local options=("Toggle Dry Run" "Toggle Auto Backup" "Toggle Verbose" "Toggle Auto Update" "Save Settings" "Back to Main Menu")
+    show_menu "Settings Menu" "${options[@]}"
+    local choice=$(get_choice ${#options[@]})
+
+    case $choice in
+        1) DEFAULT_DRY_RUN=$([ "$DEFAULT_DRY_RUN" = true ] && echo false || echo true) ;;
+        2) DEFAULT_BACKUP_BEFORE_REMOVE=$([ "$DEFAULT_BACKUP_BEFORE_REMOVE" = true ] && echo false || echo true) ;;
+        3) DEFAULT_VERBOSE=$([ "$DEFAULT_VERBOSE" = true ] && echo false || echo true); set_verbose_mode "$DEFAULT_VERBOSE" ;;
+        4) DEFAULT_AUTO_UPDATE=$([ "$DEFAULT_AUTO_UPDATE" = true ] && echo false || echo true) ;;
+        5) save_config; show_success "Settings saved" ;;
+        6) return ;;
     esac
 
-    echo "4. Back"
-    echo "5. Exit"
-    echo "--------------------------------------"
-    read -p "Enter your choice: " os_choice
-
-    local os_version=""
-    case $manufacturer in
-        "samsung")
-            case $os_choice in
-                1) os_version="oneui-6" ;;
-                2) os_version="oneui-5" ;;
-                3) os_version="oneui-4" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "xiaomi")
-            case $os_choice in
-                1) os_version="hyperos-1" ;;
-                2) os_version="miui-14" ;;
-                3) os_version="miui-13" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "huawei")
-            case $os_choice in
-                1) os_version="emui-14" ;;
-                2) os_version="emui-13" ;;
-                3) os_version="emui-12" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "oneplus")
-            case $os_choice in
-                1) os_version="oxygenos-14" ;;
-                2) os_version="oxygenos-13" ;;
-                3) os_version="oxygenos-12" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "vivo")
-            case $os_choice in
-                1) os_version="funtouchos-14" ;;
-                2) os_version="funtouchos-13" ;;
-                3) os_version="funtouchos-12" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "oppo")
-            case $os_choice in
-                1) os_version="coloros-14" ;;
-                2) os_version="coloros-13" ;;
-                3) os_version="coloros-12" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "realme")
-            case $os_choice in
-                1) os_version="realmeui-5" ;;
-                2) os_version="realmeui-4" ;;
-                3) os_version="realmeui-3" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "nothing")
-            case $os_choice in
-                1) os_version="nothingos-3" ;;
-                2) os_version="nothingos-2" ;;
-                3) os_version="nothingos-1" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "honor")
-            case $os_choice in
-                1) os_version="magicos-8" ;;
-                2) os_version="magicos-7" ;;
-                3) os_version="magicos-6" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "motorola")
-            case $os_choice in
-                1) os_version="helloui-1" ;;
-                2) os_version="myux-13" ;;
-                3) os_version="myux-12" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "meizu")
-            case $os_choice in
-                1) os_version="flymeaios-11" ;;
-                2) os_version="flymeos-10" ;;
-                3) os_version="flymeos-9" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-        "infinix")
-            case $os_choice in
-                1) os_version="xos-14" ;;
-                2) os_version="xos-13" ;;
-                3) os_version="xos-12" ;;
-                4) show_manufacturer_menu "$cleaner_type"; return ;;
-                5) echo "Exiting..."; exit ;;
-                *) echo "Invalid choice. Please try again."; show_os_version_menu "$manufacturer" "$cleaner_type"; return ;;
-            esac
-            ;;
-    esac
-
-    remove_bloatware "$manufacturer" "$os_version" "$cleaner_type"
+    # Show updated settings
+    show_settings_menu
 }
 
-print_banner
-check_for_updates
-show_cleaner_type_menu
+display_session_report() {
+    local report_path=$(get_report_path)
+    if [ -n "$report_path" ] && [ -f "$report_path" ]; then
+        show_info "Session Report: $report_path"
+        cat "$report_path"
+    else
+        show_info "No session report available yet."
+    fi
+}
+
+list_rescue_lists() {
+    local rescue_dir="$DATA_DIR/rescue"
+    if [ -d "$rescue_dir" ]; then
+        show_info "Available rescue lists:"
+        ls -1 "$rescue_dir"
+    else
+        show_info "No rescue lists found yet."
+    fi
+}
+
+run_audit_cli() {
+    local cleaner_type=${1:-}
+    local manufacturer=${2:-}
+    local os_version=${3:-}
+
+    if [ -z "$cleaner_type" ] || [ -z "$manufacturer" ] || [ -z "$os_version" ]; then
+        show_error "Usage: --audit <CleanerType> <Manufacturer> <OS-Slug>"
+        echo "Example: ./BloatwareHatao.sh --audit Safe samsung oneui-6"
+        finalize_and_exit 1
+    fi
+
+    if preview_bloatware "$manufacturer" "$os_version" "$cleaner_type"; then
+        show_success "Audit completed for $manufacturer $os_version ($cleaner_type)."
+    else
+        finalize_and_exit 1
+    fi
+}
+
+# Run main function
+main "$@"
