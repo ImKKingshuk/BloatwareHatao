@@ -31,6 +31,7 @@ LAST_BACKUP_FILE=""
 ADB_TARGET=""
 SESSION_ID="$(date +%Y%m%d_%H%M%S)"
 REPORT_FILE=""
+REPORT_NDJSON_FILE=""
 SESSION_FINALIZED=false
 
 # Logging functions
@@ -57,6 +58,10 @@ init_logging() {
     touch "$LOG_FILE"
     REPORT_FILE="$REPORT_DIR/report_${SESSION_ID}.txt"
     touch "$REPORT_FILE"
+    if [ "${DEFAULT_REPORT_NDJSON:-false}" = true ]; then
+        REPORT_NDJSON_FILE="$REPORT_DIR/report_${SESSION_ID}.ndjson"
+        : > "$REPORT_NDJSON_FILE"
+    fi
     log_info "BloatwareHatao session started"
     log_report "SESSION|START|$SESSION_ID"
 }
@@ -74,6 +79,32 @@ record_operation() {
     local type="$1"
     shift
     log_report "${type}|$*"
+    if [ "${DEFAULT_REPORT_NDJSON:-false}" = true ]; then
+        log_report_ndjson "$type" "$@"
+    fi
+}
+
+# NDJSON reporting helpers
+log_report_ndjson() {
+    local type="$1"; shift
+    ensure_directory "$REPORT_DIR"
+    if [ -z "$REPORT_NDJSON_FILE" ]; then
+        REPORT_NDJSON_FILE="$REPORT_DIR/report_${SESSION_ID}.ndjson"
+        : > "$REPORT_NDJSON_FILE"
+    fi
+    local ts
+    ts=$(date '+%Y-%m-%dT%H:%M:%S%z')
+    # Join the payload safely and escape quotes
+    local payload="$*"
+    payload=${payload//\\/\\\\}
+    payload=${payload//"/\"}
+    echo "{\"ts\":\"$ts\",\"session\":\"$SESSION_ID\",\"event\":\"$type\",\"payload\":\"$payload\"}" >> "$REPORT_NDJSON_FILE"
+}
+
+get_report_ndjson_path() {
+    if [ -n "$REPORT_NDJSON_FILE" ]; then
+        echo "$REPORT_NDJSON_FILE"
+    fi
 }
 
 finalize_session() {
@@ -261,7 +292,19 @@ load_config() {
         DEFAULT_BACKUP_BEFORE_REMOVE=true
         DEFAULT_VERBOSE=true
         DEFAULT_AUTO_UPDATE=true
+        DEFAULT_REMOVE_MODE=uninstall
+        DEFAULT_OFFLINE_MODE=false
+        DEFAULT_REPORT_NDJSON=false
     fi
+
+    # Ensure defaults exist if partially configured
+    DEFAULT_DRY_RUN=${DEFAULT_DRY_RUN:-false}
+    DEFAULT_BACKUP_BEFORE_REMOVE=${DEFAULT_BACKUP_BEFORE_REMOVE:-true}
+    DEFAULT_VERBOSE=${DEFAULT_VERBOSE:-true}
+    DEFAULT_AUTO_UPDATE=${DEFAULT_AUTO_UPDATE:-true}
+    DEFAULT_REMOVE_MODE=${DEFAULT_REMOVE_MODE:-uninstall}
+    DEFAULT_OFFLINE_MODE=${DEFAULT_OFFLINE_MODE:-false}
+    DEFAULT_REPORT_NDJSON=${DEFAULT_REPORT_NDJSON:-false}
 }
 
 # Save configuration
@@ -273,39 +316,130 @@ DEFAULT_DRY_RUN=$DEFAULT_DRY_RUN
 DEFAULT_BACKUP_BEFORE_REMOVE=$DEFAULT_BACKUP_BEFORE_REMOVE
 DEFAULT_VERBOSE=$DEFAULT_VERBOSE
 DEFAULT_AUTO_UPDATE=$DEFAULT_AUTO_UPDATE
+DEFAULT_REMOVE_MODE=$DEFAULT_REMOVE_MODE
+DEFAULT_OFFLINE_MODE=$DEFAULT_OFFLINE_MODE
+DEFAULT_REPORT_NDJSON=$DEFAULT_REPORT_NDJSON
 EOF
 }
 
 # Device health insight
 get_device_health_report() {
+    # Battery details
     local battery_level=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "level" | awk '{print $2}')
     local battery_status=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "status" | awk '{print $2}')
+    local battery_scale=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "scale" | awk '{print $2}')
     local temperature=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "temperature" | awk '{print $2}')
-    local power_source=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "AC powered" | awk -F': ' '{print $2}')
+    local power_ac=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "AC powered" | awk -F': ' '{print $2}')
+    local power_usb=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "USB powered" | awk -F': ' '{print $2}')
+    local power_wireless=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "Wireless powered" | awk -F': ' '{print $2}')
+    local voltage=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "voltage" | awk '{print $2}')
+    local health=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "health" | awk '{print $2}')
+    local technology=$(adb shell dumpsys battery 2>/dev/null | grep -m1 "technology" | awk '{print $2}')
+    local capacity_design=$(adb shell cat /sys/class/power_supply/battery/charge_full_design 2>/dev/null | tr -d '\r')
+    local capacity_now=$(adb shell cat /sys/class/power_supply/battery/charge_full 2>/dev/null | tr -d '\r')
 
-    local storage_line=$(adb shell df /data 2>/dev/null | tail -1)
-    local storage_total=$(echo "$storage_line" | awk '{print $2}')
-    local storage_used=$(echo "$storage_line" | awk '{print $3}')
-    local storage_free=$(echo "$storage_line" | awk '{print $4}')
-    local storage_percent=$(echo "$storage_line" | awk '{print $5}')
+    # SoC temperature (best-effort)
+    local soc_temp_raw=$(adb shell 'for z in /sys/class/thermal/thermal_zone*; do name=$(cat $z/type 2>/dev/null); temp=$(cat $z/temp 2>/dev/null); echo "$name:$temp"; done' 2>/dev/null | grep -i -E 'soc|cpu|gpu' | head -1 | awk -F':' '{print $2}')
+    local soc_temp_c=""
+    if [ -n "$soc_temp_raw" ]; then
+        soc_temp_c=$(awk -v t="$soc_temp_raw" 'BEGIN{if (t=="") print ""; else printf "%.1f", t/1000}')
+    fi
 
+    # Storage
+    local data_line=$(adb shell df /data 2>/dev/null | tail -1)
+    local data_total=$(echo "$data_line" | awk '{print $2}')
+    local data_used=$(echo "$data_line" | awk '{print $3}')
+    local data_free=$(echo "$data_line" | awk '{print $4}')
+    local data_percent=$(echo "$data_line" | awk '{print $5}')
+
+    local sd_line=$(adb shell df /storage/emulated/0 2>/dev/null | tail -1)
+    local sd_total=$(echo "$sd_line" | awk '{print $2}')
+    local sd_used=$(echo "$sd_line" | awk '{print $3}')
+    local sd_free=$(echo "$sd_line" | awk '{print $4}')
+    local sd_percent=$(echo "$sd_line" | awk '{print $5}')
+
+    # Memory
+    local mem_total_kb=$(adb shell cat /proc/meminfo 2>/dev/null | grep -m1 'MemTotal' | awk '{print $2}')
+    local mem_avail_kb=$(adb shell cat /proc/meminfo 2>/dev/null | grep -m1 'MemAvailable' | awk '{print $2}')
+    local mem_used_kb=$(awk -v t="$mem_total_kb" -v a="$mem_avail_kb" 'BEGIN{if(t==""||a=="") print ""; else print t-a}')
+    local mem_used_pct=$(awk -v t="$mem_total_kb" -v a="$mem_avail_kb" 'BEGIN{if(t>0) printf "%.1f", (t-a)*100/t; else print ""}')
+
+    # CPU summary
+    local cpu_summary=$(adb shell dumpsys cpuinfo 2>/dev/null | head -1)
+
+    # Network
     local uptime=$(adb shell uptime 2>/dev/null)
     local wifi_state=$(adb shell dumpsys wifi 2>/dev/null | grep -m1 "Wi-Fi is" | sed 's/^\s*//')
+    local airplane_mode=$(adb shell settings get global airplane_mode_on 2>/dev/null)
+    local mobile_state=$(adb shell dumpsys telephony.registry 2>/dev/null | grep -m1 "mDataConnectionState" | awk -F'= ' '{print $2}')
 
-    echo "Battery Level: ${battery_level}%"
-    echo "Battery Status: ${battery_status}"
+    # Human-readable output
+    echo "Battery Level: ${battery_level}% (scale: ${battery_scale})"
+    echo "Battery Status: ${battery_status}, Health: ${health}, Tech: ${technology}"
     if [ -n "$temperature" ]; then
         echo "Battery Temp: ${temperature} (tenths °C)"
     fi
-    if [ -n "$power_source" ]; then
-        echo "Charging (AC powered): ${power_source}"
+    if [ -n "$soc_temp_c" ]; then
+        echo "SoC Temp: ${soc_temp_c} °C"
     fi
-    echo "Data Storage Used: $storage_used / $storage_total ($storage_percent)"
-    echo "Data Storage Free: $storage_free"
+    if [ -n "$power_ac" ] || [ -n "$power_usb" ] || [ -n "$power_wireless" ]; then
+        echo "Power: AC=$power_ac USB=$power_usb Wireless=$power_wireless Voltage=${voltage}mV"
+    fi
+
+    echo "Data Storage: used $data_used / $data_total ($data_percent), free $data_free"
+    if [ -n "$sd_total" ]; then
+        echo "Internal Storage (/sdcard): used $sd_used / $sd_total ($sd_percent), free $sd_free"
+    fi
+
+    if [ -n "$mem_total_kb" ]; then
+        echo "Memory: total ${mem_total_kb} kB, available ${mem_avail_kb} kB, used ${mem_used_kb} kB (${mem_used_pct}%)"
+    fi
+
+    if [ -n "$cpu_summary" ]; then
+        echo "CPU: $cpu_summary"
+    fi
+
     echo "Device Uptime: $uptime"
     if [ -n "$wifi_state" ]; then
         echo "$wifi_state"
     fi
+    if [ -n "$airplane_mode" ]; then
+        echo "Airplane Mode: $airplane_mode"
+    fi
+    if [ -n "$mobile_state" ]; then
+        echo "Mobile Data State: $mobile_state"
+    fi
+
+    # Record NDJSON health snapshot (if enabled)
+    record_operation HEALTH \
+        "batt_level=${battery_level}" \
+        "status=${battery_status}" \
+        "scale=${battery_scale}" \
+        "temp_tenths=${temperature}" \
+        "soc_temp_c=${soc_temp_c}" \
+        "ac=${power_ac}" \
+        "usb=${power_usb}" \
+        "wireless=${power_wireless}" \
+        "voltage_mv=${voltage}" \
+        "health=${health}" \
+        "tech=${technology}" \
+        "cap_design=${capacity_design}" \
+        "cap_now=${capacity_now}" \
+        "data_used=${data_used}" \
+        "data_total=${data_total}" \
+        "data_pct=${data_percent}" \
+        "sd_used=${sd_used}" \
+        "sd_total=${sd_total}" \
+        "sd_pct=${sd_percent}" \
+        "mem_total_kb=${mem_total_kb}" \
+        "mem_avail_kb=${mem_avail_kb}" \
+        "mem_used_kb=${mem_used_kb}" \
+        "mem_used_pct=${mem_used_pct}" \
+        "cpu=${cpu_summary}" \
+        "uptime=${uptime}" \
+        "wifi=${wifi_state}" \
+        "airplane=${airplane_mode}" \
+        "mobile=${mobile_state}"
 }
 
 # Check for updates

@@ -13,6 +13,8 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - **Command Line Interface**: Support for CLI arguments and automation (including audits, health checks, and planner tools)
 - **Device Management**: Device detection, info display, health snapshot, and connection validation
 - **Statistics & Logging**: Detailed operation logs, session reports, and removal statistics
+- **NDJSON Session Reports**: Optional structured logs for post‑processing and analytics
+- **Richer Health Snapshot**: Battery voltage/health/technology, SoC temperature, memory, CPU, storage, and network states
 
 ## Features
 
@@ -26,11 +28,14 @@ BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodb
 - 🧪 **Dry Run Mode**: Preview what would be removed without making changes.
 - 🧠 **Smart Removal Wizard**: Guided, conversational flow to recommend safe, pro, or ultra cleaning levels.
 - 🔍 **Pre-removal Audits**: Inspect remote script packages before removal, with system-app warnings.
-- ❤️ **Device Health Snapshot**: Monitor battery, storage, uptime, and connectivity status.
+- ❤️ **Device Health Snapshot**: Monitor battery, voltage, health, technology, SoC temperature, memory, CPU, storage, uptime, Wi‑Fi, airplane mode, and mobile data state.
 - 🧭 **Cleaning Planner**: Capture goals, reminders, and notes for future cleanups.
 - 🛟 **Rescue Lists & Session Reports**: Automatically log removal operations and export rescue lists of removed packages.
 - 📊 **Statistics & Logging**: Track operations, view logs, reports, and monitor removal statistics.
 - ⚙️ **Settings & Configuration**: Customize behavior with persistent settings.
+- 🧾 **NDJSON Reports**: Enable structured NDJSON logging via Settings and view with `--report-ndjson`.
+- 📴 **Offline Mode**: Use local OEM scripts when connectivity is limited.
+- 🧹 **Removal Mode**: Choose default behavior: `uninstall`, `disable`, or `clear` (toggle in Settings).
 - 🔍 **Device Information**: View detailed connected device information.
 - 🔄 **Auto Updates**: Automatically checks for updates and updates itself to ensure you have the latest version of BloatwareHatao.
 - 🛠️ **Easy-to-Use Interface**: Interactive menus with colored output and progress indicators.
@@ -55,10 +60,14 @@ Options:
   --health            Show device health snapshot
   --planner           Open cleaning planner
   --report            Display current session report
+  --report-ndjson     Display NDJSON session report (if enabled)
   --backup            Create backup of installed packages
   --restore           Interactive restore menu
   --log               Show operation logs
   --stats             Show removal statistics
+  --mode <uninstall|disable|clear>
+                      Set removal behavior (default: uninstall)
+  --offline           Use local OEM scripts (offline mode)
 ```
 
 ## Device OEM / OS Support
@@ -119,6 +128,15 @@ For automation or specific tasks:
 
 # Show statistics
 ./BloatwareHatao.sh --stats
+
+# View structured NDJSON report (enable in Settings)
+./BloatwareHatao.sh --report-ndjson
+
+# Switch removal mode (uninstall|disable|clear)
+./BloatwareHatao.sh --mode disable
+
+# Work offline using local OEM scripts
+./BloatwareHatao.sh --offline
 ```
 
 ## Disclaimer

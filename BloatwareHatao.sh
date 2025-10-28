@@ -18,6 +18,10 @@ main() {
     init_logging
     load_config
     set_verbose_mode "$DEFAULT_VERBOSE"
+    # Initialize removal mode from config
+    set_remove_mode "${DEFAULT_REMOVE_MODE:-uninstall}"
+    # Initialize offline mode from config
+    set_offline_mode "${DEFAULT_OFFLINE_MODE:-false}"
     setup_error_handling
 
     # Parse command line arguments
@@ -100,6 +104,22 @@ parse_args() {
                 set_dry_run
                 shift
                 ;;
+            --offline)
+                set_offline_mode true
+                shift
+                ;;
+            --mode)
+                # Set removal mode: uninstall|disable|clear
+                shift
+                local mode_arg="$1"
+                if [ -z "$mode_arg" ]; then
+                    show_error "--mode requires a value: uninstall|disable|clear"
+                    show_help
+                    exit 1
+                fi
+                set_remove_mode "$mode_arg"
+                shift
+                ;;
             --device-info)
                 show_device_info
                 exit 0
@@ -123,6 +143,10 @@ parse_args() {
                 ;;
             --report)
                 display_session_report
+                finalize_and_exit 0
+                ;;
+            --report-ndjson)
+                display_session_report_ndjson
                 finalize_and_exit 0
                 ;;
             --backup)
@@ -262,9 +286,29 @@ EOF
         if [ "$DRY_RUN" = true ]; then
             show_dry_run_notice "No packages will be uninstalled"
         fi
-        if ! remove_bloatware "$manufacturer" "$os_version" "$cleaner_type"; then
-            show_warning "Removal script unavailable or failed for $manufacturer $os_display ($cleaner_type)."
+
+        # Load packages and optionally let user pick
+        local packages=()
+        read -r -a packages <<< "$(get_bloatware_packages "$manufacturer" "$os_version" "$cleaner_type")"
+
+        if [ ${#packages[@]} -eq 0 ]; then
+            show_error "No packages found for $manufacturer $os_display ($cleaner_type)"
+            return
         fi
+
+        local selected=()
+        if confirm_action "Review and select packages before removal?"; then
+            read -r -a selected <<< "$(interactive_select_packages "${packages[@]}")"
+        else
+            selected=("${packages[@]}")
+        fi
+
+        if [ ${#selected[@]} -eq 0 ]; then
+            show_warning "No packages selected. Aborting."
+            return
+        fi
+
+        batch_remove "${selected[@]}"
     fi
 }
 
@@ -297,8 +341,20 @@ show_batch_removal_menu() {
         local packages=($(load_package_list "$file_path"))
         if [ ${#packages[@]} -gt 0 ]; then
             show_info "Found ${#packages[@]} packages in $file_path"
-            if confirm_action "Remove all packages?"; then
-                batch_remove "${packages[@]}"
+            local selected=()
+            if confirm_action "Review and select packages before removal?"; then
+                read -r -a selected <<< "$(interactive_select_packages "${packages[@]}")"
+            else
+                selected=("${packages[@]}")
+            fi
+
+            if [ ${#selected[@]} -eq 0 ]; then
+                show_warning "No packages selected. Aborting."
+                return
+            fi
+
+            if confirm_action "Remove selected packages?"; then
+                batch_remove "${selected[@]}"
             fi
         else
             show_error "No valid packages found in file"
@@ -390,6 +446,7 @@ show_logs_stats_menu() {
         "Show Statistics"
         "View Session Report"
         "List Rescue Lists"
+        "Restore from Rescue List"
         "Clear Logs"
         "Back to Main Menu"
     )
@@ -401,8 +458,9 @@ show_logs_stats_menu() {
         2) show_stats ;;
         3) display_session_report ;;
         4) list_rescue_lists ;;
-        5) clear_logs ;;
-        6) return ;;
+        5) restore_from_rescue_menu ;;
+        6) clear_logs ;;
+        7) return ;;
     esac
 }
 
@@ -423,9 +481,22 @@ show_settings_menu() {
     echo "  Auto backup: $DEFAULT_BACKUP_BEFORE_REMOVE"
     echo "  Verbose output: $DEFAULT_VERBOSE"
     echo "  Auto update: $DEFAULT_AUTO_UPDATE"
+    echo "  Offline mode: $DEFAULT_OFFLINE_MODE"
+    echo "  Remove mode: $DEFAULT_REMOVE_MODE"
+    echo "  NDJSON reports: $DEFAULT_REPORT_NDJSON"
     echo
 
-    local options=("Toggle Dry Run" "Toggle Auto Backup" "Toggle Verbose" "Toggle Auto Update" "Save Settings" "Back to Main Menu")
+    local options=(
+        "Toggle Dry Run"
+        "Toggle Auto Backup"
+        "Toggle Verbose"
+        "Toggle Auto Update"
+        "Toggle Offline Mode"
+        "Cycle Default Remove Mode"
+        "Toggle NDJSON Reports"
+        "Save Settings"
+        "Back to Main Menu"
+    )
     show_menu "Settings Menu" "${options[@]}"
     local choice=$(get_choice ${#options[@]})
 
@@ -434,8 +505,18 @@ show_settings_menu() {
         2) DEFAULT_BACKUP_BEFORE_REMOVE=$([ "$DEFAULT_BACKUP_BEFORE_REMOVE" = true ] && echo false || echo true) ;;
         3) DEFAULT_VERBOSE=$([ "$DEFAULT_VERBOSE" = true ] && echo false || echo true); set_verbose_mode "$DEFAULT_VERBOSE" ;;
         4) DEFAULT_AUTO_UPDATE=$([ "$DEFAULT_AUTO_UPDATE" = true ] && echo false || echo true) ;;
-        5) save_config; show_success "Settings saved" ;;
-        6) return ;;
+        5) DEFAULT_OFFLINE_MODE=$([ "$DEFAULT_OFFLINE_MODE" = true ] && echo false || echo true); set_offline_mode "$DEFAULT_OFFLINE_MODE" ;;
+        6) 
+            case "$DEFAULT_REMOVE_MODE" in
+                uninstall) DEFAULT_REMOVE_MODE=disable ;;
+                disable) DEFAULT_REMOVE_MODE=clear ;;
+                *) DEFAULT_REMOVE_MODE=uninstall ;;
+            esac
+            set_remove_mode "$DEFAULT_REMOVE_MODE"
+            ;;
+        7) DEFAULT_REPORT_NDJSON=$([ "$DEFAULT_REPORT_NDJSON" = true ] && echo false || echo true) ;;
+        8) save_config; show_success "Settings saved" ;;
+        9) return ;;
     esac
 
     # Show updated settings
@@ -452,6 +533,16 @@ display_session_report() {
     fi
 }
 
+display_session_report_ndjson() {
+    local ndjson_path=$(get_report_ndjson_path)
+    if [ -n "$ndjson_path" ] && [ -f "$ndjson_path" ]; then
+        show_info "NDJSON Session Report: $ndjson_path"
+        cat "$ndjson_path"
+    else
+        show_info "No NDJSON session report available. Enable it in Settings."
+    fi
+}
+
 list_rescue_lists() {
     local rescue_dir="$DATA_DIR/rescue"
     if [ -d "$rescue_dir" ]; then
@@ -459,6 +550,31 @@ list_rescue_lists() {
         ls -1 "$rescue_dir"
     else
         show_info "No rescue lists found yet."
+    fi
+}
+
+# Restore from a rescue list interactively
+restore_from_rescue_menu() {
+    local rescue_dir="$DATA_DIR/rescue"
+    if [ ! -d "$rescue_dir" ]; then
+        show_info "No rescue lists directory found."
+        return
+    fi
+
+    local files=($(ls -t "$rescue_dir"/*.txt 2>/dev/null))
+    if [ ${#files[@]} -eq 0 ]; then
+        show_info "No rescue lists found."
+        return
+    fi
+
+    show_info "Rescue Lists:"
+    for i in "${!files[@]}"; do
+        echo "$((i+1)). ${files[$i]##*/}"
+    done
+    echo
+    read -p "Select rescue number (or 0 to cancel): " choice
+    if [ "$choice" -gt 0 ] && [ "$choice" -le ${#files[@]} ]; then
+        restore_rescue_list "${files[$((choice-1))]}"
     fi
 }
 

@@ -7,6 +7,8 @@
 DRY_RUN=false
 BACKUP_FILE=""
 VERBOSE_MODE=false
+REMOVE_MODE="uninstall"
+OFFLINE_MODE=false
 
 set_verbose_mode() {
     if [ "$1" = true ]; then
@@ -28,6 +30,86 @@ set_verbose_mode() {
     else
         VERBOSE_MODE=false
     fi
+}
+
+# Set removal mode (uninstall|disable|clear)
+set_remove_mode() {
+    local mode="$1"
+    case "$mode" in
+        uninstall|disable|clear)
+            REMOVE_MODE="$mode"
+            show_info "Removal mode set to: $REMOVE_MODE"
+            ;;
+        *)
+            show_warning "Invalid removal mode: $mode. Falling back to 'uninstall'."
+            REMOVE_MODE="uninstall"
+            ;;
+    esac
+}
+
+# Set offline mode (true|false)
+set_offline_mode() {
+    if [ "$1" = true ]; then
+        OFFLINE_MODE=true
+        show_info "Offline mode enabled: using local OEM scripts"
+    else
+        OFFLINE_MODE=false
+        show_info "Offline mode disabled: using remote OEM scripts when available"
+    fi
+}
+
+# Parse packages from a script's content
+parse_packages_from_script_content() {
+    local script_content="$1"
+    local packages=()
+    while IFS= read -r line; do
+        # Parse lines like: "com.example.app"
+        if [[ $line =~ ^[[:space:]]*"([^"]+)" ]]; then
+            packages+=("${BASH_REMATCH[1]}")
+        fi
+    done <<< "$script_content"
+    echo "${packages[@]}"
+}
+
+# Retrieve package list from remote or local script with fallback
+get_bloatware_packages() {
+    local manufacturer="$1"
+    local os_version="$2"
+    local cleaner_type="$3"
+
+    local remote_url="https://raw.githubusercontent.com/ImKKingshuk/BloatwareHatao/main/$cleaner_type/$manufacturer/$os_version.sh"
+    local local_path="$SCRIPT_DIR/$cleaner_type/$manufacturer/$os_version.sh"
+
+    local pkgs=()
+
+    if [ "$OFFLINE_MODE" = true ]; then
+        if [ -f "$local_path" ]; then
+            local content
+            content=$(cat "$local_path")
+            read -r -a pkgs <<< "$(parse_packages_from_script_content "$content")"
+        else
+            show_error "Local script not found: $local_path"
+        fi
+    else
+        local content
+        content=$(curl -sSL "$remote_url")
+        if [ $? -eq 0 ] && [ -n "$content" ]; then
+            read -r -a pkgs <<< "$(parse_packages_from_script_content "$content")"
+        fi
+
+        # Fallback to local if remote empty or failed
+        if [ ${#pkgs[@]} -eq 0 ]; then
+            if [ -f "$local_path" ]; then
+                show_warning "Remote script unavailable; falling back to local: $local_path"
+                content=$(cat "$local_path")
+                read -r -a pkgs <<< "$(parse_packages_from_script_content "$content")"
+            else
+                show_error "No script available for $manufacturer $os_version ($cleaner_type)"
+            fi
+        fi
+    fi
+
+    echo "${pkgs[@]}"
 }
 
 # Perform package removal
@@ -67,19 +149,32 @@ remove_package() {
         create_backup > /dev/null 2>&1 || show_warning "Backup step skipped due to earlier failure"
     fi
 
-    # Perform removal
+    # Perform removal based on REMOVE_MODE
     local result
-    result=$(adb shell pm uninstall --user 0 "$package" 2>&1)
+    case "$REMOVE_MODE" in
+        uninstall)
+            result=$(adb shell pm uninstall --user 0 "$package" 2>&1)
+            ;;
+        disable)
+            result=$(adb shell pm disable-user --user 0 "$package" 2>&1)
+            ;;
+        clear)
+            result=$(adb shell pm clear "$package" 2>&1)
+            ;;
+        *)
+            result=$(adb shell pm uninstall --user 0 "$package" 2>&1)
+            ;;
+    esac
 
     if [ $? -eq 0 ]; then
-        show_success "Successfully removed: $package"
-        log_info "Successfully removed: $package"
-        record_operation REMOVE "success|$package"
+        show_success "Successfully processed ($REMOVE_MODE): $package"
+        log_info "Successfully processed ($REMOVE_MODE): $package"
+        record_operation REMOVE "success|$package|mode=$REMOVE_MODE"
         return 0
     else
-        show_error "Failed to remove: $package"
-        log_error "Failed to remove $package: $result"
-        record_operation REMOVE "failed|$package|$result"
+        show_error "Failed to process ($REMOVE_MODE): $package"
+        log_error "Failed to process ($REMOVE_MODE) $package: $result"
+        record_operation REMOVE "failed|$package|mode=$REMOVE_MODE|$result"
         return 1
     fi
 }
@@ -122,40 +217,59 @@ batch_remove() {
     fi
 }
 
+# Interactive selector for packages
+interactive_select_packages() {
+    local items=("$@")
+    local count=${#items[@]}
+
+    if [ $count -eq 0 ]; then
+        echo ""
+        return 0
+    fi
+
+    show_info "Select packages to process (mode: $REMOVE_MODE)"
+    local i
+    for ((i=0; i<count; i++)); do
+        printf "%2d) %s\n" $((i+1)) "${items[$i]}"
+    done
+
+    echo
+    read -p "Enter numbers (comma-separated) or 'all': " selection
+
+    if [[ "$selection" =~ ^[Aa][Ll][Ll]$ ]]; then
+        echo "${items[@]}"
+        return 0
+    fi
+
+    local selected=()
+    IFS=',' read -ra nums <<< "$selection"
+    for n in "${nums[@]}"; do
+        n=$(echo "$n" | tr -d ' ')
+        if [[ "$n" =~ ^[0-9]+$ ]] && [ "$n" -ge 1 ] && [ "$n" -le "$count" ]; then
+            selected+=("${items[$((n-1))]}")
+        fi
+    done
+
+    echo "${selected[@]}"
+}
+
 # Remove bloatware from remote script
 remove_bloatware() {
     local manufacturer=$1
     local os_version=$2
     local cleaner_type=$3
-    local script_path="https://raw.githubusercontent.com/ImKKingshuk/BloatwareHatao/main/$cleaner_type/$manufacturer/$os_version.sh"
+    show_info "Loading bloatware list for $manufacturer $os_version ($cleaner_type)..."
 
-    show_info "Fetching bloatware removal script for $manufacturer $os_version ($cleaner_type)..."
-
-    # Download and execute script
-    local script_content
-    script_content=$(curl -sSL "$script_path")
-
-    if [ $? -ne 0 ] || [ -z "$script_content" ]; then
-        show_error "Failed to download script from $script_path"
-        return 1
-    fi
-
-    # Extract package list from script
     local packages=()
-    while IFS= read -r line; do
-        # Parse lines like: "com.example.app"
-        if [[ $line =~ ^[[:space:]]*\"([^\"]+)\" ]]; then
-            packages+=("${BASH_REMATCH[1]}")
-        fi
-    done <<< "$script_content"
+    read -r -a packages <<< "$(get_bloatware_packages "$manufacturer" "$os_version" "$cleaner_type")"
 
     if [ ${#packages[@]} -eq 0 ]; then
         show_error "No packages found in script"
         return 1
     fi
 
-    show_info "Found ${#packages[@]} packages to remove"
-    log_info "Starting removal of ${#packages[@]} packages for $manufacturer $os_version"
+    show_info "Found ${#packages[@]} packages to process ($REMOVE_MODE)"
+    log_info "Starting processing (${REMOVE_MODE}) of ${#packages[@]} packages for $manufacturer $os_version"
     record_operation RUN "removal|$manufacturer|$os_version|$cleaner_type|count=${#packages[@]}"
 
     batch_remove "${packages[@]}"
@@ -195,6 +309,72 @@ create_rescue_package_list() {
     grep "REMOVE|success" "$(get_report_path)" | awk -F'|' '{print $3}' >> "$rescue_file"
     record_operation RESCUE "created|$rescue_file"
     show_success "Rescue list saved to $rescue_file"
+}
+
+# Restore packages from a rescue list
+restore_rescue_list() {
+    local rescue_file="$1"
+
+    if [ ! -f "$rescue_file" ]; then
+        show_error "Rescue file not found: $rescue_file"
+        return 1
+    fi
+
+    show_info "Restoring packages from rescue list: ${rescue_file##*/}"
+
+    local packages=()
+    while IFS= read -r line; do
+        [[ "$line" =~ ^# ]] && continue
+        [[ -z "$line" ]] && continue
+        if validate_package_name "$line"; then
+            packages+=("$line")
+        fi
+    done < "$rescue_file"
+
+    if [ ${#packages[@]} -eq 0 ]; then
+        show_warning "No valid packages found in rescue file"
+        return 1
+    fi
+
+    show_info "Found ${#packages[@]} packages to restore"
+    if ! confirm_action "Attempt to restore ${#packages[@]} packages?"; then
+        return 0
+    fi
+
+    local success_count=0
+    local total=${#packages[@]}
+
+    for i in "${!packages[@]}"; do
+        local package="${packages[$i]}"
+        echo -ne "[ $((i+1))/$total ] Restoring: $package\r"
+
+        if [ "$DRY_RUN" = true ]; then
+            show_info "Would restore: $package"
+            record_operation RESCUE-RESTORE "dry-run|$package"
+            continue
+        fi
+
+        # First try reinstall existing system package
+        if adb shell cmd package install-existing --user 0 "$package" >/dev/null 2>&1; then
+            show_success "Restored (install-existing): $package"
+            record_operation RESCUE-RESTORE "success|install-existing|$package"
+            success_count=$((success_count + 1))
+            continue
+        fi
+
+        # Fallback: re-enable if disabled
+        if adb shell pm enable "$package" >/dev/null 2>&1; then
+            show_success "Restored (enable): $package"
+            record_operation RESCUE-RESTORE "success|enable|$package"
+            success_count=$((success_count + 1))
+        else
+            show_error "Failed to restore: $package"
+            record_operation RESCUE-RESTORE "failed|$package"
+        fi
+    done
+
+    echo
+    show_info "Restored $success_count/${total} packages"
 }
 
 smart_removal_wizard() {
@@ -257,25 +437,10 @@ preview_bloatware() {
     local manufacturer=$1
     local os_version=$2
     local cleaner_type=$3
-    local script_path="https://raw.githubusercontent.com/ImKKingshuk/BloatwareHatao/main/$cleaner_type/$manufacturer/$os_version.sh"
-
     show_info "Preparing smart audit for $manufacturer $os_version ($cleaner_type)..."
 
-    local script_content
-    script_content=$(curl -sSL "$script_path")
-
-    if [ $? -ne 0 ] || [ -z "$script_content" ]; then
-        show_error "Failed to fetch script for audit: $script_path"
-        record_operation AUDIT "failed|$manufacturer|$os_version|$cleaner_type"
-        return 1
-    fi
-
     local packages=()
-    while IFS= read -r line; do
-        if [[ $line =~ ^[[:space:]]*"([^"]+)" ]]; then
-            packages+=("${BASH_REMATCH[1]}")
-        fi
-    done <<< "$script_content"
+    read -r -a packages <<< "$(get_bloatware_packages "$manufacturer" "$os_version" "$cleaner_type")"
 
     if [ ${#packages[@]} -eq 0 ]; then
         show_error "No packages found in script for audit"

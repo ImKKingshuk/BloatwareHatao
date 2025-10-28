@@ -173,7 +173,11 @@ show_help() {
     echo "  --health            Show device health snapshot"
     echo "  --planner           Open cleaning planner"
     echo "  --report            Display current session report"
+    echo "  --report-ndjson     Display NDJSON session report (if enabled)"
     echo "  --log               Show operation logs"
+    echo "  --mode <uninstall|disable|clear>"
+    echo "                      Set removal behavior (default: uninstall)"
+    echo "  --offline           Use local OEM scripts (offline mode)"
     echo
     echo "Interactive mode: Run without arguments for full menu"
     echo
