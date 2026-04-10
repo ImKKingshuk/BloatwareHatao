@@ -13,32 +13,52 @@ target/
 # Contains mutation testing data
 **/mutants.out*/
 
+# Rust
+*.rmeta
+*.rlib
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+.history/
 
 # OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
 
-# Tauri / GUI
-crates/bh-gui/node_modules/
-crates/bh-gui/dist/
-crates/bh-gui/src-tauri/target/
-crates/bh-gui/.tanstack/
+
 
 # Logs
 logs/
 *.log
+*.log.*
 
 # Local data
 data/
 backups/
 .config/
 .cache/
+tmp/
+temp/
 
 # Rescue and session history (contains device-specific data)
 rescue/
@@ -55,8 +75,71 @@ profiles/custom/
 # Test artifacts
 *.profraw
 coverage/
+*.profdata
+tarpaulin-report.html
 
 # Environment
 .env
 .env.local
 .env.*.local
+.envrc
+
+# Security / Secrets
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+*.keystore
+secrets.json
+credentials.json
+id_rsa
+id_rsa.pub
+*.gpg
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# Backup files
+*.bak
+*.backup
+*.old
+*~
+
+# Archive files
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+
+# Node (if any frontend components)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build artifacts
+dist/
+build/
+out/
+
+# Rust analyzer
+rust-analyzer/
+
+# Cargo specific
+Cargo.bloat
+Cargo.toml.orig
+
+# Misc
+*.pid
+*.seed
+*.pid.lock
