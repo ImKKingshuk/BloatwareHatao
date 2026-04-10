@@ -1,0 +1,3098 @@
+[
+  {
+    "name": "cn.wps.moffice.lite.meizu",
+    "label": "Meizu",
+    "description": "WPS Office Chinese WPS Office",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "cn.wps.moffice_eng",
+    "label": "Moffice Eng",
+    "description": "WPS Office Chinese WPS Office pre-installed on Xiaomi devices.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "cn.wps.moffice_eng.xiaomi.lite",
+    "label": "Lite",
+    "description": "Chinese WPS Office",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "cn.wps.xiaomi.abroad.lite",
+    "label": "Lite",
+    "description": "Mi Doc viewer Allows users to view various types of documents on their Android devices like documents (*.doc/docx, *.ppt/pptx, *.xls/xlsx, *.pdf, *.wps, and *.txt) and it's powered by WPS Office FYI: WPS is a Chinese closed-source software. It's as bad as Microsoft Office (privacy-wise) https://www.wps.com/privacy-policy",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.AutoTest",
+    "label": "Auto Test",
+    "description": "Assemble test Hidden app used by the manufacturer to test various hardware components",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.android.globalFileexplorer",
+    "label": "Global Fileexplorer",
+    "description": "Xiaomi Files Manager (https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer)",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.android.globallauncher",
+    "label": "Globallauncher",
+    "description": "Poco Launcher System Launcher for POCO Phone, the way icons apps are organized and displayed. If you remove this package you will loose navigation gestures and recent apps view. https://play.google.com/store/apps/details?id=com.mi.android.globallauncher",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.android.globalminusscreen",
+    "label": "Globalminusscreen",
+    "description": "Default App Vault package Sends notifications and can't be uninstalled through the Apps tab. Can be downloaded back from Play Store if needed.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.android.globalpersonalassistant",
+    "label": "Globalpersonalassistant",
+    "description": "MI Vault aka the \"assistant\" you open swiping left from MI Home",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.appfinder",
+    "label": "Finder",
+    "description": "HyperOs 2.0.202.0, it didn't break the system or ui search function or poco launcher search app function. Havent heard of it breaking stuff for others so dont think it's of much concern has 15 trackers",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.emapal",
+    "label": "Emapal",
+    "description": "GamePal In China language game mode tracing menu not available for users. Safe to remove.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.global.bbs",
+    "label": "Bbs",
+    "description": "Mi Community (https://play.google.com/store/apps/details?id=com.mi.global.bbs) Xiaomi Forum app",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.global.pocobbs",
+    "label": "Pocobbs",
+    "description": "Poco Community It's only a forum and community app for POCO phones.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.global.pocostore",
+    "label": "Pocostore",
+    "description": "POCO Store It's an official POCO online store. https://play.google.com/store/apps/details?id=com.mi.global.pocostore",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.global.shop",
+    "label": "Shop",
+    "description": "Mi Store (https://play.google.com/store/apps/details?id=com.mi.global.shop) Xiaomi app store",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.globalTrendNews",
+    "label": "Global Trend News",
+    "description": "Can't find info about this package Probably used for displaying (useless) news",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.globalbrowser",
+    "label": "Globalbrowser",
+    "description": "Mi Browser Privacy nightmare. You really should use something else. https://www.xda-developers.com/xiaomi-mi-web-browser-pro-mint-collecting-browsing-data-incognito-mode/ Note: Since MIUI 12, you can no longer uninstall this app. Disabling it still works fine.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.globallayout",
+    "label": "Globallayout",
+    "description": "Home Layout Sets the default MIUI launcher to global layout instead of Chinese (or HyperOS) when you first launch the app or when cleaning the launcher data. After removing this app there are several replacement widgets and no phone/message at the bottom. Because Chinese MUI uses other apps and package names instead of just changing the default layout in the MIUI launcher code, they just threw the app in.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.globalminusscreen",
+    "label": "Globalminusscreen",
+    "description": "Xiaomi App Vault https://play.google.com/store/apps/details?id=com.mi.android.globalminusscreen&gl=US",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.health",
+    "label": "Health",
+    "description": "Heart Rate Hidden app, not available for users. https://www.reddit.com/r/Xiaomi/comments/v0uhhx/found_hidden_heart_rate_app_in_miui_1304_i_opened/ In HyperOS, this app is deprecated and there are no hidden activities like in miui 14: https://www.apkmirror.com/apk/xiaomi-inc/mi-health/mi-health-1-0-6-release/mi-health-1-0-6-android-apk-download/",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.healthglobal",
+    "label": "Healthglobal",
+    "description": "Mi Health. Xiaomi's health and fitness app. Tracks sleep, step count, BMI, and menstruation cycle. Includes heart rate monitoring support using the camera. https://www.xda-developers.com/mi-health-xiaomi-fitness-app/ https://www.xda-developers.com/xiaomi-mi-health-app-gets-heart-rate-monitoring-support-using-camera/",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.liveassistant",
+    "label": "Liveassistant",
+    "description": "Mi Live Assistant I don't really know what it is. Maybe an old name for \"com.mi.android.globalpersonalassistant\"",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.setupwizardoverlay",
+    "label": "Setupwizardoverlay",
+    "description": "Weird package related to the SetupWizard (the menu which assists you to setup your phone for the first time) A user said he needed to remove this package to be able to properly apply a dark theme to the Settings app.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mi.webkit.core",
+    "label": "Core",
+    "description": "MI WebView Xiaomi alternative to Google WebView REMINDER : It is a system component for the Android operating system that allows Android apps to display content from the web directly inside an application. It's based on Chrome. WARNING: Make to have another Webview before uninstalling it or some apps may not work properly .An open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.accessibility",
+    "label": "Accessibility",
+    "description": "Mi Ditto Accesibility feature. Dictation (TTS) and speech output, making mobile devices more convenient for people who have difficulties using conventionally designed smartphones.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.analytics",
+    "label": "Analytics",
+    "description": "Xiaomi Analytics This app is shady. According to a guy who tried to reverse engineer the app, Xiaomi Analytics can replace any (signed?) package they want silently on your device within 24 hours. Maybe that no longer the case now but... you don't want analytics anyway. Source : http://blog.thijsbroenink.com/2016/09/xiaomis-analytics-app-reverse-engineered/",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.android.fashiongallery",
+    "label": "Fashiongallery",
+    "description": "Mi Wallpaper Carousel (https://play.google.com/store/apps/details?id=com.miui.android.fashiongallery) A lockscreen customization app. Displays a new photo every on your lock screen every time you turn ON your screen.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.antispam",
+    "label": "Antispam",
+    "description": "MIUI Antispam spam phone numbers filter (blacklist). Suspicious analytics inside and has access to internet. Cloud backup possible. At quick glance it is not a private antispam app. Can someone check what data are collected/transfered?",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.aod",
+    "label": "Aod",
+    "description": "Always-on display and Lock screen editor Safe to remove if you don't use \"Always-on display\" and \"Lock screen editor\" features in settings. Required for the fingerprint scanner if you want without double-tapping or pressing the power button.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.audioeffect",
+    "label": "Audioeffect",
+    "description": "AudioEffect from Xiaomi (https://developer.android.com/reference/android/media/audiofx/AudioEffect) Used by the equalizer (to be confirmed)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.audiomonitor",
+    "label": "Audiomonitor",
+    "description": "Recording Assistant. Voice Call Recorder (only in MIUI dialer app). Unused on Global, EEA MIUI",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.backup",
+    "label": "Backup",
+    "description": "MIUI Backup Local Backup/Restore feature (Settings > Additional Settings > Local backups) It seems this app can communicate with Mi Drop This app has 73 permissions and can obviously do everything it wants.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.bugreport",
+    "label": "Bugreport",
+    "description": "Mi Feedback Used to send bug report to devs",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.calculator",
+    "label": "Calculator",
+    "description": "MIUI Calculator (https://play.google.com/store/apps/details?id=com.miui.calculator)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.carlink",
+    "label": "Carlink",
+    "description": "CarWith Not supported for most cars and only Chinese.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.carrierinstructions",
+    "label": "Carrierinstructions",
+    "description": "Manual Shortcut to the carrier's online manual.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.catcherpatch",
+    "label": "Catcherpatch",
+    "description": "Needed for Application Extension Service (com.miui.contentcatcher).",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.cit",
+    "label": "Cit",
+    "description": "Hardware tests Secret codes (https://web.archive.org/web/20220520051328/https://twitter.com/fs0c131y/status/933037531066785797). Lets you run hardware tests. https://c.mi.com/thread-1744085-1-0.html",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.cleaner",
+    "label": "Cleaner",
+    "description": "Mi Cleaner Shady Xiaomi cleaner app developed by Cheetah mobile which has previously been caught in ad fraud and user data theft with this app in 2018 (previously called com.miui.cleanmaster and banned from the PlayStore). This \"new\" app is still full of trackers https://www.gadgets360.com/apps/news/banned-security-app-clean-master-by-cheetah-mobile-collected-user-private-data-report-2189633 Pithus analysis: https://beta.pithus.org/report/f7f7ee425a8dc928db75105bd8f52e9b02f11dec3b398aac9fef1d42809d8ec1",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.cleanmaster",
+    "label": "Cleanmaster",
+    "description": "Mi Cleaner Shady Xiaomi cleaner app developed by Cheetah mobile which has previously been caught in ad fraud and user data theft in 2018. The app has been banned from the PlayStore and then reintroduced under the package name 'com.miui.cleaner'. https://www.gadgets360.com/apps/news/banned-security-app-clean-master-by-cheetah-mobile-collected-user-private-data-report-2189633",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.cloudbackup",
+    "label": "Cloudbackup",
+    "description": "Mi Cloud backup Needed for Xiaomi cloud backup.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.cloudservice",
+    "label": "Cloudservice",
+    "description": "Dependency for synchronizing data with Xiaomi Cloud, including photos, contacts, messages, etc. This feature is essential for Xiaomi phone users in China, as Xiaomi Cloud is their primary cloud storage service.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.cloudservice.sysbase",
+    "label": "Sysbase",
+    "description": "Another Mi Cloud dependency",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.compass",
+    "label": "Compass",
+    "description": "Mi Compass I think you understand its purpose...",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.contentcatcher",
+    "label": "Contentcatcher",
+    "description": "Application Extension Service It's a password manager in settings, requires Mi Account to Autofill and it syncs to your account.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.contentextension",
+    "label": "Contentextension",
+    "description": "Taplus It's disabled on default in settings. It allows you to analyze images and text by pressing and holding items on your screen to get contextual info.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.core",
+    "label": "Core",
+    "description": "MIUI SDK It is obiously needed for MIUI to work correctly. FYI, it manages the MIUI Analytics service (`tracking.miui.com`), autoinstall MIUI apps updates (?). Related to GetApps 'com.xiaomi.market' China Mi App Store), DropboxManager where is temp clean code, a lot of logs. Found things related to Quick Apps 'com.miui.hybrid', DataUpdateManager (related to micloud?). Telocation update, app looks like tracking everything. Can be disabled and uninstalled with MIUI 13.0.6, MIUI 14, see https://github.com/0x192/universal-android-debloater/issues/632 NOTE: uninstalling this package causes the Settings app to crash when searching in Settings, so better disable this app instead. If you want to test, disable this app and open an issue if anything isn't working. Another weird thing is normal user can disable this app using hidden Settings to manage app by in Google Play. No effects after disable, but not sure if its required for Miui updates or gestures.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.core.internal.assistant",
+    "label": "Assistant",
+    "description": "Needed for Chinese Mi AI (com.miui.voiceassist).",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.core.internal.editor.services",
+    "label": "S",
+    "description": "I only found: config_enableHapticTextHandle true What is this mean? it's used to permission MIUIOP 10008 in some apps. MIUIOP = miui optimization? it's useless or important? No effects after removing, it's probably a feature of Touch Assistant, but its used on 'com.miui.core'?",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.core.internal.services",
+    "label": "S",
+    "description": "I only found: array name= config_deviceSpecificSystemServices item: com.miui.me.server.auto_install.InstallService What does this mean? I have to check com.miui.core what it does and it's for autoinstall miui apps updates from GetApps 'com.xiaomi.market'.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.daemon",
+    "label": "Daemon",
+    "description": "MIUI daemon Collects a lot of data and sends them to China. See: https://web.archive.org/web/20210923050136/https://twitter.com/fs0c131y/status/938872347087564800",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.easygo",
+    "label": "Easygo",
+    "description": "For me, this app means nothing. A lot of useless code that you can't use.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.enbbs",
+    "label": "Enbbs",
+    "description": "Xiaomi Forums old package. Now com.mi.global.bbs.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.extraphoto",
+    "label": "Extraphoto",
+    "description": "Bokeh The document mode of the Xiaomi camera (for taking IDs), deleting it doesn't affect the editing of albums.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.face",
+    "label": "Face",
+    "description": "MIUI Biometric Face Unlock feature",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.face.overlay.miui",
+    "label": "Miui",
+    "description": "MiuiBiometricResOverlay Face Unlock feature will be unavailable.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [
+      "com.miui.face"
+    ],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.fm",
+    "label": "Fm",
+    "description": "MIUI FM Radio app",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.fmservice",
+    "label": "Fmservice",
+    "description": "FM Radio Service Needed by com.miui.fm to work correctly",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.freeform",
+    "label": "Freeform",
+    "description": "Floating window I think the name of the app is pretty straightforward You can make apps appear above other applications https://forum.xda-developers.com/android/miui/floating-windows-miui-12-t4125661 On some phones even if you uninstalled it, floating window still works.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.gallery",
+    "label": "Gallery",
+    "description": "MIUI Gallery app. Note: Removing the Gallery will break the send screenshot feature (swipe 3 fingers to show the screenshot preview). It has several trackers and sometimes connects to micloud, even if the account is not added.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.global.packageinstaller",
+    "label": "Packageinstaller",
+    "description": "MIUI Package Installer. Provides sideload apps virus checker when installing APKs. Removal causes bootloop on Xiaomi.EU custom ROMs. Use the built-in com.android.packageinstaller instead.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.greenguard",
+    "label": "Greenguard",
+    "description": "Security Guard Service The app includes three different antivirus brands built in that the user can choose from to keep their phone protected: Avast, AVL, and Tencent. Upon selecting the app, the user selects one of these providers as the default Anti-Virus engine to scan the device. It the app that scans an app before installing it NOTE : A vulnerability was found in 2019 : https://research.checkpoint.com/2019/vulnerability-in-xiaomi-pre-installed-security-app/",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.guardprovider",
+    "label": "Guardprovider",
+    "description": "Guard Provider security app The app includes 3 different antivirus brands built in that the user can choose (Avast, AVL and Tencent). This app notably performs a virus scan of any apps you want to install. A serious vulnerability was found in 2019 Worth reading : https://research.checkpoint.com/2019/vulnerability-in-xiaomi-pre-installed-security-app/ You may want to remove this app from a privacy stance. https://beta.pithus.org/report/797a7e405bc8e767deebbbcab3e06a19b05156de44292c918b582dff3078d7b8 IMPORTANT NOTE: Removing this package will very likely break any app installation/update. Before removing, disable security things in MIUI security app. On HyperOS this module is responsible for showing the 'Install via USB' prompt when installing apps via ADB (enabled through developer options, requires Mi account the first time).",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.home",
+    "label": "Home",
+    "description": "MIUI System Launcher It's basically the home screen, the way icons and apps are organized and displayed. Note: If you remove this package on devices based on MIUI 12+ with Android 11+, you will lose navigation gestures and recent apps view EVEN with a 3rd party launcher... https://web.archive.org/web/20220926221620/https://libreddit.spike.codes/r/Xiaomi/comments/o6vk5z/miui_12125_and_android_11_gestures/ DON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER!",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.huanji",
+    "label": "Huanji",
+    "description": "Mi Mover (https://play.google.com/store/apps/details?id=com.miui.huanji) Lets you transfer your contacts, messages, personal files, all the installed apps (but not it's data). Also all the settings (app + system) from an Android phone to a Xiaomi phone. The two phones will establish a direct Wi-Fi connection.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.hybrid",
+    "label": "Hybrid",
+    "description": "Quick Apps It's basically an app which shows you ads and tracks you... Funny thing, Xiaomi's Quick Apps was reportedly being blocked by Google Play Protect. https://www.androidpolice.com/2019/11/19/xiaomi-quick-apps-flagged-blocked-google-play-protect/ # Reverse engineering of the app : https://medium.com/@gags.gk/reverse-engineering-quick-apps-from-xiaomi-a1c9131ae0b7 Spoiler : you really should delete this package.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.hybrid.accessory",
+    "label": "Accessory",
+    "description": "Xiaomi Hybrid Accessory Smartphone accessories support for Quick Apps (com.miui.hybrid)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.klo.bugreport",
+    "label": "Bugreport",
+    "description": "KLO Bugreport This app registers system failures and Android applications errors and sends bugs to Xiaomi servers.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.maintenancemode",
+    "label": "Maintenancemode",
+    "description": "Maintenance Mode The maintenance mode of the cell phone, the cell phone maintenance time into an empty user data system mode, to ensure the safety of cell phone data. Also has child mode. Not useful if you are not in China.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.mediaeditor",
+    "label": "Mediaeditor",
+    "description": "Xiaomi Gallery Editor Extension for MIUI Gallery that's used to edit photos and videos.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.mediafeature",
+    "label": "Mediafeature",
+    "description": "MediaFeature合集 Is this something for media? Unused app, probably for China.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.mediaviewer",
+    "label": "Mediaviewer",
+    "description": "Media viewer Old? Mi Video.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.metoknlp",
+    "label": "Metoknlp",
+    "description": "Network location provider Useless, only for China, have analytics things.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.micloudsync",
+    "label": "Micloudsync",
+    "description": "Dependency for synchronizing data with Xiaomi Cloud, including photos, contacts, messages, etc. This feature is essential for Xiaomi phone users in China, as Xiaomi Cloud is their primary cloud storage service.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miinput",
+    "label": "Miinput",
+    "description": "Removing this package breaks \"Gesture shortcuts\" under \"Additional settings\".",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miservice",
+    "label": "Miservice",
+    "description": "Services & feedback Used to send feedbacks (and data) to Xiaomi. Integration in Wechat Seems to be able to launch 'Baidu location service' Has too many permissions, runs in the background all the time and can be removed without issue.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.mishare.connectivity",
+    "label": "Connectivity",
+    "description": "Mi Share Unified file sharing service between Xiaomi, Oppo, Realme and Vivo devices using Wifi-direct Settings -> Connection & sharing -> Mi Share FYI : Wifi direct allows 2 devices to establish a direct Wi-Fi connection without requiring a wireless router.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.misound",
+    "label": "Misound",
+    "description": "Earphones (it's the name of the app) Provides the sounds section in Settings and is needed for the equalizing Some people removed this package but I personaly don't think it's worth it. This package isn't really an issue (no dangerous permissions and does not run in the background all the time) You can still remove it. You'll be just fine if you really don't need it.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miwallpaper",
+    "label": "Miwallpaper",
+    "description": "Mi Wallpaper Removing this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper. Note: it may also result in longer boot times (~15s) because the system try to call miwallpaper during boot",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miwallpaper.config.overlay",
+    "label": "Overlay",
+    "description": "Another overlay for com.miui.miwallpaper. Since all other overlays related to it are listed in recommended and marked as useless empty apps, this one is most likely the same.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miwallpaper.earth",
+    "label": "Earth",
+    "description": "SuperWallpaperEARTH / SuperWallpaperMARS Live/animated Xiaomi wallaper",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miwallpaper.mars",
+    "label": "Mars",
+    "description": "SuperWallpaperEARTH / SuperWallpaperMARS Live/animated Xiaomi wallaper",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miwallpaper.overlay",
+    "label": "Overlay",
+    "description": "App that doesn't do anything, no code. Safe to remove. You will need to remove it twice.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miwallpaper.overlay.customize",
+    "label": "Customize",
+    "description": "App that doesn't do anything, no code. Safe to remove.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miwallpaper.overlay.lundun",
+    "label": "Lundun",
+    "description": "app that doesnt do anything, no code. Safe to remove. You will need remove it 2 times.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miwallpaper.overlay.qr",
+    "label": "Qr",
+    "description": "Useless app to default lock wallpaper path? Probably unused. Safe to remove.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.miwallpaper.telcel.overlay",
+    "label": "Overlay",
+    "description": "Useless app to telcel wallpaper? Probably unused. Safe to remove.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.msa.global",
+    "label": "Global",
+    "description": "Main System Ads Analyzation of user behaviors to show you ads. Yeah Xiaomi phones has ads... https://www.theverge.com/2018/9/19/17877970/xiaomi-ads-settings-menu-android-phones",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.newhome",
+    "label": "Newhome",
+    "description": "Content Service A lot bloated. Only useful in China.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.newmidrive",
+    "label": "Newmidrive",
+    "description": "Mi Drive (Chinese version) Lets you upload and sync your files on the (Mi) Cloud. Always run in background",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.nextpay",
+    "label": "Nextpay",
+    "description": "Smart cards Web Extension Only for Chinese.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.notes",
+    "label": "Notes",
+    "description": "Mi Notes",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.notification",
+    "label": "Notification",
+    "description": "Notifications are working without this app. It is possible to access the app notification settings by long pressing on the notification without the app. However notification settings in the settings menu will be broken without this package. The app is mandatory to enable notifications of apps that have been disabled before. Note: embeds a tracking statistics service (usage tracking : `id`,`pkgName`,`latestSentTime`,`sentCount`,`avgSentDaily`,`avgSentWeekly)",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.otaprovision",
+    "label": "Otaprovision",
+    "description": "OtaProvision Useless, only for China, have analytics things.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.packageinstaller",
+    "label": "Packageinstaller",
+    "description": "Package installer Hardcoded in Xiaomi China Rom. Causes BOOTLOOP on Chinese ROM When remove. It's weird when after a month this app is gone from my phone for no reason and Android enabled stock package installer.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.personalassistant",
+    "label": "Personalassistant",
+    "description": "Seems to be App Vault on some phones (https://play.google.com/store/apps/details?id=com.mi.android.globalpersonalassistant) https://c.mi.com/thread-1017547-1-0.html",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.phone.carriers.customized.overlay",
+    "label": "Overlay",
+    "description": "Something about WiFi calling \"vowifi\", \"volte\", \"notification on keyguard\" It's unused.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.phone.carriers.overlay",
+    "label": "Overlay",
+    "description": "Preferred network type to Vodafone 5G/4G/3G/2G auto. It's unused.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.phone.carriers.overlay.h3g",
+    "label": "H3G",
+    "description": "Preferred network type to h3g 5G/4G/3G/2G auto. It's unused.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.phone.carriers.overlay.vodafone",
+    "label": "Vodafone",
+    "description": "Preferred network type to Vodafone 5G/4G/3G/2G auto. It's unused.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.phrase",
+    "label": "Phrase",
+    "description": "Frequent Phrases This adds a button next to paste on input fields containing a list of phrases you can edit and paste at any time. In any case it has access to internet, is linked to MiCloud and contains a weird CloudTelephonyManager java class in the code.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.player",
+    "label": "Player",
+    "description": "Mi Music (https://play.google.com/store/apps/details?id=com.miui.player)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.powerkeeper",
+    "label": "Powerkeeper",
+    "description": "Battery and Performance (aggressive) MIUI power management (https://dontkillmyapp.com/xiaomi) That's a weird app that also contains a DRM Manager and a service related to Cloud Backup Has obviously a lot of dangerous permissions. I guess removing this package will decrease the battery performance. Is it that noticeable? Can someone try? NOTE: REMOVING THIS PACKAGE CAUSES A BOOTLOOP ON THE REDMI PAD. To not get bootloop, log out from Mi Account.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.privacycomputing",
+    "label": "Privacycomputing",
+    "description": "MIUI Privacy Components Unknown app from Miui China. There's something about keys, key status code.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.providers.weather",
+    "label": "Weather",
+    "description": "Provider for MI Weather app (com.miui.weather) Content providers encapsulate data, providing centralized management of data shared between apps. https://developer.android.com/guide/topics/providers/content-providers.html",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.qr",
+    "label": "Qr",
+    "description": "MUI Qr code scanner",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.rom",
+    "label": "Rom",
+    "description": "Core package of MIUI DO NOT REMOVE THIS",
+    "safety": "danger",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.screenrecorder",
+    "label": "Screenrecorder",
+    "description": "Mi Screen Recorder",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.screenshot",
+    "label": "Screenshot",
+    "description": "MIUI Screenshot Screenshots will not work.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.securityadd",
+    "label": "Securityadd",
+    "description": "Related to the MIUI Security app REMOVING THIS WILL MOST LIKELY BOOTLOOP YOUR DEVICE BELOW MIUI 13! This may depend on your MIUI version and device, see https://github.com/0x192/universal-android-debloater/issues/641",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.securitycenter",
+    "label": "Securitycenter",
+    "description": "MIUI Security app Provides \"protection and optimization tools\" App lock, Data usage, Security scan, Cleaner, Battery saver, Blocklist and other features. This package is mostly the front-end (UI). https://beta.pithus.org/report/f8c24ccfc526389ff9084505c60fba3d3463565f92e2015190e2974b370e7c4e NOTE: REMOVING THIS WILL MOST LIKELY BOOTLOOP YOUR DEVICE! Uninstalling this on the Redmi Pad or Miui 13 and above is not causing any bootloop, but you will lose some functionality like the battery status/usage page, as well as the app usage/removal page.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.securitycenter.securitycenter_phone_overlay.config.overlay",
+    "label": "Overlay",
+    "description": "'Security tools' name app only found",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.securitycore",
+    "label": "Securitycore",
+    "description": "Core features of the \"com.miui.securitycenter\" Provides Enterprise Mode, Dual App, Second Space, Fingerprint Add, Gesture Settings REMOVING THIS MAY BOOTLOOP YOUR DEVICE! Depends on your MIUI version and device, see https://github.com/0x192/universal-android-debloater/issues/641 On MIUI 13 and above it doesn't bootloop and performance appears similar, but this app shows annoying notifications when running new apps.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.securityinputmethod",
+    "label": "Securityinputmethod",
+    "description": "Mi Secure Keyboard A useless keyboard used to secure your password when logging in.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.settings.rro.device.hide.statusbar.overlay",
+    "label": "Overlay",
+    "description": ".webp files, and one config for me it means nothing. Only Chinese.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.settings.rro.device.type.overlay",
+    "label": "Overlay",
+    "description": "I found only PNG files and it's Chinese. Only Chinese.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.smsextra",
+    "label": "Smsextra",
+    "description": "Dependency for MIUI Messaging (MIUI SMS app misleadingly called (`com.android.mms`) You can remove it if you don't use the default SMS app (and you shouldn't). Run in the background once the phone is booted, has access to the internet and interact with Cloud Manager.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.spock",
+    "label": "Spock",
+    "description": "Analytics app which constantly runs in the background. Sends identifiable data to Xiaomi servers. See https://www.virustotal.com/gui/file/70400d0055e1924966fb8367cafddc175dee914bbdc227342c9dd86fb3aa829f/details It leaks system version, device model, exact firmware build + some few mysterious IDs",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.sysopt",
+    "label": "Sysopt",
+    "description": "SysoptApplication Strange app with no permissions. By looking at the code it seems to be some kind of debug app. The app doesn't seem to do any interesting stuff.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.system",
+    "label": "System",
+    "description": "Called 'MIUI System Launcher' but it's not the launcher itself (com.miui.home is) This package is another core MIUI app you can't remove. It centralizes a lot of default configuration values",
+    "safety": "danger",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.system.overlay",
+    "label": "Overlay",
+    "description": "App without code and safe to remove.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.systemAdSolution",
+    "label": "System Ad Solution",
+    "description": "Spyware which analyses user behavior for targeted ads. Yeah Xiaomi phones has ads... https://www.theverge.com/2018/9/19/17877970/xiaomi-ads-settings-menu-android-phones",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.systemui.carriers.overlay",
+    "label": "Overlay",
+    "description": "You will lose LTE. Important overlay to LTE connection.",
+    "safety": "danger",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.systemui.devices.overlay",
+    "label": "Overlay",
+    "description": "The empty space between the status bar and the edges of the screen Elements at edges ignore screen fillets and cutouts when removed.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.systemui.overlay.devices.android",
+    "label": "Android",
+    "description": "Config doze Component 'com.miui.aod' and ext media ready notification 'Tap to safely remove device'.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.thirdappassistant",
+    "label": "Thirdappassistant",
+    "description": "Third party app problems It's boring app.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.touchassistant",
+    "label": "Touchassistant",
+    "description": "Quick Ball/Touch Assistant Touch assistant with a combination of five unique shortcuts which aimed to give easy and quick access to functions and apps you use frequently.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.translation.kingsoft",
+    "label": "Kingsoft",
+    "description": "Translation stuff by Kingsoft (https://en.wikipedia.org/wiki/Kingsoft)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.translation.xmcloud",
+    "label": "Xmcloud",
+    "description": "Translation stuff. Does not impact global translation for non-Chinese users.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.translation.youdao",
+    "label": "Youdao",
+    "description": "Translation stufff by Youdao (https://en.wikipedia.org/wiki/Youdao)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.translationservice",
+    "label": "Translationservice",
+    "description": "Translation stuff. Does not impact global translation for non-Chinese users.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.tsmclient",
+    "label": "Tsmclient",
+    "description": "Smart cards Only for Chinese.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.tv.analytics",
+    "label": "Analytics",
+    "description": "Analytics Weird analytics app with a lot random stuff found in resources.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.uireporter",
+    "label": "Uireporter",
+    "description": "UIReporter This Chinese app has some secret code: 847, 1130.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.userguide",
+    "label": "Userguide",
+    "description": "Xiaomi User guide",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.video",
+    "label": "Video",
+    "description": "Mi Video with a different package name. Has a lot of ads, tracking.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.videoplayer",
+    "label": "Videoplayer",
+    "description": "Mi Video (https://play.google.com/store/apps/details?id=com.miui.videoplayer) Has a lot of ads, tracking.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.videoplayer.overlay",
+    "label": "Overlay",
+    "description": "Mi Video overlay Overlays are usually themes.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.vipservice",
+    "label": "Vipservice",
+    "description": "My services Customer support maybe not be available for users.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.virtualsim",
+    "label": "Virtualsim",
+    "description": "Mi Roaming It enables users to connect to roaming data on-demand via virtual SIM technology. https://alertify.eu/xiaomi-mi-roaming/",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.voiceassist",
+    "label": "Voiceassist",
+    "description": "Mi AI Chinese voice assist.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.voiceassistoverlay",
+    "label": "Voiceassistoverlay",
+    "description": "Overlay to Mi AI 'com.miui.voiceassist'. The overlay won't show up when you trigger it, which makes the voice-to-command features largely inaccessible.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.voicetrigger",
+    "label": "Voicetrigger",
+    "description": "Wake with voice Not needed if you removed Chinese Mi AI.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.vpnsdkmanager",
+    "label": "Vpnsdkmanager",
+    "description": "MiuiVpnSdkManager Vpn to game service?",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.vsimcore",
+    "label": "Vsimcore",
+    "description": "Virtual Sim core service",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.wallpaper.overlay",
+    "label": "Overlay",
+    "description": "App that doesnt do anything, no code. Safe to remove. You will need remove it 2 times.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.wallpaper.overlay.customize",
+    "label": "Customize",
+    "description": "App that doesnt do anything, no code. Safe to remove.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.weather2",
+    "label": "Weather2",
+    "description": "Mi Weather app",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.wmsvc",
+    "label": "Wmsvc",
+    "description": "WMService Runs at boot and has access to internet + GPS I quickly looked at the decompiled code and saw some unsanitized SQL inputs, which is BAD! (vulnerable to SQL injection) Tries to get your android unique Google advertising ID from Google Play Services. Feeds and launches the spying/analytics app \"com.miui.hybrid\". Doesn't seem to do anything important, only tracking. WARNING: It does not seem to affect any functionality or cause bootloop.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.yellowpage",
+    "label": "Yellowpage",
+    "description": "Yellow Page from MIUI. REMINDER : Yellow pages contain phone numbers of companies and services. They are provided by Xiaomi partners or businesses themselves.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.miui.zman",
+    "label": "Zman",
+    "description": "Mi Secure sharing Provides an option in the settings of the Xiaomi Gallery to automatically remove location and metadata from images you want to share. This do not remove metadata of the picture in the gallery but only the shared copy. There's also a \"Secure sharing\" watermark that shows up when you share photos on WeChat without metadata. The question is does this really remove all EXIF tags? Can someone test? This is a useful app anyway but do not forget that all your photos/vidoes taken with the Xiaomi camera are still geo-tagged (+ all others exif tags) by default. What you can do is at least revoke the GPS permission to the camera. FOSS alternative to this app : https://f-droid.org/fr/packages/com.jarsilio.android.scrambledeggsif/ https://f-droid.org/fr/packages/de.kaffeemitkoffein.imagepipe/",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.NetworkBoost",
+    "label": "Network Boost",
+    "description": "Network Boost Network acceleration not available in settings wifi? People said it's placebo and it doesn't speed up the network. It has a lot of Chinese code and has permission to MIUI analytics.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.ab",
+    "label": "Ab",
+    "description": "Mi Store System Components Something about login, paying in Mi Store China.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.account",
+    "label": "Account",
+    "description": "Mi Account Has a LOT of permissions + Facebook trackers. Collects many information, including your phone number, your unique International mobile subscriber identity (IMSI) and your clipboard). You should remove this if you don't have or don't want a Mi account. WARNING: Make sure to log out of your Mi Account and unbind your phone from it. If you don't you could be locked out from your phone after removing this package. Remove Mi Account: https://xiaomiui.net/how-to-remove-mi-account-7606/ Pithus analysis: https://beta.pithus.org/report/3f5abc9d7215dd0be5c3ac137b0cd528217640b5778e9f849a9beb0a34eda8dc",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.aiasst.service",
+    "label": "Service",
+    "description": "AI Call Assistant. Useless Call settings.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.aiasst.vision",
+    "label": "Vision",
+    "description": "AiasstVision. Not needed if you removed AI Call Assistant.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.aicr",
+    "label": "Aicr",
+    "description": "Mi AI Engine Another app to Mi AI from MIUI China. Might break the ability to set wallpapers See https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/1110 https://hyperosupdates.com/apps/com.xiaomi.aicr/",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.aireco",
+    "label": "Aireco",
+    "description": "XiaoaiRecommendation This app does nothing, totally random frameworks unused.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.android.tvsetup.partnercustomizer",
+    "label": "Partnercustomizer",
+    "description": "SetupCustomizer On first boot setup installs bloatware.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.aon",
+    "label": "Aon",
+    "description": "'I always on' found in code and a lot statistics. Also Miui analytics permissions. Region of the tracking device, found things Mi Face, spy on your face and everything you do on your phone? AONEventTracking uses and sends to 'com.miui.analytics'.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.barrage",
+    "label": "Barrage",
+    "description": "Bullet screen notifications Pop-up notifications (feature inside the game service) Have a lot of Chinese things in this code but it's for the game service, NOT gamespace. So it's for China only.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.bluetooth",
+    "label": "Bluetooth",
+    "description": "MIUI Bluetooth Extension. Doesn't seem to affect bluetooth functionality. Tested on Poco M4 Pro 5G HyperOS 1.0.1.0. Note: If you deleted (com.xiaomi.xmsf) this package will likely send \"Bluetooth extension stopped working\" errors, uninstalling it removes them.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.bluetooth.overlay",
+    "label": "Overlay",
+    "description": "It has only unused png files, webp. Images in it: wireless headphones from all angles.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.bsp.gps.nps",
+    "label": "Nps",
+    "description": "GPS location I think bsp = board system package (https://en.wikipedia.org/wiki/Board_support_package) Not sure about nps (It might be Non-Permanent GPS station) It's a small package which seems to display a notification when an app is using GPS. More precisely, there is a receiver (GnssEventReceiver) which listen to com.xiaomi.bsp.gps.nps.GetEvent This event most likely happen when an app use the GPS and refers to the state of the communication with the GNSS: FIX, LOSE, RECOVER, START, STOP It's safe to remove if you really want to.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.bttester",
+    "label": "Bttester",
+    "description": "BTCIT Bluetooth Test Service",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.calendar",
+    "label": "Calendar",
+    "description": "Mi Calendar. Google trackers inside and needs 48 permissions! Obviously talks to Xiaomi servers. The com.mi.health.provider.permission.read_menstruation permissions is really creepy... There are better alternatives. Pithus analysis: https://beta.pithus.org/report/6c68ddd1f9e2d1f9e1df2eab572c07f1e34c4a6490c0ba98554a7356ca2a351d Note: Since MIUI 12, you can no longer uninstall this app. Disabling it still works fine.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.cameratools",
+    "label": "Cameratools",
+    "description": "CameraTools Camera calibration. Deleting it does not affect the camera.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.channel",
+    "label": "Channel",
+    "description": "Mi Talk Mi instant messaging app that lets you do practically the same thing as Whatsapp. NOTE: You should use Signal or Wire instead Whatsapp/Mi Talk for more privacy.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.digitalkey",
+    "label": "Digitalkey",
+    "description": "digitalkey Smart door locks, can also be used as a car key. Only for China.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.discover",
+    "label": "Discover",
+    "description": "System Apps Updater WARNING: Disable System app updates (but not firmware updates)",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.entitlement.o2",
+    "label": "O2",
+    "description": "Unknown, seems to be United Kingdom, Germany specific to the O2 carrier. https://en.wikipedia.org/wiki/O2_(brand) If you don't use O2 carrier, it's safe to remove.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.finddevice",
+    "label": "Finddevice",
+    "description": "Find My Device feature (in the Settings) Allows you to locate a lost phone and wipe it remotely, provided it has an active Wi-Fi/mobile data connection. Before uninstalling, log out of your Mi Account. Removing this breaks factory reset, the Security Status page in Settings, and prevents Mi Account sign-in. Confirmed not to bootloop on POCO M5, but other MIUI versions/devices may still bootloop see https://github.com/0x192/universal-android-debloater/issues/641",
+    "safety": "danger",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.gamecenter",
+    "label": "Gamecenter",
+    "description": "Games Another app with a lot tracking and not needed for gamespace.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.gamecenter.sdk.service",
+    "label": "Service",
+    "description": "Game Service Not needed for gamespace. Disabled in settings on default. Have activities about alipay, login to account. I'm not sure what it's needed for.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.glgm",
+    "label": "Glgm",
+    "description": "Xiaomi Games Not sure if this app still exists.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.joyose",
+    "label": "Joyose",
+    "description": "GPU Tuner Optimizes your game for gaming. Some people have noticed that it locks the fps at 60 after selecting 90. https://youtu.be/gavEuH3Ck5o?t=550. If you want, you can test it by yourself.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.jr",
+    "label": "Jr",
+    "description": "Help you getting loans when shopping.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.lens",
+    "label": "Lens",
+    "description": "Related to camera app ? Safe to remove (according to a lot of users) I'd like to have more info about it. Can a Xiaomi user help ?",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.location.fused",
+    "label": "Fused",
+    "description": "It has china location, ads & analytics. You dont need it for location.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.macro",
+    "label": "Macro",
+    "description": "MiMacro is an automation task from Xiaomi like touch on MIUI Game Turbo. Has INTERNET and READ_PHONE_STATE permission allowing access to the phone number, serial number, whether a call is active, the number that a call is connected to... What is sure (from the code) is that the app collects the IMEI. Pithus analysis: https://beta.pithus.org/report/2b056ed84fe500552a58184035b962ba68af29457c24930c0aa8c9eba4af7bcf",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.market",
+    "label": "Market",
+    "description": "GetApps China Mi App Store. Essential for installing the Google Play Store and updating key system applications, such as the System Launcher.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mbnloader",
+    "label": "Mbnloader",
+    "description": "Modem Config Hidden app for Choosing Country vowifi?",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.metoknlp",
+    "label": "Metoknlp",
+    "description": "Network location provider Useless, only for China, have analytics things.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mi_connect_service",
+    "label": "Mi Connect",
+    "description": "MiConnectService Handles connection to IoT stuff Seems to be linked to Mi Home (com.xiaomi.smarthome)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.miaudiovisual",
+    "label": "Miaudiovisual",
+    "description": "MiAudioVisual Safe to remove if you not use audio visuals when screen is off.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mibrain.speech",
+    "label": "Speech",
+    "description": "Mi AI Speech Engine Another app to Mi AI Chinese app.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.micloud.sdk",
+    "label": "Sdk",
+    "description": "Mi Cloud sdk sdk = Software development kit Seems to be a dependency for \"com.miui.gallery\" (MIUI auto reboots android after remove this package)",
+    "safety": "danger",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.midrop",
+    "label": "Midrop",
+    "description": "Share Me (Mi Drop) (https://play.google.com/store/apps/details?id=com.xiaomi.midrop) P2P file transfer tool.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.midrop.overlay",
+    "label": "Overlay",
+    "description": "Mi Drop overlay Overlays are usually themes.",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.migameservice",
+    "label": "Migameservice",
+    "description": "Mi Game Service Chinese app made to test game service things.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mipicks",
+    "label": "Mipicks",
+    "description": "Mi Picks (becomed Mi Apps Store and now Get Apps -- Xiaomi app store) I believe this package is discontinued. https://play.google.com/store/apps/details?id=com.mi.global.shop",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.miplay_client",
+    "label": "Miplay Client",
+    "description": "MiPlay Client Provides support for Miracast (https://en.wikipedia.org/wiki/Miracast). It provides the Wireless Display feature (Settings - Connection & sharing - Cast).",
+    "safety": "advanced",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mircs",
+    "label": "Mircs",
+    "description": "Mi RCS Hidden unused Xiaomi free web messaging.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mirecycle",
+    "label": "Mirecycle",
+    "description": "Mi Recycle Xiaomi has extended its partnership with Cashify to launch the 'Mi Recycle' feature through its MIUI Security app. It will let Xiaomi phone users check the health of their smartphone and get their resale value directly from Cashify, the online re-commerce company based out of New Delhi. Source : https://gadgets.ndtv.com/mobiles/news/xiaomi-mi-recycle-cashify-miui-security-app-2018024",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mirror",
+    "label": "Mirror",
+    "description": "MIUI+ Beta Transfer files, sync copy text to PC without USB. https://plus.miui.com",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mis",
+    "label": "Mis",
+    "description": "Xiaomi Connected Car Service for China.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.misettings",
+    "label": "Misettings",
+    "description": "Xiaomi Settings app",
+    "safety": "danger",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mitv.res",
+    "label": "Res",
+    "description": "MiUtilRes Looks like mitv api. Probably Unsafe to remove.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.mtb",
+    "label": "Mtb",
+    "description": "Rueban(MTB)V2.4 Hidden debugging baseband tools, not available for users. https://i.postimg.cc/GpSxmNyj/Bez-n-zvu.png",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.o2o",
+    "label": "O2O",
+    "description": "o2o = online-to-offline ==> Describes systems enticing consumers within a digital environment to make purchases of goods or services from physical businesses. https://en.wikipedia.org/wiki/Online_to_offline NOTE: This package can make phone calls without user intervention.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.oobhelper",
+    "label": "Oobhelper",
+    "description": "OOBHelper Useless frameworks and logs.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.otrpbroker",
+    "label": "Otrpbroker",
+    "description": "TAMservice OTRP Protocol Negotiation Program (Internet of Things) Only useful in China.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.oversea.ecom",
+    "label": "Ecom",
+    "description": "Xiaomi ShopPlus. Given its name I think this package is useless.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.pass",
+    "label": "Pass",
+    "description": "Mi Pass is an App allows Xiaomi NFC phones to replace cards and keys in real life usage. Support NFC payment, bus card, key card, door and car lock features all together.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.payment",
+    "label": "Payment",
+    "description": "Old package name for Mi Credit (https://play.google.com/store/apps/details?id=com.micredit.in.gp) Mi Credit is a personal loan platform from Xiaomi.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.powerchecker",
+    "label": "Powerchecker",
+    "description": "Power Detector Security> Battery> Activity Control. Detects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted) Needed for 'com.miui.powerkeeper' to work.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.providers.appindex",
+    "label": "Index",
+    "description": "Provider for app index? I believe it is a provider for the settings but can't confirm (I don't have a Xiaomi device). A lot of people debloat this but I'd like to know more about this one. Content providers encapsulate data, providing centralized management of data shared between apps. https://developer.android.com/guide/topics/providers/content-providers.html",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.scanner",
+    "label": "Scanner",
+    "description": "Mi Scanner QR code scanner with a lot of questionable permissions : `ACCESS_FINE_LOCATION`, `CALL_PHONE`, `READ_CONTACTS`, `REQUEST_INSTALL_PACKAGES`, `QUERY_ALL_PACKAGES`, `FOREGROUND_SERVICE`, `INTERNET`",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.security.onetrack",
+    "label": "Onetrack",
+    "description": "SecurityOnetrackService Only uses MIUI analytics.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.shop",
+    "label": "Shop",
+    "description": "Xiaomi app store (I thinks it's discontinued) Now com.mi.global.shop (https://play.google.com/store/apps/details?id=com.mi.global.shop)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.simactivate.service",
+    "label": "Service",
+    "description": "Xiaomi SIM Activation Service SIM authentication process to access exclusive features in certain MIUI applications. For the activation to work you need to send a international SMS to China. Your carrier may block this by default and/or you'll probably need to pay extra for this. After SIM activation, you can send text messages (Mi Messages) to other Mi users using internet connection (like i-messages). You will be able to synchronize your messages into Mi Cloud and this also enables the Mi Find Device feature which allows you to track your phone’s location from your online Mi account. Note: To enable/disable Mi Messages go to Settings -> System Apps -> Messaging and reboot",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.smarthome",
+    "label": "Smarthome",
+    "description": "Mi Home (https://play.google.com/store/apps/details?id=com.xiaomi.smarthome) IoT. Lets you control with Xiaomi Smart Home Suite devices.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.touchservice",
+    "label": "Touchservice",
+    "description": "No activities, uses miui analytics looks like a tracking touch.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.trustservice",
+    "label": "Trustservice",
+    "description": "MiTrustService IFAASecCam, security things or 'Remote Control trust'.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.ugd",
+    "label": "Ugd",
+    "description": "GPU Driver Updater It's weird when this app cameback on HyperOS(from MIUI 12). Updates GPU driver.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.upnp",
+    "label": "Upnp",
+    "description": "UpnpService UPnP = Universal Plug and Play It’s a protocol that lets UPnP-enabled devices on your network automatically discover and communicate with each other For example it works with the Xiaomi Network Speaker (and probably a lot more Xiaomi IoT stuff) UPnP has a lot of security issues and you proably should disable it on your router. https://nakedsecurity.sophos.com/2020/06/10/billions-of-devices-affected-by-upnp-vulnerability/ This package is the Xiaomi implementation on Android (no AOSP support)",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.vipaccount",
+    "label": "Vipaccount",
+    "description": "Xiaomi VIP account https://www.mi.com/in/service/privilegefaq/",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.xaee",
+    "label": "Xaee",
+    "description": "XiaoaiEdgeEngine This app has something to Mi AI.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.xmsf",
+    "label": "Xmsf",
+    "description": "Xiaomi Service Framework Contains a set of API's for Xiaomi apps. Expect widespread breakage of Xiaomi apps/functionality if disabled. Disabling will mess with Alarm clock functionality(according to issue#136) and break Mi Cloud and Mi account (and all features that depend on them). I don't know about now, but in 2016 this app constantly tried to establish tcp connections in the background.",
+    "safety": "unsafe",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.xmsfkeeper",
+    "label": "Xmsfkeeper",
+    "description": "Xiaomi Service Framework Keeper Logger service for 'com.xiaomi.xmsf'",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xiaomi.youpin",
+    "label": "Youpin",
+    "description": "Xiaomi Yipin Mi Shop China.",
+    "safety": "recommended",
+    "category": "xiaomi",
+    "oems": [
+      "xiaomi"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

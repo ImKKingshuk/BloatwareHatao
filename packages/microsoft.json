@@ -1,0 +1,198 @@
+[
+  {
+    "name": "com.microsoft.appmanager",
+    "label": "Manager",
+    "description": "Link to Windows (https://play.google.com/store/apps/details?id=com.microsoft.appmanager) Microsoft app for synchronising your phone with a Windows PC.",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.deviceintegrationservice",
+    "label": "Deviceintegrationservice",
+    "description": "Device Integration Service Might be needed for Microsoft Link to Windows (com.microsoft.appmanager) which is preinstalled with OxygenOS 14. After Uninstalling, no issues occurred.",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.office.excel",
+    "label": "Excel",
+    "description": "Excel",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.office.officehub",
+    "label": "Officehub",
+    "description": "Microsoft Office Mobile Includes the complete Word, PowerPoint, and Excel apps to offer a convenient office experience on the go.",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.office.officehubhl",
+    "label": "Officehubhl",
+    "description": "Office Mobile hub (on Samsung Phone) Includes the complete Word, PowerPoint, and Excel apps to offer a convenient office experience on the go.",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.office.officehubrow",
+    "label": "Officehubrow",
+    "description": "Microsoft Mobile Office Beta",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.office.onenote",
+    "label": "Onenote",
+    "description": "OneNote (https://play.google.com/store/apps/details?id=com.microsoft.office.onenote) Microsoft and privacy you know... This app has a lot of permissions. For example it has access to phone state, including the phone number of the device, current cellular network information, the status of any ongoing calls...",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.office.outlook",
+    "label": "Outlook",
+    "description": "Outlook",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.office.powerpoint",
+    "label": "Powerpoint",
+    "description": "",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.office.word",
+    "label": "Word",
+    "description": "Word",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.skydrive",
+    "label": "Skydrive",
+    "description": "Microsoft OneDrive (Cloud) (https://play.google.com/store/apps/details?id=com.microsoft.skydrive)",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.microsoft.translator",
+    "label": "Translator",
+    "description": "Microsoft Translator app (https://play.google.com/store/apps/details?id=com.microsoft.translator) )",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.skype.m2",
+    "label": "M2",
+    "description": "Skype Lite (https://play.google.com/store/apps/details?id=com.skype.m2)",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.skype.raider",
+    "label": "Raider",
+    "description": "Skype (https://play.google.com/store/apps/details?id=com.skype.raider)",
+    "safety": "recommended",
+    "category": "microsoft",
+    "oems": [
+      "microsoft"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

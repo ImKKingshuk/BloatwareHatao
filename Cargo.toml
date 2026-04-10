@@ -1,0 +1,48 @@
+[workspace]
+resolver = "2"
+members = [
+    "bloatwarehatao-core",
+    "bloatwarehatao-tui",
+]
+
+[workspace.package]
+version = "0.2.0"
+edition = "2024"
+authors = ["ImKKingshuk"]
+license = "GPL-3.0"
+repository = "https://github.com/ImKKingshuk/BloatwareHatao"
+homepage = "https://github.com/ImKKingshuk/BloatwareHatao"
+description = "Ultimate Android Bloatware Removal Tool"
+keywords = ["android", "adb", "bloatware", "debloat", "optimization"]
+categories = ["command-line-utilities", "development-tools"]
+
+[workspace.dependencies]
+# Core dependencies
+tokio = { version = "1.42", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+anyhow = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# ADB communication
+async-process = "2.3"
+
+# Database
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+# TUI
+ratatui = "0.29"
+crossterm = "0.28"
+
+# CLI
+clap = { version = "4.5", features = ["derive"] }
+
+# Config
+toml = "0.8"
+directories = "5.0"
+
+# Utils
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.11", features = ["v4", "serde"] }

@@ -1,155 +1,246 @@
-<h1 align="center">BloatwareHatao</h1>
-<h3 align="center">v2.0.0</h3>
+<div align="center">
 
-BloatwareHatao - Your Ultimate Android Bloatware Removal Tool! 📱✨ Say goodbye to unwanted bloatware on your Android device with BloatwareHatao. Cleanse your device effortlessly, reclaiming space and enhancing performance. 💪✨ Take control of your smartphone experience with BloatwareHatao!
+# BloatwareHatao
 
-## What's New (v2.0.0)
+### The Ultimate Android Bloatware Removal Tool
 
-- **Complete Architecture Revamp**: Modular design with separate UI, core, data, and utility modules
-- **Smart Removal Wizard**: Guided flow that tailors cleaning intensity to the user’s comfort level
-- **Advanced Features**: Backup/restore, dry-run mode, batch operations, custom scripts, smart audits
-- **Enhanced UI/UX**: Colored output, progress bars, comprehensive menus, planner, and device health insights
-- **Robustness**: Better error handling, validation, logging, safety checks, and rescue list generation
-- **Command Line Interface**: Support for CLI arguments and automation (including audits, health checks, and planner tools)
-- **Device Management**: Device detection, info display, health snapshot, and connection validation
-- **Statistics & Logging**: Detailed operation logs, session reports, and removal statistics
-- **NDJSON Session Reports**: Optional structured logs for post‑processing and analytics
-- **Richer Health Snapshot**: Battery voltage/health/technology, SoC temperature, memory, CPU, storage, and network states
+### Unified Android Device Optimization Platform
 
-## Features
+### ⚛ Rust-Powered ⚛ TUI-First ⚛
 
-- 📱 **Bloatware Removal**: Effortlessly remove unwanted bloatware from your Android device.
-- 💪 **Safe & Recommended Cleaner**: Choose the safe and recommended cleaner for a standard bloatware removal.
-- ⚡ **Pro Bloatware Cleaner**: Dive deeper with extra cleaning options for a thorough bloatware removal.
-- 🌟 **Ultra Bloatware Cleaner**: For extreme cleaning, select the ultra cleaner option to rid your device of every trace of bloatware.
-- 💼 **Manual Bloatware Cleaner**: Enter the APK package name to remove specific bloatware manually.
-- 📋 **Batch Removal**: Remove multiple packages from a file or custom scripts.
-- 🔄 **Backup & Restore**: Create backups before removal and restore packages when needed.
-- 🧪 **Dry Run Mode**: Preview what would be removed without making changes.
-- 🧠 **Smart Removal Wizard**: Guided, conversational flow to recommend safe, pro, or ultra cleaning levels.
-- 🔍 **Pre-removal Audits**: Inspect remote script packages before removal, with system-app warnings.
-- ❤️ **Device Health Snapshot**: Monitor battery, voltage, health, technology, SoC temperature, memory, CPU, storage, uptime, Wi‑Fi, airplane mode, and mobile data state.
-- 🧭 **Cleaning Planner**: Capture goals, reminders, and notes for future cleanups.
-- 🛟 **Rescue Lists & Session Reports**: Automatically log removal operations and export rescue lists of removed packages.
-- 📊 **Statistics & Logging**: Track operations, view logs, reports, and monitor removal statistics.
-- ⚙️ **Settings & Configuration**: Customize behavior with persistent settings.
-- 🧾 **NDJSON Reports**: Enable structured NDJSON logging via Settings and view with `--report-ndjson`.
-- 📴 **Offline Mode**: Use local OEM scripts when connectivity is limited.
-- 🧹 **Removal Mode**: Choose default behavior: `uninstall`, `disable`, or `clear` (toggle in Settings).
-- 🔍 **Device Information**: View detailed connected device information.
-- 🔄 **Auto Updates**: Automatically checks for updates and updates itself to ensure you have the latest version of BloatwareHatao.
-- 🛠️ **Easy-to-Use Interface**: Interactive menus with colored output and progress indicators.
-- 📁 **Manufacturer & OS Version Selection**: Choose your device manufacturer and OS version for precise bloatware removal.
-- 🛡️ **Safety Features**: Comprehensive validation, confirmations, and error handling.
+#### Package Management, Device Health, and System Optimization in One Framework
 
-## Command Line Options
+BloatwareHatao is a unified Android bloatware removal and device optimization toolkit built entirely in Rust. It provides a comprehensive TUI workspace alongside a powerful CLI, enabling users to perform package analysis, safe removal, device health monitoring, and system optimization from a single modular framework.
 
-BloatwareHatao now supports command line arguments for automation:
+The platform integrates advanced capabilities including intelligent package safety classification, OEM-specific package databases, rescue and restore functionality, wireless ADB management, device health monitoring, and preset-based removal workflows. BloatwareHatao supports modern Android ecosystems across major OEMs including Samsung, Xiaomi, Huawei, OnePlus, OPPO, Vivo, Realme, Nothing, Motorola, and more.
+
+With a comprehensive package database of 5,000+ packages across 26 OEM and functional categories, safety ratings (User, Recommended, Advanced, Unsafe, Danger), and intelligent app name extraction, BloatwareHatao enables users to safely reclaim storage, enhance performance, and take control of their Android device experience within one unified environment.
+
+Connect your device and begin advanced Android bloatware removal and optimization.
+
+<br>
+
+[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Windows-brightgreen)]()
+[![Version](https://img.shields.io/badge/Release-v0.1.0-red)]()
+[![License](https://img.shields.io/badge/License-GPLv3-blue)]()
+
+<br>
+
+</div>
+
+## Installation
+
+### From Source
 
 ```bash
-./BloatwareHatao.sh [options]
+# Clone the repository
+git clone https://github.com/ImKKingshuk/BloatwareHatao.git
+cd BloatwareHatao
 
-Options:
-  --help, -h          Show help message
-  --version, -v       Show version information
-  --dry-run           Enable dry run mode
-  --device-info       Show connected device information
-  --smart-wizard      Launch guided smart removal wizard
-  --audit <type> <manufacturer> <os-slug>
-                      Run pre-removal audit (e.g., --audit Safe samsung oneui-6)
-  --health            Show device health snapshot
-  --planner           Open cleaning planner
-  --report            Display current session report
-  --report-ndjson     Display NDJSON session report (if enabled)
-  --backup            Create backup of installed packages
-  --restore           Interactive restore menu
-  --log               Show operation logs
-  --stats             Show removal statistics
-  --mode <uninstall|disable|clear>
-                      Set removal behavior (default: uninstall)
-  --offline           Use local OEM scripts (offline mode)
+# Build and run
+cargo run --release --bin bloatwarehatao
 ```
 
-## Device OEM / OS Support
+### Cargo Install
 
-- Samsung : OneUI 6, OneUI 5, OneUI 4
-- Huawei : EMUI 14, EMUI 13, EMUI 12
-- Honor: MagicUI 8, MagicUI 7, MagicUI 6
-- Xiaomi : HyperOS 1, MIUI 14, MIUI 13
-- OnePlus : OxygenOS 14, OxygenOS 13, OxygenOS 12
-- Realme : RealmeUI 5, RealmeUI 4, RealmeUI 3
-- Vivo : FuntouchOS 14, FuntouchOS 13, FuntouchOS 12
-- Oppo : ColorOS 14, ColorOS 13, ColorOS 12
-- Nothing : NothingOS 3, NothingOS 2, NothingOS 1
-- Motorola : HelloUI 1, MyUX 13, MyUX 12
-- Meizu : FlymeAIOS 11, FlymeOS 10, FlymeOS 9
-- Infinix : XOS 14, XOS 13, XOS 12
+```bash
+cargo install --git https://github.com/ImKKingshuk/BloatwareHatao bloatwarehatao-tui
+```
+
+## Quick Start
+
+### TUI (Default)
+
+```bash
+bloatwarehatao
+```
+
+### CLI (Headless)
+
+```bash
+# Show device information
+bloatwarehatao --device-info
+
+# List installed packages
+bloatwarehatao --list-packages
+
+# Dry run mode (no changes)
+bloatwarehatao --dry-run
+```
+
+## Product Priority
+
+- **TUI is the main product and default experience.** Use `bloatwarehatao` for day-to-day package management, device health monitoring, preset application, and operator-guided operations.
+- **CLI is the secondary surface.** Use `bloatwarehatao --device-info`, `--list-packages`, and other flags for quick one-off tasks, scripting, and automation.
+
+### TUI Keybindings
+
+| Action | Keys |
+|--------|------|
+| Quit | q or Esc |
+| Navigate menus | Arrow keys |
+| Select/Confirm | Enter |
+| Go back | b |
+| Search packages | / |
+| Toggle selection | Space |
+| Select all | a |
+| Deselect all | d |
+| Next/Prev tab | Tab / Shift+Tab |
+| Help | ? |
+
+## Current Capabilities (v0.1.0)
+
+### Core Platform
+
+- ✅ Rust CLI with subcommands: dry-run, verbose, device-info, list-packages, offline mode
+- 🔧 Full-screen TUI by default (`bloatwarehatao`) as the primary product surface
+- ✅ Async ADB communication with device management
+- ✅ Configuration management via TOML
+- ✅ Structured logging with tracing
+- ✅ Error handling with unique error codes
+
+### Rust Core
+
+- ✅ Async ADB operations (device list, connect, disconnect, tcpip mode)
+- ✅ Package operations (list, uninstall, disable, enable, clear data, reinstall)
+- ✅ Smart app name extraction from package names
+- ✅ Package database with 5,000+ packages across 26 categories
+- ✅ Safety rating system (User, Recommended, Advanced, Unsafe, Danger)
+- ✅ OEM detection (Samsung, Google, Xiaomi, Huawei, OnePlus, OPPO, Vivo, Realme, Motorola, Nothing, Meizu, Infinix, Tecno, Itel, Amazon, Meta, Microsoft, ASUS, Sony, LG, Nokia)
+- ✅ Preset system (built-in, custom, community with import/export)
+- ✅ Rescue and restore system (rescue points, session tracking)
+- ✅ Device health monitoring (battery, RAM, storage)
+- ✅ Wireless ADB management
+
+---
+
+## Feature Matrix
+
+### Package Management
+
+- ✅ List installed packages (all, third-party, system, disabled)
+- ✅ Package information retrieval (label, version, system/user)
+- ✅ Uninstall packages (current user)
+- ✅ Disable packages
+- ✅ Enable packages
+- ✅ Clear package data
+- ✅ Reinstall packages
+- ✅ Batch removal operations
+- ✅ Multi-selection modes
+- ✅ Dry run mode for safe preview
+
+### Package Database
+
+- ✅ 5,000+ packages with metadata
+- ✅ Safety ratings (User, Recommended, Advanced, Unsafe, Danger)
+- ✅ 26 OEM and functional categories
+- ✅ Package descriptions and dependencies
+- ✅ Alternative package suggestions
+- ✅ Community voting system
+- ✅ Search by name, OEM, category, safety rating
+- ✅ Filter by installed status
+
+### Preset System
+
+- ✅ Built-in presets for common use cases
+- ✅ Custom preset creation
+- ✅ Preset import/export (JSON)
+- ✅ Community preset support
+- ✅ Package filtering by safety level
+- ✅ Category-based targeting
+- ✅ Tag-based filtering
+
+### Rescue & Restore
+
+- ✅ Create rescue points (package snapshots)
+- ✅ Rescue history management
+- ✅ Session tracking (removed packages with timestamps)
+- ✅ Restore from rescue points
+- ✅ Restore from sessions
+- ✅ Device information in rescue entries
+- ✅ Custom descriptions for rescue points
+
+### Device Management
+
+- ✅ Device detection and listing
+- ✅ Device information (brand, model, Android version, SDK, build ID)
+- ✅ OEM detection
+- ✅ Multi-device support (target by serial)
+- ✅ Device authorization status checking
+- ✅ Wireless ADB enable/disable
+- ✅ Wireless ADB connection management
+
+### Device Health
+
+- ✅ Battery level monitoring
+- ✅ Battery temperature
+- ✅ RAM usage percentage
+- ✅ Storage usage percentage
+- ✅ Real-time health metrics
+
+### Wireless ADB
+
+- ✅ Enable wireless debugging (USB required)
+- ✅ Connect to device via IP:port
+- ✅ Disconnect from wireless device
+- ✅ TCP/IP mode configuration
+- ✅ Device IP detection
+
+---
 
 ## Requirements
 
-- macOS, Linux, Windows
-- Bash-compatible environment.
-- Internet connectivity for fetching manufacturer-specific bloatware removal scripts.
-- Android Device with [ADB (Android Debug Bridge)](https://developer.android.com/tools/adb) Enabled
-- [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools) installed properly and added to your system's PATH.
+- **OS**: macOS, Linux, Windows
+- **Rust**: 1.75+ (for building from source)
+- **ADB**: Android platform-tools (`adb`)
+- **Device**: Android device with USB debugging enabled
 
-## Usage
+## Configuration
 
-### Interactive Mode
+BloatwareHatao stores configuration in the platform-appropriate data directory:
 
-1. Clone the repository:
+- **Linux**: `~/.local/share/bloatwarehatao/`
+- **macOS**: `~/Library/Application Support/BloatwareHatao/`
+- **Windows**: `%APPDATA%\BloatwareHatao\`
 
-   ```bash
-   git clone https://github.com/ImKKingshuk/BloatwareHatao.git
-   cd BloatwareHatao
-   ```
+Configuration includes:
 
-2. Run BloatwareHatao:
+- Package database location
+- Custom presets
+- Rescue history
+- Session logs
+- Settings
 
-   ```bash
-   bash BloatwareHatao.sh
-   ```
+## Package Database
 
-3. Follow the interactive menus to select your options.
+The package database includes 5,000+ packages across:
 
-### Command Line Mode
+**OEM Categories:**
 
-For automation or specific tasks:
+- Samsung, Google, Xiaomi, Huawei, OnePlus, OPPO, Vivo, Realme, Motorola, Nothing, Meizu, Infinix, Tecno, Itel, Amazon, Meta, Microsoft, ASUS, Sony, LG, Nokia
 
-```bash
-# Show device info
-./BloatwareHatao.sh --device-info
+**Functional Categories:**
 
-# Create backup
-./BloatwareHatao.sh --backup
+- AOSP, System, Chipset, Carrier, Ads, Social, Productivity, Entertainment, Security, Finance, Health, Gaming, Shopping, News, Education, Misc, UserInstalled, Other
 
-# Dry run mode
-./BloatwareHatao.sh --dry-run
+## Safety Ratings
 
-# Show statistics
-./BloatwareHatao.sh --stats
-
-# View structured NDJSON report (enable in Settings)
-./BloatwareHatao.sh --report-ndjson
-
-# Switch removal mode (uninstall|disable|clear)
-./BloatwareHatao.sh --mode disable
-
-# Work offline using local OEM scripts
-./BloatwareHatao.sh --offline
-```
+| Rating | Meaning | Color |
+|--------|---------|-------|
+| User Installed | App installed by user. Safe to remove if desired. | Blue |
+| Recommended | Safe to remove. Bloatware with no dependencies. | Green |
+| Advanced | May affect some features. Generally safe for most users. | Yellow |
+| Unsafe | May break functionality. Only for experienced users. | Orange |
+| Danger | Critical system component. Removal may cause issues. | Red |
 
 ## Disclaimer
 
-⚠️⚠️⚠️ "The Developer of this tool is not responsible for any type of damage caused by the misuse of this tool. Use at your own risk." ⚠️⚠️⚠️
-BloatwareHatao is designed for removing bloatware from Android devices. Ensure that you have proper authorization before using it. Removing system apps may lead to unintended consequences, so use it wisely and responsibly.
-BloatwareHatao is created to simplify the process of removing bloatware from Android devices. It is meant for personal use and enhancing the user experience. The developer of this tool is not responsible for any misuse.
+**BloatwareHatao: The Ultimate Android Bloatware Removal Tool** is developed for device optimization and educational purposes. It should be used responsibly and in compliance with all applicable laws and regulations. The developer of this tool is not responsible for any misuse or illegal activities conducted with this tool.
 
-## Contributing
+Package removal should only be performed with proper authorization and understanding of the implications. Removing system packages may affect device functionality. Always use dry run mode first and create rescue points before making changes. Ensure proper authorization before using BloatwareHatao for package removal. Always adhere to ethical practices and comply with all applicable laws and regulations.
 
-Contributions are welcome!
-Feel free to report issues or submit pull requests to enhance BloatwareHatao.
+## License
 
-Feel free to contribute to the project by reporting issues or submitting pull requests!
+This project is licensed under the GPL-3.0-only License.
 
-### 💪 Reclaim Control of Your Android Device with BloatwareHatao! 💪
+<h3 align="center">Happy Android Optimization with BloatwareHatao! 🚀�</h3>

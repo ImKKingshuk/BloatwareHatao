@@ -1,0 +1,184 @@
+[
+  {
+    "name": "com.amazon.aa",
+    "label": "Aa",
+    "description": "Amazon Assistant app. Nice spyware ! Shows you recommended products available on Amazon and price compare as you shop across the web. NOTE : https://www.gadgetguy.com.au/amazon-assistant-spies-on-you/",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.aa.attribution",
+    "label": "Attribution",
+    "description": "Amazon Assistant Attribution. A spyware again ! Tracking tool. Allows sellers to measure the impact of media channels **off Amazon** on sales. https://www.repricerexpress.com/amazon-attribution/",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.amazonvideo.livingroom",
+    "label": "Livingroom",
+    "description": "Prime video https://play.google.com/store/apps/details?id=com.amazon.amazonvideo.livingroom&hl=en&gl=US",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.appmanager",
+    "label": "Manager",
+    "description": "Mobile Device Information Provider Seems related to Kindle https://forum.xda-developers.com/t/are-these-phones-preloaded-with-amazon-spyware.4260299/ https://www.reddit.com/r/AndroidQuestions/comments/89qy76/what_is_mobile_device_information_provider_app/",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.avod.thirdpartyclient",
+    "label": "Thirdpartyclient",
+    "description": "Amazon Prime Video (https://play.google.com/store/apps/details?id=com.amazon.avod.thirdpartyclient) VOD service from Amazon. https://en.wikipedia.org/wiki/Prime_Video",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.clouddrive.photos",
+    "label": "Photos",
+    "description": "Amazon Photos (https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos)",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.fv",
+    "label": "Fv",
+    "description": "Amazon App suite. Provides access to Amazon digital content",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.kindle",
+    "label": "Kindle",
+    "description": "Amazon Kindle (https://play.google.com/store/apps/details?id=com.amazon.kindle)",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.mShop.android",
+    "label": "Android",
+    "description": "Amazon Shopping (https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping)",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.mShop.android.shopping",
+    "label": "Shopping",
+    "description": "Amazon Shopping (https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping) Same package as com.amazon.mShop.android.",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.mShop.android.shopping.vpl",
+    "label": "Vpl",
+    "description": "Amazon Shopping (https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping) Same package as com.amazon.mShop.android.",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.mp3",
+    "label": "Mp3",
+    "description": "Amazon Music (https://play.google.com/store/apps/details?id=com.amazon.mp3) Amazon streaming app",
+    "safety": "recommended",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.amazon.venezia",
+    "label": "Venezia",
+    "description": "Amazon AppStore Removal will result in breakage of app drawer on Amazon Fire TV devices.",
+    "safety": "advanced",
+    "category": "amazon",
+    "oems": [
+      "amazon"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

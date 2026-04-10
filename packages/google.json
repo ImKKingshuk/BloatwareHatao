@@ -1,0 +1,5200 @@
+[
+  {
+    "name": "com.android.chrome",
+    "label": "Chrome",
+    "description": "Google Chrome (https://play.google.com/store/apps/details?id=com.android.chrome) Occasionally runs in the background. NOTE: Disabling or uninstalling Chrome may break functionality for creating and storing passkeys (https://fidoalliance.org/passkeys/) on your phone, so keep this enabled if you want to use that form of authentication. G Play Services can provide this functionality on some devices. When Chrome is updated via the Play Store, the Trichrome Library is also updated automatically. If Chrome is disabled or removed, it may impact WebView functionality. This is because Chrome, WebView, and the Trichrome Library work together as a bundle starting from Android 10 (API 29) and above.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.partnerbrowsercustomizations.chromeHomepage",
+    "label": "Chrome Homepage",
+    "description": "Horrible stuff for Google Chrome. This package bypass your DNS settings (for letting pass Google ads)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "aosp"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.soundpicker",
+    "label": "Soundpicker",
+    "description": "Google Sounds. Needed to pick up a phone ringtone. No weird permissions. Pithus analysis: https://beta.pithus.org/report/f5f7c265c6d98666c78267b91643bbfb635021d5d4f85c93407079ba4aad88ee",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "aosp"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.systemui.plugin.globalactions.wallet",
+    "label": "Wallet",
+    "description": "Apk file name: QuickAccessWallet This is the Google Pay widget in the power menu(hold power button for 1sec to show this menu), below the Emergency, Power off and Reboot buttons.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "aosp"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.vending",
+    "label": "Vending",
+    "description": "Google Play Store",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.chrome.beta",
+    "label": "Beta",
+    "description": "Google Chrome Beta (https://play.google.com/store/apps/details?id=com.chrome.beta)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.chrome.canary",
+    "label": "Canary",
+    "description": "Google Chrome Canary (Nightly build) (https://play.google.com/store/apps/details?id=com.chrome.canary)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.chrome.dev",
+    "label": "Dev",
+    "description": "Google Chrome (developer) (https://play.google.com/store/apps/details?id=com.chrome.dev)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.RilConfigService",
+    "label": "Ril Config Service",
+    "description": "May break calls after remove.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.SSRestartDetector",
+    "label": "Ssrestart Detector",
+    "description": "SubSystem Restart Service, Collects ram dump, crash count. Still unknown.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.ambient.streaming",
+    "label": "Streaming",
+    "description": "Access and use your Android phone's apps from your Chromebook",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.GoogleCamera",
+    "label": "Google Camera",
+    "description": "Google Camera (https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera)",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.accessibility.soundamplifier",
+    "label": "Soundamplifier",
+    "description": "Accessibility sound amplifier (https://play.google.com/store/apps/details?id=com.google.android.accessibility.soundamplifier)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.accessibility.switchaccess",
+    "label": "Switchaccess",
+    "description": "Switch Access https://play.google.com/store/apps/details?id=com.google.android.accessibility.switchaccess&hl=en_US",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.adservices.api",
+    "label": "Api",
+    "description": "Introduced in Android 13 privacy sandbox beta components disabled on default. https://source.android.com/docs/core/ota/modular-system/adservices",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.aicore",
+    "label": "Aicore",
+    "description": "AI Core Looks like AI things but code means nothing about AI or Performance. https://developer.android.com/ml/aicore Android apps can access this package for Google Gemini.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.androidforwork",
+    "label": "Forwork",
+    "description": "Assistant Android Work Not needed, theres only user consent activity about that: (Your organization controls your device and keeps it secure)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.access.wifi.consumer",
+    "label": "Consumer",
+    "description": "Google Wifi app (https://play.google.com/store/apps/details?id=com.google.android.apps.access.wifi.consumer)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.accessibility.voiceaccess",
+    "label": "Voiceaccess",
+    "description": "Voice Access Helps anyone who has difficulty manipulating a touch screen (e.g. due to paralysis, tremor, or temporary injury) use their Android device by voice. https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.voiceaccess",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.adm",
+    "label": "Adm",
+    "description": "Google Find my device app (https://play.google.com/store/apps/details?id=com.google.android.apps.adm)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.ads.publisher",
+    "label": "Publisher",
+    "description": "Google Adsense app (https://play.google.com/store/apps/details?id=com.google.android.apps.ads.publisher)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.adwords",
+    "label": "Adwords",
+    "description": "Google Ads app (https://play.google.com/store/apps/details?id=com.google.android.apps.adwords)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.aiwallpapers",
+    "label": "Aiwallpapers",
+    "description": "Provides the ability to create wallpapers by using AI and several presets. Not sure how this can be useful to the average user + collects device info.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.assistant",
+    "label": "Assistant",
+    "description": "Google Assistant Go (https://play.google.com/store/apps/details?id=com.google.android.apps.assistant) Go apps are lite-versions of their normal counterparts, made for low-RAM devices.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.authenticator2",
+    "label": "Authenticator2",
+    "description": "Google Authenticator app (https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.bard",
+    "label": "Bard",
+    "description": "Google Gemini, safe to remove",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.betterbug",
+    "label": "Betterbug",
+    "description": "Android Beta Feedback Available on Beta Android Pixel Phones.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.blogger",
+    "label": "Blogger",
+    "description": "Google blogger app (https://play.google.com/store/apps/details?id=com.google.android.apps.blogger)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.books",
+    "label": "Books",
+    "description": "Google Play Books (https://play.google.com/store/apps/details?id=com.google.android.apps.books)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.camera.services",
+    "label": "S",
+    "description": "Pixel Camera Services Experimental stuff, Camera Calibration.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.carrier.carrierwifi",
+    "label": "Carrierwifi",
+    "description": "WiFi Provisioner On the code I found only: OpenRoaming is a network of free and secure Wi-Fi hotspots. Require google account and google play services. It can be also for wifi calling.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.carrier.log",
+    "label": "Log",
+    "description": "Carrier App Logging Require google play services Logs everything.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.cbrsnetworkmonitor",
+    "label": "Cbrsnetworkmonitor",
+    "description": "it's used for spying on you. (citizen broadband network monitor) Require google play services and have location permission.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.chromecast.app",
+    "label": "App",
+    "description": "Google Home (https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.cloudprint",
+    "label": "Cloudprint",
+    "description": "Cloud print (https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.cultural",
+    "label": "Cultural",
+    "description": "Google Arts & Culture (https://play.google.com/store/apps/details?id=com.google.android.apps.cultural)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.currents",
+    "label": "Currents",
+    "description": "Google Currents (discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.customization.pixel",
+    "label": "Pixel",
+    "description": "Basic 4 colors",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.diagnosticstool",
+    "label": "Diagnosticstool",
+    "description": "Diagnostic tool for troubleshooting Google services and system issues.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.diagnostictool",
+    "label": "Diagnostictool",
+    "description": "DiagnosticTool Hidden testing components.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.docs",
+    "label": "Docs",
+    "description": "Google Drive (https://play.google.com/store/apps/details?id=com.google.android.apps.docs)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.docs.editors.docs",
+    "label": "Docs",
+    "description": "Google Docs (https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.docs.editors.sheets",
+    "label": "Sheets",
+    "description": "Google Sheets (https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.sheets)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.docs.editors.slides",
+    "label": "Slides",
+    "description": "Google Slides (https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.slides)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.dreamliner",
+    "label": "Dreamliner",
+    "description": "Pixel Stand, Google Pixel AI wallpaper.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.dynamite",
+    "label": "Dynamite",
+    "description": "Hangout chat (discontinued) (https://play.google.com/store/apps/details?id=com.google.android.apps.dynamite)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.enterprise.cpanel",
+    "label": "Cpanel",
+    "description": "Google Admin (https://play.google.com/store/apps/details?id=com.google.android.apps.enterprise.cpanel)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.enterprise.dmagent",
+    "label": "Dmagent",
+    "description": "Google apps device policy (https://play.google.com/store/apps/details?id=com.google.android.apps.enterprise.dmagent)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.fireball",
+    "label": "Fireball",
+    "description": "Google Allo (discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.fitness",
+    "label": "Fitness",
+    "description": "Google Fit (https://play.google.com/store/apps/details?id=com.google.android.apps.fitness)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.freighter",
+    "label": "Freighter",
+    "description": "Google Datally (discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.giant",
+    "label": "Giant",
+    "description": "Google Analytics (https://play.google.com/store/apps/details?id=com.google.android.apps.giant)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.googleassistant",
+    "label": "Googleassistant",
+    "description": "Google Assistant (https://play.google.com/store/apps/details?id=com.google.android.apps.googleassistant)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.googlecamera.fishfood",
+    "label": "Fishfood",
+    "description": "ApertureLensLauncher Not sure how it works but redirects to google app lens `com.google.android.googlequicksearchbox`.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.handwriting.ime",
+    "label": "Ime",
+    "description": "Google Handwriting Input (https://play.google.com/store/apps/details?id=com.google.android.apps.handwriting.ime)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.hangoutsdialer",
+    "label": "Hangoutsdialer",
+    "description": "Google Hangout Dialer (https://play.google.com/store/apps/details?id=com.google.android.apps.hangoutsdialer)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.healthdata",
+    "label": "Healthdata",
+    "description": "Useless frameworks and it's not needed for Health Connect.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.helprtc",
+    "label": "Helprtc",
+    "description": "Google Support Services Allows you to share your Android device screen with a Google customer support agent for a personalized support experience. https://play.google.com/store/apps/details?id=com.google.android.apps.helprtc",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.inbox",
+    "label": "Inbox",
+    "description": "Inbox by Gmail (Discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.inputmethod.hindi",
+    "label": "Hindi",
+    "description": "Google Keyboard + Hinndi characters (https://play.google.com/store/apps/details?id=com.google.android.apps.inputmethod.hindi)",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.internal.betterbug",
+    "label": "Betterbug",
+    "description": "betterbug betterbug? All of these code means nothing. also have a lot of permissions and nexuslogger permission.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.kids.familylink",
+    "label": "Familylink",
+    "description": "Google Family Link (https://play.google.com/store/apps/details?id=com.google.android.apps.kids.familylink)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.kids.familylinkhelper",
+    "label": "Familylinkhelper",
+    "description": "Google Family Link for children & teens (https://play.google.com/store/apps/details?id=com.google.android.apps.kids.familylinkhelper)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.m4b",
+    "label": "M4B",
+    "description": "Google My Maps (https://play.google.com/store/apps/details?id=com.google.android.apps.m4b) It is NOT Google Maps",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.magazines",
+    "label": "Magazines",
+    "description": "Google News (https://play.google.com/store/apps/details?id=com.google.android.apps.magazines)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.maps",
+    "label": "Maps",
+    "description": "Google Maps (https://play.google.com/store/apps/details?id=com.google.android.apps.maps)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.mapslite",
+    "label": "Mapslite",
+    "description": "Google Maps Go (lite web app of Maps) (https://play.google.com/store/apps/details?id=com.google.android.apps.mapslite)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.mediahome.launcher",
+    "label": "Launcher",
+    "description": "Entertainment Space All-in-one application for entertainment purposes like movies, games, books etc.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.mediashell",
+    "label": "Mediashell",
+    "description": "Chromecast built-in Needed to support broadcast? https://play.google.com/store/apps/details?id=com.google.android.apps.mediashell&hl=en&gl=US",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.meetings",
+    "label": "Meetings",
+    "description": "Hangout Meet (discontinued) (https://play.google.com/store/apps/details?id=com.google.android.apps.meetings)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.messaging",
+    "label": "Messaging",
+    "description": "Google Messages (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging) SMS and RCS app. NOTE: possibly a global dependency for SMS, MMS, RCS, OTP, and other services/verifications. WARNING: once disabled/uninstalled, even if reinstalled, a factory reset may be required to re-obtain full functionality.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.navlite",
+    "label": "Navlite",
+    "description": "Google Maps GPS (https://play.google.com/store/apps/details?id=com.google.android.apps.navlite)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.nbu.files",
+    "label": "Files",
+    "description": "Files by Google (https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files) Runs in the background.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.nbu.paisa.user",
+    "label": "User",
+    "description": "Google Pay (https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.paisa.user) Digital wallet and payment system List of all the information collected and associated to your Google account : https://support.google.com/googlepay/answer/10223752?hl=en&co=GENIE.Platform%3DAndroid#zippy=%2Cinfo-that-google-may-collect You really should not trust Google not to sell your data (even if they claim the contrary): https://venturebeat.com/2020/11/20/probeat-google-will-eventually-sell-ads-against-your-financial-data/ The app itself has a LOT of permissions. See the Pithus analysis: https://beta.pithus.org/report/36b22c539b5f25c27a7699516c906351a25ba2daa2894eed08ae22f7a2a72c0e",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.nexuslauncher",
+    "label": "Nexuslauncher",
+    "description": "Pixel Launcher (https://play.google.com/store/apps/details?id=com.google.android.apps.nexuslauncher) Used to be called Nexus Launcher(back when Google's phones were called Nexus, not Pixel). A launcher is basically your homescreen. DON'T REMOVE IF YOU HAVEN'T INSTALLED ANOTHER LAUNCHER! Nova Launcher is usually the go-to custom launcher.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.paidtasks",
+    "label": "Paidtasks",
+    "description": "Google Opinion Rewards (https://play.google.com/store/apps/details?id=com.google.android.apps.paidtasks)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.pdfviewer",
+    "label": "Pdfviewer",
+    "description": "Google PDF Viewer Shouldn't run in the background, so no reason to disable. Discontinued, but still works perfectly on Android 11. In fact, this is the best standalone PDF-viewer I've found. The default PDF-viewer in recent Android releases is now integrated into Google Drive.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.photos",
+    "label": "Photos",
+    "description": "Google Photos (https://play.google.com/store/apps/details?id=com.google.android.apps.photos)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.photos.scanner",
+    "label": "Scanner",
+    "description": "Google PhotoScan (https://play.google.com/store/apps/details?id=com.google.android.apps.photos.scanner)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.photosgo",
+    "label": "Photosgo",
+    "description": "Google Gallery (https://play.google.com/store/apps/details?id=com.google.android.apps.photosgo)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.pixel.creativeassistant",
+    "label": "Creativeassistant",
+    "description": "Creative Assistant for media editing and artistic tasks on Pixel devices.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.pixel.subzero",
+    "label": "Subzero",
+    "description": "Daily Hub - useless a general-purpose news app",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.pixel.support",
+    "label": "Support",
+    "description": "Pixel Troubleshooting There's Battery diagnostics also google, tiktok? account load.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.pixelmigrate",
+    "label": "Pixelmigrate",
+    "description": "Data Transfer Tool It's probably restore apps on setup wizard first-boot setup.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.plus",
+    "label": "Plus",
+    "description": "Google+ (discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.podcasts",
+    "label": "Podcasts",
+    "description": "Google Podcasts (https://play.google.com/store/apps/details?id=com.google.android.apps.podcasts)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.privacy.wildlife",
+    "label": "Wildlife",
+    "description": "VPN by Google One. Discontinued. Succeeded by VPN by Google and Google Fi VPN.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.recorder",
+    "label": "Recorder",
+    "description": "Google (audio)Recorder (https://play.google.com/store/apps/details?id=com.google.android.apps.recorder)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.restore",
+    "label": "Restore",
+    "description": "The backup restore wizard used for pulling Android system backups from your Google account. Runs on boot. You only need this if you factory restore, in which case it’s automatically re-enabled for you.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.retaildemo.preload",
+    "label": "Preload",
+    "description": "Retail Demo Services Should not be used for normal users.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.safetyhub",
+    "label": "Safetyhub",
+    "description": "Personal Safety (https://play.google.com/store/apps/details?id=com.google.android.apps.safetyhub) Personal Safety is a Pixel app that helps you prepare and react in an emergency by quickly calling emergency services (e.g if your phone detects that you've been in a car crash, it can call for help automatically) This app has obviously a lot of dangerous permissions due to its operation. Pithus analysis: https://beta.pithus.org/report/e207f7d0f59d9df268154b90fc10cd861d0483465e30bbac8f68a7b12340c67f",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.santatracker",
+    "label": "Santatracker",
+    "description": "Google Santa Tracker (discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.scone",
+    "label": "Scone",
+    "description": "Automatically switches basebands between LTE and 5G on demand",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.searchlite",
+    "label": "Searchlite",
+    "description": "Google Go (https://play.google.com/store/apps/details?id=com.google.android.apps.searchlite) Go apps are lite-versions of their normal counterparts, made for low-RAM devices.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.security.securityhub",
+    "label": "Securityhub",
+    "description": "Checks security your phone(you can find it in settings). Not very useful. https://play.google.com/store/apps/details?id=com.google.android.apps.security.securityhub",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.setupwizard.searchselector",
+    "label": "Searchselector",
+    "description": "Search engine selector The search selection screen in the setupwizard you see on new/factory reset phones. Runs on boot, but doesn't seem to run in the background beyond that.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.speechservices",
+    "label": "Speechservices",
+    "description": "Google Speech Services Absolute garbage. There is already another speech recognition app (Speech Recognition and Synthesis from Google), so this app is just spyware, judging by the URLs it connects to. https://www.virustotal.com/gui/file/9340b2aa1cb6f3fab3481a4bd5c0dacae2441bbb0849691b08a6e8bcedae2662/details",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.subscriptions.red",
+    "label": "Red",
+    "description": "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red) Lets you manage your Google cloud storage. Occasionally runs in the background.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.tachyon",
+    "label": "Tachyon",
+    "description": "Google Duo (Video Calls) (https://play.google.com/store/apps/details?id=com.google.android.apps.tachyon)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.tasks",
+    "label": "Tasks",
+    "description": "Google Task (TODO list) (https://play.google.com/store/apps/details?id=com.google.android.apps.tasks)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.tips",
+    "label": "Tips",
+    "description": "Pixel Tips a lot bloated.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.translate",
+    "label": "Translate",
+    "description": "Google Translate (https://play.google.com/store/apps/details?id=com.google.android.apps.translate)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.travel.onthego",
+    "label": "Onthego",
+    "description": "Google Trip (discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.turbo",
+    "label": "Turbo",
+    "description": "Device Health Services. Breaks battery settings.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.tv.dreamx",
+    "label": "Dreamx",
+    "description": "Ambient Mode Running wallpapers from this app like a slideshow. https://play.google.com/store/apps/details?id=com.google.android.apps.tv.dreamx&hl=en&gl=US",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.tv.launcherx",
+    "label": "Launcherx",
+    "description": "Google TV Launcher to TV, there's no replace probably. https://play.google.com/store/apps/details?id=com.google.android.apps.tv.launcherx&hl=en&gl=US",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.tv.netoscope",
+    "label": "Netoscope",
+    "description": "Connectivity Diagnostics Diagnoses not only connectivity but also time, not needed.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.tycho",
+    "label": "Tycho",
+    "description": "Google Fi Wireless https://play.google.com/store/apps/details?id=com.google.android.apps.tycho",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.uploader",
+    "label": "Uploader",
+    "description": "Picasa Uploader (discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.vega",
+    "label": "Vega",
+    "description": "Google My Business (https://play.google.com/store/apps/details?id=com.google.android.apps.vega)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.walletnfcrel",
+    "label": "Walletnfcrel",
+    "description": "Google Pay (https://play.google.com/store/apps/details?id=com.google.android.apps.walletnfcrel)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.wallpaper",
+    "label": "Wallpaper",
+    "description": "Google Wallpapers (https://play.google.com/store/apps/details?id=com.google.android.apps.wallpaper)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.wallpaper.pixel",
+    "label": "Pixel",
+    "description": "Wallpaper app for Google Pixel devices.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.wearable.retailattractloop",
+    "label": "Retailattractloop",
+    "description": "Demo mode - you see it in the stores (the video playing while idle).",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.wearable.settings",
+    "label": "Settings",
+    "description": "WearOS settings",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.wearables.maestro.companion",
+    "label": "Companion",
+    "description": "Google Pixel Buds Set up and manage your Pixel Buds right from your Android 6.0+ device with the Google Pixel Buds app. https://play.google.com/store/apps/details?id=com.google.android.apps.wearables.maestro.companion",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.weather",
+    "label": "Weather",
+    "description": "The new Weather app by Google. If removed, \"At a Glance\" and the lock screen will still redirect to the Google app (like before). https://play.google.com/store/apps/details?id=com.google.android.apps.weather",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.wellbeing",
+    "label": "Wellbeing",
+    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing) Lets you track device and app usage and set usage limits. WARNING: It is now a hard dependency for the Settings app on Android 12+ for Pixel phones. After uninstalling, there will be an empty entry on Settings. Rebooting should make it disappear..",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.work.clouddpc",
+    "label": "Clouddpc",
+    "description": "Device Policy work apps handling",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.work.oobconfig",
+    "label": "Oobconfig",
+    "description": "Device Setup Sets up device to be managed by EMM (Enterprise Mobility Management), which \"allows organizations to securely enable employee use of mobile devices\". Might also be what does the actual management on your device, if you set it up as a work device. Only seems to run on boot(not in the background after boot) if you haven't set up your device as a work device. I tried to disable it through UAD-ng, but nothing happens? Seems immune to disabling? https://bayton.org/2020/11/google-announce-big-changes-to-zero-touch/ https://bayton.org/docs/enterprise-mobility/android/what-is-android-zero-touch-enrolment/ Contains 4 services: GcmJobService, GservicesChangedObserverService, AppMeasurementService and FirebaseInstanceIdService. GCM(Google Cloud Messaging) was the backend for Android's push messaging system 2012-2019, after which it was replaced by FCM(Firebase Cloud Messaging). I assume the GCM/Firebase connection is for Push notification functionality. The MANAGE_CARRIER_OEM_UNLOCK_STATE permission hints at doing something with carrier locks? Needs Google Play Services to function?",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.youtube.creator",
+    "label": "Creator",
+    "description": "YouTube Studio (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.creator)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.youtube.gaming",
+    "label": "Gaming",
+    "description": "YouTube Gaming -(discontinued in March 2019, features integrated in main youtube app)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.youtube.kids",
+    "label": "Kids",
+    "description": "YouTube Kids (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.youtube.mango",
+    "label": "Mango",
+    "description": "YouTube Go (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.mango) Lite version of the YouTube app. Shutdown by Google in august 2022. https://support.google.com/youtube/thread/162222567/youtube-go-is-going-away-in-august-of-this-year",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.youtube.music",
+    "label": "Music",
+    "description": "YouTube Music (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.youtube.music.setupwizard",
+    "label": "Setupwizard",
+    "description": "YT Music Setup Wizard YT Music Setup Wizard?! Everything is possible. I found only that they want to give you a free trial or premium.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.apps.youtube.vr",
+    "label": "Vr",
+    "description": "YouTube VR (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.vr)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.appsearch.apk",
+    "label": "Apk",
+    "description": "AppSearch is an on-device search library for managing locally stored structured data, with APIs for indexing data and retrieving data using full-text search. Use it to build custom in-app search capabilities for your users. https://developer.android.com/jetpack/androidx/releases/appsearch",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.as",
+    "label": "As",
+    "description": "Android System Intelligence (previously Device Personalization Services) (https://play.google.com/store/apps/details?id=com.google.android.as) Runs in the background. \"Enables intelligent features across Android\", like: Live Caption, Screen Attention, Improved Copy-Paste, App Predictions in the launcher, Notification Smart Actions, Smart Text Selection and Linkifying text in apps. Also known as device learning, e.g. enhanced keyboard auto suggestions, keeps the screen on when looking at it (with help of the camera), smart replies. https://milaq.net/android-bloatware",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.as.oss",
+    "label": "Oss",
+    "description": "Private Compute Services. On-device behavior analysis Enables live caption, music recognition and smart replies. Seems to be a dependency of System Intelligence. https://play.google.com/store/apps/details?id=com.google.android.as.oss https://milaq.net/android-bloatware",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.avatarpicker",
+    "label": "Avatarpicker",
+    "description": "Avatar picker for Google account customization.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.backdrop",
+    "label": "Backdrop",
+    "description": "Needed for screensaver. https://play.google.com/store/apps/details?id=com.google.android.backdrop&hl=en&gl=US",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.backup",
+    "label": "Backup",
+    "description": "Allows Android apps to back up their data on Google servers. (On Android 4.2)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.backuptransport",
+    "label": "Backuptransport",
+    "description": "Allows Android apps to back up their data on Google servers.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.bluetooth",
+    "label": "Bluetooth",
+    "description": "Bluetooth management for Android devices.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.calculator",
+    "label": "Calculator",
+    "description": "Google Calculator (https://play.google.com/store/apps/details?id=com.google.android.calculator)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.calendar",
+    "label": "Calendar",
+    "description": "Google Calendar (https://play.google.com/store/apps/details?id=com.google.android.calendar)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.captiveportallogin",
+    "label": "Captiveportallogin",
+    "description": "it's the same as (com.android.captiveportallogin). Support for captive portal. A captive portal login is a web page where the users have to input their login information or accept the displayed terms of use. Some networks (typically public wifi network) use the captive portal login to block access until the user inputs some necessary information NOTE : This package is a now a mandatory mainline module https://en.wikipedia.org/wiki/Captive_portal https://www.xda-developers.com/android-project-mainline-modules-explanation",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.carrier",
+    "label": "Carrier",
+    "description": "Carrier Settings Google Api Activity, requires GMS, totally random api's. Required for 4G, but does not cause bootloop after removal.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.carrierconfig",
+    "label": "Carrierconfig",
+    "description": "Same as com.android.carrierconfig? Here's that description: Dynamically provides configuration for the carrier network. The config contains: Roaming networks, Voicemail settings, SMS/MMS settings, VoLTE/IMS settings, and more. If a carrier app is installed it will be queried for overrides to these settings. Seems to run on boot and when you swap SIM card? https://source.android.com/devices/tech/config/carrier https://cs.android.com/android/platform/superproject/+/master:packages/apps/CarrierConfig/src/com/android/carrierconfig/DefaultCarrierConfigService.java",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.carrierlocation",
+    "label": "Carrierlocation",
+    "description": "Sharing location to carrier.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.carriersetup",
+    "label": "Carriersetup",
+    "description": "it's only needed on first-boot setup",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.cellbroadcastreceiver",
+    "label": "Cellbroadcastreceiver",
+    "description": "Wireless emergency alerts Cell broadcast is designed to deliver messages to multiple users in an area. This is notably used by ISP to send Emergency/Government alerts. Runs at boot and is also triggered after exiting airplane mode. https://en.wikipedia.org/wiki/Cell_Broadcast https://www.androidcentral.com/amber-alerts-and-android-what-you-need-know https://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [
+      "com.google.android.cellbroadcastservice"
+    ],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.cellbroadcastreceiver.overlay",
+    "label": "Overlay",
+    "description": "CellBroadcastReceiver overlay. Overlays work by mapping resources defined in the overlay package to resources defined in the target package. When an app attempts to resolve the value of a resource in the target package, the value of the overlay resource the target resource is mapped to is returned instead. The CellBroadcastReceiver app is a default system app that handles emergency and nonemergency alerts (such as amber and presidential alerts) and presents the information to end users based on carrier and regional regulations. https://source.android.com/docs/core/runtime/rros https://source.android.com/docs/core/ota/modular-system/cellbroadcast",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.cellbroadcastreceiver.overlay.miui",
+    "label": "Miui",
+    "description": "Disable opt out dialog to cellbroadcastreceiver? I never seen that. Unused.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.cellbroadcastreceiver.rro_common",
+    "label": "Rro Common",
+    "description": "Useless overlay code for cellbroadcastreceiver",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.cellbroadcastservice",
+    "label": "Cellbroadcastservice",
+    "description": "Cell broadcast is designed to deliver messages to multiple users in an area. This is notably used by ISP to send Emergency/Government alerts. https://en.wikipedia.org/wiki/Cell_Broadcast https://www.androidcentral.com/amber-alerts-and-android-what-you-need-know",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.cellbroadcastservice.overlay",
+    "label": "Overlay",
+    "description": "CellBroadcastService overlay. Overlays work by mapping resources defined in the overlay package to resources defined in the target package. When an app attempts to resolve the value of a resource in the target package, the value of the overlay resource the target resource is mapped to is returned instead. The CellBroadcastService service supports CellBroadcast SMS decoding, geofencing for wireless emergency alert (WEA) 3.0, message duplication checks, and broadcasting messages to apps. It's a one-to-many geotargeted and geofenced messaging service designed to deliver messages to multiple mobile phone users, in a defined area, at the same time. The service is defined by the [ETSI](https://www.etsi.org/about) GSM committee, [3GPP](https://www.3gpp.org/about-3gpp), and is a part of the telecommunication standards. https://source.android.com/docs/core/runtime/rros https://source.android.com/docs/core/ota/modular-system/cellbroadcast",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.cellbroadcastservice.overlay.miui",
+    "label": "Miui",
+    "description": "cross sim duplicate detection disable? I never seen this. Unused.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.cellbroadcastservice.rro_common",
+    "label": "Rro Common",
+    "description": "Useless overlay code for cellbroadcastservice",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.chromecast.chromecastservice",
+    "label": "Chromecastservice",
+    "description": "Needed for broadcast support?",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.chromecast.setupcustomization",
+    "label": "Setupcustomization",
+    "description": "Needed for Chromecast setup.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.clockwork.oemsetup",
+    "label": "Oemsetup",
+    "description": "Installs carrier apps after the first time setup. Haven't noticed any consequences after uninstalling. I also saw some similar bloatware packages on the net, ending with clockwork.gestures.tutorial - first time use tutorial or clockwork.flashlight, clockwork.nfc, clockwork.brightness",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.compos.payload",
+    "label": "Payload",
+    "description": "Payload for Google's Compose system handling notifications and widgets.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.configupdater",
+    "label": "Configupdater",
+    "description": "Config Update Intents used to provide unbundled updates of system data. All require the UPDATE_CONFIG permission. Updates: - system wide certificate pins for TLS connections. - System wide Intent firewall. - List of permium SMS short codes. - List of carrier provisioning URLs. - Set of trusted logs used for Certificate Transparency support for TLS connections language detection model file - Smart selection model file - Conversation actions model file - Network watchlist config file - Intent action indicating that the updated carrier id config is available - The emergency number database into the devices - An integer to indicate the numeric version of the new data -- devices should only install if the update version is newer than the current one - Hash of the database, which is encoded by base-16 SHA512. https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/os/ConfigUpdate.java",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.connectivity.resources",
+    "label": "Resources",
+    "description": "Network connectivity resources. Removing this packages causes a bootloop.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.connectivity.resources.overlay",
+    "label": "Overlay",
+    "description": "Useless default configs (?)",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.connectivity.resources.overlay.oplus",
+    "label": "Oplus",
+    "description": "Needed for network, may cause bootloop.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.connectivitythermalpowermanager",
+    "label": "Connectivitythermalpowermanager",
+    "description": "powersaving?",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.contactkeys",
+    "label": "Contactkeys",
+    "description": "Android System Key Verifier is a system service for verifying interlocutors using messengers with end-to-end encryption. Its job is to verify end-to-end encryption keys across chat apps. It has no internet permissions and performs local key comparisons only. It doesn’t access your chats, contacts, or files. It doesn’t run in the background unless called by another apps https://grouphowto.com/com-google-android-contactkeys/ https://developers.google.com/android/binary_transparency/google1p/overview",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.contacts",
+    "label": "Contacts",
+    "description": "Google Contacts (https://play.google.com/store/apps/details?id=com.google.android.contacts) Occasionally runs in the background.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.deskclock",
+    "label": "Deskclock",
+    "description": "Google clock app (https://play.google.com/store/apps/details?id=com.google.android.deskclock) WARNING: on some phones, removing this makes it so alarms and notifications only vibrate and don't make any sound (via any installed app), and makes the 'Alarm' section unavailable in 'Settings > Sound & Vibration'.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.devicelockcontroller",
+    "label": "Devicelockcontroller",
+    "description": "Device lock and security controller for Android devices.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.dialer",
+    "label": "Dialer",
+    "description": "Google Dialer (https://play.google.com/store/apps/details?id=com.google.android.dialer) Default dialer on some phones. Google Analytics are embedded in the app, assume everything is datamined. https://www.virustotal.com/gui/file/a978d90f27d5947dca33ed59b73bd8efbac67253f9ef7a343beb9197c8913d1a/details",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.dialer.rro_common",
+    "label": "Rro Common",
+    "description": "Useless overlay code for Google Dialer",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.documentsui",
+    "label": "Documentsui",
+    "description": "Occasionally runs in the background. File selector for other apps. Storage Access Framework (SAF) will break if this is disabled.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.documentsui.icon_overlay",
+    "label": "Icon",
+    "description": "Another useless icon overlay.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.documentsui.theme.pixel",
+    "label": "Pixel",
+    "description": "Useless code to documentsui.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.dreamlinerupdater",
+    "label": "Dreamlinerupdater",
+    "description": "Dock Updater Updates to Dreamliner(Google Pixel AI wallpaper).",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.email",
+    "label": "Email",
+    "description": "AOSP Mail client Newer versions of AOSP Mail are renamed to com.android.email and Gmail was migrated to com.google.android.gm",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.euicc",
+    "label": "Euicc",
+    "description": "eUICC (embedded UICC) refers to the architectural standards for eSIM, a device used to securely store one or more SIM card profiles, which are the unique identifiers and cryptographic keys used by cellular network service providers to uniquely identify and securely connect to mobile network devices. Breaks SIM Manager.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.euiccoverlay",
+    "label": "Euiccoverlay",
+    "description": "Partner customization on first boot Setup, overlay.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.ext.services",
+    "label": "S",
+    "description": "The ExtServices module updates framework components for core OS functionality such as notification ranking, autofill text-matching strategies, storage cache, package watchdog, and other services that run continually. This module is updatable, meaning it can receive updates to functionality outside of the normal Android release cycle. Can run before the user unlocks the device (direct-boot aware) and Android 9+ version have internet and location permissions. WARNING: Causes bootloop on most Android 11+ phones. This module is related to the Android mainline project (which is a useful project).There is no reason to mess with this. Sources: https://source.android.com/devices/architecture/modular-system/extservices https://arstechnica.com/gadgets/2016/11/android-extensions-could-be-googles-plan-to-make-android-updates-suck-less/ Pithus analysis (Android 11): https://beta.pithus.org/report/e5e4a181082b88baf55e19aab0f9cb62e131d612eeaa73cddb510a52e0ff5c1a",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.ext.shared",
+    "label": "Shared",
+    "description": "Android Shared Library. Maybe people thinking it's safe to remove or it's useless because it's empty. but it cause bootloop on my miui 14.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.factoryota",
+    "label": "Factoryota",
+    "description": "Factory OTA Mode it's for testing OTA.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.federatedcompute",
+    "label": "Federatedcompute",
+    "description": "FederatedCompute. Another component of OnDevicePersonalization. But this app learns things about users. Introduced in Android 13. https://source.android.com/docs/core/ota/modular-system/ondevicepersonalization",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.feedback",
+    "label": "Feedback",
+    "description": "This is the package that sends crash-report feedback to the Play Store? The crash pop-up still happens with this disabled. Doesn't seem to run on its own. Has permission to access system logs and package usage stats. Only connects to 4 Google domains. App developers likely have to go through the Play Store to access any sent data. https://beta.pithus.org/report/7041823ff880c207ed2ddacdc92e5ed803b1eb105e4483696d2152bea44903aa",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.flipendo",
+    "label": "Flipendo",
+    "description": "Extreme Battery Saver It can be found in settings, lets you to choose which app are important to you to use when this feature is enabled.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.flipendo.auto_generated_rro_product__",
+    "label": "Auto Generated Rro Product",
+    "description": "Data connection 5G? it's for extreme battery saver.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.flipendo.auto_generated_rro_vendor__",
+    "label": "Auto Generated Rro Vendor",
+    "description": "Data connection 5G? it's for extreme battery saver.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gallery3d",
+    "label": "Gallery3D",
+    "description": "Built-in Gallery app. The ID could be \"recycled\" by OEMs for their own gallery implementations.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gm",
+    "label": "Gm",
+    "description": "Gmail (https://play.google.com/store/apps/details?id=com.google.android.gm)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gm.lite",
+    "label": "Lite",
+    "description": "Gmail Go (https://play.google.com/store/apps/details?id=com.google.android.gm.lite) Lite version of the Gmail app (hah! Because the base one is too bloated?). Don't use this app",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gms",
+    "label": "Gms",
+    "description": "Google Play Services GMS = Google Mobile Services. It is a layer that sits on top of the OS and provides a lot of proprietary Google APIs, giving apps access to various Google Services, such as: \"fused\"-location (internet and GPS chip), QR Code scanner, 2FA, G-Drive storage, Firebase API, Cloud Messaging, etc... If you remove it, all the apps relying on it will either: - detect the lack of Play-Services and refuse to run - detect the lack of Play-Services but allow you to run (improperly) by dismissing an annoying popup Removing Google Play Services can boot-loop some devices, so be careful. Disabling this package will improve battery life significantly, as it always runs in the background. IMPORTANT: You need to uncheck \"Find My Device\" from the \"Device admin apps\" settings panel to be able to disable this package. Search \"admin\" in the Settings-app search bar, or go to the Security category.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gms.location.history",
+    "label": "History",
+    "description": "Google Location History This app has nothing in the code. Only png logo google and name.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gms.policy_sidecar_aps",
+    "label": "Policy Sidecar Aps",
+    "description": "Not sure what purpose it has, but it gets some network and phone data and connects to some Google domains, but never on its own; it has no permissions and never runs on its own, it likely exists as a helper package for other Google services. Doesn't seem to exist in newer versions of Android; it's not in Android 11, but it is in 9. Needs a Google Account and Google Play Services to work. Given its name it could be related to Android auto? Seems safe to remove, noticed no breakage (didn't test Android Auto tho). https://beta.pithus.org/report/60835b97f38d9e64d4f554a73dab71c892153486a8e0fd81461c3d85359d9fae",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gms.supervision",
+    "label": "Supervision",
+    "description": "Family Link parental controls It has something to Family Link parental controls. Introduced in android 13. https://play.google.com/store/apps/details?id=com.google.android.gms.supervision",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gmsintegration",
+    "label": "Gmsintegration",
+    "description": "it's Google Sample Home Screen. Useless.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.googlequicksearchbox",
+    "label": "Googlequicksearchbox",
+    "description": "Google Search box (https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox) Runs in the background. Pointless. If you need a shortcut to Google on your homescreen just use a web-browser shortcut. Does also remove the Google Sound Search widget, but you can get that functionality from an app like Shazam, that additionally doesn't run in the background constantly like this package does. This app also powers the Google Discover page (the news 'widget' when you go to the left of the home screen) and the app symbol called 'Google'. WARNING: disabling this package also breaks the Ok Google Search functionality as well as Google Lens.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.googlequicksearchbox.nga_resources",
+    "label": "Nga Resources",
+    "description": "Resources for Google Assistant quick search.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.grilservice",
+    "label": "Grilservice",
+    "description": "Has too much random logging, metrics stuff.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gsf",
+    "label": "Gsf",
+    "description": "Google Services Framework Supports the Play Services application in application updates, user authentication, location services, user searches & more. https://android.stackexchange.com/questions/216176/what-is-the-exact-functionality-of-google-play-services-google-services-framew https://stackoverflow.com/questions/37337448/what-is-the-difference-between-google-service-frameworkgsfgoogle-mobile-servi Same recommendation as com.google.android.gms except I've never seen a bootloop because of deleting this package.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.gsf.login",
+    "label": "Login",
+    "description": "Support for managing Google accounts. Safe to remove if you don't use a Google account.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.hardwareinfo",
+    "label": "Hardwareinfo",
+    "description": "Has a lot statistics and takes info about device. Requires Google Play Services, also assumes call notifications?",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.health.connect.backuprestore",
+    "label": "Backuprestore",
+    "description": "Health Connect for Android backup/restore.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.healthconnect.controller",
+    "label": "Controller",
+    "description": "Health Connect by Android gives you a simple way to share data between your health, fitness, and wellbeing apps without compromising on privacy. Once you've downloaded Health Connect, you can access it through your settings by going to Settings > Apps > Health Connect, or from your Quick Settings menu. https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.hotspot2.osulogin",
+    "label": "Osulogin",
+    "description": "The sole purpose of the OsuLogin App is to provision credentials from the Wi-Fi network to the device and allow them to connect to Wi-Fi Hotspot 2.0. See https://hackanons.com/2021/07/osulogin-android-everything-you-need-to-know.html for more information.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.ims",
+    "label": "Ims",
+    "description": "Carrier Services (https://play.google.com/store/apps/details?id=com.google.android.ims) Runs in the background. Play store description claims power savings in addition to the features, but I don't see how that could be the case. IMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling). Safe to remove.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.inputmethod.japanese",
+    "label": "Japanese",
+    "description": "Google Keyboard + Japanese characters (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.japanese)",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.inputmethod.korean",
+    "label": "Korean",
+    "description": "Google Keyboard + Korean characters (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.korean)",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.inputmethod.latin",
+    "label": "Latin",
+    "description": "Gboard – the Google Keyboard (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin) Sometimes the only keyboard app on a phone; Make sure you have another installed before you disable.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.inputmethod.pinyin",
+    "label": "Pinyin",
+    "description": "Google Keyboard + Pinyin (Chinese) characters (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.pinyin)",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.instantapps.supervisor",
+    "label": "Supervisor",
+    "description": "Lets you try new games directly on Google Play. https://www.zdnet.com/article/googles-instant-apps-goes-live-now-you-can-try-android-apps-before-installing-them/",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.iwlan",
+    "label": "Iwlan",
+    "description": "IWLAN feature manager for enhanced connectivity.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.katniss",
+    "label": "Katniss",
+    "description": "Google app, no replacement? https://play.google.com/store/apps/details?id=com.google.android.katniss&hl=en&gl=US",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.keep",
+    "label": "Keep",
+    "description": "Google Keep (https://play.google.com/store/apps/details?id=com.google.android.keep)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.launcher",
+    "label": "Launcher",
+    "description": "Google Now Launcher (https://play.google.com/store/apps/details?id=com.google.android.launcher) DO NOT REMOVE THIS IF YOU DON'T HAVE ANOTHER LAUNCHER INSTALLED.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.location",
+    "label": "Location",
+    "description": "Handles location services on older devices. On newer ones Google location services is part of Google Play Services and Android location service is provided by com.android.location.fused or com.android.location.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.markup",
+    "label": "Markup",
+    "description": "Google Markup app made for modifying pictures, shipped by default on every Pie+ device.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.marvin.talkback",
+    "label": "Talkback",
+    "description": "Android Accessibility Suite (https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) Helps blind and visually impaired users. WARNING: Causes com.motorola.dynamicvolume to not display individual apps and their respective volumes when volume button pressed. Seems to revert to an older (maybe testing) version of the dynamicvolume pkg?",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.microdroid.empty_payload",
+    "label": "Empty Payload",
+    "description": "Empty payload for MicroDroid sandbox testing.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.modulemetadata",
+    "label": "Modulemetadata",
+    "description": "Module that contains metadata about the list of modules on the device. And that’s about it. I wouldn't advise you to mess with it as it could break important modules (see #37) Good explanation of what android modules are : https://www.xda-developers.com/android-project-mainline-modules-explanation/",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.music",
+    "label": "Music",
+    "description": "Google Play Music (discontinued) (https://play.google.com/store/apps/details?id=com.google.android.music)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.nearby.halfsheet",
+    "label": "Halfsheet",
+    "description": "Useless frameworks to Wi-Fi connections, USB tethering, auto, usage. Every version has random code and the app is not running in the background.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.networkstack",
+    "label": "Networkstack",
+    "description": "Network Stack Components https://source.android.com/devices/architecture/modular-system/networking Provides common IP services, network connectivity monitoring, and captive login portal detection.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.networkstack.overlay",
+    "label": "Overlay",
+    "description": "WiFi will not work after remove.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.networkstack.permissionconfig",
+    "label": "Permissionconfig",
+    "description": "Network Stack Permission Configuration Defines a permission that enables modules to perform network-related tasks. https://source.android.com/devices/architecture/modular-system/networking",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.networkstack.tethering",
+    "label": "Tethering",
+    "description": "Uninstalling/Disabling this app will Break the Hotspot and Bluetooth/USB Tethering. When you enable hotspot or Bluetooth/USB Tethering it will show the bootanimation (not bootloop) And will bring you back to your device It's safe to Uninstall if you are not going to use hotspot and Bluetooth/USB Tethering.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.networkstack.tethering.overlay",
+    "label": "Overlay",
+    "description": "it's needed for tethering?. I found: arrays.xml array name (config_tether_usb_regexs) item rndis d item usb d",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.networkstack.tethering.overlay2021",
+    "label": "2021",
+    "description": "Useless hotspot configs (?)",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.odad",
+    "label": "Odad",
+    "description": "Google Play Protect Service Google Play Protect Service? it have only third party notices activity and useless frameworks",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.ondevicepersonalization.services",
+    "label": "S",
+    "description": "OnDevicePersonalization. Another thing to AdServices privacy sandbox. Introduced in Android 13. https://source.android.com/docs/core/ota/modular-system/ondevicepersonalization",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.onetimeinitializer",
+    "label": "Onetimeinitializer",
+    "description": "Provides first time setup, safe to remove.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.devicelockcontroller",
+    "label": "Devicelockcontroller",
+    "description": "Pixel device lock configuration overlay.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.flipendo",
+    "label": "Flipendo",
+    "description": "Unused colors to 5G",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsagoconfig",
+    "label": "Gmsagoconfig",
+    "description": "A completely useless 0 bytes app.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig",
+    "label": "Gmsconfig",
+    "description": "Useless configurations about webview, wifi and bluetooth to scan for better location. Everything works without it. WARNING: causes the Galaxy App to force-close after a few seconds on a Samsung N960F running Android Q.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.asi",
+    "label": "Asi",
+    "description": "it's another component of Android System Intelligence (previously Device Personalization Services)",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.common",
+    "label": "Common",
+    "description": "If you delete this package, you won't be able to log in to your Google account on a Google app. But if you don't need to log in to a Google account, you can safely remove this.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.comms",
+    "label": "Comms",
+    "description": "Useless configurations dialer, sms, contacts Google(GApps) It may break PackageInstaller.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.geotz",
+    "label": "Geotz",
+    "description": "Provides Geolocation Time Zone detection. and it's used by (com.google.android.overlay.gmsconfig.common)? No effects after remove.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.gsa",
+    "label": "Gsa",
+    "description": "configures default assistant? And have config to allow disabling assist disclosure? I think it doesn't affect anything. Safe to remove if you removed (com.google.android.googlequicksearchbox).",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.healthconnect",
+    "label": "Healthconnect",
+    "description": "Useless overlay gmsconfig to Health Connect",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.nosafetycenter",
+    "label": "Nosafetycenter",
+    "description": "Has no safety center in the code? Weird. Not needed.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.personalsafety",
+    "label": "Personalsafety",
+    "description": "Not needed for (com.google.android.apps.safetyhub).",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.photos",
+    "label": "Photos",
+    "description": "WARNING: Uninstalling it makes it impossible to unlock Android 15, Blackview Tab 60 WiFi!",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.searchlauncherqs",
+    "label": "Searchlauncherqs",
+    "description": "WARNING: Uninstalling it breaks the Settings app for Android 15, Blackview Tab 60 WiFi!",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.searchselector",
+    "label": "Searchselector",
+    "description": "Removal will crash most apps like settings, clock, firefox, github, termux etc.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.tetheringentitlement",
+    "label": "Tetheringentitlement",
+    "description": "Useless overlay gmsconfig to tetheringentitlement. No effects after remove",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.tier1",
+    "label": "Tier1",
+    "description": "Has random set to default google apps and vivo gallery.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsconfig.ww",
+    "label": "Ww",
+    "description": "useless unused overlay gmsconfig to family link.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsgoconfig",
+    "label": "Gmsgoconfig",
+    "description": "A completely useless 0 bytes app.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.gmsgsaconfig",
+    "label": "Gmsgsaconfig",
+    "description": "Not needed overlay, only has code to set `googlequicksearchbox`(Google App) as default assistant",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.googleconfig",
+    "label": "Googleconfig",
+    "description": "Once configs all default things to google. Bricks google login functionality.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.googlewebview",
+    "label": "Googlewebview",
+    "description": "Once configs webview default to google. Bricks google login functionality.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.healthconnect",
+    "label": "Healthconnect",
+    "description": "Overlay to 'com.google.android.apps.healthdata'.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.managedprovisioning",
+    "label": "Managedprovisioning",
+    "description": "In code I have seen lists of some system apps and stuff of `managedprovisioning` user. Safe to remove if you removed `com.android.managedprovisioning`. But it probably doesn't affect anything.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.modules.captiveportallogin.forframework",
+    "label": "Forframework",
+    "description": "Configs default captiveportallogin. (not needed) No effects after remove.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.modules.cellbroadcastreceiver",
+    "label": "Cellbroadcastreceiver",
+    "description": "Overlay (theme/notification) module for com.google.android.cellbroadcastreceiver",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [
+      "com.google.android.cellbroadcastreceiver"
+    ],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.modules.cellbroadcastservice",
+    "label": "Cellbroadcastservice",
+    "description": "",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.modules.documentsui",
+    "label": "Documentsui",
+    "description": "WARNING: Uninstalling it breaks the Scheduled power on/off page of the Settings app for Android 15, Blackview Tab 60 WiFi!",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.modules.ext.services",
+    "label": "S",
+    "description": "it's overlay that depends on (com.google.android.ext.services) Cause bootloop.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [
+      "com.google.android.ext.services"
+    ],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.modules.modulemetadata.forframework",
+    "label": "Forframework",
+    "description": "If you remove this package, your phone has an extremely large chance of bootlooping. Just don't mess around with this package. Tested on a Samsung A34 5G.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.modules.packageinstaller",
+    "label": "Packageinstaller",
+    "description": "Package installer ui changes to the classic after uninstallation.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.modules.permissioncontroller",
+    "label": "Permissioncontroller",
+    "description": "I only detect on this app: help_app_permissions (link below). It looks very useless, not needed. It doesnt affect com.google.android.permissioncontroller https://support.google.com/googleplay/answer/6270602 WARNING: when disabling this package on a Samsung N960F running Android Q, the pop-up UI reverts. Disabling this package (as it's an overlay) will also put the pop-up UI to (like full-screen notification) to the center instead of the bottom.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.modules.permissioncontroller.forframework",
+    "label": "Forframework",
+    "description": "config_incidentReportApproverPackage It looks very useless. Not needed, it doesnt affect on (com.google.android.permissioncontroller)",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.permissioncontroller",
+    "label": "Permissioncontroller",
+    "description": "Breaks Google Play System updates (GPSu), related to Project Mainline. Page on Settings will crash altogether, or ask Play Store to be updated. https://support.google.com/product-documentation/answer/14343500",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [
+      "com.android.vending"
+    ],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.pixelconfig2018",
+    "label": "Pixelconfig2018",
+    "description": "Useless default configs? You can lose some basic functionality so it's not worth touching it.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.pixelconfig2019",
+    "label": "Pixelconfig2019",
+    "description": "Useless default configs? You can lose some basic functionality so it's not worth touching it.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.pixelconfig2019midyear",
+    "label": "Pixelconfig2019Midyear",
+    "description": "Useless default configs? You can lose some basic functionality so it's not worth touching it.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.pixelconfig2021",
+    "label": "Pixelconfig2021",
+    "description": "Pixel 2021 configuration overlay for device features and UI.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.pixelconfigcommon",
+    "label": "Pixelconfigcommon",
+    "description": "Useless default configs? You can lose some basic functionality so it's not worth touching it.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.settingsProvider",
+    "label": "Settings Provider",
+    "description": "Have some stuff about google gms: backup.BackupTransportService. Useless backup things, without it backup and cloud work. Maybe it's used for backup settings, but probably not, and if it is, I don't think you need it.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.trafficlightfaceoverlay",
+    "label": "Trafficlightfaceoverlay",
+    "description": "Traffic light face overlay for system UI enhancement.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.overlay.udfpsoverlay",
+    "label": "Udfpsoverlay",
+    "description": "Configs to fingerprints FRP auto generated.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.packageinstaller",
+    "label": "Packageinstaller",
+    "description": "Google package installer. Seems to replace com.android.packageinstaller on newer phones. It is strangely not needed on older devices (you can still install APKs without it by using the AOSP package installer) but since Android 9, it also handles permissions control and could bootloop your device if removed. On Android 8.1, disabling the app also disabled the 'Permissions' settings within all the apps. Besides that, I couldn't install an '.apk' file download from outside the Play Store. Source: https://source.android.com/docs/core/architecture/modular-system/permissioncontroller.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.packageinstaller.a_overlay",
+    "label": "A",
+    "description": "Gives ability to install, update or remove applications on the device. If you delete this package, your phone will probably bootloop.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.partnersetup",
+    "label": "Partnersetup",
+    "description": "Google Partner Setup Occasionally runs in the background. Based on an unclear explanation online: \"Enables applications to interact with your Google account/apps, for example: adding a Google Calendar event from a To-Do app.\" Probably safe to disable; haven't noticed any consequences of disabling from weeks of use.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.permissioncontroller",
+    "label": "Permissioncontroller",
+    "description": "Permission controller Controls app permissions. https://source.android.com/devices/architecture/modular-system/permissioncontroller",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.permissioncontroller.overlay.nothing",
+    "label": "Nothing",
+    "description": "Better keep this for permissioncontroller. Better don't risk",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.permissioncontroller.overlay.oplus",
+    "label": "Oplus",
+    "description": "Permission controller overlay. Overlays work by mapping resources defined in the overlay package to resources defined in the target package. When an app attempts to resolve the value of a resource in the target package, the value of the overlay resource the target resource is mapped to is returned instead. https://source.android.com/docs/core/runtime/rros",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.photopicker",
+    "label": "Photopicker",
+    "description": "Photo picker Provides a browsable interface that presents the user with their media library, sorted by date from newest to oldest. Safe, built-in way for users to grant your app access to only selected images and videos, instead of their entire media library. https://developer.android.com/training/data-storage/shared/photopicker",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.pixel.avatarpicker",
+    "label": "Avatarpicker",
+    "description": "Avatar picker for Google Pixel personalization.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.pixel.setupwizard",
+    "label": "Setupwizard",
+    "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device. The second package is only present on Pixel phones. Breaks the Google Play System update page found on \"Security & privacy\", for whatever reason...",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.pixel.setupwizard.auto_generated_rro_product__",
+    "label": "Auto Generated Rro Product",
+    "description": "Useless first-boot setup configs",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.pixel.setupwizard.overlay",
+    "label": "Overlay",
+    "description": "Useless first-boot setup configs",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.pixel.setupwizard.overlay2019",
+    "label": "2019",
+    "description": "Useless first-boot setup configs",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.pixel.setupwizard.overlay2021",
+    "label": "2021",
+    "description": "Useless first-boot setup configs",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.pixelnfc",
+    "label": "Pixelnfc",
+    "description": "Application that checks the SKU of a Pixel device to Region Lock the Felica chip (Japanese NFC technology used in E-money cards) of the phone to prevent non-Japanese people from using it. Removing it will make the Osaifu-Keitai crash upon start-up but will not cause any bootloop. Patching it (ROOT), however allows people with a Felica Chip to add IC cards to their phone and use it to pay while in Japan.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.pixelsystemservice",
+    "label": "Pixelsystemservice",
+    "description": "System service app for Pixel device management.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.play.games",
+    "label": "Games",
+    "description": "Google Play Games (https://play.google.com/store/apps/details?id=com.google.android.play.games)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.printservice.recommendation",
+    "label": "Recommendation",
+    "description": "I think this has to do with recommending a printservice app you can get from the Play store. I think printing still works with this off.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.projection.gearhead",
+    "label": "Gearhead",
+    "description": "Android Auto (https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.providers.media.module",
+    "label": "Module",
+    "description": "Media Storage In Android 11+ this provides file access to apps without \"Manage All Files\" permission. In previous versions it's just an index of all audio-visual (no text) files in the user's file-system (`/sdcard/`, `/storage/emulated/0/`, etc...). This allows music-players and photo-galleries to list files quickly, without caching their own indices. Safe to disable, but NOT recommended; breaks file browsers and other forms of file access. Content providers encapsulate data, providing centralized management of data shared between apps. https://developer.android.com/guide/topics/providers/content-providers.html",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.repairmode",
+    "label": "Repairmode",
+    "description": "Repair mode to Pixel, not sure how it works.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.retaildemo",
+    "label": "Retaildemo",
+    "description": "Retail demo app for product displays in stores.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.rilextension",
+    "label": "Rilextension",
+    "description": "Google Assistant extension for enhanced functionality.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.rkpdapp",
+    "label": "Rkpdapp",
+    "description": "Security and privacy management app for Pixel devices.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.safetycenter.resources",
+    "label": "Resources",
+    "description": "Google Safety Center. Google Safe Browsing. WARNING: Crashes Security and Privacy settings if removed. https://www.android.com/safety/",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.sdksandbox",
+    "label": "Sdksandbox",
+    "description": "Introduced in Android 13 privacy sandbox beta disabled on default. Causes bootloop. Maybe this component is not only for privacy... (I think it's for testing privacy sandbox using Android Studio.) https://source.android.com/docs/core/ota/modular-system/adservices Cause BOOTLOOP.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.server.deviceconfig.resources",
+    "label": "Resources",
+    "description": "Device configuration server resources for Android devices.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.settings.future.biometrics.faceenroll",
+    "label": "Faceenroll",
+    "description": "Needed to face unlock.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.settings.intelligence",
+    "label": "Intelligence",
+    "description": "Settings Services/nAdds the main search bar for the settings app (the one at the top on the default page). When uninstalled, search bar will be invisible. May have other purposes regarding settings. /nUses location, nearby devices, notifications permissions by default.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.settings.overlay.pixelvpnconfig",
+    "label": "Pixelvpnconfig",
+    "description": "VPN configuration for Pixel devices.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.setupwizard",
+    "label": "Setupwizard",
+    "description": "Android Setup The factory reset device basic configuration setup guides you through the basics of setting up your device. WARNING: Oddly enough, disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your bank) to authenticate you. Also breaks syncing of Google accounts setup after this package is removed. See https://en.wikipedia.org/wiki/Mobile_identity_management for Mobile Identity Management.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [
+      "mim"
+    ],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.setupwizard.a_overlay",
+    "label": "A",
+    "description": "Overlay for setupwizard?",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.soundpicker",
+    "label": "Soundpicker",
+    "description": "Google Sounds. Removable if you already have another media select service.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.speech.pumpkin",
+    "label": "Pumpkin",
+    "description": "PumpkinService Has something to speech.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.sss.authbridge",
+    "label": "Authbridge",
+    "description": "Second Screen Setup Auth Bridge There's google api's used on first boot setup.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.storagemanager",
+    "label": "Storagemanager",
+    "description": "Storage management app for Android devices.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.storagemanager.auto_generated_rro_product__",
+    "label": "Auto Generated Rro Product",
+    "description": "Configs to settings auto generated but better keep.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.storagemanager.auto_generated_rro_vendor__",
+    "label": "Auto Generated Rro Vendor",
+    "description": "Configs to settings auto generated but better keep.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.street",
+    "label": "Street",
+    "description": "Google Street View (https://play.google.com/store/apps/details?id=com.google.android.street)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.syncadapters.bookmarks",
+    "label": "Bookmarks",
+    "description": "Synchronisation for Google Chrome bookmarks",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.syncadapters.calendar",
+    "label": "Calendar",
+    "description": "Synchronisation for Google Calendar.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.syncadapters.contacts",
+    "label": "Contacts",
+    "description": "Synchronisation for Google Contacts.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.systemui.gxoverlay",
+    "label": "Gxoverlay",
+    "description": "Configs to systemui auto generated but better keep.",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.systemui.overlay.pixelbatteryhealthconfig",
+    "label": "Pixelbatteryhealthconfig",
+    "description": "Battery health overlay for Pixel devices.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.systemui.overlay.pixelvpnconfig",
+    "label": "Pixelvpnconfig",
+    "description": "Pixel VPN configuration overlay for network management.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tag",
+    "label": "Tag",
+    "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default). NFC Tags are for instance used in bus to let you validate your transport card with your phone Other example: https://en.wikipedia.org/wiki/TecTile You will still be able to connect to an NFC device (e.g a speaker) if removed.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.talk",
+    "label": "Talk",
+    "description": "Google Hangouts (https://play.google.com/store/apps/details?id=com.google.android.talk)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.telephony",
+    "label": "Telephony",
+    "description": "Core telephony system app for managing calls and messaging.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tetheringentitlement",
+    "label": "Tetheringentitlement",
+    "description": "Tethering entitlement management for Android devices.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tts",
+    "label": "Tts",
+    "description": "Speech Recognition and Synthesis from Google (https://play.google.com/store/apps/details?id=com.google.android.tts) Default Text To Speech (TTS) engine on most of Android devices. It enables apps to convert text into voice. Pithus analysis (2024-03-03): https://beta.pithus.org/report/f0a2303e1c1bd049bf1cdc5a3454dfe19b2aaf26008662c7a307aaec2538558b Note: Many navigation and health/sports apps rely on a TTS engine to provide speech services. Open-source TTS engines available on Android exists but, as of the end of 2022, there is only RHVoice (https://f-droid.org/en/packages/com.github.olga_yakovleva.rhvoice.android/) and it doesn't support a lot of languages. Mimic3 (https://mycroft.ai/mimic-3/) is probably the future of IoT open-source TTS engine but there is no Android support yet",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tungsten.setupwraith",
+    "label": "Setupwraith",
+    "description": "First boot setup TV. Removing it crashes sound related system settings and breaks volume control on Sony Bravia TV. https://play.google.com/store/apps/details?id=com.google.android.tungsten.setupwraith&hl=en&gl=US",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.turboadapter",
+    "label": "Turboadapter",
+    "description": "Device Health Services Adapter Another app for Device Health Services(discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tv",
+    "label": "Tv",
+    "description": "Live Channels TV tuner and watching stuff, sadly has google analytics.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tv.axel",
+    "label": "Axel",
+    "description": "Android TV Infrared Service Needed for volume setup.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tv.bugreportsender",
+    "label": "Bugreportsender",
+    "description": "BugReportSender Bug reports app.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tv.dfuservice",
+    "label": "Dfuservice",
+    "description": "Remote Control Update Service.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tv.frameworkpackagestubs",
+    "label": "Frameworkpackagestubs",
+    "description": "Activity Stub Weird app that probably needed for SQLite, webview browser.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tv.remote",
+    "label": "Remote",
+    "description": "Android TV remote control (https://play.google.com/store/apps/details?id=com.google.android.tv.remote)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tv.remote.service",
+    "label": "Service",
+    "description": "Android TV Remote Service, pairing requests from your phone. https://play.google.com/store/apps/details?id=com.google.android.tv.remote.service&hl=en&gl=US",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tv.remotecontrol.logging",
+    "label": "Logging",
+    "description": "Needed for logging?",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tvlauncher",
+    "label": "Tvlauncher",
+    "description": "Android TV Home, on some devices, removing this causes the device to restore default settings on the next power on. https://play.google.com/store/apps/details?id=com.google.android.tvlauncher&hl=en&gl=US https://www.clrn.org/how-to-disable-google-tv-on-android/",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.tvrecommendations",
+    "label": "Tvrecommendations",
+    "description": "Android TV Core Services Sometimes has only Notification to Android11UpgradeReceiver, and on some TV's has a lot frameworks, it's weird. https://play.google.com/store/apps/details?id=com.google.android.tvrecommendations&hl=en&gl=US",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.uvexposurereporter",
+    "label": "Uvexposurereporter",
+    "description": "UvExposureReporter, logs, VendorAtom. Unknown.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.uwb.resources",
+    "label": "Resources",
+    "description": "UWB technology resources for location tracking.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.videoeditor",
+    "label": "Videoeditor",
+    "description": "Google Movie Studio (discontinued)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.videos",
+    "label": "Videos",
+    "description": "Google TV (previously Google Play Movies & TV) (https://play.google.com/store/apps/details?id=com.google.android.videos)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.virtualmachine.res",
+    "label": "Res",
+    "description": "Resources for Android virtual machine environment.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.voicesearch",
+    "label": "Voicesearch",
+    "description": "Google Voice Search (Speech-To-Text)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.vr.home",
+    "label": "Home",
+    "description": "Daydream (VR stuff) (https://play.google.com/store/apps/details?id=com.google.android.vr.home)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.vr.inputmethod",
+    "label": "Inputmethod",
+    "description": "Daydream virtual keyboard (VR stuff) (https://play.google.com/store/apps/details?id=com.google.android.vr.inputmethod)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wallpaper.effects",
+    "label": "Effects",
+    "description": "Wallpaper visual effects for Android devices.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wearable.ambient",
+    "label": "Ambient",
+    "description": "It's like doze on Android phones. Not recommended to disable, as this package reduces battery drain when idle.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wearable.app",
+    "label": "App",
+    "description": "Wear OS Smartwatch (https://play.google.com/store/apps/details?id=com.google.android.wearable.app)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wearable.assistant",
+    "label": "Assistant",
+    "description": "Google Assistant for Android wearables (https://play.google.com/store/apps/details?id=com.google.android.wearable.assistant) Has obviously all the dangerous permissions: https://beta.pithus.org/report/efccf27aa68d9c263e4288d38af76f855b5fd4156034ebdaabeb185d8c4f1411",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wearable.batteryservices",
+    "label": "Batteryservices",
+    "description": "It's used to manage battery-related things on Android smartwatches, like monitoring the battery level, managing power consumption (auto battery saving I think), and handling battery-related events (pop-up when battery at 15%, etc.). It is typically used by developers to create battery-aware applications for wearable devices.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wearable.healthservices",
+    "label": "Healthservices",
+    "description": "Health Services by Google (https://play.google.com/store/apps/details?id=com.google.android.wearable.healthservices) Disabling this on a Watch5 broke heart rate measuring and some workouts.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.webview",
+    "label": "Webview",
+    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview) enables Android apps to display web content within the app itself, based on Chrome. If you delete WebView, make sure to install a replacement. Many third-party apps, such as banks, VPNs, GitHub, Discord and Reddit use web-based content and will crash without it. It can cause notifications problems",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wfcactivation",
+    "label": "Wfcactivation",
+    "description": "Carrier Setup Needed for IMS, WiFi calling and have emergency things.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wifi.dialog",
+    "label": "Dialog",
+    "description": "Wi-Fi dialog. App to launch user dialogs requested by the Wi-Fi service is stored here. Contains the Activity the dialogs are launched from. https://source.android.com/docs/core/ota/modular-system/wifi https://android.googlesource.com/platform/packages/apps/Settings/+/refs/heads/main/src/com/android/settings/wifi/WifiDialog.java https://android.googlesource.com/platform/packages/apps/Settings/+/refs/heads/main/src/com/android/settings/wifi/WifiDialog2.kt",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wifi.resources",
+    "label": "Resources",
+    "description": "Wi-Fi Service Resources. Overlay APK manifest is stored here. Extracts Wi-Fi configs. https://source.android.com/docs/core/ota/modular-system/wifi",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.wifi.resources.pixel",
+    "label": "Pixel",
+    "description": "WiFi configs",
+    "safety": "danger",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.youtube",
+    "label": "Youtube",
+    "description": "YouTube (https://play.google.com/store/apps/details?id=com.google.android.youtube)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.youtube.tv",
+    "label": "Tv",
+    "description": "YouTube app https://play.google.com/store/apps/details?id=com.google.android.youtube.tv&hl=en_US",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.android.youtube.tvmusic",
+    "label": "Tvmusic",
+    "description": "YouTube Music https://play.google.com/store/apps/details?id=com.google.android.youtube.tvmusic&hl=en&gl=US",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.ar.core",
+    "label": "Core",
+    "description": "Google Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core) Note: Disabling it can mess with apps that use it, like Pokemon GO. https://beta.pithus.org/report/99ea324529f950fe351d22724f8b894cce19c16607fcc9c2855bc906b1f8e644",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.ar.lens",
+    "label": "Lens",
+    "description": "Google Lens (for AR too) (https://play.google.com/store/apps/details?id=com.google.ar.lens)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.audio.hearing.visualization.accessibility.scribe",
+    "label": "Scribe",
+    "description": "Live Transcribe & Sound Notifications (https://play.google.com/store/apps/details?id=com.google.audio.hearing.visualization.accessibility.scribe) Provides push notifications for critical sounds around you. This feature can be helpful for people with hearing loss. https://blog.google/products/android/new-sound-notifications-on-android/ Works offline",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.chromeremotedesktop",
+    "label": "Chromeremotedesktop",
+    "description": "Chrome Remote Desktop (https://play.google.com/store/apps/details?id=com.google.chromeremotedesktop)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.earth",
+    "label": "Earth",
+    "description": "Google Earth (https://play.google.com/store/apps/details?id=com.google.earth)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.euiccpixel",
+    "label": "Euiccpixel",
+    "description": "NFC, eSE, eSIM firmware updater",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.euiccpixel.overlay.gs101",
+    "label": "Gs101",
+    "description": "Overlay to (com.google.euiccpixel) NFC, eSE, eSIM firmware updater",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.euiccpixel.overlay.zuma",
+    "label": "Zuma",
+    "description": "EU Pixel device overlay for regional functionality.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.euiccpixel.permissions",
+    "label": "Permissions",
+    "description": "Permission manager for EU-configured Google Pixel devices.",
+    "safety": "unsafe",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.mainline.adservices",
+    "label": "Adservices",
+    "description": "Adservices Train Version Package. AdServices too. uses ondevicepersonalization. Introduced in Android 13 NOTE: This package is a mandatory mainline module, which is also not documented. I don't trust it when it comes to adservices.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.mainline.telemetry",
+    "label": "Telemetry",
+    "description": "Contains data on which versions of modules are installed. Google Play uses this data to determine if updates are available for the modules, and to show which security patch is installed. This module doesn’t contain active code and has no functionality on its own. Anyway I wont trust it when adservices are also in mainline. https://www.xda-developers.com/android-project-mainline-modules-explanation/ https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/27#note_410012436",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.marvin.talkback",
+    "label": "Talkback",
+    "description": "Android Accessibility Suite (https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.omadm.trigger",
+    "label": "Trigger",
+    "description": "OemDmTrigger OMA Device Managment Verizon.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.pixel.camera.services",
+    "label": "S",
+    "description": "CameraIDRemapper and a lot Debug stuff. Dependency for Private space on Pixel devices. https://source.android.com/docs/security/features/private-space",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.pixel.digitalkey.timesync",
+    "label": "Timesync",
+    "description": "CccDkTimeSyncService, IBluetoothCcc. Unknown app to car connectivity.",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.pixel.iwlan",
+    "label": "Iwlan",
+    "description": "IWlan optimization for Pixel Wi-Fi connections.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.pixel.livewallpaper",
+    "label": "Livewallpaper",
+    "description": "Pixel live wallpaper Have a lot of wallpapers.",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.samples.apps.cardboarddemo",
+    "label": "Cardboarddemo",
+    "description": "Google Cardboard (VR stuff) (https://play.google.com/store/apps/details?id=com.google.samples.apps.cardboarddemo)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.tango.measure",
+    "label": "Measure",
+    "description": "Google Measure (https://play.google.com/store/apps/details?id=com.google.tango.measure)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.vr.cyclops",
+    "label": "Cyclops",
+    "description": "Google Cardboard Camera (VR stuff) (https://play.google.com/store/apps/details?id=com.google.vr.cyclops)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.vr.expeditions",
+    "label": "Expeditions",
+    "description": "Google Expedition (VR stuff) (https://play.google.com/store/apps/details?id=com.google.vr.expeditions)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.vr.vrcore",
+    "label": "Vrcore",
+    "description": "Google VR services (https://play.google.com/store/apps/details?id=com.google.vr.vrcore)",
+    "safety": "advanced",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.google.zxing.client.android",
+    "label": "Android",
+    "description": "Google Barcode Scanner (discontinued) (https://play.google.com/store/apps/details?id=com.google.zxing.client.android)",
+    "safety": "recommended",
+    "category": "google",
+    "oems": [
+      "google"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

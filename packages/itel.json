@@ -1,0 +1,16 @@
+[
+  {
+    "name": "com.itel.TWSService",
+    "label": "Twsservice",
+    "description": "This app is used for connection to TECNO Hipods.",
+    "safety": "advanced",
+    "category": "itel",
+    "oems": [
+      "itel"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

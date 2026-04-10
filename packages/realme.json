@@ -1,0 +1,100 @@
+[
+  {
+    "name": "com.realme.as.music",
+    "label": "Music",
+    "description": "Realme Music app https://play.google.com/store/apps/details?id=com.realme.as.music",
+    "safety": "recommended",
+    "category": "realme",
+    "oems": [
+      "realme"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.realme.findphone.client2",
+    "label": "Client2",
+    "description": "Find my phone client app",
+    "safety": "recommended",
+    "category": "realme",
+    "oems": [
+      "realme"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.realme.link",
+    "label": "Link",
+    "description": "RealMe Link (https://play.google.com/store/apps/details?id=com.realme.link) Companion app for various realme IoT devices. Useless if you don't have a realme watch/band",
+    "safety": "recommended",
+    "category": "realme",
+    "oems": [
+      "realme"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.realme.logtool",
+    "label": "Logtool",
+    "description": "Hidden Logs App",
+    "safety": "recommended",
+    "category": "realme",
+    "oems": [
+      "realme"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.realme.movieshot",
+    "label": "Movieshot",
+    "description": "Combine captions It's for partial screenshot, SaveLongshot.",
+    "safety": "advanced",
+    "category": "realme",
+    "oems": [
+      "realme"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.realme.securitycheck",
+    "label": "Securitycheck",
+    "description": "Have useless ads and security checks. Why do we need more security when Play Protect is already good?",
+    "safety": "recommended",
+    "category": "realme",
+    "oems": [
+      "realme"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.realme.wellbeing",
+    "label": "Wellbeing",
+    "description": "Sleep capsule Feature for your phone where apps are locked at night to help you get a good night's sleep. No one is probably using this.",
+    "safety": "recommended",
+    "category": "realme",
+    "oems": [
+      "realme"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]
