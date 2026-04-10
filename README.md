@@ -30,23 +30,6 @@ Connect your device and begin advanced Android bloatware removal and optimizatio
 
 ## Installation
 
-### From Source
-
-```bash
-# Clone the repository
-git clone https://github.com/ImKKingshuk/BloatwareHatao.git
-cd BloatwareHatao
-
-# Build and run
-cargo run --release --bin bloatwarehatao
-```
-
-### Cargo Install
-
-```bash
-cargo install --git https://github.com/ImKKingshuk/BloatwareHatao bloatwarehatao-tui
-```
-
 ## Quick Start
 
 ### TUI (Default)
