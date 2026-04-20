@@ -37,48 +37,57 @@ impl Device {
     /// Fetch device information from a connected device
     #[instrument(skip(adb))]
     pub async fn from_adb(adb: &Adb) -> Result<Self> {
-        let model = adb.shell("getprop ro.product.model")
+        let model = adb
+            .shell("getprop ro.product.model")
             .await
             .map(|s| s.trim().to_string())
             .unwrap_or_default();
-        
-        let manufacturer = adb.shell("getprop ro.product.manufacturer")
+
+        let manufacturer = adb
+            .shell("getprop ro.product.manufacturer")
             .await
             .map(|s| s.trim().to_string())
             .unwrap_or_default();
-        
-        let brand = adb.shell("getprop ro.product.brand")
+
+        let brand = adb
+            .shell("getprop ro.product.brand")
             .await
             .map(|s| s.trim().to_string())
             .unwrap_or_default();
-        
-        let android_version = adb.shell("getprop ro.build.version.release")
+
+        let android_version = adb
+            .shell("getprop ro.build.version.release")
             .await
             .map(|s| s.trim().to_string())
             .unwrap_or_default();
-        
-        let sdk_str = adb.shell("getprop ro.build.version.sdk")
+
+        let sdk_str = adb
+            .shell("getprop ro.build.version.sdk")
             .await
             .map(|s| s.trim().to_string())
             .unwrap_or_default();
         let sdk_version = sdk_str.parse().unwrap_or(0);
-        
-        let build_id = adb.shell("getprop ro.build.display.id")
+
+        let build_id = adb
+            .shell("getprop ro.build.display.id")
             .await
             .map(|s| s.trim().to_string())
             .unwrap_or_default();
-        
-        let product = adb.shell("getprop ro.product.name")
+
+        let product = adb
+            .shell("getprop ro.product.name")
             .await
             .map(|s| s.trim().to_string())
             .unwrap_or_default();
-        
-        let device = adb.shell("getprop ro.product.device")
+
+        let device = adb
+            .shell("getprop ro.product.device")
             .await
             .map(|s| s.trim().to_string())
             .unwrap_or_default();
-        
-        let security_patch = adb.shell("getprop ro.build.version.security_patch")
+
+        let security_patch = adb
+            .shell("getprop ro.build.version.security_patch")
             .await
             .map(|s| s.trim().to_string())
             .ok();
@@ -244,7 +253,7 @@ impl DeviceHealth {
     #[instrument(skip(adb))]
     pub async fn from_adb(adb: &Adb) -> Result<Self> {
         let battery_output = adb.shell("dumpsys battery").await.unwrap_or_default();
-        
+
         let mut battery_level = None;
         let mut battery_status = None;
         let mut battery_temp = None;
@@ -270,11 +279,9 @@ impl DeviceHealth {
 
         for line in meminfo.lines() {
             if let Some(value) = line.strip_prefix("MemTotal:") {
-                ram_total_kb = value.split_whitespace().next()
-                    .and_then(|s| s.parse().ok());
+                ram_total_kb = value.split_whitespace().next().and_then(|s| s.parse().ok());
             } else if let Some(value) = line.strip_prefix("MemAvailable:") {
-                ram_available_kb = value.split_whitespace().next()
-                    .and_then(|s| s.parse().ok());
+                ram_available_kb = value.split_whitespace().next().and_then(|s| s.parse().ok());
             }
         }
 
@@ -359,18 +366,21 @@ impl DeviceManager {
     /// Get list of ready devices (authorized and connected)
     pub async fn list_ready_devices(&self) -> Result<Vec<AdbDeviceInfo>> {
         let devices = self.adb.devices().await?;
-        Ok(devices.into_iter().filter(|d| d.status.is_ready()).collect())
+        Ok(devices
+            .into_iter()
+            .filter(|d| d.status.is_ready())
+            .collect())
     }
 
     /// Get single connected device (error if multiple)
     pub async fn get_device(&self) -> Result<Adb> {
         let devices = self.list_ready_devices().await?;
-        
+
         match devices.len() {
             0 => Err(Error::NoDevice),
             1 => Ok(self.adb.clone().with_device(&devices[0].serial)),
             _ => Err(Error::MultipleDevices(
-                devices.iter().map(|d| d.serial.clone()).collect()
+                devices.iter().map(|d| d.serial.clone()).collect(),
             )),
         }
     }

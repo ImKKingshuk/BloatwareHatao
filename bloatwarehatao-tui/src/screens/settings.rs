@@ -3,15 +3,15 @@
 //! Application configuration settings backed by bh-core Config.
 
 use ratatui::{
+    Frame,
     layout::{Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
     widgets::{Block, Borders, List, ListItem, Paragraph},
-    Frame,
 };
 
-use bloatwarehatao_core::config::Theme;
 use crate::app::App;
+use bloatwarehatao_core::config::Theme;
 
 /// Settings categories
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -52,9 +52,9 @@ impl SettingsScreen {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([
-                Constraint::Length(3),  // Header
-                Constraint::Min(10),    // Content
-                Constraint::Length(3),  // Status bar
+                Constraint::Length(3), // Header
+                Constraint::Min(10),   // Content
+                Constraint::Length(3), // Status bar
             ])
             .split(f.area());
 
@@ -64,12 +64,12 @@ impl SettingsScreen {
     }
 
     fn draw_header(f: &mut Frame, area: Rect) {
-        let header = Paragraph::new(Line::from(vec![
-            Span::styled(
-                " ⚙️ Settings ",
-                Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD),
-            ),
-        ]))
+        let header = Paragraph::new(Line::from(vec![Span::styled(
+            " ⚙️ Settings ",
+            Style::default()
+                .fg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
+        )]))
         .block(
             Block::default()
                 .borders(Borders::ALL)
@@ -91,7 +91,7 @@ impl SettingsScreen {
 
     fn draw_categories(f: &mut Frame, area: Rect, selected: usize) {
         let categories = SettingsCategory::all();
-        
+
         let items: Vec<ListItem> = categories
             .iter()
             .enumerate()
@@ -115,21 +115,22 @@ impl SettingsScreen {
             })
             .collect();
 
-        let list = List::new(items)
-            .block(
-                Block::default()
-                    .title(" Categories ")
-                    .title_style(Style::default().fg(Color::Yellow))
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let list = List::new(items).block(
+            Block::default()
+                .title(" Categories ")
+                .title_style(Style::default().fg(Color::Yellow))
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(list, area);
     }
 
     fn draw_settings(f: &mut Frame, area: Rect, app: &App, selected: usize) {
         let categories = SettingsCategory::all();
-        let category = categories.get(selected).unwrap_or(&SettingsCategory::General);
+        let category = categories
+            .get(selected)
+            .unwrap_or(&SettingsCategory::General);
 
         let block = Block::default()
             .title(format!(" {} ", category.display_name()))
@@ -149,36 +150,68 @@ impl SettingsScreen {
 
     fn draw_general_settings(f: &mut Frame, area: Rect, app: &App) {
         let config = &app.state.config;
-        
+
         let lines = vec![
             Line::from(""),
-            Self::setting_line("Dry Run Mode", 
-                if app.state.dry_run { "Enabled" } else { "Disabled" }, 
-                if app.state.dry_run { Color::Yellow } else { Color::Green }),
+            Self::setting_line(
+                "Dry Run Mode",
+                if app.state.dry_run {
+                    "Enabled"
+                } else {
+                    "Disabled"
+                },
+                if app.state.dry_run {
+                    Color::Yellow
+                } else {
+                    Color::Green
+                },
+            ),
             Line::from(Span::styled(
                 "  When enabled, no actual changes are made to the device",
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Auto Update Check", 
-                if config.auto_update_check { "Enabled" } else { "Disabled" }, 
-                Color::Green),
+            Self::setting_line(
+                "Auto Update Check",
+                if config.auto_update_check {
+                    "Enabled"
+                } else {
+                    "Disabled"
+                },
+                Color::Green,
+            ),
             Line::from(Span::styled(
                 "  Check for new versions on startup",
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Offline Mode", 
-                if config.offline_mode { "Enabled" } else { "Disabled" }, 
-                if config.offline_mode { Color::Yellow } else { Color::Green }),
+            Self::setting_line(
+                "Offline Mode",
+                if config.offline_mode {
+                    "Enabled"
+                } else {
+                    "Disabled"
+                },
+                if config.offline_mode {
+                    Color::Yellow
+                } else {
+                    Color::Green
+                },
+            ),
             Line::from(Span::styled(
                 "  Use local package database only",
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Verbose Output", 
-                if config.verbose { "Enabled" } else { "Disabled" }, 
-                Color::White),
+            Self::setting_line(
+                "Verbose Output",
+                if config.verbose {
+                    "Enabled"
+                } else {
+                    "Disabled"
+                },
+                Color::White,
+            ),
             Line::from(Span::styled(
                 "  Show detailed operation logs",
                 Style::default().fg(Color::DarkGray),
@@ -191,13 +224,13 @@ impl SettingsScreen {
 
     fn draw_removal_settings(f: &mut Frame, area: Rect, app: &App) {
         let config = &app.state.config;
-        
+
         let removal_mode = match config.removal_mode {
             bloatwarehatao_core::package::RemovalMode::Uninstall => "User-level Uninstall",
             bloatwarehatao_core::package::RemovalMode::Disable => "Disable Only",
             bloatwarehatao_core::package::RemovalMode::Clear => "Clear Data",
         };
-        
+
         let lines = vec![
             Line::from(""),
             Self::setting_line("Default Mode", removal_mode, Color::Green),
@@ -206,31 +239,57 @@ impl SettingsScreen {
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Safety Warnings", 
-                if config.ui.show_safety_warnings { "Enabled" } else { "Disabled" }, 
-                Color::Green),
+            Self::setting_line(
+                "Safety Warnings",
+                if config.ui.show_safety_warnings {
+                    "Enabled"
+                } else {
+                    "Disabled"
+                },
+                Color::Green,
+            ),
             Line::from(Span::styled(
                 "  Show warnings for risky packages",
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Confirm Removal", 
-                if config.ui.confirm_removal { "Enabled" } else { "Disabled" }, 
-                Color::Green),
+            Self::setting_line(
+                "Confirm Removal",
+                if config.ui.confirm_removal {
+                    "Enabled"
+                } else {
+                    "Disabled"
+                },
+                Color::Green,
+            ),
             Line::from(Span::styled(
                 "  Show confirmation before removal",
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Backup Before Remove", 
-                if config.backup_before_remove { "Always" } else { "Never" }, 
-                if config.backup_before_remove { Color::Green } else { Color::Red }),
+            Self::setting_line(
+                "Backup Before Remove",
+                if config.backup_before_remove {
+                    "Always"
+                } else {
+                    "Never"
+                },
+                if config.backup_before_remove {
+                    Color::Green
+                } else {
+                    Color::Red
+                },
+            ),
             Line::from(Span::styled(
                 "  Create rescue list before removing packages",
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Max Safety Rating", &config.max_safety_rating, Color::Yellow),
+            Self::setting_line(
+                "Max Safety Rating",
+                &config.max_safety_rating,
+                Color::Yellow,
+            ),
             Line::from(Span::styled(
                 "  Maximum package safety level to show",
                 Style::default().fg(Color::DarkGray),
@@ -243,13 +302,13 @@ impl SettingsScreen {
 
     fn draw_appearance_settings(f: &mut Frame, area: Rect, app: &App) {
         let config = &app.state.config;
-        
+
         let theme_text = match config.theme {
             Theme::System => "System",
             Theme::Light => "Light",
             Theme::Dark => "Dark",
         };
-        
+
         let lines = vec![
             Line::from(""),
             Self::setting_line("Theme", theme_text, Color::Cyan),
@@ -258,25 +317,43 @@ impl SettingsScreen {
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Show Descriptions", 
-                if config.ui.show_descriptions { "Enabled" } else { "Disabled" }, 
-                Color::Green),
+            Self::setting_line(
+                "Show Descriptions",
+                if config.ui.show_descriptions {
+                    "Enabled"
+                } else {
+                    "Disabled"
+                },
+                Color::Green,
+            ),
             Line::from(Span::styled(
                 "  Show package descriptions in lists",
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Show Progress", 
-                if config.ui.show_progress { "Enabled" } else { "Disabled" }, 
-                Color::Green),
+            Self::setting_line(
+                "Show Progress",
+                if config.ui.show_progress {
+                    "Enabled"
+                } else {
+                    "Disabled"
+                },
+                Color::Green,
+            ),
             Line::from(Span::styled(
                 "  Show progress indicators during operations",
                 Style::default().fg(Color::DarkGray),
             )),
             Line::from(""),
-            Self::setting_line("Animations", 
-                if config.ui.animations { "Enabled" } else { "Disabled" }, 
-                Color::Green),
+            Self::setting_line(
+                "Animations",
+                if config.ui.animations {
+                    "Enabled"
+                } else {
+                    "Disabled"
+                },
+                Color::Green,
+            ),
             Line::from(Span::styled(
                 "  Enable UI animations",
                 Style::default().fg(Color::DarkGray),
@@ -287,12 +364,15 @@ impl SettingsScreen {
         f.render_widget(paragraph, area);
     }
 
-
-
     fn setting_line(name: &str, value: &str, value_color: Color) -> Line<'static> {
         Line::from(vec![
             Span::styled(format!("  {} ", name), Style::default().fg(Color::White)),
-            Span::styled(value.to_string(), Style::default().fg(value_color).add_modifier(Modifier::BOLD)),
+            Span::styled(
+                value.to_string(),
+                Style::default()
+                    .fg(value_color)
+                    .add_modifier(Modifier::BOLD),
+            ),
         ])
     }
 
@@ -303,17 +383,19 @@ impl SettingsScreen {
         );
 
         let dry_run = if app.state.dry_run {
-            Span::styled(" 🧪 DRY RUN ", Style::default().fg(Color::Black).bg(Color::Yellow))
+            Span::styled(
+                " 🧪 DRY RUN ",
+                Style::default().fg(Color::Black).bg(Color::Yellow),
+            )
         } else {
             Span::raw("")
         };
 
-        let status_bar = Paragraph::new(Line::from(vec![dry_run, help]))
-            .block(
-                Block::default()
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let status_bar = Paragraph::new(Line::from(vec![dry_run, help])).block(
+            Block::default()
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(status_bar, area);
     }

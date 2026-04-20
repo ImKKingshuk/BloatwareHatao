@@ -7,8 +7,8 @@ use std::collections::HashSet;
 use std::path::{Path, PathBuf};
 use tracing::info;
 
-use crate::database::SafetyRating;
 use crate::Result;
+use crate::database::SafetyRating;
 
 /// A removal preset containing a set of packages to remove
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -251,8 +251,9 @@ impl PresetManager {
 
             if path.extension().map(|e| e == "json").unwrap_or(false)
                 && let Ok(content) = std::fs::read_to_string(&path)
-                && let Ok(preset) = serde_json::from_str::<Preset>(&content) {
-                    presets.push(preset);
+                && let Ok(preset) = serde_json::from_str::<Preset>(&content)
+            {
+                presets.push(preset);
             }
         }
 
@@ -274,7 +275,12 @@ impl PresetManager {
     }
 
     /// Create and save a new custom preset
-    pub fn create_preset(&self, name: &str, description: &str, packages: Vec<String>) -> Result<Preset> {
+    pub fn create_preset(
+        &self,
+        name: &str,
+        description: &str,
+        packages: Vec<String>,
+    ) -> Result<Preset> {
         let mut preset = Preset::new(name, description);
         preset.packages = packages;
         self.save_custom_preset(&preset)?;
@@ -309,9 +315,10 @@ impl PresetManager {
 
     /// Export a preset to JSON string
     pub fn export_preset(&self, id: &str) -> Result<String> {
-        let preset = self.get_preset(id)?
+        let preset = self
+            .get_preset(id)?
             .ok_or_else(|| crate::Error::preset(format!("Preset not found: {}", id)))?;
-        
+
         serde_json::to_string_pretty(&preset)
             .map_err(|e| crate::Error::preset(format!("Failed to serialize preset: {}", e)))
     }
@@ -320,18 +327,25 @@ impl PresetManager {
     pub fn import_preset(&self, json_data: &str) -> Result<Preset> {
         let mut preset: Preset = serde_json::from_str(json_data)
             .map_err(|e| crate::Error::preset(format!("Failed to parse preset JSON: {}", e)))?;
-        
+
         // Force the preset type to Custom when importing
         preset.preset_type = PresetType::Custom;
-        
+
         // Generate a new ID to avoid conflicts
-        let new_id = format!("imported_{}", uuid::Uuid::new_v4().to_string().split('-').next().unwrap_or("new"));
+        let new_id = format!(
+            "imported_{}",
+            uuid::Uuid::new_v4()
+                .to_string()
+                .split('-')
+                .next()
+                .unwrap_or("new")
+        );
         preset.id = new_id;
-        
+
         // Save the imported preset
         self.save_custom_preset(&preset)?;
         info!("Imported preset: {} ({})", preset.name, preset.id);
-        
+
         Ok(preset)
     }
 }

@@ -3,18 +3,18 @@
 //! View and apply removal presets.
 
 use ratatui::{
+    Frame,
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
     widgets::{Block, Borders, List, ListItem, Paragraph, Wrap},
-    Frame,
 };
 
-use bloatwarehatao_core::preset::PresetType;
 use crate::app::App;
+use bloatwarehatao_core::preset::PresetType;
+use ratatui::widgets::ListState;
 use std::cell::RefCell;
 use std::collections::HashSet;
-use ratatui::widgets::ListState;
 
 /// Preset creation step
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -61,9 +61,9 @@ impl PresetsScreen {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([
-                Constraint::Length(3),  // Header
-                Constraint::Min(10),    // Content
-                Constraint::Length(3),  // Status bar
+                Constraint::Length(3), // Header
+                Constraint::Min(10),   // Content
+                Constraint::Length(3), // Status bar
             ])
             .split(f.area());
 
@@ -78,19 +78,17 @@ impl PresetsScreen {
         } else {
             " 📋 Removal Presets "
         };
-        
+
         let color = if app.state.preset_creator.active {
             Color::Yellow
         } else {
             Color::Cyan
         };
 
-        let header = Paragraph::new(Line::from(vec![
-            Span::styled(
-                title,
-                Style::default().fg(color).add_modifier(Modifier::BOLD),
-            ),
-        ]))
+        let header = Paragraph::new(Line::from(vec![Span::styled(
+            title,
+            Style::default().fg(color).add_modifier(Modifier::BOLD),
+        )]))
         .block(
             Block::default()
                 .borders(Borders::ALL)
@@ -116,11 +114,11 @@ impl PresetsScreen {
 
     fn draw_creator(f: &mut Frame, area: Rect, app: &App) {
         let state = &app.state.preset_creator;
-        
+
         let block = Block::default()
             .borders(Borders::ALL)
             .border_style(Style::default().fg(Color::Yellow));
-            
+
         let inner = block.inner(area);
         f.render_widget(block, area);
 
@@ -128,62 +126,104 @@ impl PresetsScreen {
             PresetCreationStep::NameInput => {
                 let chunks = Layout::default()
                     .direction(Direction::Vertical)
-                    .constraints([Constraint::Length(3), Constraint::Length(3), Constraint::Min(0)])
+                    .constraints([
+                        Constraint::Length(3),
+                        Constraint::Length(3),
+                        Constraint::Min(0),
+                    ])
                     .split(inner);
 
-                f.render_widget(Paragraph::new("Step 1/3: Preset Name").alignment(Alignment::Center), chunks[0]);
+                f.render_widget(
+                    Paragraph::new("Step 1/3: Preset Name").alignment(Alignment::Center),
+                    chunks[0],
+                );
 
                 let input = Paragraph::new(state.name_input.as_str())
                     .style(Style::default().fg(Color::Yellow))
                     .block(Block::default().borders(Borders::ALL).title(" Name "));
                 f.render_widget(input, chunks[1]);
-                
-                f.render_widget(Paragraph::new("Enter a unique name for this preset.\nPress Enter to continue.").style(Style::default().fg(Color::DarkGray)), chunks[2]);
+
+                f.render_widget(
+                    Paragraph::new(
+                        "Enter a unique name for this preset.\nPress Enter to continue.",
+                    )
+                    .style(Style::default().fg(Color::DarkGray)),
+                    chunks[2],
+                );
             }
             PresetCreationStep::DescriptionInput => {
                 let chunks = Layout::default()
                     .direction(Direction::Vertical)
-                    .constraints([Constraint::Length(3), Constraint::Length(6), Constraint::Min(0)])
+                    .constraints([
+                        Constraint::Length(3),
+                        Constraint::Length(6),
+                        Constraint::Min(0),
+                    ])
                     .split(inner);
 
-                f.render_widget(Paragraph::new("Step 2/3: Description").alignment(Alignment::Center), chunks[0]);
+                f.render_widget(
+                    Paragraph::new("Step 2/3: Description").alignment(Alignment::Center),
+                    chunks[0],
+                );
 
                 let input = Paragraph::new(state.description_input.as_str())
                     .style(Style::default().fg(Color::Yellow))
-                    .block(Block::default().borders(Borders::ALL).title(" Description "));
+                    .block(
+                        Block::default()
+                            .borders(Borders::ALL)
+                            .title(" Description "),
+                    );
                 f.render_widget(input, chunks[1]);
-                
-                 f.render_widget(Paragraph::new("Enter a brief description.\nPress Enter to continue.").style(Style::default().fg(Color::DarkGray)), chunks[2]);
+
+                f.render_widget(
+                    Paragraph::new("Enter a brief description.\nPress Enter to continue.")
+                        .style(Style::default().fg(Color::DarkGray)),
+                    chunks[2],
+                );
             }
             PresetCreationStep::PackageSelection => {
-                 let chunks = Layout::default()
+                let chunks = Layout::default()
                     .direction(Direction::Vertical)
-                    .constraints([Constraint::Length(2), Constraint::Min(0), Constraint::Length(1)])
+                    .constraints([
+                        Constraint::Length(2),
+                        Constraint::Min(0),
+                        Constraint::Length(1),
+                    ])
                     .split(inner);
-                    
-                 let instructions = Paragraph::new("Step 3/3: Select Packages (Space to toggle, Enter to save)")
-                    .style(Style::default().fg(Color::Green));
-                 f.render_widget(instructions, chunks[0]);
-                 
-                 let items: Vec<ListItem> = state.available_packages.iter().map(|s| {
-                     let selected = state.selected_packages.contains(s);
-                     let checkbox = if selected { "[x] " } else { "[ ] " };
-                     let style = if selected { Style::default().fg(Color::Green) } else { Style::default() };
-                     ListItem::new(format!("{}{}", checkbox, s)).style(style)
-                 }).collect();
-                 
-                 let list = List::new(items)
-                    .highlight_style(Style::default().bg(Color::DarkGray).fg(Color::White));
-                 
-                 let mut list_state = state.list_state.borrow_mut();
-                 f.render_stateful_widget(list, chunks[1], &mut *list_state);
 
-                 let count = state.selected_packages.len();
-                 let footer = Paragraph::new(format!("Selected: {} packages", count)).alignment(Alignment::Right);
-                 f.render_widget(footer, chunks[2]);
+                let instructions =
+                    Paragraph::new("Step 3/3: Select Packages (Space to toggle, Enter to save)")
+                        .style(Style::default().fg(Color::Green));
+                f.render_widget(instructions, chunks[0]);
+
+                let items: Vec<ListItem> = state
+                    .available_packages
+                    .iter()
+                    .map(|s| {
+                        let selected = state.selected_packages.contains(s);
+                        let checkbox = if selected { "[x] " } else { "[ ] " };
+                        let style = if selected {
+                            Style::default().fg(Color::Green)
+                        } else {
+                            Style::default()
+                        };
+                        ListItem::new(format!("{}{}", checkbox, s)).style(style)
+                    })
+                    .collect();
+
+                let list = List::new(items)
+                    .highlight_style(Style::default().bg(Color::DarkGray).fg(Color::White));
+
+                let mut list_state = state.list_state.borrow_mut();
+                f.render_stateful_widget(list, chunks[1], &mut *list_state);
+
+                let count = state.selected_packages.len();
+                let footer = Paragraph::new(format!("Selected: {} packages", count))
+                    .alignment(Alignment::Right);
+                f.render_widget(footer, chunks[2]);
             }
             PresetCreationStep::Confirm => {
-                 // Should not stay here long, handled by key press logic usually or just skip to save
+                // Should not stay here long, handled by key press logic usually or just skip to save
             }
         }
     }
@@ -191,7 +231,7 @@ impl PresetsScreen {
     fn draw_preset_list(f: &mut Frame, area: Rect, app: &App) {
         let presets = &app.state.presets;
         let selected = app.state.presets_selected;
-        
+
         if presets.is_empty() {
             let empty = Paragraph::new("No presets available")
                 .style(Style::default().fg(Color::DarkGray))
@@ -225,7 +265,7 @@ impl PresetsScreen {
                     PresetType::Custom => "📝",
                     PresetType::Community => "🌐",
                 };
-                
+
                 ListItem::new(vec![
                     Line::from(vec![
                         Span::raw(prefix),
@@ -241,14 +281,13 @@ impl PresetsScreen {
             })
             .collect();
 
-        let list = List::new(items)
-            .block(
-                Block::default()
-                    .title(format!(" Presets ({}) ", presets.len()))
-                    .title_style(Style::default().fg(Color::Yellow))
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let list = List::new(items).block(
+            Block::default()
+                .title(format!(" Presets ({}) ", presets.len()))
+                .title_style(Style::default().fg(Color::Yellow))
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(list, area);
     }
@@ -256,7 +295,7 @@ impl PresetsScreen {
     fn draw_preset_details(f: &mut Frame, area: Rect, app: &App) {
         let presets = &app.state.presets;
         let selected = app.state.presets_selected;
-        
+
         let block = Block::default()
             .title(" Preset Details ")
             .title_style(Style::default().fg(Color::Green))
@@ -282,7 +321,9 @@ impl PresetsScreen {
             Line::from(""),
             Line::from(Span::styled(
                 &preset.name,
-                Style::default().fg(Color::White).add_modifier(Modifier::BOLD),
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
             )),
             Line::from(""),
             Line::from(vec![
@@ -301,7 +342,10 @@ impl PresetsScreen {
                 Span::styled(&preset.id, Style::default().fg(Color::DarkGray)),
             ]),
             Line::from(""),
-            Line::from(Span::styled("Description:", Style::default().fg(Color::DarkGray))),
+            Line::from(Span::styled(
+                "Description:",
+                Style::default().fg(Color::DarkGray),
+            )),
             Line::from(Span::styled(
                 &preset.description,
                 Style::default().fg(Color::White),
@@ -318,9 +362,7 @@ impl PresetsScreen {
             )),
         ];
 
-        let paragraph = Paragraph::new(lines)
-            .block(block)
-            .wrap(Wrap { trim: true });
+        let paragraph = Paragraph::new(lines).block(block).wrap(Wrap { trim: true });
 
         f.render_widget(paragraph, area);
     }
@@ -331,24 +373,23 @@ impl PresetsScreen {
         } else {
             " ↑/↓: Navigate | Enter: Apply | n: New | e: Export | i: Import | d: Delete | q: Quit "
         };
-        
-        let help = Span::styled(
-            help_text,
-            Style::default().fg(Color::DarkGray),
-        );
+
+        let help = Span::styled(help_text, Style::default().fg(Color::DarkGray));
 
         let dry_run = if app.state.dry_run {
-            Span::styled(" 🧪 DRY RUN ", Style::default().fg(Color::Black).bg(Color::Yellow))
+            Span::styled(
+                " 🧪 DRY RUN ",
+                Style::default().fg(Color::Black).bg(Color::Yellow),
+            )
         } else {
             Span::raw("")
         };
 
-        let status_bar = Paragraph::new(Line::from(vec![dry_run, help]))
-            .block(
-                Block::default()
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let status_bar = Paragraph::new(Line::from(vec![dry_run, help])).block(
+            Block::default()
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(status_bar, area);
     }

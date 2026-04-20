@@ -8,12 +8,9 @@ use anyhow::Result;
 use crossterm::{
     event::{self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode, KeyModifiers},
     execute,
-    terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
+    terminal::{EnterAlternateScreen, LeaveAlternateScreen, disable_raw_mode, enable_raw_mode},
 };
-use ratatui::{
-    backend::CrosstermBackend,
-    Terminal,
-};
+use ratatui::{Terminal, backend::CrosstermBackend};
 use tokio::sync::mpsc;
 use tracing::{debug, error, info};
 
@@ -24,8 +21,13 @@ use bloatwarehatao_core::device::{Device, DeviceHealth};
 use bloatwarehatao_core::package::PackageManager;
 use bloatwarehatao_core::preset::PresetType;
 
-use crate::screens::{HomeScreen, PackageBrowserScreen, DeviceInfoScreen, HealthScreen, SettingsScreen, PresetsScreen, RescueScreen, UserGuideScreen, WirelessScreen, AboutScreen, SupportScreen, dialogs};
-use crate::state::{AppState, DeviceState, DialogType, PackageItem, PackageOperation, SelectionMode, WirelessField};
+use crate::screens::{
+    AboutScreen, DeviceInfoScreen, HealthScreen, HomeScreen, PackageBrowserScreen, PresetsScreen,
+    RescueScreen, SettingsScreen, SupportScreen, UserGuideScreen, WirelessScreen, dialogs,
+};
+use crate::state::{
+    AppState, DeviceState, DialogType, PackageItem, PackageOperation, SelectionMode, WirelessField,
+};
 
 /// Application screens
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -59,7 +61,6 @@ pub enum Screen {
 /// Background task messages
 #[derive(Debug)]
 pub enum Message {
-
     /// Rescue point created
     RescuePointCreated(Result<bloatwarehatao_core::rescue::RescueEntry, String>),
     /// Rescue restored
@@ -98,7 +99,7 @@ impl App {
     /// Create new app instance
     pub fn new(dry_run: bool) -> Self {
         let (tx, rx) = mpsc::unbounded_channel();
-        
+
         Self {
             should_quit: false,
             current_screen: Screen::Home,
@@ -115,10 +116,10 @@ impl App {
     pub async fn init(&mut self) -> Result<()> {
         // Load package database
         self.load_database().await?;
-        
+
         // Check for connected device
         self.check_device().await;
-        
+
         Ok(())
     }
 
@@ -127,15 +128,16 @@ impl App {
         // Try multiple locations for the packages directory
         // This ensures the DB loads whether run from project root, crate dir, or installed location
         let mut candidates: Vec<PathBuf> = vec![
-            PathBuf::from("packages"),  // Relative to CWD (project root)
+            PathBuf::from("packages"), // Relative to CWD (project root)
         ];
 
         // Add path relative to executable (for installed binaries)
         if let Ok(exe_path) = std::env::current_exe()
-            && let Some(exe_dir) = exe_path.parent() {
-                candidates.push(exe_dir.join("packages"));
-                candidates.push(exe_dir.join("../packages"));
-                candidates.push(exe_dir.join("../../packages"));
+            && let Some(exe_dir) = exe_path.parent()
+        {
+            candidates.push(exe_dir.join("packages"));
+            candidates.push(exe_dir.join("../packages"));
+            candidates.push(exe_dir.join("../../packages"));
         }
 
         // Add path relative to cargo manifest (compile-time, always available in dev)
@@ -148,21 +150,28 @@ impl App {
         for candidate in candidates {
             let canonical = candidate.canonicalize().ok();
             let path_to_check = canonical.as_ref().unwrap_or(&candidate);
-            
+
             if path_to_check.exists() && path_to_check.is_dir() {
                 match PackageDatabase::load_from_dir(path_to_check) {
                     Ok(db) => {
-                        info!("Loaded {} packages from database at {:?}", db.len(), path_to_check);
+                        info!(
+                            "Loaded {} packages from database at {:?}",
+                            db.len(),
+                            path_to_check
+                        );
                         self.state.database = Some(db);
                         return Ok(());
                     }
                     Err(e) => {
-                        error!("Failed to load package database from {:?}: {}", path_to_check, e);
+                        error!(
+                            "Failed to load package database from {:?}: {}",
+                            path_to_check, e
+                        );
                     }
                 }
             }
         }
-        
+
         debug!("No packages directory found in any candidate location");
         Ok(())
     }
@@ -170,9 +179,9 @@ impl App {
     /// Check for connected device
     pub async fn check_device(&mut self) {
         self.state.device = DeviceState::Checking;
-        
+
         let adb = Adb::new();
-        
+
         // Check if ADB is available
         if !adb.is_available().await {
             self.state.device = DeviceState::Error("ADB not found".to_string());
@@ -182,16 +191,18 @@ impl App {
         // Get list of devices
         match adb.devices().await {
             Ok(devices) => {
-                let ready_devices: Vec<_> = devices.iter()
-                    .filter(|d| d.status.is_ready())
-                    .collect();
+                let ready_devices: Vec<_> =
+                    devices.iter().filter(|d| d.status.is_ready()).collect();
 
                 if ready_devices.is_empty() {
                     // Check if any device is unauthorized
                     let unauthorized = devices.iter().any(|d| {
-                        matches!(d.status, bloatwarehatao_core::adb::DeviceStatus::Unauthorized)
+                        matches!(
+                            d.status,
+                            bloatwarehatao_core::adb::DeviceStatus::Unauthorized
+                        )
                     });
-                    
+
                     if unauthorized {
                         self.state.device = DeviceState::Unauthorized;
                     } else {
@@ -201,7 +212,7 @@ impl App {
                     // Use first ready device
                     let device_info = &ready_devices[0];
                     let adb = adb.with_device(&device_info.serial);
-                    
+
                     // Get detailed device info
                     match Device::from_adb(&adb).await {
                         Ok(device) => {
@@ -225,21 +236,21 @@ impl App {
         self.state.browser.status = Some("Loading packages...".to_string());
 
         let mut packages = Vec::new();
-        
+
         // Get installed packages from device if connected
         if let DeviceState::Connected(ref info) = self.state.device {
             let adb = Adb::new().with_device(&info.serial);
             let pm = PackageManager::new(adb);
-            
+
             // Get installed and system packages
             match tokio::join!(pm.list_packages(), pm.list_system_packages()) {
                 (Ok(installed), Ok(system)) => {
                     for name in installed {
                         let is_sys = system.contains(&name);
-                        
+
                         // Use smart extraction for fast loading (no slow ADB calls per package)
                         let real_label = bloatwarehatao_core::package::extract_app_name(&name);
-                        
+
                         let mut pkg = if let Some(db) = &self.state.database {
                             if let Some(entry) = db.get(&name) {
                                 // Start from database entry for safety/category/description
@@ -257,22 +268,23 @@ impl App {
                         };
                         pkg.installed = true;
                         pkg.is_system = is_sys;
-                        
+
                         packages.push(pkg);
                     }
                 }
                 (Err(e), _) | (_, Err(e)) => {
-                     self.state.browser.status = Some(format!("Error loading packages: {}", e));
+                    self.state.browser.status = Some(format!("Error loading packages: {}", e));
                 }
             }
         }
-        
+
         // Add database packages only if NO device is connected
         if !matches!(self.state.device, DeviceState::Connected(_))
-            && let Some(db) = &self.state.database {
-                for entry in db.all() {
-                    packages.push(PackageItem::from_db_entry(entry));
-                }
+            && let Some(db) = &self.state.database
+        {
+            for entry in db.all() {
+                packages.push(PackageItem::from_db_entry(entry));
+            }
         }
 
         // Sort by label
@@ -294,16 +306,16 @@ impl App {
         if let DeviceState::Connected(ref info) = self.state.device {
             let serial = info.serial.clone();
             let tx = self.tx.clone();
-            
+
             self.state.browser.fetching_labels = true;
             self.state.browser.labels_total = total_packages;
             self.state.browser.labels_fetched = 0;
-            
+
             // Spawn background task to fetch real app labels
             tokio::spawn(async move {
                 let adb = Adb::new().with_device(&serial);
                 let pm = PackageManager::new(adb);
-                
+
                 let mut fetched = 0;
                 for package in package_names {
                     // Fetch real label from device
@@ -317,7 +329,7 @@ impl App {
                             });
                         }
                     }
-                    
+
                     fetched += 1;
                     // Send progress update every 10 packages
                     if fetched % 10 == 0 {
@@ -327,7 +339,7 @@ impl App {
                         });
                     }
                 }
-                
+
                 // Signal completion
                 let _ = tx.send(Message::LabelsFetchComplete);
             });
@@ -341,7 +353,7 @@ impl App {
 
         if let DeviceState::Connected(ref info) = self.state.device {
             let adb = Adb::new().with_device(&info.serial);
-            
+
             match DeviceHealth::from_adb(&adb).await {
                 Ok(health) => {
                     self.state.health.health = Some(health);
@@ -351,7 +363,7 @@ impl App {
                 }
             }
         }
-        
+
         self.state.health.loading = false;
     }
 
@@ -422,7 +434,7 @@ impl App {
 
     async fn handle_browser_key(&mut self, key: KeyCode) {
         let browser = &mut self.state.browser;
-        
+
         // If search is active, handle search input
         if browser.search_active {
             match key {
@@ -482,11 +494,12 @@ impl App {
                 if count > 0 {
                     self.state.dialog.show_action_menu();
                 } else if let Some(pkg) = self.state.browser.selected_package()
-                    && pkg.installed {
-                        // Select current package and show action menu
-                        self.state.browser.selection_mode = SelectionMode::Multi;
-                        self.state.browser.toggle_selection();
-                        self.state.dialog.show_action_menu();
+                    && pkg.installed
+                {
+                    // Select current package and show action menu
+                    self.state.browser.selection_mode = SelectionMode::Multi;
+                    self.state.browser.toggle_selection();
+                    self.state.dialog.show_action_menu();
                 }
             }
             KeyCode::Char('u') => {
@@ -537,7 +550,8 @@ impl App {
             }
             // Safety filters (1-4)
             KeyCode::Char('1') => {
-                browser.filter.safety = if browser.filter.safety == Some(SafetyRating::Recommended) {
+                browser.filter.safety = if browser.filter.safety == Some(SafetyRating::Recommended)
+                {
                     None
                 } else {
                     Some(SafetyRating::Recommended)
@@ -575,14 +589,15 @@ impl App {
             // Category filters (a-z for dynamic categories)
             KeyCode::Char(c @ 'a'..='z') => {
                 // Get unique categories from packages
-                let mut unique_cats: Vec<PackageCategory> = browser.packages
+                let mut unique_cats: Vec<PackageCategory> = browser
+                    .packages
                     .iter()
                     .map(|p| p.category)
                     .collect::<std::collections::HashSet<_>>()
                     .into_iter()
                     .collect();
                 unique_cats.sort_by(|a, b| a.display_name().cmp(b.display_name()));
-                
+
                 let idx = (c as u8 - b'a') as usize;
                 if let Some(&cat) = unique_cats.get(idx) {
                     browser.filter.category = if browser.filter.category == Some(cat) {
@@ -677,20 +692,20 @@ impl App {
                         Ok(mut clipboard) => {
                             if let Err(e) = clipboard.set_text(&item.value) {
                                 self.state.support.copy_status = Some((
-                                    format!("Failed to copy: {}", e), 
-                                    std::time::Instant::now()
+                                    format!("Failed to copy: {}", e),
+                                    std::time::Instant::now(),
                                 ));
                             } else {
                                 self.state.support.copy_status = Some((
-                                    format!("Copied {} to clipboard!", item.label), 
-                                    std::time::Instant::now()
+                                    format!("Copied {} to clipboard!", item.label),
+                                    std::time::Instant::now(),
                                 ));
                             }
                         }
                         Err(e) => {
-                           self.state.support.copy_status = Some((
-                                format!("Clipboard error: {}", e), 
-                                std::time::Instant::now()
+                            self.state.support.copy_status = Some((
+                                format!("Clipboard error: {}", e),
+                                std::time::Instant::now(),
                             ));
                         }
                     }
@@ -770,7 +785,10 @@ impl App {
                 // Appearance settings - toggle desc/progress/animations
                 match self.state.settings_item_selected {
                     0 => {} // Theme needs cycling
-                    1 => self.state.config.ui.show_descriptions = !self.state.config.ui.show_descriptions,
+                    1 => {
+                        self.state.config.ui.show_descriptions =
+                            !self.state.config.ui.show_descriptions
+                    }
                     2 => self.state.config.ui.show_progress = !self.state.config.ui.show_progress,
                     3 => self.state.config.ui.animations = !self.state.config.ui.animations,
                     _ => {}
@@ -801,10 +819,12 @@ impl App {
             }
             KeyCode::Enter => {
                 // Apply preset - select its packages in browser
-                let preset_name = self.state.presets
+                let preset_name = self
+                    .state
+                    .presets
                     .get(self.state.presets_selected)
                     .map(|p| p.name.clone());
-                
+
                 if let Some(count) = self.state.apply_preset(self.state.presets_selected) {
                     if count > 0 {
                         self.status_message = Some(format!(
@@ -840,10 +860,8 @@ impl App {
                     let preset_name = preset.name.clone();
                     match self.export_preset(&preset_id) {
                         Ok(path) => {
-                            self.status_message = Some(format!(
-                                "✓ Exported '{}' to: {}",
-                                preset_name, path
-                            ));
+                            self.status_message =
+                                Some(format!("✓ Exported '{}' to: {}", preset_name, path));
                         }
                         Err(e) => {
                             self.status_message = Some(format!("Export failed: {}", e));
@@ -860,10 +878,8 @@ impl App {
                         match self.delete_preset(&preset_id) {
                             Ok(()) => {
                                 self.state.reload_presets();
-                                self.status_message = Some(format!(
-                                    "✓ Deleted preset '{}'",
-                                    preset_name
-                                ));
+                                self.status_message =
+                                    Some(format!("✓ Deleted preset '{}'", preset_name));
                             }
                             Err(e) => {
                                 self.status_message = Some(format!("Delete failed: {}", e));
@@ -927,7 +943,8 @@ impl App {
                     }
                 } else {
                     // Restore from Rescue Session
-                    if let Some(session) = self.state.get_rescue_session(self.state.rescue_selected) {
+                    if let Some(session) = self.state.get_rescue_session(self.state.rescue_selected)
+                    {
                         self.restore_rescue_session(session.clone());
                     }
                 }
@@ -945,29 +962,33 @@ impl App {
 
     fn handle_preset_creator_key(&mut self, key: KeyCode) {
         use crate::screens::PresetCreationStep;
-        
+
         // Scope to allow borrowing creator, then saving
         let mut save_needed = false;
 
         {
             let creator = &mut self.state.preset_creator;
-            
+
             match creator.step {
-                PresetCreationStep::NameInput => {
-                    match key {
-                        KeyCode::Enter => {
-                            if !creator.name_input.trim().is_empty() {
-                                creator.step = PresetCreationStep::DescriptionInput;
-                            } else {
-                                self.status_message = Some("Name cannot be empty".to_string());
-                            }
+                PresetCreationStep::NameInput => match key {
+                    KeyCode::Enter => {
+                        if !creator.name_input.trim().is_empty() {
+                            creator.step = PresetCreationStep::DescriptionInput;
+                        } else {
+                            self.status_message = Some("Name cannot be empty".to_string());
                         }
-                        KeyCode::Backspace => { creator.name_input.pop(); }
-                        KeyCode::Char(c) => { creator.name_input.push(c); }
-                        KeyCode::Esc => { creator.active = false; }
-                        _ => {}
                     }
-                }
+                    KeyCode::Backspace => {
+                        creator.name_input.pop();
+                    }
+                    KeyCode::Char(c) => {
+                        creator.name_input.push(c);
+                    }
+                    KeyCode::Esc => {
+                        creator.active = false;
+                    }
+                    _ => {}
+                },
                 PresetCreationStep::DescriptionInput => {
                     match key {
                         KeyCode::Enter => {
@@ -978,12 +999,24 @@ impl App {
                             if self.state.browser.packages.is_empty() {
                                 // Fallback or warning
                             }
-                            creator.available_packages = self.state.browser.packages.iter().map(|p| p.name.clone()).collect();
+                            creator.available_packages = self
+                                .state
+                                .browser
+                                .packages
+                                .iter()
+                                .map(|p| p.name.clone())
+                                .collect();
                             creator.list_state.borrow_mut().select(Some(0));
                         }
-                        KeyCode::Backspace => { creator.description_input.pop(); }
-                        KeyCode::Char(c) => { creator.description_input.push(c); }
-                        KeyCode::Esc => { creator.step = PresetCreationStep::NameInput; }
+                        KeyCode::Backspace => {
+                            creator.description_input.pop();
+                        }
+                        KeyCode::Char(c) => {
+                            creator.description_input.push(c);
+                        }
+                        KeyCode::Esc => {
+                            creator.step = PresetCreationStep::NameInput;
+                        }
                         _ => {}
                     }
                 }
@@ -991,7 +1024,7 @@ impl App {
                     let count = creator.available_packages.len();
                     let mut list_state = creator.list_state.borrow_mut();
                     let selected_idx = list_state.selected().unwrap_or(0);
-                    
+
                     match key {
                         KeyCode::Up | KeyCode::Char('k') => {
                             if selected_idx > 0 {
@@ -1015,7 +1048,7 @@ impl App {
                         KeyCode::Enter => {
                             save_needed = true;
                         }
-                        KeyCode::Esc => { 
+                        KeyCode::Esc => {
                             creator.step = PresetCreationStep::DescriptionInput;
                         }
                         _ => {}
@@ -1026,7 +1059,7 @@ impl App {
                 }
             }
         }
-        
+
         if save_needed {
             self.save_created_preset();
         }
@@ -1037,7 +1070,7 @@ impl App {
         let name = creator.name_input.clone();
         let desc = creator.description_input.clone();
         let packages: Vec<String> = creator.selected_packages.iter().cloned().collect();
-        
+
         if packages.is_empty() {
             self.status_message = Some("Cannot save preset without packages".to_string());
             return;
@@ -1049,16 +1082,20 @@ impl App {
                     self.status_message = Some(format!("✓ Preset '{}' created", name));
                     // Reload presets
                     if let Ok(presets) = pm.all_presets() {
-                         self.state.presets = presets;
+                        self.state.presets = presets;
                     }
                     creator.active = false;
                 }
                 Err(e) => {
-                    self.state.dialog.show_error("Failed to create preset", e.to_string());
+                    self.state
+                        .dialog
+                        .show_error("Failed to create preset", e.to_string());
                 }
             }
         } else {
-            self.state.dialog.show_error("Error", "Preset manager not available");
+            self.state
+                .dialog
+                .show_error("Error", "Preset manager not available");
         }
     }
     async fn handle_wireless_key(&mut self, key: KeyCode) {
@@ -1073,24 +1110,24 @@ impl App {
                     self.state.wireless.editing = None;
                     self.state.wireless.status = Some("Input cancelled.".to_string());
                 }
-                KeyCode::Backspace => {
-                     match field {
-                        WirelessField::Port => { self.state.wireless.port_input.pop(); }
-                        WirelessField::Address => { self.state.wireless.address_input.pop(); }
-                     }
-                }
-                KeyCode::Char(c) => {
-                    match field {
-                        WirelessField::Port => {
-                            if c.is_numeric() {
-                                self.state.wireless.port_input.push(c);
-                            }
-                        }
-                        WirelessField::Address => {
-                            self.state.wireless.address_input.push(c);
+                KeyCode::Backspace => match field {
+                    WirelessField::Port => {
+                        self.state.wireless.port_input.pop();
+                    }
+                    WirelessField::Address => {
+                        self.state.wireless.address_input.pop();
+                    }
+                },
+                KeyCode::Char(c) => match field {
+                    WirelessField::Port => {
+                        if c.is_numeric() {
+                            self.state.wireless.port_input.push(c);
                         }
                     }
-                }
+                    WirelessField::Address => {
+                        self.state.wireless.address_input.push(c);
+                    }
+                },
                 _ => {}
             }
             return;
@@ -1099,14 +1136,14 @@ impl App {
         // Normal mode
         match key {
             KeyCode::Char('p') => {
-                 self.state.wireless.editing = Some(WirelessField::Port);
-                 self.state.wireless.status = Some("Editing Port... (Enter to save)".to_string());
-                 self.state.wireless.port_input.clear();
+                self.state.wireless.editing = Some(WirelessField::Port);
+                self.state.wireless.status = Some("Editing Port... (Enter to save)".to_string());
+                self.state.wireless.port_input.clear();
             }
             KeyCode::Char('i') => {
-                 self.state.wireless.editing = Some(WirelessField::Address);
-                 self.state.wireless.status = Some("Editing Address... (Enter to save)".to_string());
-                 self.state.wireless.address_input.clear();
+                self.state.wireless.editing = Some(WirelessField::Address);
+                self.state.wireless.status = Some("Editing Address... (Enter to save)".to_string());
+                self.state.wireless.address_input.clear();
             }
             KeyCode::Char('e') => self.enable_wireless_adb().await,
             KeyCode::Char('c') => self.connect_wireless().await,
@@ -1117,44 +1154,48 @@ impl App {
 
     async fn enable_wireless_adb(&mut self) {
         if let DeviceState::Connected(info) = &self.state.device {
-             let serial = info.serial.clone();
-             let port_str = self.state.wireless.port_input.clone();
-             let port = port_str.parse::<u16>().unwrap_or(5555);
-             
-             self.state.wireless.status = Some("Enabling wireless mode...".to_string());
-             
-             let adb = Adb::new().with_device(&serial);
-             match adb.tcpip(port).await {
-                 Ok(_) => {
-                     self.state.wireless.status = Some(format!("Success! Wireless enabled on port {}. Now disconnect USB and connect via Wi-Fi.", port));
-                     // Try to get IP
-                     if let Ok(Some(ip)) = adb.get_device_ip().await {
-                         self.state.wireless.address_input = format!("{}:{}", ip, port);
-                     }
-                 }
-                 Err(e) => {
-                     self.state.wireless.status = Some(format!("Error: {}", e));
-                 }
-             }
+            let serial = info.serial.clone();
+            let port_str = self.state.wireless.port_input.clone();
+            let port = port_str.parse::<u16>().unwrap_or(5555);
+
+            self.state.wireless.status = Some("Enabling wireless mode...".to_string());
+
+            let adb = Adb::new().with_device(&serial);
+            match adb.tcpip(port).await {
+                Ok(_) => {
+                    self.state.wireless.status = Some(format!(
+                        "Success! Wireless enabled on port {}. Now disconnect USB and connect via Wi-Fi.",
+                        port
+                    ));
+                    // Try to get IP
+                    if let Ok(Some(ip)) = adb.get_device_ip().await {
+                        self.state.wireless.address_input = format!("{}:{}", ip, port);
+                    }
+                }
+                Err(e) => {
+                    self.state.wireless.status = Some(format!("Error: {}", e));
+                }
+            }
         } else {
-             self.state.wireless.status = Some("Error: No device connected via USB.".to_string());
+            self.state.wireless.status = Some("Error: No device connected via USB.".to_string());
         }
     }
 
     async fn connect_wireless(&mut self) {
         let address = self.state.wireless.address_input.clone();
         if address.is_empty() {
-             self.state.wireless.status = Some("Error: Address is empty.".to_string());
-             return;
+            self.state.wireless.status = Some("Error: Address is empty.".to_string());
+            return;
         }
 
         self.state.wireless.status = Some(format!("Connecting to {}...", address));
-        
+
         let adb = Adb::new();
         match adb.connect(&address).await {
             Ok(_) => {
-                 self.state.wireless.status = Some(format!("Successfully connected to {}!", address));
-                 self.check_device().await; // Refresh device list
+                self.state.wireless.status =
+                    Some(format!("Successfully connected to {}!", address));
+                self.check_device().await; // Refresh device list
             }
             Err(e) => {
                 self.state.wireless.status = Some(format!("Error: {}", e));
@@ -1171,7 +1212,7 @@ impl App {
                 }
             }
             KeyCode::Down | KeyCode::Char('j') => {
-                 self.state.user_guide.scroll_offset += 1;
+                self.state.user_guide.scroll_offset += 1;
             }
             KeyCode::PageUp => {
                 if self.state.user_guide.scroll_offset > 5 {
@@ -1243,9 +1284,13 @@ impl App {
     /// Handle dialog key input
     async fn handle_dialog_key(&mut self, key: KeyCode) {
         let dialog_type = self.state.dialog.active.clone();
-        
+
         match dialog_type {
-            Some(DialogType::Confirm { operation, packages, .. }) => {
+            Some(DialogType::Confirm {
+                operation,
+                packages,
+                ..
+            }) => {
                 match key {
                     KeyCode::Left | KeyCode::Char('h') => {
                         self.state.dialog.selected = 0;
@@ -1273,32 +1318,34 @@ impl App {
                     _ => {}
                 }
             }
-            Some(DialogType::ActionMenu { selected }) => {
-                match key {
-                    KeyCode::Up | KeyCode::Char('k') => {
-                        if selected > 0
-                            && let Some(DialogType::ActionMenu { selected: s }) = &mut self.state.dialog.active {
-                                *s -= 1;
-                        }
+            Some(DialogType::ActionMenu { selected }) => match key {
+                KeyCode::Up | KeyCode::Char('k') => {
+                    if selected > 0
+                        && let Some(DialogType::ActionMenu { selected: s }) =
+                            &mut self.state.dialog.active
+                    {
+                        *s -= 1;
                     }
-                    KeyCode::Down | KeyCode::Char('j') => {
-                        if selected < dialogs::action_count() - 1
-                            && let Some(DialogType::ActionMenu { selected: s }) = &mut self.state.dialog.active {
-                                *s += 1;
-                        }
-                    }
-                    KeyCode::Enter => {
-                        if let Some(op) = dialogs::operation_by_index(selected) {
-                            self.state.dialog.close();
-                            self.start_operation(op).await;
-                        }
-                    }
-                    KeyCode::Esc => {
-                        self.state.dialog.close();
-                    }
-                    _ => {}
                 }
-            }
+                KeyCode::Down | KeyCode::Char('j') => {
+                    if selected < dialogs::action_count() - 1
+                        && let Some(DialogType::ActionMenu { selected: s }) =
+                            &mut self.state.dialog.active
+                    {
+                        *s += 1;
+                    }
+                }
+                KeyCode::Enter => {
+                    if let Some(op) = dialogs::operation_by_index(selected) {
+                        self.state.dialog.close();
+                        self.start_operation(op).await;
+                    }
+                }
+                KeyCode::Esc => {
+                    self.state.dialog.close();
+                }
+                _ => {}
+            },
             Some(DialogType::Progress { .. }) => {
                 // Progress dialog doesn't respond to keys (operation in progress)
             }
@@ -1319,7 +1366,10 @@ impl App {
     /// Start a package operation with confirmation
     async fn start_operation(&mut self, operation: PackageOperation) {
         // Get selected packages
-        let packages: Vec<String> = self.state.browser.packages
+        let packages: Vec<String> = self
+            .state
+            .browser
+            .packages
             .iter()
             .filter(|p| p.selected && p.installed)
             .map(|p| p.name.clone())
@@ -1335,7 +1385,10 @@ impl App {
 
         // Build confirmation message
         let message = if packages.len() == 1 {
-            format!("Are you sure you want to {} this package?", operation.display_name().to_lowercase())
+            format!(
+                "Are you sure you want to {} this package?",
+                operation.display_name().to_lowercase()
+            )
         } else {
             format!(
                 "Are you sure you want to {} {} packages?",
@@ -1368,7 +1421,9 @@ impl App {
         let serial = match &self.state.device {
             DeviceState::Connected(info) => info.serial.clone(),
             _ => {
-                self.state.dialog.show_error("No Device", "No device connected.");
+                self.state
+                    .dialog
+                    .show_error("No Device", "No device connected.");
                 return;
             }
         };
@@ -1382,7 +1437,11 @@ impl App {
 
             // In dry run mode, simulate success
             if self.state.dry_run {
-                info!("[DRY RUN] Would {} package: {}", operation.display_name().to_lowercase(), package);
+                info!(
+                    "[DRY RUN] Would {} package: {}",
+                    operation.display_name().to_lowercase(),
+                    package
+                );
                 success.push(package.clone());
                 continue;
             }
@@ -1402,7 +1461,12 @@ impl App {
                     success.push(package.clone());
                 }
                 Err(e) => {
-                    error!("Failed to {} {}: {}", operation.display_name().to_lowercase(), package, e);
+                    error!(
+                        "Failed to {} {}: {}",
+                        operation.display_name().to_lowercase(),
+                        package,
+                        e
+                    );
                     failed.push((package.clone(), e.to_string()));
                 }
             }
@@ -1423,8 +1487,6 @@ impl App {
         self.state.browser.clear_selection();
         self.state.browser.selection_mode = SelectionMode::Single;
     }
-
-
 
     /// Get main menu items
     pub fn menu_items(&self) -> Vec<(&'static str, &'static str)> {
@@ -1449,26 +1511,26 @@ impl App {
             Some(pm) => pm,
             None => return Err("Preset manager not available".to_string()),
         };
-        
+
         // Get the export path
-        let export_dir = pm.custom_dir().parent()
+        let export_dir = pm
+            .custom_dir()
+            .parent()
             .map(|p| p.join("exports"))
             .unwrap_or_else(|| std::path::PathBuf::from("."));
-        
+
         // Create exports directory if needed
         std::fs::create_dir_all(&export_dir)
             .map_err(|e| format!("Failed to create exports directory: {}", e))?;
-        
+
         // Export the preset
-        let json = pm.export_preset(preset_id)
-            .map_err(|e| e.to_string())?;
-        
+        let json = pm.export_preset(preset_id).map_err(|e| e.to_string())?;
+
         // Write to file
         let filename = format!("{}.json", preset_id);
         let filepath = export_dir.join(&filename);
-        std::fs::write(&filepath, &json)
-            .map_err(|e| format!("Failed to write file: {}", e))?;
-        
+        std::fs::write(&filepath, &json).map_err(|e| format!("Failed to write file: {}", e))?;
+
         Ok(filepath.display().to_string())
     }
 
@@ -1478,7 +1540,7 @@ impl App {
             Some(pm) => pm,
             None => return Err("Preset manager not available".to_string()),
         };
-        
+
         pm.delete_custom_preset(preset_id)
             .map_err(|e| e.to_string())
     }
@@ -1498,19 +1560,23 @@ impl App {
             if let DeviceState::Connected(_info) = &self.state.device {
                 // Continue
             } else {
-                self.state.dialog.show_error("No Device", "Please connect a device to create a rescue point.");
+                self.state.dialog.show_error(
+                    "No Device",
+                    "Please connect a device to create a rescue point.",
+                );
                 return;
             }
         }
-        
+
         let tx = self.tx.clone();
-        
+
         // Show progress via status (simpler than dialog for now)
         self.status_message = Some("Creating rescue point... please wait".to_string());
-        
+
         // Dry run handling
         if self.state.dry_run {
-            self.status_message = Some("[DRY RUN] Would create rescue point of all packages".to_string());
+            self.status_message =
+                Some("[DRY RUN] Would create rescue point of all packages".to_string());
             return;
         }
 
@@ -1521,15 +1587,30 @@ impl App {
         };
 
         // Needs to own RM or clone path info to pass to thread
-        let rescue_dir = self.state.rescue_manager.as_ref().unwrap().rescue_dir().to_path_buf();
-        let session_dir = self.state.rescue_manager.as_ref().unwrap().session_dir().to_path_buf();
+        let rescue_dir = self
+            .state
+            .rescue_manager
+            .as_ref()
+            .unwrap()
+            .rescue_dir()
+            .to_path_buf();
+        let session_dir = self
+            .state
+            .rescue_manager
+            .as_ref()
+            .unwrap()
+            .session_dir()
+            .to_path_buf();
 
         tokio::spawn(async move {
             use bloatwarehatao_core::rescue::RescueManager;
             let rm = RescueManager::new(rescue_dir, session_dir);
             let adb = Adb::new().with_device(&serial);
-            
-            let result = rm.create_rescue_point(&adb).await.map_err(|e| e.to_string());
+
+            let result = rm
+                .create_rescue_point(&adb)
+                .await
+                .map_err(|e| e.to_string());
             let _ = tx.send(Message::RescuePointCreated(result));
         });
     }
@@ -1540,7 +1621,9 @@ impl App {
             if let DeviceState::Connected(_info) = &self.state.device {
                 // Continue
             } else {
-                self.state.dialog.show_error("No Device", "Please connect a device to restore.");
+                self.state
+                    .dialog
+                    .show_error("No Device", "Please connect a device to restore.");
                 return;
             }
         }
@@ -1549,7 +1632,10 @@ impl App {
         self.status_message = Some(format!("Restoring backup {}... please wait", backup.id));
 
         if self.state.dry_run {
-            self.status_message = Some(format!("[DRY RUN] Would restore {} packages", backup.packages.len()));
+            self.status_message = Some(format!(
+                "[DRY RUN] Would restore {} packages",
+                backup.packages.len()
+            ));
             return;
         }
 
@@ -1559,14 +1645,19 @@ impl App {
             return;
         };
 
-        let bm_opt = self.state.rescue_manager.as_ref().map(|rm| (rm.rescue_dir().to_path_buf(), rm.session_dir().to_path_buf()));
-        
+        let bm_opt = self.state.rescue_manager.as_ref().map(|rm| {
+            (
+                rm.rescue_dir().to_path_buf(),
+                rm.session_dir().to_path_buf(),
+            )
+        });
+
         if let Some((rescue_dir, session_dir)) = bm_opt {
-             tokio::spawn(async move {
+            tokio::spawn(async move {
                 use bloatwarehatao_core::rescue::RescueManager;
                 let rm = RescueManager::new(rescue_dir, session_dir);
                 let adb = Adb::new().with_device(&serial);
-                
+
                 match rm.restore_from_entry(&adb, &backup).await {
                     Ok(results) => {
                         let success = results.iter().filter(|(_, s)| *s).count();
@@ -1587,16 +1678,24 @@ impl App {
             if let DeviceState::Connected(_info) = &self.state.device {
                 // Continue
             } else {
-                self.state.dialog.show_error("No Device", "Please connect a device to restore.");
+                self.state
+                    .dialog
+                    .show_error("No Device", "Please connect a device to restore.");
                 return;
             }
         }
 
         let tx = self.tx.clone();
-        self.status_message = Some(format!("Restoring session {}... please wait", session.session_id));
+        self.status_message = Some(format!(
+            "Restoring session {}... please wait",
+            session.session_id
+        ));
 
         if self.state.dry_run {
-            self.status_message = Some(format!("[DRY RUN] Would restore {} packages", session.removed_packages.len()));
+            self.status_message = Some(format!(
+                "[DRY RUN] Would restore {} packages",
+                session.removed_packages.len()
+            ));
             return;
         }
 
@@ -1606,14 +1705,19 @@ impl App {
             return;
         };
 
-        let bm_opt = self.state.rescue_manager.as_ref().map(|rm| (rm.rescue_dir().to_path_buf(), rm.session_dir().to_path_buf()));
-        
+        let bm_opt = self.state.rescue_manager.as_ref().map(|rm| {
+            (
+                rm.rescue_dir().to_path_buf(),
+                rm.session_dir().to_path_buf(),
+            )
+        });
+
         if let Some((rescue_dir, session_dir)) = bm_opt {
-             tokio::spawn(async move {
+            tokio::spawn(async move {
                 use bloatwarehatao_core::rescue::RescueManager;
                 let rm = RescueManager::new(rescue_dir, session_dir);
                 let adb = Adb::new().with_device(&serial);
-                
+
                 match rm.restore_from_session(&adb, &session).await {
                     Ok(results) => {
                         let success = results.iter().filter(|(_, s)| *s).count();
@@ -1639,7 +1743,7 @@ pub async fn run(dry_run: bool) -> Result<()> {
 
     // Create app state
     let mut app = App::new(dry_run);
-    
+
     // Initialize app
     app.init().await?;
 
@@ -1674,49 +1778,56 @@ async fn run_app(terminal: &mut Terminal<CrosstermBackend<Stdout>>, app: &mut Ap
         // Process background messages
         while let Ok(msg) = app.rx.try_recv() {
             match msg {
-
-                Message::RescuePointCreated(result) => {
-                    match result {
-                        Ok(entry) => {
-                            app.status_message = Some(format!("✓ Rescue Point created: {}", entry.id));
-                            app.state.reload_rescue();
-                        }
-                        Err(e) => {
-                            app.state.dialog.show_error("Creation Failed", &e);
-                        }
+                Message::RescuePointCreated(result) => match result {
+                    Ok(entry) => {
+                        app.status_message = Some(format!("✓ Rescue Point created: {}", entry.id));
+                        app.state.reload_rescue();
                     }
-                }
+                    Err(e) => {
+                        app.state.dialog.show_error("Creation Failed", &e);
+                    }
+                },
                 Message::RescueRestored(result) => {
                     match result {
                         Ok((success, failed)) => {
                             app.state.dialog.show_result(
                                 "Rescue Point Restored".to_string(),
                                 vec!["Restore successful".to_string(); success], // Dummy for now, or change dialog API
-                                vec![("Restore failed".to_string(), "check logs".to_string()); failed],
+                                vec![
+                                    ("Restore failed".to_string(), "check logs".to_string());
+                                    failed
+                                ],
                             );
-                            app.status_message = Some(format!("✓ Restore complete: {} restored, {} failed", success, failed));
+                            app.status_message = Some(format!(
+                                "✓ Restore complete: {} restored, {} failed",
+                                success, failed
+                            ));
                         }
                         Err(e) => {
-                             app.state.dialog.show_error("Restore Failed", &e);
+                            app.state.dialog.show_error("Restore Failed", &e);
                         }
                     }
                 }
-                Message::SessionRestored(result) => {
-                    match result {
-                        Ok((success, failed)) => {
-                            app.state.dialog.show_result(
-                                "Session Restored".to_string(),
-                                vec!["Restore successful".to_string(); success],
-                                vec![("Restore failed".to_string(), "check logs".to_string()); failed],
-                            );
-                            app.status_message = Some(format!("✓ Session restore complete: {} restored, {} failed", success, failed));
-                        }
-                        Err(e) => {
-                             app.state.dialog.show_error("Session Restore Failed", &e);
-                        }
+                Message::SessionRestored(result) => match result {
+                    Ok((success, failed)) => {
+                        app.state.dialog.show_result(
+                            "Session Restored".to_string(),
+                            vec!["Restore successful".to_string(); success],
+                            vec![("Restore failed".to_string(), "check logs".to_string()); failed],
+                        );
+                        app.status_message = Some(format!(
+                            "✓ Session restore complete: {} restored, {} failed",
+                            success, failed
+                        ));
                     }
-                }
-                Message::LabelUpdate { package_name, label } => {
+                    Err(e) => {
+                        app.state.dialog.show_error("Session Restore Failed", &e);
+                    }
+                },
+                Message::LabelUpdate {
+                    package_name,
+                    label,
+                } => {
                     // Update single package label from background fetch
                     app.state.browser.update_package_label(&package_name, label);
                 }
@@ -1733,16 +1844,16 @@ async fn run_app(terminal: &mut Terminal<CrosstermBackend<Stdout>>, app: &mut Ap
                 Message::LabelsFetchComplete => {
                     app.state.browser.fetching_labels = false;
                     // Re-sort and re-apply filter after all labels updated
-                    app.state.browser.packages.sort_by(|a, b| {
-                        a.label.to_lowercase().cmp(&b.label.to_lowercase())
-                    });
+                    app.state
+                        .browser
+                        .packages
+                        .sort_by(|a, b| a.label.to_lowercase().cmp(&b.label.to_lowercase()));
                     app.state.browser.apply_filter();
                     app.state.browser.status = Some(format!(
                         "Loaded {} packages (names updated)",
                         app.state.browser.filtered_indices.len()
                     ));
                 }
-
             }
         }
 
@@ -1772,7 +1883,9 @@ fn draw(f: &mut ratatui::Frame, app: &App) {
         Screen::About => AboutScreen::draw(f, app),
         Screen::Support => SupportScreen::draw(f, app),
         Screen::Presets => PresetsScreen::draw(f, app),
-        Screen::Rescue => RescueScreen::draw(f, app, app.state.rescue_tab, app.state.rescue_selected),
+        Screen::Rescue => {
+            RescueScreen::draw(f, app, app.state.rescue_tab, app.state.rescue_selected)
+        }
         Screen::Help => draw_help(f, app),
     }
 
@@ -1783,23 +1896,27 @@ fn draw(f: &mut ratatui::Frame, app: &App) {
 /// Draw help overlay
 fn draw_help(f: &mut ratatui::Frame, _app: &App) {
     use ratatui::{
-
         style::{Color, Modifier, Style},
         text::{Line, Span},
         widgets::{Block, Borders, Clear, Paragraph, Wrap},
     };
 
     let area = centered_rect(60, 80, f.area());
-    
+
     f.render_widget(Clear, area);
 
     let help_text = vec![
         Line::from(Span::styled(
             "BloatwareHatao - Keyboard Shortcuts",
-            Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD),
+            Style::default()
+                .fg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
         )),
         Line::from(""),
-        Line::from(Span::styled("Navigation", Style::default().add_modifier(Modifier::BOLD))),
+        Line::from(Span::styled(
+            "Navigation",
+            Style::default().add_modifier(Modifier::BOLD),
+        )),
         Line::from("  ↑/k       Move up"),
         Line::from("  ↓/j       Move down"),
         Line::from("  Enter     Select/confirm"),
@@ -1807,14 +1924,20 @@ fn draw_help(f: &mut ratatui::Frame, _app: &App) {
         Line::from("  PgUp/PgDn Page up/down"),
         Line::from("  g/G       Go to top/bottom"),
         Line::from(""),
-        Line::from(Span::styled("Package Browser", Style::default().add_modifier(Modifier::BOLD))),
+        Line::from(Span::styled(
+            "Package Browser",
+            Style::default().add_modifier(Modifier::BOLD),
+        )),
         Line::from("  Space     Toggle selection"),
         Line::from("  /         Search packages"),
         Line::from("  c         Clear search"),
         Line::from("  i         Toggle installed filter"),
         Line::from("  r         Refresh list"),
         Line::from(""),
-        Line::from(Span::styled("General", Style::default().add_modifier(Modifier::BOLD))),
+        Line::from(Span::styled(
+            "General",
+            Style::default().add_modifier(Modifier::BOLD),
+        )),
         Line::from("  ?         Show this help"),
         Line::from("  q         Quit / Go back"),
         Line::from("  Ctrl+c    Force quit"),
@@ -1829,7 +1952,11 @@ fn draw_help(f: &mut ratatui::Frame, _app: &App) {
         .block(
             Block::default()
                 .title(" Help ")
-                .title_style(Style::default().fg(Color::Yellow).add_modifier(Modifier::BOLD))
+                .title_style(
+                    Style::default()
+                        .fg(Color::Yellow)
+                        .add_modifier(Modifier::BOLD),
+                )
                 .borders(Borders::ALL)
                 .border_style(Style::default().fg(Color::Cyan)),
         )
@@ -1839,9 +1966,13 @@ fn draw_help(f: &mut ratatui::Frame, _app: &App) {
 }
 
 /// Create a centered rect
-fn centered_rect(percent_x: u16, percent_y: u16, r: ratatui::layout::Rect) -> ratatui::layout::Rect {
+fn centered_rect(
+    percent_x: u16,
+    percent_y: u16,
+    r: ratatui::layout::Rect,
+) -> ratatui::layout::Rect {
     use ratatui::layout::{Constraint, Direction, Layout};
-    
+
     let popup_layout = Layout::default()
         .direction(Direction::Vertical)
         .constraints([

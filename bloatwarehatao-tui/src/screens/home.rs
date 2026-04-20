@@ -3,11 +3,11 @@
 //! Main menu of the application.
 
 use ratatui::{
+    Frame,
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
     widgets::{Block, Borders, List, ListItem, Paragraph, Wrap},
-    Frame,
 };
 
 use crate::app::App;
@@ -22,9 +22,9 @@ impl HomeScreen {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([
-                Constraint::Length(8),  // Header/banner
-                Constraint::Min(10),    // Menu
-                Constraint::Length(3),  // Status bar
+                Constraint::Length(8), // Header/banner
+                Constraint::Min(10),   // Menu
+                Constraint::Length(3), // Status bar
             ])
             .split(f.area());
 
@@ -74,7 +74,11 @@ impl HomeScreen {
                     Style::default().fg(Color::White)
                 };
 
-                let prefix = if i == app.selected_index { "▶ " } else { "  " };
+                let prefix = if i == app.selected_index {
+                    "▶ "
+                } else {
+                    "  "
+                };
                 ListItem::new(Line::from(vec![
                     Span::raw(prefix),
                     Span::styled(*title, style),
@@ -86,7 +90,11 @@ impl HomeScreen {
             .block(
                 Block::default()
                     .title(" Main Menu ")
-                    .title_style(Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD))
+                    .title_style(
+                        Style::default()
+                            .fg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    )
                     .borders(Borders::ALL)
                     .border_style(Style::default().fg(Color::DarkGray)),
             )
@@ -123,10 +131,7 @@ impl HomeScreen {
 
         let lines = vec![
             Line::from(""),
-            Line::from(Span::styled(
-                description,
-                Style::default().fg(Color::White),
-            )),
+            Line::from(Span::styled(description, Style::default().fg(Color::White))),
             Line::from(""),
             Line::from(Span::styled(
                 "Press Enter to select",
@@ -182,7 +187,12 @@ impl HomeScreen {
         f.render_widget(paragraph, area);
     }
 
-    fn draw_connected_device(f: &mut Frame, area: Rect, text: &str, info: &crate::state::DeviceInfo) {
+    fn draw_connected_device(
+        f: &mut Frame,
+        area: Rect,
+        text: &str,
+        info: &crate::state::DeviceInfo,
+    ) {
         let block = Block::default()
             .title(" Device ")
             .title_style(Style::default().fg(Color::Magenta))
@@ -205,7 +215,10 @@ impl HomeScreen {
     /// Draw the status bar
     fn draw_status_bar(f: &mut Frame, area: Rect, app: &App) {
         let dry_run_indicator = if app.state.dry_run {
-            Span::styled(" 🧪 DRY RUN ", Style::default().fg(Color::Black).bg(Color::Yellow))
+            Span::styled(
+                " 🧪 DRY RUN ",
+                Style::default().fg(Color::Black).bg(Color::Yellow),
+            )
         } else {
             Span::raw("")
         };

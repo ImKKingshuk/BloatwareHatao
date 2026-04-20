@@ -3,13 +3,12 @@
 //! Manage rescue history and restore packages.
 
 use ratatui::{
+    Frame,
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
     widgets::{Block, Borders, List, ListItem, Paragraph, Wrap},
-    Frame,
 };
-
 
 use crate::app::App;
 
@@ -22,9 +21,9 @@ impl RescueScreen {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([
-                Constraint::Length(3),  // Header with tabs
-                Constraint::Min(10),    // Content
-                Constraint::Length(3),  // Status bar
+                Constraint::Length(3), // Header with tabs
+                Constraint::Min(10),   // Content
+                Constraint::Length(3), // Status bar
             ])
             .split(f.area());
 
@@ -35,19 +34,30 @@ impl RescueScreen {
 
     fn draw_header(f: &mut Frame, area: Rect, tab: usize) {
         let tab1_style = if tab == 0 {
-            Style::default().fg(Color::Black).bg(Color::Cyan).add_modifier(Modifier::BOLD)
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Cyan)
+                .add_modifier(Modifier::BOLD)
         } else {
             Style::default().fg(Color::White)
         };
 
         let tab2_style = if tab == 1 {
-            Style::default().fg(Color::Black).bg(Color::Cyan).add_modifier(Modifier::BOLD)
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Cyan)
+                .add_modifier(Modifier::BOLD)
         } else {
             Style::default().fg(Color::White)
         };
 
         let header = Paragraph::new(Line::from(vec![
-            Span::styled(" 🚑 Rescue History ", Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD)),
+            Span::styled(
+                " 🚑 Rescue History ",
+                Style::default()
+                    .fg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
             Span::raw("  "),
             Span::styled(" Rescue Points ", tab1_style),
             Span::raw("  "),
@@ -66,7 +76,7 @@ impl RescueScreen {
         match tab {
             0 => Self::draw_rescue_points_tab(f, area, app, selected),
             1 => Self::draw_sessions_tab(f, area, app, selected),
-            _ => {},
+            _ => {}
         }
     }
 
@@ -82,7 +92,7 @@ impl RescueScreen {
 
     fn draw_rescue_list(f: &mut Frame, area: Rect, app: &App, selected: usize) {
         let entries = &app.state.rescue_entries;
-        
+
         if entries.is_empty() {
             let empty = Paragraph::new(vec![
                 Line::from(""),
@@ -120,7 +130,7 @@ impl RescueScreen {
 
                 let prefix = if i == selected { "▶ " } else { "  " };
                 let date_str = entry.created_at.format("%Y-%m-%d %H:%M").to_string();
-                
+
                 ListItem::new(vec![
                     Line::from(vec![
                         Span::raw(prefix),
@@ -135,21 +145,20 @@ impl RescueScreen {
             })
             .collect();
 
-        let list = List::new(items)
-            .block(
-                Block::default()
-                    .title(format!(" Rescue Points ({}) ", entries.len()))
-                    .title_style(Style::default().fg(Color::Yellow))
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let list = List::new(items).block(
+            Block::default()
+                .title(format!(" Rescue Points ({}) ", entries.len()))
+                .title_style(Style::default().fg(Color::Yellow))
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(list, area);
     }
 
     fn draw_rescue_details(f: &mut Frame, area: Rect, app: &App, selected: usize) {
         let entries = &app.state.rescue_entries;
-        
+
         let block = Block::default()
             .title(" Details ")
             .title_style(Style::default().fg(Color::Green))
@@ -166,15 +175,15 @@ impl RescueScreen {
         };
 
         let date_str = entry.created_at.format("%Y-%m-%d %H:%M:%S").to_string();
-        let device_info = entry.device_model
-            .as_deref()
-            .unwrap_or("Unknown device");
-        
+        let device_info = entry.device_model.as_deref().unwrap_or("Unknown device");
+
         let lines = vec![
             Line::from(""),
             Line::from(Span::styled(
                 &entry.id,
-                Style::default().fg(Color::White).add_modifier(Modifier::BOLD),
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
             )),
             Line::from(""),
             Line::from(vec![
@@ -220,9 +229,7 @@ impl RescueScreen {
             )),
         ];
 
-        let paragraph = Paragraph::new(lines)
-            .block(block)
-            .wrap(Wrap { trim: true });
+        let paragraph = Paragraph::new(lines).block(block).wrap(Wrap { trim: true });
 
         f.render_widget(paragraph, area);
     }
@@ -239,7 +246,7 @@ impl RescueScreen {
 
     fn draw_session_list(f: &mut Frame, area: Rect, app: &App, selected: usize) {
         let sessions = &app.state.rescue_sessions;
-        
+
         if sessions.is_empty() {
             let empty = Paragraph::new(vec![
                 Line::from(""),
@@ -281,7 +288,7 @@ impl RescueScreen {
 
                 let prefix = if i == selected { "▶ " } else { "  " };
                 let date_str = session.created_at.format("%Y-%m-%d %H:%M").to_string();
-                
+
                 ListItem::new(vec![
                     Line::from(vec![
                         Span::raw(prefix),
@@ -289,28 +296,31 @@ impl RescueScreen {
                         Span::styled(&session.session_id, style),
                     ]),
                     Line::from(Span::styled(
-                        format!("    {} • {} removed", date_str, session.removed_packages.len()),
+                        format!(
+                            "    {} • {} removed",
+                            date_str,
+                            session.removed_packages.len()
+                        ),
                         Style::default().fg(Color::DarkGray),
                     )),
                 ])
             })
             .collect();
 
-        let list = List::new(items)
-            .block(
-                Block::default()
-                    .title(format!(" Sessions ({}) ", sessions.len()))
-                    .title_style(Style::default().fg(Color::Yellow))
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let list = List::new(items).block(
+            Block::default()
+                .title(format!(" Sessions ({}) ", sessions.len()))
+                .title_style(Style::default().fg(Color::Yellow))
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(list, area);
     }
 
     fn draw_session_details(f: &mut Frame, area: Rect, app: &App, selected: usize) {
         let sessions = &app.state.rescue_sessions;
-        
+
         let block = Block::default()
             .title(" Details ")
             .title_style(Style::default().fg(Color::Green))
@@ -327,12 +337,14 @@ impl RescueScreen {
         };
 
         let date_str = session.created_at.format("%Y-%m-%d %H:%M:%S").to_string();
-        
+
         let mut lines = vec![
             Line::from(""),
             Line::from(Span::styled(
                 &session.session_id,
-                Style::default().fg(Color::White).add_modifier(Modifier::BOLD),
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
             )),
             Line::from(""),
             Line::from(vec![
@@ -380,9 +392,7 @@ impl RescueScreen {
             )),
         ]);
 
-        let paragraph = Paragraph::new(lines)
-            .block(block)
-            .wrap(Wrap { trim: true });
+        let paragraph = Paragraph::new(lines).block(block).wrap(Wrap { trim: true });
 
         f.render_widget(paragraph, area);
     }
@@ -397,17 +407,19 @@ impl RescueScreen {
         let help_span = Span::styled(help, Style::default().fg(Color::DarkGray));
 
         let dry_run = if app.state.dry_run {
-            Span::styled(" 🧪 DRY RUN ", Style::default().fg(Color::Black).bg(Color::Yellow))
+            Span::styled(
+                " 🧪 DRY RUN ",
+                Style::default().fg(Color::Black).bg(Color::Yellow),
+            )
         } else {
             Span::raw("")
         };
 
-        let status_bar = Paragraph::new(Line::from(vec![dry_run, help_span]))
-            .block(
-                Block::default()
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let status_bar = Paragraph::new(Line::from(vec![dry_run, help_span])).block(
+            Block::default()
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(status_bar, area);
     }

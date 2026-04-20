@@ -9,7 +9,9 @@ db-urls = ["https://github.com/rustsec/advisory-db"]
 # The lint level for crates that have been yanked from their source registry
 yanked = "deny"
 # A list of advisory IDs to ignore
-ignore = []
+ignore = [
+    "RUSTSEC-2024-0436", # paste crate is unmaintained but no safe upgrade available
+]
 
 [bans]
 # Lint level for when multiple versions of the same crate are detected
@@ -41,6 +43,7 @@ allow = [
     "Zlib",
     "Unicode-3.0",
     "CC0-1.0",
+    "MPL-2.0",
 ]
 # Confidence threshold for license detection
 confidence-threshold = 0.8

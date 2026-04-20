@@ -139,7 +139,10 @@ impl Adb {
         if output.contains("connected") || output.contains("already connected") {
             Ok(())
         } else {
-            Err(Error::adb(format!("Failed to connect to {}: {}", address, output)))
+            Err(Error::adb(format!(
+                "Failed to connect to {}: {}",
+                address, output
+            )))
         }
     }
 
@@ -158,7 +161,10 @@ impl Adb {
         if output.contains("restarting") || !output.contains("error") {
             Ok(())
         } else {
-            Err(Error::adb(format!("Failed to enable TCP/IP mode: {}", output)))
+            Err(Error::adb(format!(
+                "Failed to enable TCP/IP mode: {}",
+                output
+            )))
         }
     }
 
@@ -166,14 +172,18 @@ impl Adb {
     #[instrument(skip(self))]
     pub async fn get_device_ip(&self) -> Result<Option<String>> {
         // Try wlan0 first (most common)
-        let output = self.shell("ip addr show wlan0 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1").await?;
+        let output = self
+            .shell("ip addr show wlan0 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1")
+            .await?;
         let ip = output.trim();
         if !ip.is_empty() && ip.contains('.') {
             return Ok(Some(ip.to_string()));
         }
 
         // Fallback to any available interface
-        let output = self.shell("ip route get 1 2>/dev/null | awk '{print $7}' | head -1").await?;
+        let output = self
+            .shell("ip route get 1 2>/dev/null | awk '{print $7}' | head -1")
+            .await?;
         let ip = output.trim();
         if !ip.is_empty() && ip.contains('.') {
             return Ok(Some(ip.to_string()));
@@ -276,7 +286,7 @@ mod tests {
     fn test_device_info_parse() {
         let line = "RFXXXXXXXX device usb:1-1 product:starqltesq model:SM_G960U device:starqltesq transport_id:1";
         let info = DeviceInfo::parse(line).unwrap();
-        
+
         assert_eq!(info.serial, "RFXXXXXXXX");
         assert!(info.status.is_ready());
         assert_eq!(info.model, Some("SM_G960U".to_string()));

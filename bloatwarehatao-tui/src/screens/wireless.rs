@@ -3,11 +3,11 @@
 //! Interface for managing wireless ADB connections.
 
 use ratatui::{
+    Frame,
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
     widgets::{Block, Borders, Paragraph},
-    Frame,
 };
 
 use crate::app::App;
@@ -21,9 +21,9 @@ impl WirelessScreen {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([
-                Constraint::Length(3),  // Header
-                Constraint::Min(10),    // Main content
-                Constraint::Length(3),  // Status bar
+                Constraint::Length(3), // Header
+                Constraint::Min(10),   // Main content
+                Constraint::Length(3), // Status bar
             ])
             .split(f.area());
 
@@ -39,7 +39,9 @@ impl WirelessScreen {
 
         let text = Paragraph::new(Span::styled(
             " 📡 Wireless ADB Connection ",
-            Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD),
+            Style::default()
+                .fg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
         ))
         .block(block)
         .alignment(Alignment::Center);
@@ -51,13 +53,13 @@ impl WirelessScreen {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([
-                Constraint::Length(6),  // Enable Wireless
-                Constraint::Length(6),  // Connect
-                Constraint::Min(3),     // Status/Info
+                Constraint::Length(6), // Enable Wireless
+                Constraint::Length(6), // Connect
+                Constraint::Min(3),    // Status/Info
             ])
             .margin(1)
             .split(area);
-        
+
         // Enable Wireless Section
         let enable_block = Block::default()
             .title(" Step 1: Enable Wireless on Device (USB Required) ")
@@ -70,13 +72,21 @@ impl WirelessScreen {
             Line::from(""),
             Line::from(vec![
                 Span::raw("Port: "),
-                Span::styled(&app.state.wireless.port_input, Style::default().fg(Color::White).add_modifier(Modifier::BOLD)),
+                Span::styled(
+                    &app.state.wireless.port_input,
+                    Style::default()
+                        .fg(Color::White)
+                        .add_modifier(Modifier::BOLD),
+                ),
                 Span::styled(" (Press 'p' to edit)", Style::default().fg(Color::DarkGray)),
             ]),
             Line::from(""),
-            Line::from(Span::styled("Press 'e' to Enable Wireless Mode", Style::default().fg(Color::Green))),
+            Line::from(Span::styled(
+                "Press 'e' to Enable Wireless Mode",
+                Style::default().fg(Color::Green),
+            )),
         ];
-        
+
         f.render_widget(Paragraph::new(port_text).block(enable_block), chunks[0]);
 
         // Connect Section
@@ -92,33 +102,51 @@ impl WirelessScreen {
             Line::from(vec![
                 Span::raw("Address: "),
                 Span::styled(
-                    if app.state.wireless.address_input.is_empty() { "Enter address..." } else { &app.state.wireless.address_input }, 
-                    if app.state.wireless.address_input.is_empty() { Style::default().fg(Color::DarkGray) } else { Style::default().fg(Color::White).add_modifier(Modifier::BOLD) }
+                    if app.state.wireless.address_input.is_empty() {
+                        "Enter address..."
+                    } else {
+                        &app.state.wireless.address_input
+                    },
+                    if app.state.wireless.address_input.is_empty() {
+                        Style::default().fg(Color::DarkGray)
+                    } else {
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD)
+                    },
                 ),
                 Span::styled(" (Press 'i' to edit)", Style::default().fg(Color::DarkGray)),
             ]),
             Line::from(""),
-            Line::from(Span::styled("Press 'c' to Connect", Style::default().fg(Color::Green))),
+            Line::from(Span::styled(
+                "Press 'c' to Connect",
+                Style::default().fg(Color::Green),
+            )),
         ];
 
         f.render_widget(Paragraph::new(addr_text).block(connect_block), chunks[1]);
-        
+
         // Status Section
         let status_block = Block::default()
             .title(" Status ")
             .borders(Borders::ALL)
             .border_style(Style::default().fg(Color::DarkGray));
-            
+
         let status_msg = app.state.wireless.status.clone().unwrap_or_default();
         let status_style = if status_msg.starts_with("Error") || status_msg.starts_with("Failed") {
             Style::default().fg(Color::Red)
         } else if status_msg.starts_with("Success") || status_msg.starts_with("Connected") {
             Style::default().fg(Color::Green)
         } else {
-             Style::default().fg(Color::White)
+            Style::default().fg(Color::White)
         };
-        
-        f.render_widget(Paragraph::new(status_msg).style(status_style).block(status_block), chunks[2]);
+
+        f.render_widget(
+            Paragraph::new(status_msg)
+                .style(status_style)
+                .block(status_block),
+            chunks[2],
+        );
     }
 
     fn draw_status_bar(f: &mut Frame, area: Rect, _app: &App) {

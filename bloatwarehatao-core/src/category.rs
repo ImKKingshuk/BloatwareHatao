@@ -48,7 +48,7 @@ pub enum PackageCategory {
     Meta,
     /// Microsoft apps
     Microsoft,
-    
+
     // Functional categories
     /// Generic OEM apps
     Generic,
@@ -90,7 +90,7 @@ pub enum PackageCategory {
     Other,
 }
 
-use serde::de::{self, Visitor, Deserializer};
+use serde::de::{self, Deserializer, Visitor};
 use std::fmt;
 
 impl<'de> Deserialize<'de> for PackageCategory {
@@ -154,10 +154,10 @@ impl<'de> Deserialize<'de> for PackageCategory {
                     "user_installed" => Ok(PackageCategory::UserInstalled),
                     "other" => Ok(PackageCategory::Other),
                     _ => Ok(PackageCategory::Other), // Fallback to Other instead of error for robustness?
-                    // Or keep error to find issues? User explicitly complained about "Other" for everything.
-                    // If I fallback to Other, existing Unknown logic handles it.
-                    // But the Error 'unknown variant' prevents DB load ENTIRELY.
-                    // So fallback to Other is SAFER to ensure DB loads at least.
+                                                     // Or keep error to find issues? User explicitly complained about "Other" for everything.
+                                                     // If I fallback to Other, existing Unknown logic handles it.
+                                                     // But the Error 'unknown variant' prevents DB load ENTIRELY.
+                                                     // So fallback to Other is SAFER to ensure DB loads at least.
                 }
             }
         }

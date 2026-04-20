@@ -3,17 +3,20 @@
 //! Interactive package browser with search, filter, and selection.
 
 use ratatui::{
+    Frame,
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
-    widgets::{Block, Borders, List, ListItem, Paragraph, Scrollbar, ScrollbarOrientation, ScrollbarState, Wrap},
-    Frame,
+    widgets::{
+        Block, Borders, List, ListItem, Paragraph, Scrollbar, ScrollbarOrientation, ScrollbarState,
+        Wrap,
+    },
 };
 
 use crate::app::App;
 use crate::state::{PackageItem, SelectionMode, StatusTab};
-use bloatwarehatao_core::database::SafetyRating;
 use bloatwarehatao_core::category::PackageCategory;
+use bloatwarehatao_core::database::SafetyRating;
 
 /// Package browser screen renderer
 pub struct PackageBrowserScreen;
@@ -24,11 +27,11 @@ impl PackageBrowserScreen {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([
-                Constraint::Length(3),  // Tabs bar
-                Constraint::Length(3),  // Header with search
-                Constraint::Length(7),  // Filter panel (multi-row)
-                Constraint::Min(6),     // Package list + details
-                Constraint::Length(3),  // Status bar
+                Constraint::Length(3), // Tabs bar
+                Constraint::Length(3), // Header with search
+                Constraint::Length(7), // Filter panel (multi-row)
+                Constraint::Min(6),    // Package list + details
+                Constraint::Length(3), // Status bar
             ])
             .split(f.area());
 
@@ -62,21 +65,21 @@ impl PackageBrowserScreen {
         for (tab, count) in tabs.iter() {
             let is_selected = *tab == current_tab;
             let label = format!(" {} ({}) ", tab.label(), count);
-            
+
             if is_selected {
                 spans.push(Span::styled(
                     label,
-                    Style::default().fg(Color::Black).bg(Color::White).add_modifier(Modifier::BOLD),
+                    Style::default()
+                        .fg(Color::Black)
+                        .bg(Color::White)
+                        .add_modifier(Modifier::BOLD),
                 ));
             } else {
-                spans.push(Span::styled(
-                    label,
-                    Style::default().fg(Color::DarkGray),
-                ));
+                spans.push(Span::styled(label, Style::default().fg(Color::DarkGray)));
             }
             spans.push(Span::raw(" │ "));
         }
-        
+
         // Remove last separator
         spans.pop();
         spans.push(Span::styled(
@@ -84,12 +87,11 @@ impl PackageBrowserScreen {
             Style::default().fg(Color::DarkGray),
         ));
 
-        let tabs_bar = Paragraph::new(Line::from(spans))
-            .block(
-                Block::default()
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let tabs_bar = Paragraph::new(Line::from(spans)).block(
+            Block::default()
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(tabs_bar, area);
     }
@@ -97,28 +99,29 @@ impl PackageBrowserScreen {
     /// Draw the filter panel with safety levels and categories (multi-row)
     fn draw_filter_panel(f: &mut Frame, area: Rect, app: &App) {
         let browser = &app.state.browser;
-        
+
         // Get unique categories first to calculate row count
-        let mut unique_cats: Vec<PackageCategory> = browser.packages
+        let mut unique_cats: Vec<PackageCategory> = browser
+            .packages
             .iter()
             .map(|p| p.category)
             .collect::<std::collections::HashSet<_>>()
             .into_iter()
             .collect();
         unique_cats.sort_by(|a, b| a.display_name().cmp(b.display_name()));
-        
+
         // Calculate how many category rows we need (8 per row)
         let cats_per_row = 8;
         let cat_row_count = unique_cats.len().div_ceil(cats_per_row);
         let cat_row_count = cat_row_count.clamp(1, 3); // Max 3 rows of categories
-        
+
         // Split area: 1 row safety + N rows categories
         let mut constraints = vec![Constraint::Length(1)]; // Safety row
         for _ in 0..cat_row_count {
             constraints.push(Constraint::Length(1)); // Category rows
         }
         constraints.push(Constraint::Min(0)); // Spacing
-        
+
         let rows = Layout::default()
             .direction(Direction::Vertical)
             .constraints(constraints)
@@ -133,14 +136,20 @@ impl PackageBrowserScreen {
             (SafetyRating::Danger, "4:Danger", Color::Red),
         ];
 
-        let mut safety_spans: Vec<Span> = vec![
-            Span::styled("SAFETY: ", Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD)),
-        ];
-        
+        let mut safety_spans: Vec<Span> = vec![Span::styled(
+            "SAFETY: ",
+            Style::default()
+                .fg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
+        )];
+
         for (rating, label, color) in safety_levels.iter() {
             let is_active = browser.filter.safety == Some(*rating);
             let style = if is_active {
-                Style::default().bg(*color).fg(Color::Black).add_modifier(Modifier::BOLD)
+                Style::default()
+                    .bg(*color)
+                    .fg(Color::Black)
+                    .add_modifier(Modifier::BOLD)
             } else {
                 Style::default().fg(*color)
             };
@@ -148,22 +157,27 @@ impl PackageBrowserScreen {
             safety_spans.push(Span::raw(" "));
         }
         safety_spans.push(Span::styled(" ", Style::default().fg(Color::Red)));
-        
+
         f.render_widget(Paragraph::new(Line::from(safety_spans)), rows[0]);
 
         // Category rows - split into multiple rows
         for row_idx in 0..cat_row_count {
             let start_idx = row_idx * cats_per_row;
             let end_idx = (start_idx + cats_per_row).min(unique_cats.len());
-            
+
             let mut cat_spans: Vec<Span> = vec![];
-            
+
             if row_idx == 0 {
-                cat_spans.push(Span::styled("CATEGORY:", Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD)));
+                cat_spans.push(Span::styled(
+                    "CATEGORY:",
+                    Style::default()
+                        .fg(Color::Cyan)
+                        .add_modifier(Modifier::BOLD),
+                ));
             } else {
                 cat_spans.push(Span::styled("         ", Style::default())); // Align with first row
             }
-            
+
             for (i, cat) in unique_cats[start_idx..end_idx].iter().enumerate() {
                 let global_idx = start_idx + i;
                 let key = if global_idx < 26 {
@@ -173,13 +187,19 @@ impl PackageBrowserScreen {
                 };
                 let is_active = browser.filter.category == Some(*cat);
                 let style = if is_active {
-                    Style::default().bg(Color::White).fg(Color::Black).add_modifier(Modifier::BOLD)
+                    Style::default()
+                        .bg(Color::White)
+                        .fg(Color::Black)
+                        .add_modifier(Modifier::BOLD)
                 } else {
                     Style::default().fg(Color::DarkGray)
                 };
-                cat_spans.push(Span::styled(format!(" {}:{} ", key, cat.display_name()), style));
+                cat_spans.push(Span::styled(
+                    format!(" {}:{} ", key, cat.display_name()),
+                    style,
+                ));
             }
-            
+
             f.render_widget(Paragraph::new(Line::from(cat_spans)), rows[1 + row_idx]);
         }
 
@@ -188,8 +208,14 @@ impl PackageBrowserScreen {
             Block::default()
                 .borders(Borders::ALL)
                 .border_style(Style::default().fg(Color::DarkGray))
-                .title_style(Style::default().fg(Color::LightMagenta).add_modifier(Modifier::BOLD))
-                .title(" Filters: (Safety:1-4, Category:A-Z, 0:Clear All, Press keys on Keyboard) "),
+                .title_style(
+                    Style::default()
+                        .fg(Color::LightMagenta)
+                        .add_modifier(Modifier::BOLD),
+                )
+                .title(
+                    " Filters: (Safety:1-4, Category:A-Z, 0:Clear All, Press keys on Keyboard) ",
+                ),
             area,
         );
     }
@@ -197,13 +223,13 @@ impl PackageBrowserScreen {
     /// Draw the header with title and inline search bar
     fn draw_header(f: &mut Frame, area: Rect, app: &App) {
         let browser = &app.state.browser;
-        
+
         // Split header into title area and search bar area
         let header_chunks = Layout::default()
             .direction(Direction::Horizontal)
             .constraints([
-                Constraint::Percentage(50),  // Title
-                Constraint::Percentage(50),  // Search bar
+                Constraint::Percentage(50), // Title
+                Constraint::Percentage(50), // Search bar
             ])
             .split(area);
 
@@ -220,7 +246,12 @@ impl PackageBrowserScreen {
         };
 
         let title_widget = Paragraph::new(Line::from(vec![
-            Span::styled(&title, Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD)),
+            Span::styled(
+                &title,
+                Style::default()
+                    .fg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
             Span::styled(&selected_info, Style::default().fg(Color::Green)),
         ]))
         .block(
@@ -237,32 +268,43 @@ impl PackageBrowserScreen {
             Line::from(vec![
                 Span::styled(" 🔍 ", Style::default().fg(Color::Yellow)),
                 Span::styled(&browser.filter.search, Style::default().fg(Color::White)),
-                Span::styled("█", Style::default().fg(Color::Cyan).add_modifier(Modifier::SLOW_BLINK)),
+                Span::styled(
+                    "█",
+                    Style::default()
+                        .fg(Color::Cyan)
+                        .add_modifier(Modifier::SLOW_BLINK),
+                ),
             ])
         } else if !browser.filter.search.is_empty() {
             // Has search term but not active
             Line::from(vec![
                 Span::styled(" 🔍 ", Style::default().fg(Color::Yellow)),
-                Span::styled(format!("\"{}\"", &browser.filter.search), Style::default().fg(Color::Yellow)),
-                Span::styled("  (/ to edit, c to clear)", Style::default().fg(Color::DarkGray)),
+                Span::styled(
+                    format!("\"{}\"", &browser.filter.search),
+                    Style::default().fg(Color::Yellow),
+                ),
+                Span::styled(
+                    "  (/ to edit, c to clear)",
+                    Style::default().fg(Color::DarkGray),
+                ),
             ])
         } else {
             // No search, show placeholder
-            Line::from(vec![
-                Span::styled(" 🔍 Press / to search...", Style::default().fg(Color::DarkGray)),
-            ])
+            Line::from(vec![Span::styled(
+                " 🔍 Press / to search...",
+                Style::default().fg(Color::DarkGray),
+            )])
         };
 
-        let search_bar = Paragraph::new(search_content)
-            .block(
-                Block::default()
-                    .borders(Borders::ALL)
-                    .border_style(if browser.search_active {
-                        Style::default().fg(Color::Cyan)
-                    } else {
-                        Style::default().fg(Color::DarkGray)
-                    }),
-            );
+        let search_bar = Paragraph::new(search_content).block(
+            Block::default()
+                .borders(Borders::ALL)
+                .border_style(if browser.search_active {
+                    Style::default().fg(Color::Cyan)
+                } else {
+                    Style::default().fg(Color::DarkGray)
+                }),
+        );
 
         f.render_widget(search_bar, header_chunks[1]);
     }
@@ -281,7 +323,7 @@ impl PackageBrowserScreen {
     /// Draw the package list
     fn draw_package_list(f: &mut Frame, area: Rect, app: &App) {
         let browser = &app.state.browser;
-        
+
         if browser.loading {
             let loading = Paragraph::new("⏳ Loading packages...")
                 .style(Style::default().fg(Color::Yellow))
@@ -298,7 +340,7 @@ impl PackageBrowserScreen {
 
         // Calculate visible area (accounting for borders)
         let inner_height = area.height.saturating_sub(2) as usize;
-        
+
         // Calculate scroll offset to keep cursor visible
         let visible_start = if browser.cursor >= inner_height {
             browser.cursor - inner_height + 1
@@ -316,18 +358,21 @@ impl PackageBrowserScreen {
             .filter_map(|(display_idx, &pkg_idx)| {
                 let pkg = browser.packages.get(pkg_idx)?;
                 let is_selected = display_idx == browser.cursor;
-                Some(Self::make_list_item(pkg, is_selected, browser.selection_mode))
+                Some(Self::make_list_item(
+                    pkg,
+                    is_selected,
+                    browser.selection_mode,
+                ))
             })
             .collect();
 
-        let list = List::new(items)
-            .block(
-                Block::default()
-                    .title(" Packages ")
-                    .title_style(Style::default().fg(Color::Cyan))
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let list = List::new(items).block(
+            Block::default()
+                .title(" Packages ")
+                .title_style(Style::default().fg(Color::Cyan))
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(list, area);
 
@@ -337,19 +382,26 @@ impl PackageBrowserScreen {
                 .begin_symbol(Some("↑"))
                 .end_symbol(Some("↓"));
 
-            let mut scrollbar_state = ScrollbarState::new(browser.filtered_indices.len())
-                .position(browser.cursor);
+            let mut scrollbar_state =
+                ScrollbarState::new(browser.filtered_indices.len()).position(browser.cursor);
 
             f.render_stateful_widget(
                 scrollbar,
-                area.inner(ratatui::layout::Margin { vertical: 1, horizontal: 0 }),
+                area.inner(ratatui::layout::Margin {
+                    vertical: 1,
+                    horizontal: 0,
+                }),
                 &mut scrollbar_state,
             );
         }
     }
 
     /// Create a list item for a package
-    fn make_list_item<'a>(pkg: &'a PackageItem, is_cursor: bool, mode: SelectionMode) -> ListItem<'a> {
+    fn make_list_item<'a>(
+        pkg: &'a PackageItem,
+        is_cursor: bool,
+        mode: SelectionMode,
+    ) -> ListItem<'a> {
         let safety_indicator = match pkg.safety {
             SafetyRating::Recommended => Span::styled("●", Style::default().fg(Color::Green)),
             SafetyRating::Advanced => Span::styled("●", Style::default().fg(Color::Yellow)),
@@ -379,7 +431,10 @@ impl PackageBrowserScreen {
 
         // Package label
         let label_style = if is_cursor {
-            Style::default().fg(Color::Black).bg(Color::Cyan).add_modifier(Modifier::BOLD)
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Cyan)
+                .add_modifier(Modifier::BOLD)
         } else if pkg.selected {
             Style::default().fg(Color::Green)
         } else {
@@ -434,7 +489,9 @@ impl PackageBrowserScreen {
         let mut lines = vec![
             Line::from(Span::styled(
                 &pkg.label,
-                Style::default().fg(Color::White).add_modifier(Modifier::BOLD),
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
             )),
             Line::from(""),
             Line::from(vec![
@@ -444,11 +501,19 @@ impl PackageBrowserScreen {
             Line::from(""),
             Line::from(vec![
                 Span::styled("Safety: ", Style::default().fg(Color::DarkGray)),
-                Span::styled(pkg.safety.display_name(), Style::default().fg(safety_color).add_modifier(Modifier::BOLD)),
+                Span::styled(
+                    pkg.safety.display_name(),
+                    Style::default()
+                        .fg(safety_color)
+                        .add_modifier(Modifier::BOLD),
+                ),
             ]),
             Line::from(vec![
                 Span::styled("Category: ", Style::default().fg(Color::DarkGray)),
-                Span::styled(pkg.category.display_name(), Style::default().fg(Color::White)),
+                Span::styled(
+                    pkg.category.display_name(),
+                    Style::default().fg(Color::White),
+                ),
             ]),
             Line::from(vec![
                 Span::styled("Installed: ", Style::default().fg(Color::DarkGray)),
@@ -459,8 +524,14 @@ impl PackageBrowserScreen {
                 },
             ]),
             Line::from(""),
-            Line::from(Span::styled("Description:", Style::default().fg(Color::DarkGray))),
-            Line::from(Span::styled(&pkg.description, Style::default().fg(Color::White))),
+            Line::from(Span::styled(
+                "Description:",
+                Style::default().fg(Color::DarkGray),
+            )),
+            Line::from(Span::styled(
+                &pkg.description,
+                Style::default().fg(Color::White),
+            )),
         ];
 
         // Add warning for danger packages
@@ -476,9 +547,7 @@ impl PackageBrowserScreen {
             )));
         }
 
-        let details = Paragraph::new(lines)
-            .block(block)
-            .wrap(Wrap { trim: true });
+        let details = Paragraph::new(lines).block(block).wrap(Wrap { trim: true });
 
         f.render_widget(details, area);
     }
@@ -488,16 +557,27 @@ impl PackageBrowserScreen {
         let browser = &app.state.browser;
 
         let mode_indicator = match browser.selection_mode {
-            SelectionMode::Single => Span::styled(" BROWSE ", Style::default().fg(Color::Black).bg(Color::Cyan)),
-            SelectionMode::Multi => Span::styled(" SELECT ", Style::default().fg(Color::Black).bg(Color::Green)),
+            SelectionMode::Single => Span::styled(
+                " BROWSE ",
+                Style::default().fg(Color::Black).bg(Color::Cyan),
+            ),
+            SelectionMode::Multi => Span::styled(
+                " SELECT ",
+                Style::default().fg(Color::Black).bg(Color::Green),
+            ),
         };
 
-        let status = browser.status.as_ref()
+        let status = browser
+            .status
+            .as_ref()
             .map(|s| Span::styled(format!(" {} ", s), Style::default().fg(Color::Green)))
             .unwrap_or_else(|| Span::raw(""));
 
         let dry_run = if app.state.dry_run {
-            Span::styled(" 🧪 DRY RUN ", Style::default().fg(Color::Black).bg(Color::Yellow))
+            Span::styled(
+                " 🧪 DRY RUN ",
+                Style::default().fg(Color::Black).bg(Color::Yellow),
+            )
         } else {
             Span::raw("")
         };

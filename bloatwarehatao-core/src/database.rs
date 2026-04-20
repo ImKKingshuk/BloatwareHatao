@@ -6,9 +6,9 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::path::Path;
 
+pub use crate::category::PackageCategory;
 use crate::device::Oem;
 use crate::{Error, Result};
-pub use crate::category::PackageCategory;
 
 /// Safety rating for a package
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
@@ -60,9 +60,6 @@ impl SafetyRating {
         }
     }
 }
-
-
-
 
 /// Package entry in the database
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -119,7 +116,10 @@ impl PackageEntry {
 
     /// Check if safe to remove (Recommended or Advanced)
     pub fn is_safe_to_remove(&self) -> bool {
-        matches!(self.safety, SafetyRating::Recommended | SafetyRating::Advanced)
+        matches!(
+            self.safety,
+            SafetyRating::Recommended | SafetyRating::Advanced
+        )
     }
 }
 
@@ -147,19 +147,25 @@ impl PackageDatabase {
         let mut db = Self::new();
 
         if !dir.exists() {
-            return Err(Error::config(format!("Package database directory not found: {:?}", dir)));
+            return Err(Error::config(format!(
+                "Package database directory not found: {:?}",
+                dir
+            )));
         }
 
-        for entry in std::fs::read_dir(dir).map_err(|e| Error::config(format!("Failed to read database dir: {}", e)))? {
-            let entry = entry.map_err(|e| Error::config(format!("Failed to read dir entry: {}", e)))?;
+        for entry in std::fs::read_dir(dir)
+            .map_err(|e| Error::config(format!("Failed to read database dir: {}", e)))?
+        {
+            let entry =
+                entry.map_err(|e| Error::config(format!("Failed to read dir entry: {}", e)))?;
             let path = entry.path();
 
             if path.extension().map(|e| e == "json").unwrap_or(false) {
                 let content = std::fs::read_to_string(&path)
                     .map_err(|e| Error::config(format!("Failed to read {:?}: {}", path, e)))?;
-                
+
                 let packages: Vec<PackageEntry> = serde_json::from_str(&content)?;
-                
+
                 for package in packages {
                     db.add(package);
                 }
@@ -176,7 +182,15 @@ impl PackageDatabase {
         // Add to OEM index
         if entry.oems.is_empty() {
             // Add to all OEMs if not specified
-            for oem in [Oem::Samsung, Oem::Xiaomi, Oem::Huawei, Oem::OnePlus, Oem::Oppo, Oem::Vivo, Oem::Realme] {
+            for oem in [
+                Oem::Samsung,
+                Oem::Xiaomi,
+                Oem::Huawei,
+                Oem::OnePlus,
+                Oem::Oppo,
+                Oem::Vivo,
+                Oem::Realme,
+            ] {
                 self.by_oem.entry(oem).or_default().push(name.clone());
             }
         } else {
@@ -186,10 +200,16 @@ impl PackageDatabase {
         }
 
         // Add to category index
-        self.by_category.entry(entry.category).or_default().push(name.clone());
+        self.by_category
+            .entry(entry.category)
+            .or_default()
+            .push(name.clone());
 
         // Add to safety index
-        self.by_safety.entry(entry.safety).or_default().push(name.clone());
+        self.by_safety
+            .entry(entry.safety)
+            .or_default()
+            .push(name.clone());
 
         // Add to main map
         self.packages.insert(name, entry);
@@ -396,13 +416,13 @@ mod tests {
     #[test]
     fn test_database_operations() {
         let db = create_default_database();
-        
+
         assert!(!db.is_empty());
         assert!(db.get("com.google.android.youtube").is_some());
-        
+
         let safe = db.get_safe_packages();
         assert!(!safe.is_empty());
-        
+
         let results = db.search("youtube");
         assert!(!results.is_empty());
     }

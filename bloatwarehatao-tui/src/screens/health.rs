@@ -3,11 +3,11 @@
 //! Displays device health metrics (battery, RAM, storage).
 
 use ratatui::{
+    Frame,
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
     widgets::{Block, Borders, Gauge, Paragraph},
-    Frame,
 };
 
 use crate::app::App;
@@ -23,9 +23,9 @@ impl HealthScreen {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([
-                Constraint::Length(3),  // Header
-                Constraint::Min(10),    // Content
-                Constraint::Length(3),  // Status bar
+                Constraint::Length(3), // Header
+                Constraint::Min(10),   // Content
+                Constraint::Length(3), // Status bar
             ])
             .split(f.area());
 
@@ -35,12 +35,12 @@ impl HealthScreen {
     }
 
     fn draw_header(f: &mut Frame, area: Rect) {
-        let header = Paragraph::new(Line::from(vec![
-            Span::styled(
-                " ❤️ Device Health Check ",
-                Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD),
-            ),
-        ]))
+        let header = Paragraph::new(Line::from(vec![Span::styled(
+            " ❤️ Device Health Check ",
+            Style::default()
+                .fg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
+        )]))
         .block(
             Block::default()
                 .borders(Borders::ALL)
@@ -138,12 +138,12 @@ impl HealthScreen {
             .direction(Direction::Vertical)
             .margin(1)
             .constraints([
-                Constraint::Length(4),  // Battery
-                Constraint::Length(1),  // Spacing
-                Constraint::Length(4),  // RAM
-                Constraint::Length(1),  // Spacing 
-                Constraint::Length(4),  // Storage
-                Constraint::Min(1),     // Remaining space
+                Constraint::Length(4), // Battery
+                Constraint::Length(1), // Spacing
+                Constraint::Length(4), // RAM
+                Constraint::Length(1), // Spacing
+                Constraint::Length(4), // Storage
+                Constraint::Min(1),    // Remaining space
             ])
             .split(inner);
 
@@ -165,22 +165,19 @@ impl HealthScreen {
 
         // Battery label
         let battery_pct = health.battery_level.unwrap_or(0);
-        let temp = health.battery_temp_celsius()
+        let temp = health
+            .battery_temp_celsius()
             .map(|t| format!(" ({:.1}°C)", t))
             .unwrap_or_default();
-        
-        let battery_icon = if battery_pct > 20 {
-            "🔋"
-        } else {
-            "🪫"
-        };
 
-        let label = Line::from(vec![
-            Span::styled(
-                format!("{} Battery: {}%{}", battery_icon, battery_pct, temp),
-                Style::default().fg(Color::White).add_modifier(Modifier::BOLD),
-            ),
-        ]);
+        let battery_icon = if battery_pct > 20 { "🔋" } else { "🪫" };
+
+        let label = Line::from(vec![Span::styled(
+            format!("{} Battery: {}%{}", battery_icon, battery_pct, temp),
+            Style::default()
+                .fg(Color::White)
+                .add_modifier(Modifier::BOLD),
+        )]);
         f.render_widget(Paragraph::new(label), chunks[0]);
 
         // Battery gauge
@@ -212,12 +209,15 @@ impl HealthScreen {
         let ram_available_mb = health.ram_available_kb.unwrap_or(0) / 1024;
         let ram_used_mb = ram_total_mb.saturating_sub(ram_available_mb);
 
-        let label = Line::from(vec![
-            Span::styled(
-                format!("💾 RAM: {} MB / {} MB ({}%)", ram_used_mb, ram_total_mb, ram_pct),
-                Style::default().fg(Color::White).add_modifier(Modifier::BOLD),
+        let label = Line::from(vec![Span::styled(
+            format!(
+                "💾 RAM: {} MB / {} MB ({}%)",
+                ram_used_mb, ram_total_mb, ram_pct
             ),
-        ]);
+            Style::default()
+                .fg(Color::White)
+                .add_modifier(Modifier::BOLD),
+        )]);
         f.render_widget(Paragraph::new(label), chunks[0]);
 
         // RAM gauge
@@ -249,12 +249,15 @@ impl HealthScreen {
         let storage_free_gb = health.storage_free_kb.unwrap_or(0) / 1024 / 1024;
         let storage_used_gb = storage_total_gb.saturating_sub(storage_free_gb);
 
-        let label = Line::from(vec![
-            Span::styled(
-                format!("📂 Storage: {} GB / {} GB ({}%)", storage_used_gb, storage_total_gb, storage_pct),
-                Style::default().fg(Color::White).add_modifier(Modifier::BOLD),
+        let label = Line::from(vec![Span::styled(
+            format!(
+                "📂 Storage: {} GB / {} GB ({}%)",
+                storage_used_gb, storage_total_gb, storage_pct
             ),
-        ]);
+            Style::default()
+                .fg(Color::White)
+                .add_modifier(Modifier::BOLD),
+        )]);
         f.render_widget(Paragraph::new(label), chunks[0]);
 
         // Storage gauge
@@ -281,17 +284,19 @@ impl HealthScreen {
         );
 
         let dry_run = if app.state.dry_run {
-            Span::styled(" 🧪 DRY RUN ", Style::default().fg(Color::Black).bg(Color::Yellow))
+            Span::styled(
+                " 🧪 DRY RUN ",
+                Style::default().fg(Color::Black).bg(Color::Yellow),
+            )
         } else {
             Span::raw("")
         };
 
-        let status_bar = Paragraph::new(Line::from(vec![dry_run, help]))
-            .block(
-                Block::default()
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let status_bar = Paragraph::new(Line::from(vec![dry_run, help])).block(
+            Block::default()
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(status_bar, area);
     }

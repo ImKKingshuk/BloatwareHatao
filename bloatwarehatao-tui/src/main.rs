@@ -48,15 +48,13 @@ async fn main() -> Result<()> {
     let cli = Cli::parse();
 
     // Initialize logging
-    let filter = if cli.verbose {
-        "debug"
-    } else {
-        "info"
-    };
-    
+    let filter = if cli.verbose { "debug" } else { "info" };
+
     tracing_subscriber::registry()
         .with(tracing_subscriber::fmt::layer().with_target(false))
-        .with(tracing_subscriber::EnvFilter::try_from_default_env().unwrap_or_else(|_| filter.into()))
+        .with(
+            tracing_subscriber::EnvFilter::try_from_default_env().unwrap_or_else(|_| filter.into()),
+        )
         .init();
 
     // Handle non-interactive commands
@@ -83,14 +81,17 @@ async fn show_device_info(device: Option<&str>) -> Result<()> {
     };
 
     let device = Device::from_adb(&adb).await?;
-    
+
     println!();
     println!("📱 Device Information");
     println!("=====================");
     println!("Brand:          {}", device.brand);
     println!("Model:          {}", device.model);
     println!("Manufacturer:   {}", device.manufacturer);
-    println!("Android:        {} (SDK {})", device.android_version, device.sdk_version);
+    println!(
+        "Android:        {} (SDK {})",
+        device.android_version, device.sdk_version
+    );
     println!("Build:          {}", device.build_id);
     println!("Serial:         {}", device.serial);
     if let Some(ref patch) = device.security_patch {
@@ -114,7 +115,7 @@ async fn list_packages(device: Option<&str>) -> Result<()> {
 
     let pm = PackageManager::new(adb);
     let packages = pm.list_packages().await?;
-    
+
     println!();
     println!("📦 Installed Packages ({})", packages.len());
     println!("==========================");

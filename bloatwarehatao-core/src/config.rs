@@ -210,7 +210,7 @@ impl ConfigManager {
     pub fn save(&self) -> Result<()> {
         let content = toml::to_string_pretty(&self.config)
             .map_err(|e| Error::config(format!("Failed to serialize config: {}", e)))?;
-        
+
         std::fs::write(self.dirs.config_file(), content)?;
         info!("Saved configuration to {:?}", self.dirs.config_file());
         Ok(())

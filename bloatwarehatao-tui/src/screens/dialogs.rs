@@ -3,11 +3,11 @@
 //! Reusable dialog widgets for confirmations, progress, and results.
 
 use ratatui::{
+    Frame,
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
     widgets::{Block, Borders, Clear, Gauge, List, ListItem, Paragraph, Wrap},
-    Frame,
 };
 
 use crate::state::{DialogState, DialogType, PackageOperation};
@@ -19,13 +19,27 @@ pub fn draw_dialogs(f: &mut Frame, dialog: &DialogState) {
     };
 
     match dialog_type {
-        DialogType::Confirm { title, message, operation, packages } => {
+        DialogType::Confirm {
+            title,
+            message,
+            operation,
+            packages,
+        } => {
             draw_confirm_dialog(f, title, message, *operation, packages, dialog.selected);
         }
-        DialogType::Progress { title, current, total, current_package } => {
+        DialogType::Progress {
+            title,
+            current,
+            total,
+            current_package,
+        } => {
             draw_progress_dialog(f, title, *current, *total, current_package);
         }
-        DialogType::Result { title, success, failed } => {
+        DialogType::Result {
+            title,
+            success,
+            failed,
+        } => {
             draw_result_dialog(f, title, success, failed);
         }
         DialogType::ActionMenu { selected } => {
@@ -57,7 +71,11 @@ fn draw_confirm_dialog(
 
     let block = Block::default()
         .title(format!(" {} {} ", operation.icon(), title))
-        .title_style(Style::default().fg(border_color).add_modifier(Modifier::BOLD))
+        .title_style(
+            Style::default()
+                .fg(border_color)
+                .add_modifier(Modifier::BOLD),
+        )
         .borders(Borders::ALL)
         .border_style(Style::default().fg(border_color));
 
@@ -68,9 +86,9 @@ fn draw_confirm_dialog(
         .direction(Direction::Vertical)
         .margin(1)
         .constraints([
-            Constraint::Length(2),   // Message
-            Constraint::Min(3),      // Package list
-            Constraint::Length(3),   // Buttons
+            Constraint::Length(2), // Message
+            Constraint::Min(3),    // Package list
+            Constraint::Length(3), // Buttons
         ])
         .split(inner);
 
@@ -84,7 +102,12 @@ fn draw_confirm_dialog(
     let package_items: Vec<ListItem> = packages
         .iter()
         .take(5)
-        .map(|p| ListItem::new(Span::styled(format!("  • {}", p), Style::default().fg(Color::Cyan))))
+        .map(|p| {
+            ListItem::new(Span::styled(
+                format!("  • {}", p),
+                Style::default().fg(Color::Cyan),
+            ))
+        })
         .collect();
 
     let mut items = package_items;
@@ -135,7 +158,11 @@ fn draw_progress_dialog(
 
     let block = Block::default()
         .title(format!(" ⏳ {} ", title))
-        .title_style(Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD))
+        .title_style(
+            Style::default()
+                .fg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
+        )
         .borders(Borders::ALL)
         .border_style(Style::default().fg(Color::Cyan));
 
@@ -146,9 +173,9 @@ fn draw_progress_dialog(
         .direction(Direction::Vertical)
         .margin(1)
         .constraints([
-            Constraint::Length(1),  // Status text
-            Constraint::Length(2),  // Progress bar
-            Constraint::Length(1),  // Current package
+            Constraint::Length(1), // Status text
+            Constraint::Length(2), // Progress bar
+            Constraint::Length(1), // Current package
         ])
         .split(inner);
 
@@ -179,12 +206,7 @@ fn draw_progress_dialog(
 }
 
 /// Draw result dialog
-fn draw_result_dialog(
-    f: &mut Frame,
-    title: &str,
-    success: &[String],
-    failed: &[(String, String)],
-) {
+fn draw_result_dialog(f: &mut Frame, title: &str, success: &[String], failed: &[(String, String)]) {
     let area = centered_rect(60, 50, f.area());
     f.render_widget(Clear, area);
 
@@ -209,9 +231,9 @@ fn draw_result_dialog(
         .direction(Direction::Vertical)
         .margin(1)
         .constraints([
-            Constraint::Length(1),  // Summary
-            Constraint::Min(5),     // Details
-            Constraint::Length(2),  // Close hint
+            Constraint::Length(1), // Summary
+            Constraint::Min(5),    // Details
+            Constraint::Length(2), // Close hint
         ])
         .split(inner);
 
@@ -231,7 +253,9 @@ fn draw_result_dialog(
     if !success.is_empty() {
         items.push(ListItem::new(Span::styled(
             "✓ Succeeded:",
-            Style::default().fg(Color::Green).add_modifier(Modifier::BOLD),
+            Style::default()
+                .fg(Color::Green)
+                .add_modifier(Modifier::BOLD),
         )));
         for pkg in success.iter().take(5) {
             items.push(ListItem::new(Span::styled(
@@ -284,7 +308,11 @@ fn draw_action_menu(f: &mut Frame, selected: usize) {
 
     let block = Block::default()
         .title(" 📋 Actions ")
-        .title_style(Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD))
+        .title_style(
+            Style::default()
+                .fg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
+        )
         .borders(Borders::ALL)
         .border_style(Style::default().fg(Color::Cyan));
 
@@ -303,13 +331,20 @@ fn draw_action_menu(f: &mut Frame, selected: usize) {
         .enumerate()
         .map(|(i, (op, desc))| {
             let style = if i == selected {
-                Style::default().fg(Color::Black).bg(Color::Cyan).add_modifier(Modifier::BOLD)
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD)
             } else {
                 Style::default().fg(Color::White)
             };
 
             let prefix = if i == selected { "▶ " } else { "  " };
-            let icon_color = if op.is_destructive() { Color::Red } else { Color::Green };
+            let icon_color = if op.is_destructive() {
+                Color::Red
+            } else {
+                Color::Green
+            };
 
             ListItem::new(vec![
                 Line::from(vec![

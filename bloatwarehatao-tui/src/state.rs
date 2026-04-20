@@ -1,16 +1,15 @@
-
 //! Application state management
 //!
 //! Shared state for the TUI application with device and package data.
 
-use bloatwarehatao_core::rescue::{RescueEntry, RescueSession, RescueManager};
 use bloatwarehatao_core::config::{Config, ConfigManager};
-use bloatwarehatao_core::database::{PackageDatabase, PackageEntry, SafetyRating, PackageCategory};
+use bloatwarehatao_core::database::{PackageCategory, PackageDatabase, PackageEntry, SafetyRating};
 use bloatwarehatao_core::device::{Device, DeviceHealth};
-use bloatwarehatao_core::preset::{Preset, PresetManager};
 use bloatwarehatao_core::package::{RemovalMode, extract_app_name};
+use bloatwarehatao_core::preset::{Preset, PresetManager};
+use bloatwarehatao_core::rescue::{RescueEntry, RescueManager, RescueSession};
 
-use crate::screens::{UserGuideState, PresetCreatorState};
+use crate::screens::{PresetCreatorState, UserGuideState};
 
 /// Device connection state
 #[derive(Debug, Clone)]
@@ -152,7 +151,7 @@ impl StatusTab {
             StatusTab::Uninstalled => "Uninstalled",
         }
     }
-    
+
     pub fn next(&self) -> Self {
         match self {
             StatusTab::All => StatusTab::Installed,
@@ -161,7 +160,7 @@ impl StatusTab {
             StatusTab::Uninstalled => StatusTab::All,
         }
     }
-    
+
     pub fn prev(&self) -> Self {
         match self {
             StatusTab::All => StatusTab::Uninstalled,
@@ -225,15 +224,17 @@ impl PackageFilter {
         // Safety filter
         // Safety filter
         if let Some(safety) = self.safety
-            && pkg.safety != safety {
-                return false;
+            && pkg.safety != safety
+        {
+            return false;
         }
 
         // Category filter
         // Category filter
         if let Some(category) = self.category
-            && pkg.category != category {
-                return false;
+            && pkg.category != category
+        {
+            return false;
         }
 
         // Search filter
@@ -390,7 +391,8 @@ impl PackageBrowserState {
             }
         }
         // Re-sort by label after updating
-        self.packages.sort_by(|a, b| a.label.to_lowercase().cmp(&b.label.to_lowercase()));
+        self.packages
+            .sort_by(|a, b| a.label.to_lowercase().cmp(&b.label.to_lowercase()));
         // Re-apply filter to update indices
         self.apply_filter();
     }
@@ -500,14 +502,9 @@ pub enum DialogType {
         failed: Vec<(String, String)>,
     },
     /// Action menu for selecting operation
-    ActionMenu {
-        selected: usize,
-    },
+    ActionMenu { selected: usize },
     /// Error dialog
-    Error {
-        title: String,
-        message: String,
-    },
+    Error { title: String, message: String },
 }
 
 /// Dialog state
@@ -536,11 +533,7 @@ impl DialogState {
         self.selected = 1; // Default to "No"
     }
 
-    pub fn show_progress(
-        &mut self,
-        title: impl Into<String>,
-        total: usize,
-    ) {
+    pub fn show_progress(&mut self, title: impl Into<String>, total: usize) {
         self.active = Some(DialogType::Progress {
             title: title.into(),
             current: 0,
@@ -550,7 +543,12 @@ impl DialogState {
     }
 
     pub fn update_progress(&mut self, current: usize, package: impl Into<String>) {
-        if let Some(DialogType::Progress { current: c, current_package, .. }) = &mut self.active {
+        if let Some(DialogType::Progress {
+            current: c,
+            current_package,
+            ..
+        }) = &mut self.active
+        {
             *c = current;
             *current_package = package.into();
         }
@@ -831,22 +829,22 @@ impl AppState {
             .as_ref()
             .map(|cm| cm.config().clone())
             .unwrap_or_default();
-        
+
         // Try to load presets and rescue history
-        let (preset_manager, rescue_manager, presets, rescue_entries, rescue_sessions) = 
+        let (preset_manager, rescue_manager, presets, rescue_entries, rescue_sessions) =
             if let Ok(dirs) = bloatwarehatao_core::config::AppDirs::new() {
                 let pm = PresetManager::from_data_dir(dirs.data_dir.as_path());
                 let rm = RescueManager::from_data_dir(dirs.data_dir.as_path());
-                
+
                 let prsts = pm.get_builtin_presets();
                 let entries = rm.list_rescue_history().unwrap_or_default();
                 let sessions = rm.list_rescue_sessions().unwrap_or_default();
-                
+
                 (Some(pm), Some(rm), prsts, entries, sessions)
             } else {
                 (None, None, Vec::new(), Vec::new(), Vec::new())
             };
-        
+
         Self {
             device: DeviceState::Unknown,
             database: None,
@@ -874,7 +872,7 @@ impl AppState {
             last_error: None,
         }
     }
-    
+
     /// Reload presets from disk
     pub fn reload_presets(&mut self) {
         if let Some(ref pm) = self.preset_manager {
@@ -884,7 +882,7 @@ impl AppState {
             }
         }
     }
-    
+
     /// Reload rescue history from disk
     pub fn reload_rescue(&mut self) {
         if let Some(ref rm) = self.rescue_manager {
@@ -892,13 +890,13 @@ impl AppState {
             self.rescue_sessions = rm.list_rescue_sessions().unwrap_or_default();
         }
     }
-    
+
     /// Get preset by index
     #[allow(dead_code)]
     pub fn get_preset(&self, index: usize) -> Option<&Preset> {
         self.presets.get(index)
     }
-    
+
     /// Get rescue entry by index
     pub fn get_rescue_entry(&self, index: usize) -> Option<&RescueEntry> {
         self.rescue_entries.get(index)
@@ -908,43 +906,43 @@ impl AppState {
     pub fn get_rescue_session(&self, index: usize) -> Option<&RescueSession> {
         self.rescue_sessions.get(index)
     }
-    
+
     /// Toggle dry run mode
     pub fn toggle_dry_run(&mut self) {
         self.dry_run = !self.dry_run;
         self.config.dry_run = self.dry_run;
     }
-    
+
     /// Toggle auto update check
     pub fn toggle_auto_update(&mut self) {
         self.config.auto_update_check = !self.config.auto_update_check;
     }
-    
+
     /// Toggle offline mode
     pub fn toggle_offline_mode(&mut self) {
         self.config.offline_mode = !self.config.offline_mode;
     }
-    
+
     /// Toggle verbose output
     pub fn toggle_verbose(&mut self) {
         self.config.verbose = !self.config.verbose;
     }
-    
+
     /// Toggle safety warnings
     pub fn toggle_safety_warnings(&mut self) {
         self.config.ui.show_safety_warnings = !self.config.ui.show_safety_warnings;
     }
-    
+
     /// Toggle confirm removal
     pub fn toggle_confirm_removal(&mut self) {
         self.config.ui.confirm_removal = !self.config.ui.confirm_removal;
     }
-    
+
     /// Toggle backup before remove
     pub fn toggle_backup_before_remove(&mut self) {
         self.config.backup_before_remove = !self.config.backup_before_remove;
     }
-    
+
     /// Save configuration to disk
     pub fn save_config(&mut self) -> Result<(), String> {
         if let Some(ref mut cm) = self.config_manager {
@@ -954,13 +952,13 @@ impl AppState {
             Err("Config manager not available".to_string())
         }
     }
-    
+
     /// Apply a preset - select its packages in the browser
     pub fn apply_preset(&mut self, preset_index: usize) -> Option<usize> {
         let preset = self.presets.get(preset_index)?;
-        let preset_packages: std::collections::HashSet<_> = 
+        let preset_packages: std::collections::HashSet<_> =
             preset.packages.iter().map(|s| s.as_str()).collect();
-        
+
         let mut selected_count = 0;
         for pkg in &mut self.browser.packages {
             if preset_packages.contains(pkg.name.as_str()) && pkg.installed {
@@ -968,7 +966,7 @@ impl AppState {
                 selected_count += 1;
             }
         }
-        
+
         self.browser.selection_mode = SelectionMode::Multi;
         Some(selected_count)
     }

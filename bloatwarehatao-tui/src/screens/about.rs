@@ -3,11 +3,11 @@
 //! Information about the application.
 
 use ratatui::{
+    Frame,
     layout::{Alignment, Constraint, Direction, Layout},
     style::{Color, Modifier, Style},
     text::{Line, Span},
     widgets::{Block, Borders, Paragraph},
-    Frame,
 };
 
 use crate::app::App;
@@ -26,12 +26,14 @@ impl AboutScreen {
             .split(f.area());
 
         let version = env!("CARGO_PKG_VERSION");
-        
+
         let lines = vec![
             Line::from(""),
             Line::from(Span::styled(
                 "BloatwareHatao",
-                Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD),
+                Style::default()
+                    .fg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
             )),
             Line::from(Span::styled(
                 format!("Version {}", version),
@@ -61,7 +63,9 @@ impl AboutScreen {
             Line::from(""),
             Line::from(Span::styled(
                 "Thank you for using BloatwareHatao!",
-                Style::default().fg(Color::Magenta).add_modifier(Modifier::BOLD),
+                Style::default()
+                    .fg(Color::Magenta)
+                    .add_modifier(Modifier::BOLD),
             )),
         ];
 

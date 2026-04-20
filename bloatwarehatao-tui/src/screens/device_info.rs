@@ -3,11 +3,11 @@
 //! Displays connected device information.
 
 use ratatui::{
+    Frame,
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
     widgets::{Block, Borders, Paragraph, Wrap},
-    Frame,
 };
 
 use crate::app::App;
@@ -22,9 +22,9 @@ impl DeviceInfoScreen {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([
-                Constraint::Length(3),  // Header
-                Constraint::Min(10),    // Content
-                Constraint::Length(3),  // Status bar
+                Constraint::Length(3), // Header
+                Constraint::Min(10),   // Content
+                Constraint::Length(3), // Status bar
             ])
             .split(f.area());
 
@@ -34,12 +34,12 @@ impl DeviceInfoScreen {
     }
 
     fn draw_header(f: &mut Frame, area: Rect) {
-        let header = Paragraph::new(Line::from(vec![
-            Span::styled(
-                " 📱 Device Information ",
-                Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD),
-            ),
-        ]))
+        let header = Paragraph::new(Line::from(vec![Span::styled(
+            " 📱 Device Information ",
+            Style::default()
+                .fg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
+        )]))
         .block(
             Block::default()
                 .borders(Borders::ALL)
@@ -57,55 +57,51 @@ impl DeviceInfoScreen {
             .border_style(Style::default().fg(Color::DarkGray));
 
         let content = match &app.state.device {
-            DeviceState::Unknown | DeviceState::Checking => {
-                Paragraph::new(vec![
-                    Line::from(""),
-                    Line::from(Span::styled(
-                        "🔍 Checking for connected devices...",
-                        Style::default().fg(Color::Yellow),
-                    )),
-                ])
-                .block(block)
-                .alignment(Alignment::Center)
-            }
-            DeviceState::NotConnected => {
-                Paragraph::new(vec![
-                    Line::from(""),
-                    Line::from(Span::styled(
-                        "❌ No device connected",
-                        Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
-                    )),
-                    Line::from(""),
-                    Line::from(Span::styled(
-                        "Please connect an Android device with USB debugging enabled.",
-                        Style::default().fg(Color::DarkGray),
-                    )),
-                    Line::from(""),
-                    Line::from(Span::styled("Tips:", Style::default().fg(Color::Yellow))),
-                    Line::from("  1. Enable Developer Options on your device"),
-                    Line::from("  2. Enable USB Debugging in Developer Options"),
-                    Line::from("  3. Connect your device via USB cable"),
-                    Line::from("  4. Accept the USB debugging authorization prompt"),
-                ])
-                .block(block)
-                .alignment(Alignment::Center)
-            }
-            DeviceState::Unauthorized => {
-                Paragraph::new(vec![
-                    Line::from(""),
-                    Line::from(Span::styled(
-                        "🔒 Device Unauthorized",
-                        Style::default().fg(Color::Yellow).add_modifier(Modifier::BOLD),
-                    )),
-                    Line::from(""),
-                    Line::from(Span::styled(
-                        "Please check your device screen and accept the USB debugging prompt.",
-                        Style::default().fg(Color::White),
-                    )),
-                ])
-                .block(block)
-                .alignment(Alignment::Center)
-            }
+            DeviceState::Unknown | DeviceState::Checking => Paragraph::new(vec![
+                Line::from(""),
+                Line::from(Span::styled(
+                    "🔍 Checking for connected devices...",
+                    Style::default().fg(Color::Yellow),
+                )),
+            ])
+            .block(block)
+            .alignment(Alignment::Center),
+            DeviceState::NotConnected => Paragraph::new(vec![
+                Line::from(""),
+                Line::from(Span::styled(
+                    "❌ No device connected",
+                    Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
+                )),
+                Line::from(""),
+                Line::from(Span::styled(
+                    "Please connect an Android device with USB debugging enabled.",
+                    Style::default().fg(Color::DarkGray),
+                )),
+                Line::from(""),
+                Line::from(Span::styled("Tips:", Style::default().fg(Color::Yellow))),
+                Line::from("  1. Enable Developer Options on your device"),
+                Line::from("  2. Enable USB Debugging in Developer Options"),
+                Line::from("  3. Connect your device via USB cable"),
+                Line::from("  4. Accept the USB debugging authorization prompt"),
+            ])
+            .block(block)
+            .alignment(Alignment::Center),
+            DeviceState::Unauthorized => Paragraph::new(vec![
+                Line::from(""),
+                Line::from(Span::styled(
+                    "🔒 Device Unauthorized",
+                    Style::default()
+                        .fg(Color::Yellow)
+                        .add_modifier(Modifier::BOLD),
+                )),
+                Line::from(""),
+                Line::from(Span::styled(
+                    "Please check your device screen and accept the USB debugging prompt.",
+                    Style::default().fg(Color::White),
+                )),
+            ])
+            .block(block)
+            .alignment(Alignment::Center),
             DeviceState::Connected(info) => {
                 let lines = vec![
                     Line::from(""),
@@ -119,23 +115,19 @@ impl DeviceInfoScreen {
                     Self::info_line("OEM Detected", &info.oem, Color::Yellow),
                 ];
 
-                Paragraph::new(lines)
-                    .block(block)
-                    .wrap(Wrap { trim: true })
+                Paragraph::new(lines).block(block).wrap(Wrap { trim: true })
             }
-            DeviceState::Error(e) => {
-                Paragraph::new(vec![
-                    Line::from(""),
-                    Line::from(Span::styled(
-                        "⚠️ Error",
-                        Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
-                    )),
-                    Line::from(""),
-                    Line::from(Span::styled(e.as_str(), Style::default().fg(Color::Red))),
-                ])
-                .block(block)
-                .alignment(Alignment::Center)
-            }
+            DeviceState::Error(e) => Paragraph::new(vec![
+                Line::from(""),
+                Line::from(Span::styled(
+                    "⚠️ Error",
+                    Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
+                )),
+                Line::from(""),
+                Line::from(Span::styled(e.as_str(), Style::default().fg(Color::Red))),
+            ])
+            .block(block)
+            .alignment(Alignment::Center),
         };
 
         f.render_widget(content, area);
@@ -143,8 +135,16 @@ impl DeviceInfoScreen {
 
     fn info_line(label: &str, value: &str, value_color: Color) -> Line<'static> {
         Line::from(vec![
-            Span::styled(format!("  {}: ", label), Style::default().fg(Color::DarkGray)),
-            Span::styled(value.to_string(), Style::default().fg(value_color).add_modifier(Modifier::BOLD)),
+            Span::styled(
+                format!("  {}: ", label),
+                Style::default().fg(Color::DarkGray),
+            ),
+            Span::styled(
+                value.to_string(),
+                Style::default()
+                    .fg(value_color)
+                    .add_modifier(Modifier::BOLD),
+            ),
         ])
     }
 
@@ -155,17 +155,19 @@ impl DeviceInfoScreen {
         );
 
         let dry_run = if app.state.dry_run {
-            Span::styled(" 🧪 DRY RUN ", Style::default().fg(Color::Black).bg(Color::Yellow))
+            Span::styled(
+                " 🧪 DRY RUN ",
+                Style::default().fg(Color::Black).bg(Color::Yellow),
+            )
         } else {
             Span::raw("")
         };
 
-        let status_bar = Paragraph::new(Line::from(vec![dry_run, help]))
-            .block(
-                Block::default()
-                    .borders(Borders::ALL)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            );
+        let status_bar = Paragraph::new(Line::from(vec![dry_run, help])).block(
+            Block::default()
+                .borders(Borders::ALL)
+                .border_style(Style::default().fg(Color::DarkGray)),
+        );
 
         f.render_widget(status_bar, area);
     }

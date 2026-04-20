@@ -109,7 +109,10 @@ impl RescueSession {
 
     /// Get package names only
     pub fn package_names(&self) -> Vec<&str> {
-        self.removed_packages.iter().map(|p| p.name.as_str()).collect()
+        self.removed_packages
+            .iter()
+            .map(|p| p.name.as_str())
+            .collect()
     }
 }
 
@@ -170,7 +173,11 @@ impl RescueManager {
         let content = serde_json::to_string_pretty(&entry)?;
         std::fs::write(&path, content)?;
 
-        info!("Created rescue point: {:?} with {} packages", path, entry.packages.len());
+        info!(
+            "Created rescue point: {:?} with {} packages",
+            path,
+            entry.packages.len()
+        );
         Ok(entry)
     }
 
@@ -186,8 +193,9 @@ impl RescueManager {
 
             if path.extension().map(|e| e == "json").unwrap_or(false)
                 && let Ok(content) = std::fs::read_to_string(&path)
-                && let Ok(rescue_entry) = serde_json::from_str::<RescueEntry>(&content) {
-                    entries.push(rescue_entry);
+                && let Ok(rescue_entry) = serde_json::from_str::<RescueEntry>(&content)
+            {
+                entries.push(rescue_entry);
             }
         }
 
@@ -216,7 +224,11 @@ impl RescueManager {
         let content = serde_json::to_string_pretty(session)?;
         std::fs::write(&path, content)?;
 
-        info!("Saved rescue session: {:?} with {} packages", path, session.removed_packages.len());
+        info!(
+            "Saved rescue session: {:?} with {} packages",
+            path,
+            session.removed_packages.len()
+        );
         Ok(path)
     }
 
@@ -232,8 +244,9 @@ impl RescueManager {
 
             if path.extension().map(|e| e == "json").unwrap_or(false)
                 && let Ok(content) = std::fs::read_to_string(&path)
-                && let Ok(session) = serde_json::from_str::<RescueSession>(&content) {
-                    sessions.push(session);
+                && let Ok(session) = serde_json::from_str::<RescueSession>(&content)
+            {
+                sessions.push(session);
             }
         }
 
@@ -244,7 +257,11 @@ impl RescueManager {
 
     /// Restore packages from a rescue entry
     #[instrument(skip(self, adb))]
-    pub async fn restore_from_entry(&self, adb: &Adb, entry: &RescueEntry) -> Result<Vec<(String, bool)>> {
+    pub async fn restore_from_entry(
+        &self,
+        adb: &Adb,
+        entry: &RescueEntry,
+    ) -> Result<Vec<(String, bool)>> {
         let pm = PackageManager::new(adb.clone());
         let mut results = Vec::new();
 
@@ -259,7 +276,11 @@ impl RescueManager {
 
     /// Restore packages from a rescue session
     #[instrument(skip(self, adb))]
-    pub async fn restore_from_session(&self, adb: &Adb, session: &RescueSession) -> Result<Vec<(String, bool)>> {
+    pub async fn restore_from_session(
+        &self,
+        adb: &Adb,
+        session: &RescueSession,
+    ) -> Result<Vec<(String, bool)>> {
         let pm = PackageManager::new(adb.clone());
         let mut results = Vec::new();
 
