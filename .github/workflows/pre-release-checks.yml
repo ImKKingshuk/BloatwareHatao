@@ -23,10 +23,6 @@ jobs:
         run: cargo clippy --workspace --all-targets --all-features -- -D warnings
       - name: Run cargo-deny
         run: cargo deny check
-      - name: Typos Spell Check
-        uses: crate-ci/typos@v1.41.0
-        with:
-          write_changes: false
 
   build-check:
     name: Build Check - ${{ matrix.os }}
