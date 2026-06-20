@@ -21,7 +21,7 @@ Connect your device and begin advanced Android bloatware removal and optimizatio
 <br>
 
 [![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Windows-brightgreen)]()
-[![Version](https://img.shields.io/badge/Release-v0.1.0-red)]()
+[![Version](https://img.shields.io/badge/Release-v1.0.0-red)]()
 [![License](https://img.shields.io/badge/License-GPLv3-blue)]()
 
 <br>
@@ -29,6 +29,28 @@ Connect your device and begin advanced Android bloatware removal and optimizatio
 </div>
 
 ## Installation
+
+### Homebrew (macOS Apple Silicon)
+
+```bash
+brew tap ImKKingshuk/tap
+brew install bloatwarehatao
+```
+
+The Homebrew formula installs Android platform tools automatically.
+
+### Scoop (Windows x64)
+
+```powershell
+scoop bucket add imkkingshuk https://github.com/ImKKingshuk/scoop-bucket
+scoop install imkkingshuk/bloatwarehatao
+```
+
+Install Android platform tools separately if you need ADB-driven workflows.
+
+### GitHub Release Archives
+
+Download the archive for your platform from the latest GitHub release, extract it, and place `bloatwarehatao` or `bloatwarehatao.exe` on your `PATH`.
 
 ## Quick Start
 
@@ -71,7 +93,7 @@ bloatwarehatao --dry-run
 | Next/Prev tab | Tab / Shift+Tab |
 | Help | ? |
 
-## Current Capabilities (v0.1.0)
+## Current Capabilities (v1.0.0)
 
 ### Core Platform
 

@@ -392,7 +392,7 @@ impl PackageBrowserState {
         }
         // Re-sort by label after updating
         self.packages
-            .sort_by(|a, b| a.label.to_lowercase().cmp(&b.label.to_lowercase()));
+            .sort_by_key(|package| package.label.to_lowercase());
         // Re-apply filter to update indices
         self.apply_filter();
     }

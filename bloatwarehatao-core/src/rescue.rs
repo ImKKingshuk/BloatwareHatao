@@ -4,6 +4,7 @@
 
 use chrono::{DateTime, Local, Utc};
 use serde::{Deserialize, Serialize};
+use std::cmp::Reverse;
 use std::path::{Path, PathBuf};
 use tracing::{info, instrument};
 
@@ -200,7 +201,7 @@ impl RescueManager {
         }
 
         // Sort by date, newest first
-        entries.sort_by(|a, b| b.created_at.cmp(&a.created_at));
+        entries.sort_by_key(|entry| Reverse(entry.created_at));
         Ok(entries)
     }
 
@@ -251,7 +252,7 @@ impl RescueManager {
         }
 
         // Sort by date, newest first
-        sessions.sort_by(|a, b| b.created_at.cmp(&a.created_at));
+        sessions.sort_by_key(|session| Reverse(session.created_at));
         Ok(sessions)
     }
 

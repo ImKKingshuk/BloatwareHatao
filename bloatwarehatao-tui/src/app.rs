@@ -288,7 +288,7 @@ impl App {
         }
 
         // Sort by label
-        packages.sort_by(|a, b| a.label.to_lowercase().cmp(&b.label.to_lowercase()));
+        packages.sort_by_key(|package| package.label.to_lowercase());
 
         // Collect package names for background fetching
         let package_names: Vec<String> = packages.iter().map(|p| p.name.clone()).collect();
@@ -404,10 +404,8 @@ impl App {
 
     async fn handle_home_key(&mut self, key: KeyCode) {
         match key {
-            KeyCode::Up | KeyCode::Char('k') => {
-                if self.selected_index > 0 {
-                    self.selected_index -= 1;
-                }
+            KeyCode::Up | KeyCode::Char('k') if self.selected_index > 0 => {
+                self.selected_index -= 1;
             }
             KeyCode::Down | KeyCode::Char('j') => {
                 let max_index = self.menu_items().len() - 1;
@@ -675,15 +673,13 @@ impl App {
     fn handle_support_key(&mut self, key: KeyCode) {
         let count = self.state.support.items.len();
         match key {
-            KeyCode::Up | KeyCode::Char('k') => {
-                if self.state.support.selected > 0 {
-                    self.state.support.selected -= 1;
-                }
+            KeyCode::Up | KeyCode::Char('k') if self.state.support.selected > 0 => {
+                self.state.support.selected -= 1;
             }
-            KeyCode::Down | KeyCode::Char('j') => {
-                if self.state.support.selected < count.saturating_sub(1) {
-                    self.state.support.selected += 1;
-                }
+            KeyCode::Down | KeyCode::Char('j')
+                if self.state.support.selected < count.saturating_sub(1) =>
+            {
+                self.state.support.selected += 1;
             }
             KeyCode::Enter => {
                 // Copy to clipboard
@@ -721,17 +717,13 @@ impl App {
 
     async fn handle_settings_key(&mut self, key: KeyCode) {
         match key {
-            KeyCode::Up | KeyCode::Char('k') => {
-                if self.state.settings_selected > 0 {
-                    self.state.settings_selected -= 1;
-                    self.state.settings_item_selected = 0;
-                }
+            KeyCode::Up | KeyCode::Char('k') if self.state.settings_selected > 0 => {
+                self.state.settings_selected -= 1;
+                self.state.settings_item_selected = 0;
             }
-            KeyCode::Down | KeyCode::Char('j') => {
-                if self.state.settings_selected < 3 {
-                    self.state.settings_selected += 1;
-                    self.state.settings_item_selected = 0;
-                }
+            KeyCode::Down | KeyCode::Char('j') if self.state.settings_selected < 3 => {
+                self.state.settings_selected += 1;
+                self.state.settings_item_selected = 0;
             }
             KeyCode::Enter | KeyCode::Char(' ') => {
                 // Toggle setting based on category and item
@@ -807,15 +799,13 @@ impl App {
 
         let preset_count = self.state.presets.len();
         match key {
-            KeyCode::Up | KeyCode::Char('k') => {
-                if self.state.presets_selected > 0 {
-                    self.state.presets_selected -= 1;
-                }
+            KeyCode::Up | KeyCode::Char('k') if self.state.presets_selected > 0 => {
+                self.state.presets_selected -= 1;
             }
-            KeyCode::Down | KeyCode::Char('j') => {
-                if self.state.presets_selected < preset_count.saturating_sub(1) {
-                    self.state.presets_selected += 1;
-                }
+            KeyCode::Down | KeyCode::Char('j')
+                if self.state.presets_selected < preset_count.saturating_sub(1) =>
+            {
+                self.state.presets_selected += 1;
             }
             KeyCode::Enter => {
                 // Apply preset - select its packages in browser
@@ -912,15 +902,13 @@ impl App {
                 self.state.rescue_tab = (self.state.rescue_tab + 1) % 2;
                 self.state.rescue_selected = 0;
             }
-            KeyCode::Up | KeyCode::Char('k') => {
-                if self.state.rescue_selected > 0 {
-                    self.state.rescue_selected -= 1;
-                }
+            KeyCode::Up | KeyCode::Char('k') if self.state.rescue_selected > 0 => {
+                self.state.rescue_selected -= 1;
             }
-            KeyCode::Down | KeyCode::Char('j') => {
-                if self.state.rescue_selected < rescue_count.saturating_sub(1) {
-                    self.state.rescue_selected += 1;
-                }
+            KeyCode::Down | KeyCode::Char('j')
+                if self.state.rescue_selected < rescue_count.saturating_sub(1) =>
+            {
+                self.state.rescue_selected += 1;
             }
             KeyCode::Char('n') => {
                 // Create new rescue point
@@ -1026,15 +1014,13 @@ impl App {
                     let selected_idx = list_state.selected().unwrap_or(0);
 
                     match key {
-                        KeyCode::Up | KeyCode::Char('k') => {
-                            if selected_idx > 0 {
-                                list_state.select(Some(selected_idx - 1));
-                            }
+                        KeyCode::Up | KeyCode::Char('k') if selected_idx > 0 => {
+                            list_state.select(Some(selected_idx - 1));
                         }
-                        KeyCode::Down | KeyCode::Char('j') => {
-                            if selected_idx < count.saturating_sub(1) {
-                                list_state.select(Some(selected_idx + 1));
-                            }
+                        KeyCode::Down | KeyCode::Char('j')
+                            if selected_idx < count.saturating_sub(1) =>
+                        {
+                            list_state.select(Some(selected_idx + 1));
                         }
                         KeyCode::Char(' ') => {
                             if let Some(pkg) = creator.available_packages.get(selected_idx) {
@@ -1206,10 +1192,8 @@ impl App {
     async fn handle_user_guide_key(&mut self, key: KeyCode) {
         match key {
             KeyCode::Esc | KeyCode::Char('q') => self.current_screen = Screen::Home,
-            KeyCode::Up | KeyCode::Char('k') => {
-                if self.state.user_guide.scroll_offset > 0 {
-                    self.state.user_guide.scroll_offset -= 1;
-                }
+            KeyCode::Up | KeyCode::Char('k') if self.state.user_guide.scroll_offset > 0 => {
+                self.state.user_guide.scroll_offset -= 1;
             }
             KeyCode::Down | KeyCode::Char('j') => {
                 self.state.user_guide.scroll_offset += 1;
@@ -1847,7 +1831,7 @@ async fn run_app(terminal: &mut Terminal<CrosstermBackend<Stdout>>, app: &mut Ap
                     app.state
                         .browser
                         .packages
-                        .sort_by(|a, b| a.label.to_lowercase().cmp(&b.label.to_lowercase()));
+                        .sort_by_key(|package| package.label.to_lowercase());
                     app.state.browser.apply_filter();
                     app.state.browser.status = Some(format!(
                         "Loaded {} packages (names updated)",
