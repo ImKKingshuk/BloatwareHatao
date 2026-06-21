@@ -140,13 +140,6 @@ impl App {
             candidates.push(exe_dir.join("../../packages"));
         }
 
-        // Add path relative to cargo manifest (compile-time, always available in dev)
-        let manifest_packages = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-            .join("..")
-            .join("..")
-            .join("packages");
-        candidates.push(manifest_packages);
-
         for candidate in candidates {
             let canonical = candidate.canonicalize().ok();
             let path_to_check = canonical.as_ref().unwrap_or(&candidate);

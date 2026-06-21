@@ -11,7 +11,7 @@ on:
         type: string
 
 permissions:
-  contents: write
+  contents: read
 
 env:
   RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.event.release.tag_name }}
@@ -91,6 +91,11 @@ jobs:
         with:
           key: ${{ matrix.target }}
 
+      - name: Configure release path remapping
+        shell: bash
+        run: |
+          echo "RUSTFLAGS=--remap-path-prefix=${GITHUB_WORKSPACE}=. --remap-path-prefix=${HOME}/.cargo/registry/src=registry/src --remap-path-prefix=${HOME}/.cargo/git/checkouts=cargo/git/checkouts --remap-path-prefix=${HOME}/.rustup/toolchains=rustup/toolchains" >> "$GITHUB_ENV"
+
       - name: Install cross
         if: matrix.use_cross
         run: cargo install cross
@@ -112,22 +117,24 @@ jobs:
 
           if [ "${{ runner.os }}" = "Windows" ]; then
             cp "target/${{ matrix.target }}/release/bloatwarehatao.exe" .
-            7z a "${ARCHIVE_BASE}.zip" bloatwarehatao.exe README.md LICENSE CHANGELOG.md
+            7z a "${ARCHIVE_BASE}.zip" bloatwarehatao.exe README.md LICENSE CHANGELOG.md packages
           else
             cp "target/${{ matrix.target }}/release/bloatwarehatao" .
-            tar czf "${ARCHIVE_BASE}.tar.gz" bloatwarehatao README.md LICENSE CHANGELOG.md
+            tar czf "${ARCHIVE_BASE}.tar.gz" bloatwarehatao README.md LICENSE CHANGELOG.md packages
           fi
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: binary-${{ matrix.target }}
-          path: bloatwarehatao-${{ matrix.target }}.*
+          path: bloatwarehatao-*-${{ matrix.target }}.*
 
   upload-release:
     name: Upload to GitHub Release
     needs: [build]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/download-artifact@v4
         with:

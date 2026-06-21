@@ -3,6 +3,9 @@ name: pre-release checks
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: Test
@@ -52,6 +55,10 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           key: ${{ matrix.target }}
+      - name: Configure release path remapping
+        shell: bash
+        run: |
+          echo "RUSTFLAGS=--remap-path-prefix=${GITHUB_WORKSPACE}=. --remap-path-prefix=${HOME}/.cargo/registry/src=registry/src --remap-path-prefix=${HOME}/.cargo/git/checkouts=cargo/git/checkouts --remap-path-prefix=${HOME}/.rustup/toolchains=rustup/toolchains" >> "$GITHUB_ENV"
       - name: Install cross
         if: matrix.use_cross
         run: cargo install cross
@@ -63,7 +70,16 @@ jobs:
             cargo build --release --target ${{ matrix.target }}
           fi
         shell: bash
-      - name: Run binary
+      - name: Verify built binary exists
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            test -f ./target/${{ matrix.target }}/release/bloatwarehatao.exe
+          else
+            test -f ./target/${{ matrix.target }}/release/bloatwarehatao
+          fi
+        shell: bash
+      - name: Run native binary
+        if: matrix.use_cross == false
         run: |
           if [ "${{ runner.os }}" = "Windows" ]; then
             ./target/${{ matrix.target }}/release/bloatwarehatao.exe --help
@@ -71,3 +87,6 @@ jobs:
             ./target/${{ matrix.target }}/release/bloatwarehatao --help
           fi
         shell: bash
+      - name: Skip cross-compiled binary execution
+        if: matrix.use_cross == true
+        run: echo "Skipping runtime smoke test for ${{ matrix.target }} because it cannot run on ${{ runner.os }}."

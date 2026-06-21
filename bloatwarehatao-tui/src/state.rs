@@ -681,7 +681,6 @@ impl Default for WirelessState {
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum SupportType {
     GitHub,
-    Crypto(String), // Ticker
 }
 
 /// Support item
@@ -703,63 +702,11 @@ pub struct SupportState {
 impl Default for SupportState {
     fn default() -> Self {
         Self {
-            items: vec![
-                SupportItem {
-                    label: "GitHub Sponsors".to_string(),
-                    value: "https://github.com/sponsors/ImKKingshuk".to_string(),
-                    type_: SupportType::GitHub,
-                },
-                SupportItem {
-                    label: "Bitcoin (BTC)".to_string(),
-                    value: "bc1q0kj3ey4d5q4y6t26v28sd7h7cs6k9ghrk8k603".to_string(),
-                    type_: SupportType::Crypto("BTC".to_string()),
-                },
-                SupportItem {
-                    label: "Ethereum (EVM)".to_string(),
-                    value: "0x2f6C64389D5CC1A7Ad517eFa7bef31a6b2c91157".to_string(),
-                    type_: SupportType::Crypto("ETH".to_string()),
-                },
-                SupportItem {
-                    label: "USDT (EVM)".to_string(),
-                    value: "0x2f6C64389D5CC1A7Ad517eFa7bef31a6b2c91157".to_string(),
-                    type_: SupportType::Crypto("USDT".to_string()),
-                },
-                SupportItem {
-                    label: "BNB (EVM)".to_string(),
-                    value: "0x2f6C64389D5CC1A7Ad517eFa7bef31a6b2c91157".to_string(),
-                    type_: SupportType::Crypto("BNB".to_string()),
-                },
-                SupportItem {
-                    label: "Solana (SOL)".to_string(),
-                    value: "8e8psTV8xTxM8Cfprzn2fdu4FctkK6Up62vepUfG3hvf".to_string(),
-                    type_: SupportType::Crypto("SOL".to_string()),
-                },
-                SupportItem {
-                    label: "Toncoin (TON)".to_string(),
-                    value: "UQBXXCoqkOIDMyASA6z1WWWuDzW1V2D0QHpgyFXUmNIx-cti".to_string(),
-                    type_: SupportType::Crypto("TON".to_string()),
-                },
-                SupportItem {
-                    label: "Dogecoin (DOGE)".to_string(),
-                    value: "D72xXqpvqR2UWk1r22BKCjYG5dSTW9N86r".to_string(),
-                    type_: SupportType::Crypto("DOGE".to_string()),
-                },
-                SupportItem {
-                    label: "XRP".to_string(),
-                    value: "rnMXNWYG2bpJ8e1AL8cLMrpZ8DVzYraMbi".to_string(),
-                    type_: SupportType::Crypto("XRP".to_string()),
-                },
-                SupportItem {
-                    label: "Polygon (POL/EVM)".to_string(),
-                    value: "0x2f6C64389D5CC1A7Ad517eFa7bef31a6b2c91157".to_string(),
-                    type_: SupportType::Crypto("POL".to_string()),
-                },
-                SupportItem {
-                    label: "Avalanche (AVAX/EVM)".to_string(),
-                    value: "0x2f6C64389D5CC1A7Ad517eFa7bef31a6b2c91157".to_string(),
-                    type_: SupportType::Crypto("AVAX".to_string()),
-                },
-            ],
+            items: vec![SupportItem {
+                label: "GitHub Sponsors".to_string(),
+                value: "https://github.com/sponsors/ImKKingshuk".to_string(),
+                type_: SupportType::GitHub,
+            }],
             selected: 0,
             copy_status: None,
         }

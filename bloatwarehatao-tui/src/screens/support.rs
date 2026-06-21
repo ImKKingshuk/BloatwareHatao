@@ -64,7 +64,6 @@ impl SupportScreen {
                 // Color logic
                 let label_color = match item.type_ {
                     SupportType::GitHub => Color::Magenta,
-                    SupportType::Crypto(_) => Color::Yellow,
                 };
 
                 let item_style = if is_selected {
