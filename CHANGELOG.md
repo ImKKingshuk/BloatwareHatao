@@ -1,123 +1,81 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to `BloatwareHatao : The Ultimate Android Bloatware Removal Tool` will be documented in this file.
 
 ## [v1.0.0] - 2026-06-21
 
-First public release of BloatwareHatao, a Rust-powered Android bloatware removal and device optimization toolkit with a TUI-first workflow and a secondary CLI surface for headless checks.
+### The Debut Release
 
-### Highlights
+This release introduces the initial public release of BloatwareHatao, a high-performance Rust-powered Android bloatware removal and device optimization toolkit featuring a TUI-first workflow and a streamlined headless CLI.
 
-- First stable release for GitHub Releases, Homebrew, and Scoop distribution.
-- Full-screen terminal UI as the primary product experience.
-- Cross-platform release archives for macOS, Linux, and Windows.
-- Packaged local package database included with release artifacts.
-- GPL-3.0-only licensed release with security and safe-usage guidance.
+### 🎨 TUI Experience
 
-### TUI Experience
+- **Full-Screen Terminal Workspace**: Interactive dashboard with real-time UI components built on Ratatui and Crossterm.
+- **Visual Package Browser**: Advanced grid view with quick sorting, safety-rating badges, description tooltips, and keyboard-driven selection.
+- **Dynamic Search & Filtering**: Instant case-insensitive package search (`/` key) with quick filters for system, user, and disabled packages.
+- **Global Help Overlay**: Accessible keyboard shortcut overlay (`?` key) detailing all TUI actions and navigation options.
+- **Dedicated Health Checks**: Terminal UI dashboard to monitor device health, hardware temperatures, battery level, RAM, and storage partition layouts.
+- **Settings Controller**: Visual configuration editor to toggle dry-run simulation, default removal modes, and UI animation configurations on the fly.
+- **Interactive Guides**: Built-in visual user guides, sponsor details, and licensing references inside the TUI dashboard.
+- **Background App Name Resolution**: Asynchronous name fetching to keep the UI buttery smooth while package labels resolve in the background.
 
-- Keyboard-driven terminal interface built with Ratatui and Crossterm.
-- Home dashboard with device status and primary workflow navigation.
-- Package browser with search, filtering, multi-select, and batch actions.
-- Dedicated screens for device information, health checks, presets, rescue history, settings, wireless ADB, user guide, support, and about/license details.
-- Global help overlay and practical navigation shortcuts.
-- Dry-run mode support for previewing actions without changing the device.
-- Background package label fetching so the UI can load quickly while app names are refined.
+### ⚡ CLI Experience
 
-### CLI Experience
+- **TUI Launcher**: Starting the app without arguments launches the full-screen terminal TUI by default.
+- **Device Audits**: Command line flags like `--device-info` print connected Android hardware, battery, and OEM parameters and exit.
+- **Fast Package Listings**: Subcommand/flag `--list-packages` generates plain-text system and third-party package details on standard output.
+- **Dry-Run Simulation**: Global `--dry-run` flag starts the application in simulation mode to safely test workflows.
+- **Target Selection**: CLI flag `-s` / `--device <serial>` overrides the default target when multiple ADB devices are plugged in.
+- **Log Verbosities**: Detailed runtime diagnostic printing via the `-v` / `--verbose` flag.
 
-- `bloatwarehatao` launches the TUI by default.
-- `bloatwarehatao --device-info` prints connected Android device details.
-- `bloatwarehatao --list-packages` lists installed packages.
-- `bloatwarehatao --dry-run` starts the app in simulation mode.
-- `bloatwarehatao --offline` is accepted as an offline-mode flag; offline behavior is currently managed through TUI settings/config.
-- `bloatwarehatao --verbose` enables more detailed logs.
-- `bloatwarehatao --device <serial>` targets a specific device when multiple devices are connected.
-- `bloatwarehatao --version` reports the installed release version.
+### 📱 ADB & Device Management
 
-### ADB And Device Management
+- **Asynchronous ADB Core**: Fully asynchronous process execution loops to communicate with ADB without blocking user interactions.
+- **ADB Availability Checks**: Diagnostic checks during startup to report clear instructions if Android platform-tools are missing from system `PATH`.
+- **Intelligent Status Detection**: Automated categorization of device statuses including ready, unauthorized, offline, recovery, and unknown.
+- **OEM Auto-Detection**: Extracting build attributes to detect device manufacturers (Samsung, Xiaomi, Google, etc.) and tailor package listings.
+- **Wireless ADB Helper**: Automated TCP/IP mode pairing on port 5555 with local IP scanning, connection, and disconnection workflows.
 
-- Async ADB command execution with device serial targeting.
-- ADB availability detection with clear errors when Android platform-tools are missing.
-- Connected device discovery with ready, unauthorized, offline, recovery, sideload, and unknown status handling.
-- Device information retrieval, including brand, model, manufacturer, Android version, SDK version, build ID, serial, security patch, and detected OEM.
-- Multi-device support through explicit serial selection.
-- Wireless ADB support for TCP/IP mode, IP detection, connect, and disconnect workflows.
+### 📦 Package Management
 
-### Package Management
+- **User-Level Debloating**: Safe system uninstalls via `pm uninstall --user 0` without requiring root permissions.
+- **Package Disablement**: Support for disabling system packages via `pm disable-user` and re-enabling them via `pm enable`.
+- **Data Cleanup**: Storage space restoration via `pm clear` to purge cache and application data.
+- **Batch Processing**: Simultaneous execution of uninstall, disable, or clear actions on multiple selected packages.
+- **System Restoration**: Reinstallation helpers (`cmd package install-existing`) to restore previously uninstalled system packages.
 
-- Installed package listing.
-- System package and third-party package discovery.
-- Package metadata retrieval, including APK path, version name, version code, enabled state, and system/user classification.
-- Current-user uninstall operations.
-- Disable, enable, clear data, and reinstall operations.
-- Batch package operations from the TUI.
-- Operation results with success/failure status and error details.
-- Smart app name extraction from package names for faster browsing.
+### 🗄️ Package Database
 
-### Package Database
+- **Native Package Registry**: Bundled offline package database featuring 5,089 unique application profiles.
+- **Comprehensive Classifications**: Mapping across 36 categories representing OEMs, chipset components, carriers, and user applications.
+- **Safety Assessments**: Categorization into User Installed, Recommended, Advanced, Unsafe, and Danger to prevent critical brick issues.
+- **Package Attribute Mapping**: Real-time cross-referencing between device package names and bundled database entries.
 
-- Local JSON package database bundled into release archives.
-- 5,000+ Android package records across OEM and functional categories.
-- Package names, labels, descriptions, dependencies, alternatives, and metadata.
-- Safety ratings: User, Recommended, Advanced, Unsafe, and Danger.
-- OEM/category support for Samsung, Google, Xiaomi, Huawei, OnePlus, OPPO, Vivo, Realme, Motorola, Nothing, Meizu, Infinix, Tecno, Itel, Amazon, Meta, Microsoft, ASUS, Sony, LG, Nokia, AOSP, System, Chipset, Carrier, Ads, Social, Productivity, Entertainment, Security, Finance, Health, Gaming, Shopping, News, Education, Misc, UserInstalled, and Other.
-- Installed-status matching between the connected device and the local database.
+### 📑 Presets & Custom Profiles
 
-### Presets
+- **Built-in Templates**: Pre-configured profiles for De-Google, Privacy enhancement, Performance optimization, and Social Media cleanups.
+- **Profile Managers**: Import and export mechanisms using standard JSON templates to save and share optimization profiles.
+- **Dry-Run Previews**: Interactive preview sheets inside the TUI to review packages included in a profile before applying changes.
 
-- Built-in presets for privacy, performance, minimal setup, social media cleanup, and De-Google workflows.
-- Custom preset creation and deletion.
-- JSON preset import and export.
-- Preset package selection and review from the TUI.
-- Preset application support with dry-run preview behavior.
+### 🛡️ Rescue, Backup & Restore
 
-### Rescue And Restore
+- **Automated Rescue Points**: Snapshotting the device's installed package inventory before performing uninstalls.
+- **Removal History Logs**: Local JSON logs tracking package uninstalls, disablements, and timestamps.
+- **One-Click Restoration**: Easy recovery workflows to restore packages from rescue points or historical removal sessions.
 
-- Rescue point creation from the current installed package list.
-- Rescue history persisted as JSON in the platform data directory.
-- Session tracking for removed packages with timestamps and operation method.
-- Restore packages from rescue points.
-- Restore packages from removal sessions.
-- Dry-run restore previews.
+### 📊 Device Health Audit
 
-### Device Health
+- **Battery Statistics**: Live updates on battery status, capacity percentages, and operating temperatures.
+- **Memory Auditing**: Hardware RAM analysis including total, used, and free memory metrics.
+- **Storage Partitions**: Space analysis mapping System and Data mount utilization.
 
-- Battery level reporting.
-- Battery temperature reporting.
-- RAM usage reporting.
-- Storage usage reporting.
-- Real-time health screen in the TUI.
+### 🔒 Safety & Privacy
 
-### Configuration And Data Storage
+- **Zero Telemetry**: Completely offline operations with no remote tracking, data gathering, or network phone-homes.
+- **Local Interaction Only**: All communications occur locally through ADB commands on the connected host.
+- **Safeguard Prompts**: Double-confirmation dialogs before committing destructive batch uninstalls.
 
-- Platform-appropriate data directory handling.
-- TOML-based configuration support.
-- Persistent locations for settings, presets, rescue points, sessions, and package database data.
-- Structured logging with `tracing`.
-- Typed error handling with project-specific error categories.
+### 📋 Known Notes
 
-### Release Engineering
-
-- GitHub Actions release workflow for tagged releases.
-- Pre-release checks for formatting, clippy, tests, dependency/license checks, and multi-target builds.
-- Release artifacts include the binary, `README.md`, `LICENSE`, `CHANGELOG.md`, and `packages/`.
-- `SHA256SUMS` generation for release artifacts.
-- Homebrew tap workflow support for creating/updating `Formula/bloatwarehatao.rb` from GitHub Release assets.
-- Scoop bucket workflow support for creating/updating `bucket/bloatwarehatao.json` from GitHub Release assets.
-- Release builds remap local filesystem paths to avoid embedding developer machine paths in binaries.
-
-### Safety And Privacy
-
-- No telemetry or network service is required by the application itself.
-- Device interaction is performed through local ADB commands.
-- Package removal is scoped to the connected Android device and selected packages.
-- Dry-run mode and rescue points are available for safer workflows.
-- Security policy documents ADB usage, backup expectations, sensitive file exclusions, and responsible reporting.
-
-### Known Notes
-
-- ADB must be installed and available on `PATH` for device-driven workflows.
-- Homebrew installs Android platform-tools automatically through the formula.
-- Scoop users should install Android platform-tools separately when ADB workflows are needed.
-- Removing system packages can affect device functionality; review safety ratings and create rescue points before bulk operations.
+- **System Requirements**: ADB must be installed and globally accessible on system `PATH` (automatically bundled in Homebrew tap installation).
+- **OEM Limitations**: Some OEM packages might automatically re-enable or restrict disablement based on active Android version constraints.
