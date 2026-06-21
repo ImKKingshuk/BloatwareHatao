@@ -219,42 +219,6 @@ BloatwareHatao is designed as a **guided operator workspace** that spans classif
 
 ---
 
-## Configuration
-
-BloatwareHatao stores configuration and runtime data in platform-appropriate application directories.
-
-### Directories
-
-- **Linux**: `~/.config/bloatwarehatao/` (config), `~/.local/share/bloatwarehatao/` (data)
-- **macOS**: `~/Library/Application Support/com.imkkingshuk.bloatwarehatao/` (config & data)
-- **Windows**: `%APPDATA%\imkkingshuk\bloatwarehatao\` (config & data)
-
-### Example `config.toml`
-
-Customize the behavior of the toolkit by creating a `config.toml` in your configuration directory:
-
-```toml
-removal_mode = "uninstall" # options: "uninstall", "disable", "clear"
-dry_run = false
-backup_before_remove = true
-verbose = false
-auto_update_check = true
-offline_mode = false
-ndjson_reports = false
-max_safety_rating = "advanced"
-adb_path = "/usr/local/bin/adb" # custom path if not in system PATH
-theme = "system" # options: "system", "light", "dark"
-
-[ui]
-show_descriptions = true
-show_safety_warnings = true
-confirm_removal = true
-show_progress = true
-animations = true
-```
-
----
-
 ## Package Safety Ratings
 
 | Rating             | Meaning                                                                              |
