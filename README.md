@@ -2,250 +2,257 @@
 
 # BloatwareHatao
 
-### The Ultimate Android Bloatware Removal Tool
+### Android bloatware removal and device optimization from a Rust terminal UI
 
-### Unified Android Device Optimization Platform
-
-### ⚛ Rust-Powered ⚛ TUI-First ⚛
-
-#### Package Management, Device Health, and System Optimization in One Framework
-
-BloatwareHatao is a unified Android bloatware removal and device optimization toolkit built entirely in Rust. It provides a comprehensive TUI workspace alongside a powerful CLI, enabling users to perform package analysis, safe removal, device health monitoring, and system optimization from a single modular framework.
-
-The platform integrates advanced capabilities including intelligent package safety classification, OEM-specific package databases, rescue and restore functionality, wireless ADB management, device health monitoring, and preset-based removal workflows. BloatwareHatao supports modern Android ecosystems across major OEMs including Samsung, Xiaomi, Huawei, OnePlus, OPPO, Vivo, Realme, Nothing, Motorola, and more.
-
-With a comprehensive package database of 5,000+ packages across 26 OEM and functional categories, safety ratings (User, Recommended, Advanced, Unsafe, Danger), and intelligent app name extraction, BloatwareHatao enables users to safely reclaim storage, enhance performance, and take control of their Android device experience within one unified environment.
-
-Connect your device and begin advanced Android bloatware removal and optimization.
-
-<br>
-
-[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Windows-brightgreen)]()
-[![Version](https://img.shields.io/badge/Release-v1.0.0-red)]()
-[![License](https://img.shields.io/badge/License-GPLv3-blue)]()
-
-<br>
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-brightgreen)]()
+[![Release](https://img.shields.io/badge/release-v1.0.0-red)]()
+[![License](https://img.shields.io/badge/license-GPL--3.0--only-blue)]()
 
 </div>
 
+BloatwareHatao is a TUI-first Android package management tool for reviewing installed apps, classifying bloatware, removing or disabling selected packages, creating rescue points, restoring packages, checking device health, and managing wireless ADB workflows.
+
+The project is built in Rust and ships a local package database with 5,000+ Android package records, safety ratings, OEM/functional categories, descriptions, dependencies, alternatives, and tags. The CLI is intentionally small and is mainly for quick device/package checks; day-to-day package operations happen in the terminal UI.
+
 ## Installation
 
-### Homebrew (macOS Apple Silicon)
+### Homebrew
+
+macOS Apple Silicon is distributed through the Homebrew tap. The formula installs Android platform-tools automatically.
 
 ```bash
 brew tap ImKKingshuk/tap
 brew install bloatwarehatao
 ```
 
-The Homebrew formula installs Android platform tools automatically.
+### Scoop
 
-### Scoop (Windows x64)
+Windows x64 is distributed through the Scoop bucket. Install Android platform-tools separately if you need ADB-driven workflows.
 
 ```powershell
 scoop bucket add imkkingshuk https://github.com/ImKKingshuk/scoop-bucket
 scoop install imkkingshuk/bloatwarehatao
 ```
 
-Install Android platform tools separately if you need ADB-driven workflows.
-
 ### GitHub Release Archives
 
-Download the archive for your platform from the latest GitHub release, extract it, and place `bloatwarehatao` or `bloatwarehatao.exe` on your `PATH`.
+Download the archive for your platform from the GitHub release page, extract it, and place `bloatwarehatao` or `bloatwarehatao.exe` on your `PATH`.
+
+Release archives include:
+
+- `bloatwarehatao` or `bloatwarehatao.exe`
+- `README.md`
+- `LICENSE`
+- `CHANGELOG.md`
+- `packages/`
+
+Published asset names use this format:
+
+```text
+bloatwarehatao-1.0.0-x86_64-unknown-linux-gnu.tar.gz
+bloatwarehatao-1.0.0-aarch64-unknown-linux-gnu.tar.gz
+bloatwarehatao-1.0.0-aarch64-apple-darwin.tar.gz
+bloatwarehatao-1.0.0-x86_64-pc-windows-msvc.zip
+SHA256SUMS
+```
+
+### Build From Source
+
+```bash
+cargo build --release --workspace
+./target/release/bloatwarehatao --version
+```
+
+The repository uses the stable Rust toolchain with `rustfmt` and `clippy`.
 
 ## Quick Start
 
-### TUI (Default)
+Launch the terminal UI:
 
 ```bash
 bloatwarehatao
 ```
 
-### CLI (Headless)
+Run in dry-run mode:
 
 ```bash
-# Show device information
-bloatwarehatao --device-info
-
-# List installed packages
-bloatwarehatao --list-packages
-
-# Dry run mode (no changes)
 bloatwarehatao --dry-run
 ```
 
-## Product Priority
+Print connected device information:
 
-- **TUI is the main product and default experience.** Use `bloatwarehatao` for day-to-day package management, device health monitoring, preset application, and operator-guided operations.
-- **CLI is the secondary surface.** Use `bloatwarehatao --device-info`, `--list-packages`, and other flags for quick one-off tasks, scripting, and automation.
+```bash
+bloatwarehatao --device-info
+```
 
-### TUI Keybindings
+List installed packages:
+
+```bash
+bloatwarehatao --list-packages
+```
+
+Target a specific device when multiple devices are connected:
+
+```bash
+bloatwarehatao --device <serial> --device-info
+bloatwarehatao -s <serial> --list-packages
+```
+
+Enable verbose logs:
+
+```bash
+bloatwarehatao --verbose
+```
+
+## CLI Options
+
+| Option | Purpose |
+|--------|---------|
+| `--dry-run` | Preview actions without changing the connected device |
+| `-v`, `--verbose` | Enable more detailed logs |
+| `--device-info` | Print device information and exit |
+| `--list-packages` | Print installed package names and exit |
+| `--offline` | Accepted offline-mode flag; offline behavior is currently controlled from TUI settings/config |
+| `-s`, `--device <serial>` | Target a specific ADB device |
+| `-h`, `--help` | Show help |
+| `-V`, `--version` | Show version |
+
+Package uninstall, disable, clear-data, restore, preset, and wireless ADB operations are available through the TUI and core package manager, not as standalone CLI subcommands in v1.0.0.
+
+## TUI Workflows
+
+The TUI is the primary product surface. It includes:
+
+- Package Browser: search, filter, inspect safety ratings, select packages, and perform batch operations.
+- User Guide: in-app usage help.
+- Profiles: built-in and custom preset workflows.
+- Device Info: brand, model, manufacturer, Android version, SDK version, build ID, serial, security patch, and detected OEM.
+- Health Check: battery level, battery temperature, RAM usage, and storage usage.
+- Backup & Restore: rescue point history, removal sessions, and package restore workflows.
+- Settings: dry-run, removal mode, offline mode, and UI preferences.
+- Wireless ADB: TCP/IP mode, IP detection, connect, and disconnect workflows.
+- Support/Sponsor and About screens.
+
+Common keys:
 
 | Action | Keys |
 |--------|------|
-| Quit | q or Esc |
-| Navigate menus | Arrow keys |
-| Select/Confirm | Enter |
-| Go back | b |
-| Search packages | / |
-| Toggle selection | Space |
-| Select all | a |
-| Deselect all | d |
-| Next/Prev tab | Tab / Shift+Tab |
-| Help | ? |
+| Navigate | Arrow keys, `j`, `k` |
+| Select/confirm | `Enter` |
+| Back/quit current screen | `q`, `Esc` |
+| Search packages | `/` |
+| Clear search | `c` |
+| Toggle package selection | `Space` |
+| Refresh package list | `r` |
+| Page navigation | `PgUp`, `PgDn`, `g`, `G` |
+| Help | `?` |
+| Force quit | `Ctrl+C` |
 
-## Current Capabilities (v1.0.0)
+## Current Capabilities
 
-### Core Platform
+### Device And ADB
 
-- ✅ Rust CLI with subcommands: dry-run, verbose, device-info, list-packages, offline mode
-- 🔧 Full-screen TUI by default (`bloatwarehatao`) as the primary product surface
-- ✅ Async ADB communication with device management
-- ✅ Configuration management via TOML
-- ✅ Structured logging with tracing
-- ✅ Error handling with unique error codes
+- Async ADB command execution.
+- ADB availability checks with clear error reporting.
+- Connected-device listing and authorization status handling.
+- Multi-device targeting by serial.
+- Device OEM detection.
+- Wireless ADB enable, connect, disconnect, and device IP detection.
 
-### Rust Core
+### Package Operations
 
-- ✅ Async ADB operations (device list, connect, disconnect, tcpip mode)
-- ✅ Package operations (list, uninstall, disable, enable, clear data, reinstall)
-- ✅ Smart app name extraction from package names
-- ✅ Package database with 5,000+ packages across 26 categories
-- ✅ Safety rating system (User, Recommended, Advanced, Unsafe, Danger)
-- ✅ OEM detection (Samsung, Google, Xiaomi, Huawei, OnePlus, OPPO, Vivo, Realme, Motorola, Nothing, Meizu, Infinix, Tecno, Itel, Amazon, Meta, Microsoft, ASUS, Sony, LG, Nokia)
-- ✅ Preset system (built-in, custom, community with import/export)
-- ✅ Rescue and restore system (rescue points, session tracking)
-- ✅ Device health monitoring (battery, RAM, storage)
-- ✅ Wireless ADB management
-
----
-
-## Feature Matrix
-
-### Package Management
-
-- ✅ List installed packages (all, third-party, system, disabled)
-- ✅ Package information retrieval (label, version, system/user)
-- ✅ Uninstall packages (current user)
-- ✅ Disable packages
-- ✅ Enable packages
-- ✅ Clear package data
-- ✅ Reinstall packages
-- ✅ Batch removal operations
-- ✅ Multi-selection modes
-- ✅ Dry run mode for safe preview
+- List installed, system, and third-party packages.
+- Retrieve package metadata such as APK path, version name, version code, enabled state, and system/user classification.
+- Current-user uninstall through `pm uninstall --user 0`.
+- Disable, enable, clear data, and reinstall existing system packages.
+- Batch package operations from selected TUI rows.
+- Dry-run behavior for package-changing actions.
+- Operation results with success/failure status and error details.
 
 ### Package Database
 
-- ✅ 5,000+ packages with metadata
-- ✅ Safety ratings (User, Recommended, Advanced, Unsafe, Danger)
-- ✅ 26 OEM and functional categories
-- ✅ Package descriptions and dependencies
-- ✅ Alternative package suggestions
-- ✅ Community voting system
-- ✅ Search by name, OEM, category, safety rating
-- ✅ Filter by installed status
+- 5,089 unique package records in the bundled database.
+- 36 categories currently represented in `packages/all_packages.json`.
+- Safety ratings: User, Recommended, Advanced, Unsafe, and Danger.
+- Search across package name, label, and description.
+- Metadata support for OEMs, dependencies, alternatives, tags, and vote counts.
+- Installed-package matching against the connected device.
 
-### Preset System
+### Presets
 
-- ✅ Built-in presets for common use cases
-- ✅ Custom preset creation
-- ✅ Preset import/export (JSON)
-- ✅ Community preset support
-- ✅ Package filtering by safety level
-- ✅ Category-based targeting
-- ✅ Tag-based filtering
+- Built-in presets for privacy, performance, minimal setup, social media cleanup, and De-Google workflows.
+- Custom preset creation and deletion.
+- JSON preset import/export.
+- Preset review and application through the TUI.
 
-### Rescue & Restore
+### Rescue And Restore
 
-- ✅ Create rescue points (package snapshots)
-- ✅ Rescue history management
-- ✅ Session tracking (removed packages with timestamps)
-- ✅ Restore from rescue points
-- ✅ Restore from sessions
-- ✅ Device information in rescue entries
-- ✅ Custom descriptions for rescue points
+- Rescue point creation from the current installed package list.
+- JSON rescue history.
+- Removal session tracking with timestamps and operation method.
+- Restore from rescue points or removal sessions.
 
-### Device Management
+### Configuration
 
-- ✅ Device detection and listing
-- ✅ Device information (brand, model, Android version, SDK, build ID)
-- ✅ OEM detection
-- ✅ Multi-device support (target by serial)
-- ✅ Device authorization status checking
-- ✅ Wireless ADB enable/disable
-- ✅ Wireless ADB connection management
+BloatwareHatao stores configuration and runtime data in platform-appropriate application directories.
 
-### Device Health
+Common data locations:
 
-- ✅ Battery level monitoring
-- ✅ Battery temperature
-- ✅ RAM usage percentage
-- ✅ Storage usage percentage
-- ✅ Real-time health metrics
+- Linux: `~/.local/share/bloatwarehatao/`
+- macOS: `~/Library/Application Support/com.imkkingshuk.bloatwarehatao/`
+- Windows: `%APPDATA%\imkkingshuk\bloatwarehatao\`
 
-### Wireless ADB
+Configuration supports:
 
-- ✅ Enable wireless debugging (USB required)
-- ✅ Connect to device via IP:port
-- ✅ Disconnect from wireless device
-- ✅ TCP/IP mode configuration
-- ✅ Device IP detection
+- Default removal mode: uninstall, disable, or clear data.
+- Dry-run mode.
+- Backup-before-remove preference.
+- Verbose logging.
+- Offline mode.
+- UI preferences.
+- Custom ADB path.
 
----
+## Package Safety Ratings
+
+| Rating | Meaning |
+|--------|---------|
+| User Installed | App installed by the user. Safe to remove if desired. |
+| Recommended | Usually safe to remove. Intended for common bloatware with no known critical dependency. |
+| Advanced | May affect device features. Review before removing. |
+| Unsafe | Can break functionality. Only for experienced users. |
+| Danger | Critical or high-risk component. Avoid removal unless you know exactly why. |
 
 ## Requirements
 
-- **OS**: macOS, Linux, Windows
-- **Rust**: 1.75+ (for building from source)
-- **ADB**: Android platform-tools (`adb`)
-- **Device**: Android device with USB debugging enabled
+- macOS, Linux, or Windows.
+- Android platform-tools (`adb`) for device workflows.
+- Android device with USB debugging enabled and this computer authorized.
+- Rust stable if building from source.
 
-## Configuration
+## Release Flow
 
-BloatwareHatao stores configuration in the platform-appropriate data directory:
+GitHub Releases are the source of truth for packaged binaries. Homebrew and Scoop entries consume those release assets and their SHA-256 hashes.
 
-- **Linux**: `~/.local/share/bloatwarehatao/`
-- **macOS**: `~/Library/Application Support/BloatwareHatao/`
-- **Windows**: `%APPDATA%\BloatwareHatao\`
+For `v1.0.0`, the release workflow builds:
 
-Configuration includes:
+- Linux x86_64
+- Linux ARM64
+- macOS Apple Silicon
+- Windows x64
 
-- Package database location
-- Custom presets
-- Rescue history
-- Session logs
-- Settings
+The release workflow also publishes `SHA256SUMS`.
 
-## Package Database
+## Safety And Privacy
 
-The package database includes 5,000+ packages across:
-
-**OEM Categories:**
-
-- Samsung, Google, Xiaomi, Huawei, OnePlus, OPPO, Vivo, Realme, Motorola, Nothing, Meizu, Infinix, Tecno, Itel, Amazon, Meta, Microsoft, ASUS, Sony, LG, Nokia
-
-**Functional Categories:**
-
-- AOSP, System, Chipset, Carrier, Ads, Social, Productivity, Entertainment, Security, Finance, Health, Gaming, Shopping, News, Education, Misc, UserInstalled, Other
-
-## Safety Ratings
-
-| Rating | Meaning | Color |
-|--------|---------|-------|
-| User Installed | App installed by user. Safe to remove if desired. | Blue |
-| Recommended | Safe to remove. Bloatware with no dependencies. | Green |
-| Advanced | May affect some features. Generally safe for most users. | Yellow |
-| Unsafe | May break functionality. Only for experienced users. | Orange |
-| Danger | Critical system component. Removal may cause issues. | Red |
-
-## Disclaimer
-
-**BloatwareHatao: The Ultimate Android Bloatware Removal Tool** is developed for device optimization and educational purposes. It should be used responsibly and in compliance with all applicable laws and regulations. The developer of this tool is not responsible for any misuse or illegal activities conducted with this tool.
-
-Package removal should only be performed with proper authorization and understanding of the implications. Removing system packages may affect device functionality. Always use dry run mode first and create rescue points before making changes. Ensure proper authorization before using BloatwareHatao for package removal. Always adhere to ethical practices and comply with all applicable laws and regulations.
+- BloatwareHatao does not require telemetry or a hosted service.
+- Device interaction is performed through local ADB commands.
+- Package removal only affects the connected Android device and selected packages.
+- Use dry-run mode before bulk actions.
+- Create rescue points before removing packages.
+- Review safety ratings and descriptions before removing system packages.
+- Disable USB debugging when you are not using it.
+- Only authorize ADB from computers you trust.
 
 ## License
 
-This project is licensed under the GPL-3.0-only License.
-
-<h3 align="center">Happy Android Optimization with BloatwareHatao! 🚀�</h3>
+BloatwareHatao is licensed under the GPL-3.0-only License. See [LICENSE](LICENSE) for details.
