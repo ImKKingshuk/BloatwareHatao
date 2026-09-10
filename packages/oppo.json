@@ -1,0 +1,2380 @@
+[
+  {
+    "name": "com.coloros.accessibilityassistant",
+    "label": "Accessibilityassistant",
+    "description": "Another thing for smart assistant",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.activation",
+    "label": "Activation",
+    "description": "E-warranty card Lets you check if your registered phone is still under warranty (will send your IMEI to esa-reg-eup.myoppo.com. Has a lot of permissions and run at boot Pithus analysis: https://beta.pithus.org/report/2a1dc5caedd2347fa009563e9b4d1c11b1cb42726f9046151934c456fdd77d88",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.activation.overlay.common",
+    "label": "Common",
+    "description": "E-warranty card Lets you check if your registered phone is still under warranty. Has a lot of permissions and runs at boot. Pithus analysis: https://beta.pithus.org/report/2a1dc5caedd2347fa009563e9b4d1c11b1cb42726f9046151934c456fdd77d88",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.alarmclock",
+    "label": "Alarmclock",
+    "description": "Stock Clock app.",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.appmanager",
+    "label": "Manager",
+    "description": "App Management Used to uninstall applications, but uninstalling apps works nonetheless, even after uninstalling this package. GameSpace's game assistant does not work anymore after uninstalling this package.",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.apprecover",
+    "label": "Recover",
+    "description": "Used for app recovery?",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.assistantscreen",
+    "label": "Assistantscreen",
+    "description": "HeyTap Shelf. ColorOS 'At a Glance'. Shelf provides a variety of widgets that let you access important information or services from apps with ease. Swipe down on the Home screen to enter Shelf. https://play.google.com/store/apps/details?id=com.coloros.assistantscreen",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.athena",
+    "label": "Athena",
+    "description": "Memory management, maybe useful, maybe not",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.athena.config_plugin",
+    "label": "Config Plugin",
+    "description": "Needed to configure com.coloros.athena. Memory management, maybe useful, maybe not.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.avastofferwall",
+    "label": "Avastofferwall",
+    "description": "Avast Offerwall Avast anti-virus things.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.backuprestore",
+    "label": "Backuprestore",
+    "description": "Most likely Oppo backup/restore feature",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.backuprestore.remoteservice",
+    "label": "Remoteservice",
+    "description": "It has something to scan always Wi-Fi but it's probably unused.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.blacklistapp",
+    "label": "Blacklistapp",
+    "description": "Blacklist Contacts Black list contacts, blocking calling.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.bootreg",
+    "label": "Bootreg",
+    "description": "Setup Wizard Cause bootloop after uninstall app.",
+    "safety": "danger",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.calculator",
+    "label": "Calculator",
+    "description": "Calculator app Has internet access because it can convert exchange rate, but I don't know whether it's used for other things as well or not.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.childrenspace",
+    "label": "Childrenspace",
+    "description": "Limit time spending on apps for kids.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.cloud",
+    "label": "Cloud",
+    "description": "Oppo Cloud",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.codebook",
+    "label": "Codebook",
+    "description": "Password manager App where you can keep passwords.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.colordirectservice",
+    "label": "Colordirectservice",
+    "description": "Screen Recognition (Breeno Touch). This app is used to recognize screen contents and provide quick access to relevant services (like Text Extraction, AI Summarizer). com.coloros.ocrscanner, com.coloros.ocrservice, com.oplus.ocs, com.oplus.aiunit, com.coloros.ocs.opencapabilityservice are also needed for this to work.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [
+      "com.coloros.ocrscanner",
+      "com.coloros.ocrservice",
+      "com.oplus.ocs",
+      "com.oplus.aiunit",
+      "com.coloros.ocs.opencapabilityservice"
+    ],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.colorfilestand",
+    "label": "Colorfilestand",
+    "description": "It has only Request permission activity. Probably useless framework also it has something to do with cloud.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.compass2",
+    "label": "Compass2",
+    "description": "ColorOS default compass app Keep in mind that by using this app you give your location to the weather Oppo servers. Pithus analysis: https://beta.pithus.org/report/9a965f5587fa6ee21c526612f3d72c50ef3cc53679b741260298387c44f5a3dc",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.digitalwellbeing",
+    "label": "Digitalwellbeing",
+    "description": "App usage time that can be found in settings.",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.directui",
+    "label": "Directui",
+    "description": "Brenoo touch Smart things it can be found in settings.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.dirrecord",
+    "label": "Dirrecord",
+    "description": "Security features, anti-trojan?",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.encryption",
+    "label": "Encryption",
+    "description": "Private Safe Removing breaks the stock launcher? Private Safe (located in Privacy Settings)",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.exserviceui",
+    "label": "Exserviceui",
+    "description": "Edge touch Gesture-related things. Edge touch",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.exsystemservice",
+    "label": "Exsystemservice",
+    "description": "Color settings, app manager things without activities. Someone can test if it's useless?",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.eyeprotect",
+    "label": "Eyeprotect",
+    "description": "It's the only eye protection option",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.feedback",
+    "label": "Feedback",
+    "description": "Feedback service Feedback for OPPO",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.filemanager",
+    "label": "Filemanager",
+    "description": "ColorOS File Manager",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.findmyphone",
+    "label": "Findmyphone",
+    "description": "Find phone Find phone, logout from oppo account before",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.findphone.client2",
+    "label": "Client2",
+    "description": "Find phone Find phone, logout from oppo account before",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.floatassistant",
+    "label": "Floatassistant",
+    "description": "GA ball, Assistive ball feature.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.focusmode",
+    "label": "Focusmode",
+    "description": "Focus mode it's option that can be found in settings.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.gallery3d",
+    "label": "Gallery3D",
+    "description": "Gallery Stock gallery app.",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.gamespace",
+    "label": "Gamespace",
+    "description": "Game Space Hub for your Games + some performance optimizations https://community.coloros.com/thread-9962-1-1.html",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.gamespaceui",
+    "label": "Gamespaceui",
+    "description": "GameSpace Gaming utility aiming at 'optimizing your gaming experience'. Has a lot of permissions. For instance, it has internet access, will scans all the apps you have on your phones (to find games), can performs Bluetooth scan and has access to the metadata of your media files (e.g the place where you took a picture).",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.gesture",
+    "label": "Gesture",
+    "description": "Gestures & Motions Somatic gestures (double tap to light up the screen)",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.healthcheck",
+    "label": "Healthcheck",
+    "description": "Health check Health check? Probably hidden.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.healthservice",
+    "label": "Healthservice",
+    "description": "Health service Another thing related to health check",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.karaoke",
+    "label": "Karaoke",
+    "description": "In-ear monitoring Basically ColorOS's high volume warning system. Can be removed fine if you don't want it.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.launcher.layout",
+    "label": "Layout",
+    "description": "Useless code that means nothing for the launcher",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.lockassistant",
+    "label": "Lockassistant",
+    "description": "You can't remove this app using adb.",
+    "safety": "danger",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.logkit",
+    "label": "Logkit",
+    "description": "LogKit Logs, Dial *#800# for running it",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.logkit.plugin.upload",
+    "label": "Upload",
+    "description": "Useless plugin for logs",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.mapcom.frame",
+    "label": "Frame",
+    "description": "Useless frameworks",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.mcs",
+    "label": "Mcs",
+    "description": "",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.musiclink",
+    "label": "Musiclink",
+    "description": "Music Party This app allows you to play music through different phones, synchronised. https://www.youtube.com/watch?v=3Ak222Z79RY",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.notificationmanager",
+    "label": "Notificationmanager",
+    "description": "Needed for notification manager and scheduled do not disturb.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.ocrscanner",
+    "label": "Ocrscanner",
+    "description": "ColorOS Optical character recognition scanner",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.ocrservice",
+    "label": "Ocrservice",
+    "description": "Extract text from images.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.ocs.opencapabilityservice",
+    "label": "Opencapabilityservice",
+    "description": "Security things and something related to Chinese payment",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.onekeylockscreen",
+    "label": "Onekeylockscreen",
+    "description": "Lock your phone if you click on the app icon. Completely useless unless your physical power button is damaged. This app still has the permission to list all the apps installed on the phone. Pithus analysis: https://beta.pithus.org/report/ece4088357c0a47dffd96bdc46a7b535d448c1a3619d995f7032df3be6cb0a38",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.operationManual",
+    "label": "Operation Manual",
+    "description": "Help & feedback Help (in Settings - Other Settings)",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.operationtips",
+    "label": "Operationtips",
+    "description": "Tips",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.oppoguardelf",
+    "label": "Oppoguardelf",
+    "description": "Needed for power-saving and security",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.oppoguardelf.restrict_plugin",
+    "label": "Restrict Plugin",
+    "description": "Needed components for com.coloros.oppoguardelf. Needed for power-saving and security. Also, the plugin is bloated with logs and statistics.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.oppoguardelf.secretplugin",
+    "label": "Secretplugin",
+    "description": "Needed components for com.coloros.oppoguardelf. Needed for power-saving and security. Also, the plugin is bloated with logs and statistics.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.oppomultiapp",
+    "label": "Oppomultiapp",
+    "description": "App cloner Needed for app clone feature.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.oshare",
+    "label": "Oshare",
+    "description": "Oppo Share File sharing app to transfer data from/to Oppo devices only. Seems to use weak crypto (AES ECB mode) and has weird permissions (such as `READ_CONTACTS`). WARNING: removing this app will break the functionality to share photos directly from ColorOS Photos app and break the 'share with' prompt after taking a screenshot. Pithus analysis: https://beta.pithus.org/report/170f4a14be24a2e2135cd956a038aae9e2f78c845f3161b84c5545dbec03fad9",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.phonemanager",
+    "label": "Phonemanager",
+    "description": "Phone Manager Provides so called 'optimization tools' and various security scanning services. These virus scanning services may have privacy implications. Pithus analysis: https://beta.pithus.org/report/6b7d9e117ffb600b852f3785ede4f3773385fc291376e94a061bf7ed787dec48",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.phonenoareainquire",
+    "label": "Phonenoareainquire",
+    "description": "Number Origin",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.pictorial",
+    "label": "Pictorial",
+    "description": "LockscreenMagazine Removal will result in no longer being able to access Lockscreen settings.",
+    "safety": "danger",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.prome.service",
+    "label": "Service",
+    "description": "Useless frameworks. About feedback and smart touch.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.prome.smsservice",
+    "label": "Smsservice",
+    "description": "Useless SMS frameworks.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.recents",
+    "label": "Recents",
+    "description": "Recent apps. Provides navigation to alternate between multiple apps. Removal will result in no \"Recent App\" list and re-enablement will cause a soft reload.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.regservice",
+    "label": "Regservice",
+    "description": "Mobile DM authentication related (recommended to be uninstalled)",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.remoteguardservice",
+    "label": "Remoteguardservice",
+    "description": "Remote Guard Service Have only useless statistics and depends on: com.coloros.mcs, com.heytap.mcs ONLY FOR CHINA.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.safecenter",
+    "label": "Safecenter",
+    "description": "Security Center It breaks 'display over other apps' permission!",
+    "safety": "danger",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.safecenter.config_plugin",
+    "label": "Config Plugin",
+    "description": "This plugin doesn't have any important things. It's safe to remove, useless logs code.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.safesdkproxy",
+    "label": "Safesdkproxy",
+    "description": "It has cleaner and security things.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.sau",
+    "label": "Sau",
+    "description": "System Upgrade Services Needed to update ColorOS.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.sauhelper",
+    "label": "Sauhelper",
+    "description": "SAUHelper It has only statistics and logs.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.scenemode",
+    "label": "Scenemode",
+    "description": "Scene mode and simple mode",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.sceneservice",
+    "label": "Sceneservice",
+    "description": "Data Services Platform Data Services Platform (the entire Breeno option in the settings menu disappears after deletion)",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.screenrecorder",
+    "label": "Screenrecorder",
+    "description": "Screen recorder Stock screen recording app.",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.screenshot",
+    "label": "Screenshot",
+    "description": "Screenshot Needed for screenshots. Very useful app.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.securepay",
+    "label": "Securepay",
+    "description": "Payment system from Oppo allowing you to pay with your phone Pithus analysis: https://beta.pithus.org/report/65246664d3795a5ac1b402d28456903e1b3bd76176de8298b3ea96c6c592ae9a",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.securityguard",
+    "label": "Securityguard",
+    "description": "Security Events (located in Phone Manager - Security Tools, it is recommended to uninstall it).",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.securitykeyboard",
+    "label": "Securitykeyboard",
+    "description": "Secure keyboard Not needed if your keyboard is already good.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.securitypermission",
+    "label": "Securitypermission",
+    "description": "Handles app permission management. DO NOT REMOVE THIS",
+    "safety": "danger",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.sharescreen",
+    "label": "Sharescreen",
+    "description": "Shared screen assistance Shared screen assistance (nobody need it)",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.simsettings",
+    "label": "Simsettings",
+    "description": "Data usage Data usage and OTA updates",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.smartdrive",
+    "label": "Smartdrive",
+    "description": "Breeno smart drive it's for smart things.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.smartlock",
+    "label": "Smartlock",
+    "description": "\"Phone stays unlocked when using a wearable device\" feature support component.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.smartsidebar",
+    "label": "Smartsidebar",
+    "description": "Smart Sidebar Edge panel settings",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.soundrecorder",
+    "label": "Soundrecorder",
+    "description": "ColorOS Sound Recorder",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.speechassist",
+    "label": "Speechassist",
+    "description": "ColorOS Speech Assistant",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.systemclone",
+    "label": "Systemclone",
+    "description": "System Cloner Creates multiple users on device",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.trafficlimit",
+    "label": "Trafficlimit",
+    "description": "Useless frameworks",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.translate.engine",
+    "label": "Engine",
+    "description": "Used for translation?",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.uxdesign",
+    "label": "Uxdesign",
+    "description": "Needed for themes",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.video",
+    "label": "Video",
+    "description": "Video Player Default Oppo video player with too much permissions (21) for a video player! Note: using inbuilt screen recorder you won't be able to open the recorded video from the notification view. Pithus analysis: https://beta.pithus.org/report/4ceb96c23ad0e26ee8eceab293d251f8b1bddaf4a901741ee467e0bb867db6e9",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.wallet",
+    "label": "Wallet",
+    "description": "Oppo Wallet",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.wallpapers",
+    "label": "Wallpapers",
+    "description": "Wallpapers Needed for wallpapers",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.weather.service",
+    "label": "Service",
+    "description": "Name indicates it's for the weather, but removing this causes the screen to flash and the phone will eventually become unresponsive. https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/585",
+    "safety": "danger",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.weather2",
+    "label": "Weather2",
+    "description": "ColorOS weather app. Removal seems to trigger a bootloop on some phones. You should try, several users removed this app without any trouble on Oppo/Realme device with Android 11+ See: https://github.com/0x192/universal-android-debloater/issues/211",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.widget.smallweather",
+    "label": "Smallweather",
+    "description": "",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.wifibackuprestore",
+    "label": "Wifibackuprestore",
+    "description": "WifiBackupRestore Backup Wi-Fi to the cloud NOTE: Removing or disabling this app would lose the ability for Backup and Restore functionality to backup locally stored wifi access points or credentials locally on your device",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.wifisecuredetect",
+    "label": "Wifisecuredetect",
+    "description": "Useless for Wi-Fi. Has captcha and mobile number verification.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.coloros.wirelesssettings",
+    "label": "Wirelesssettings",
+    "description": "Wireless settings Probably needed.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.accessory",
+    "label": "Accessory",
+    "description": "Accessory Framework Quick device connect feature. Can be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> Quick device connect) if not wanted. Allows you to search for nearby devices and connect to them without having to go through the Bluetooth or WiFi Direct settings' Ghosh! 32 permissions just for this? Pithus analysis: https://beta.pithus.org/report/cc0ba95f0d0867ba6d883275cd2f6c4aa252ebc874f15f1ee240bb5bac330578",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [
+      "com.heytap.mcs"
+    ],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.appplatform",
+    "label": "Platform",
+    "description": "Needed for OTA Updates also causes bootloop on some phones after uninstall.",
+    "safety": "danger",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.browser",
+    "label": "Browser",
+    "description": "Oppo Browser Rebranded HeyTap browser for Oppo. Full of ads and spams you in notifications. You should never use this browser HeyTap's terrible privacy policy: https://brand.heytap.com/eu/privacy.html",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.cast",
+    "label": "Cast",
+    "description": "Screencast Phone casting (casting phone screen to other devices).",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.cloud",
+    "label": "Cloud",
+    "description": "HeyTap Cloud Bad privacy policy: https://muc.heytap.com/document/heytap/oversea/privacyPolicy/privacyPolicy_en-US.html Why does the app need `REQUEST_INSTALL_PACKAGES` (can install packages)? Pithus analysis: https://beta.pithus.org/report/dbf265db47f8632453bb83ef51ea1d921413c02a8d24c989345896de83704a75",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [
+      "com.heytap.mcs"
+    ],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.colorfulengine",
+    "label": "Colorfulengine",
+    "description": "Useless frameworks for theming. Maybe needed for premium",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.datamigration",
+    "label": "Datamigration",
+    "description": "Some tools for stock browser (not Chrome), but it's Chinese and probably unused",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.habit.analysis",
+    "label": "Analysis",
+    "description": "Most likely used to track your habits from IoT HeyTap devices [TO BE CONFIRMED]",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.headset",
+    "label": "Headset",
+    "description": "HeyTap Melody App used to manage Oppo Bluetooth Earphones.",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.htms",
+    "label": "Htms",
+    "description": "Mobile Services Mobile services (removal may not be able to log in to OPPO account).",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.linker",
+    "label": "Linker",
+    "description": "DistUI Needed for broadcast",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.market",
+    "label": "Market",
+    "description": "Heytap/Oppo app store.There is no benefit of using this app store and you should not keep a privileged app with as many permissions. https://developers.oppomobile.com/newservice/capability?pagename=app_store Pithus analysis: https://beta.pithus.org/report/3a2a10af9310411d814fd6dd252adec1ab0c06adf32a675b7534c3edc0e534bf",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [
+      "com.heytap.mcs"
+    ],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.mcs",
+    "label": "Mcs",
+    "description": "System messages with trackers",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.music",
+    "label": "Music",
+    "description": "Default Oppo Music App with insecure WebView Implementation (execution of user controlled code in WebView is an important security hole. Has also weird permissions (QUERY_ALL_PACKAGES and BLUETOOTH?) https://beta.pithus.org/report/befa0ec0616c553632379f069453b0ca74ee29fd1428b9fce19c1657e6f97d8b",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.mydevices",
+    "label": "Mydevices",
+    "description": "My devices My devices (showing headphones and such)",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.openid",
+    "label": "Openid",
+    "description": "OpenID Device logos and advertisements; uninstallation causes anomalies in cloud drive functionality",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.pictorial",
+    "label": "Pictorial",
+    "description": "Lock Screen Magazine Lock Screen Magazine provides high-quality wallpapers and allows users to customize their lock screens. Every time you wake your screen, the wallpaper automatically changes. https://play.google.com/store/apps/details?id=com.heytap.pictorial",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.quicksearchbox",
+    "label": "Quicksearchbox",
+    "description": "Global Search Realme. This will remove the single swipe from top to bottom search that has lots of Chinese in it.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.speechassist",
+    "label": "Speechassist",
+    "description": "Breeno Voice Breeno assistant.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.synergy",
+    "label": "Synergy",
+    "description": "HeySynergy Another thing related to broadcast",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.themestore",
+    "label": "Themestore",
+    "description": "Theme Store with 73 permissions! (including CAMERA, CALL_PHONE, READ_CONTACTS, REQUEST_INSTALL_PACKAGES...) and 2 trackers. Pithus analysis: https://beta.pithus.org/report/e8c4fc2bae420cf5f094ce914f25accdede5152f9d801db6eb32a4020a7726b2",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.usercenter",
+    "label": "Usercenter",
+    "description": "Login service for various HeyTap related services like HeyTap Cloud etc. Needed if you want to join Early Access Testing for new ColorOS/RealmeUI [APK NEEDED]",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.usercenter.overlay",
+    "label": "Overlay",
+    "description": "overlay needed to usercenter app has resources",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.heytap.yoli",
+    "label": "Yoli",
+    "description": "Video player with Chinese tracking.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.atlas",
+    "label": "Atlas",
+    "description": "Useless frameworks",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.bttestmode",
+    "label": "Bttestmode",
+    "description": "Test BLE Tx and Rx channel",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.camera",
+    "label": "Camera",
+    "description": "Camera Oppo stock camera app",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.criticallog",
+    "label": "Criticallog",
+    "description": "I found logs in code. This app means nothing.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.ctautoregist",
+    "label": "Ctautoregist",
+    "description": "Has something related to IMS SMS",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.customize",
+    "label": "Customize",
+    "description": "Only Hello world! found in app also things to com.orange.aura.oobe",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.em5g",
+    "label": "Em5G",
+    "description": "EM NR5G 5G Disable Mode, Probably needed for mobile data internet.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.engineermode",
+    "label": "Engineermode",
+    "description": "Engineer mode (hardware tests), uses a dialer code, safe to disable",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.engineermode.camera",
+    "label": "Camera",
+    "description": "Related to com.oppo.engineermode. This application likely doesn't work without that app.",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.engineermode.network",
+    "label": "Network",
+    "description": "Related to com.oppo.engineermode. This application likely doesn't work without that app.",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.fingerprints.fingerprintsensortest",
+    "label": "Fingerprintsensortest",
+    "description": "Fingerprint sensort test",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.freefallingmonitor",
+    "label": "Freefallingmonitor",
+    "description": "I found only: Hello World!. This app means nothing.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.gmail.overlay",
+    "label": "Overlay",
+    "description": "I found in code only words Vodafone email, email setup wizard. Not needed overlay",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.healthservice",
+    "label": "Healthservice",
+    "description": "Some health function, needed for the correct work of fitness trackers and pedometers from realme. When deleted, it does not seem to affect the operation of the phone.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.instant.local.service",
+    "label": "Service",
+    "description": "A lot of tracking for demo game ads",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.launcher",
+    "label": "Launcher",
+    "description": "OPPO Home Oppo stock launcher",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.lfeh",
+    "label": "Lfeh",
+    "description": "OppoLFEHer DCS service, another thing related to scanning. Bloated",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.localservice",
+    "label": "Localservice",
+    "description": "It's an app without activities, and in the code, I found it's for Set Mode Daemon Point, but how can we use that? I guess it's for testing, so remove it.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.locationpicker",
+    "label": "Locationpicker",
+    "description": "Location works without.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.logkit",
+    "label": "Logkit",
+    "description": "",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.logkitsdservice",
+    "label": "Logkitsdservice",
+    "description": "Hidden logs hardware without activities.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.logkitservice",
+    "label": "Logkitservice",
+    "description": "Probably same as \"com.oem.oemlogkit\", which is a shady logging package on Oneplus devices.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.market",
+    "label": "Market",
+    "description": "Oppo App Market",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.mimosiso",
+    "label": "Mimosiso",
+    "description": "Empty app. I only found: hello world!",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.multimedia.dolby",
+    "label": "Dolby",
+    "description": "Oppo Dolby service equalizer, but only for Chinese apps",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.music",
+    "label": "Music",
+    "description": "Oppo Music app",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.nw",
+    "label": "Nw",
+    "description": "RadioInfo Only has radioinfo activity. Not needed",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.operationManual",
+    "label": "Operation Manual",
+    "description": "Oppo User Manual",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.oppopowermonitor",
+    "label": "Oppopowermonitor",
+    "description": "Battery monitoring",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.ota",
+    "label": "Ota",
+    "description": "Software update Software update OTA",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.ovoicemanager",
+    "label": "Ovoicemanager",
+    "description": "Voice wake-up manager?",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.partnerbrowsercustomizations",
+    "label": "Partnerbrowsercustomizations",
+    "description": "Oppo Bookmarks Oppo default browser customization. Injects Oppo bookmarks",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.qualityprotect",
+    "label": "Qualityprotect",
+    "description": "Useless logs",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.quicksearchbox",
+    "label": "Quicksearchbox",
+    "description": "Single swipe from top to bottom search that has lots of Chinese in it",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.resmonitor",
+    "label": "Resmonitor",
+    "description": "App has only icon and means nothing.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.rftoolkit",
+    "label": "Rftoolkit",
+    "description": "Monitors the broadcast action events (BOOT_COMPLETED)",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.securepay",
+    "label": "Securepay",
+    "description": "Payment Protection",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.smartvolume",
+    "label": "Smartvolume",
+    "description": "This app means nothing. There's only logs.",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.sos",
+    "label": "Sos",
+    "description": "Emergency Alert service by clicking power button 5 times. It will automatically call contacts (and/or send a SMS) you designated as emergency contacts",
+    "safety": "advanced",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.tzupdate",
+    "label": "Tzupdate",
+    "description": "Useless time zone calibration",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.usageDump",
+    "label": "Usage Dump",
+    "description": "After-sales service assistance tools",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.webview",
+    "label": "Webview",
+    "description": "Oppo WebView enables Android apps to display web content within the app itself, based on Chrome. No root? Don't uninstall. Root? If you delete WebView, make sure to install a replacement. Many third-party apps, such as banks, VPNs, GitHub, Discord and Reddit use web-based content and will crash without it.",
+    "safety": "unsafe",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.wifirf",
+    "label": "Wifirf",
+    "description": "Wifi Rf Test",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.oppo.wifitest",
+    "label": "Wifitest",
+    "description": "Wi-Fi RF, RX test",
+    "safety": "recommended",
+    "category": "oppo",
+    "oems": [
+      "oppo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

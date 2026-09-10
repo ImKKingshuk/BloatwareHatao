@@ -1,0 +1,1206 @@
+[
+  {
+    "name": "com.asus.UpdateLauncher",
+    "label": "Update Launcher",
+    "description": "Updater Launcher Remove if you dont need it Launcher updates.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.alwayson",
+    "label": "Alwayson",
+    "description": "Always-on Display AOD will be not available after remove.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.alwayson.res.overlay",
+    "label": "Overlay",
+    "description": "Not needed gif to Always-on Display",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.appupdater",
+    "label": "Updater",
+    "description": "ASUS Config Updater It may have something to do with app updater but no activities.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.asusbacktap",
+    "label": "Asusbacktap",
+    "description": "Back tap it's for Accessibility component feature. Back tap will not be available in settings after remove.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.asusoptiflex",
+    "label": "Asusoptiflex",
+    "description": "ASUS Opti Flex it's something for settings? Still unknown.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.asussettingsbackuphelper",
+    "label": "Asussettingsbackuphelper",
+    "description": "Settings ASUS Backup Can be removed if ASUS Backup are not used.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.atd.smmitest",
+    "label": "Smmitest",
+    "description": "SMMI TEST Testing hardware things.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.audiowizard",
+    "label": "Audiowizard",
+    "description": "ASUS AudioWizard Needed for sound effects.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.calculator",
+    "label": "Calculator",
+    "description": "Calculator - unit converter (https://play.google.com/store/apps/details?id=com.asus.calculator) Has more permissions than a Calculator app reasonably should have. Connects to a few Google and currency exchange-rate servers. https://beta.pithus.org/report/817514371bbdb76ec52da4c8456bbc116deec179603099deabbe6fcce6f6ccdb",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.camera",
+    "label": "Camera",
+    "description": "Stock ASUS camera app. It has Google Analytics, so better disable internet for this app.",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.cellbroadcastreceiver.overlay",
+    "label": "Overlay",
+    "description": "useless overlay for cellbroadcast",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.cellbroadcastservice.overlay",
+    "label": "Overlay",
+    "description": "useless overlay for cellbroadcast",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.configupdater",
+    "label": "Configupdater",
+    "description": "ASUS Config Updater Some people have removed this. Needed for ASUS autoupdate apps probably, also found debugging code.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.contacts",
+    "label": "Contacts",
+    "description": "ASUS Contacts Stock ASUS Contacts app. Contains Google trackers.",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.deskclock",
+    "label": "Deskclock",
+    "description": "ASUS Digital Clock & Widget Contains google analytics.",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.dialer",
+    "label": "Dialer",
+    "description": "ASUS Dialer Contains Google trackers.",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.dm",
+    "label": "Dm",
+    "description": "System update System updates for ASUS",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.easylauncher",
+    "label": "Easylauncher",
+    "description": "Asus Easy Mode (https://play.google.com/store/apps/details?id=com.asus.easylauncher) Alternative launcher with bigger icons and simpler interface",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ephotoburst",
+    "label": "Ephotoburst",
+    "description": "ASUS Burst shot viewer ASUS Photo viewer, Trim Service. Contains Google Analytics.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.faceunlockservice",
+    "label": "Faceunlockservice",
+    "description": "ASUS Face Unlock Service Needed for face unlock. Face unlock will not work after remove.",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.filemanager",
+    "label": "Filemanager",
+    "description": "File Manager Stock ASUS file manager app.",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.focusapplistener",
+    "label": "Focusapplistener",
+    "description": "Focus app Needed for optimization, probably.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.gallery",
+    "label": "Gallery",
+    "description": "Stock Gallery app. Contains Google Analytics.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.gamewidget",
+    "label": "Gamewidget",
+    "description": "Game genie Probably useful for gaming. https://play.google.com/store/apps/details?id=com.asus.gamewidget",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.gamewidget.service",
+    "label": "Service",
+    "description": "Game genie service Game genie service needed for (`com.asus.gamewidget`) It's probably useful for gaming.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.hardwarestub",
+    "label": "Hardwarestub",
+    "description": "HardwareStub Services Has components for optimization game.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.hbm",
+    "label": "Hbm",
+    "description": "High Brightness Mode It can be found probably in settings. Still unknown.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ia.asusapp",
+    "label": "Asusapp",
+    "description": "My Asus (https://play.google.com/store/apps/details?id=com.asus.ia.asusapp) Asus service center (support + store)",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.imagesearch",
+    "label": "Imagesearch",
+    "description": "Image search it's so bloated.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.benchmarkblocker",
+    "label": "Benchmarkblocker",
+    "description": "Founded debugs and benchmark blocker.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.brightnessservice",
+    "label": "Brightnessservice",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.configmanager",
+    "label": "Configmanager",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.devicepolicymanager",
+    "label": "Devicepolicymanager",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.evtlog",
+    "label": "Evtlog",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.extdispctrl",
+    "label": "Extdispctrl",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.forcedark",
+    "label": "Forcedark",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.freeform",
+    "label": "Freeform",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.observer",
+    "label": "Observer",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.packageinstallerproxy",
+    "label": "Packageinstallerproxy",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.phykeyctrl",
+    "label": "Phykeyctrl",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.pointerproxy",
+    "label": "Pointerproxy",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.powerctrl",
+    "label": "Powerctrl",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.rogproxy",
+    "label": "Rogproxy",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.smartread",
+    "label": "Smartread",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.twinapps",
+    "label": "Twinapps",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.ims.watermark",
+    "label": "Watermark",
+    "description": "Not needed, unused frameworks",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.inadvertentTouch",
+    "label": "Inadvertent Touch",
+    "description": "Not needed 'Do not cover the top of the screen'",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.key_status",
+    "label": "Key Status",
+    "description": "KeyStatusTool KeyStatusTool? All of this code means nothing.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.launcher",
+    "label": "Launcher",
+    "description": "ASUS Launcher Contains Google Firebase Analytics.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.livedemoservice",
+    "label": "Livedemoservice",
+    "description": "Demo Mode Enables retail demonstration mode. it's not a feature for normal users.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.lockscreen2",
+    "label": "Lockscreen2",
+    "description": "Lockscreen It should be important for lockscreen.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.loguploader",
+    "label": "Loguploader",
+    "description": "Log Tool Captured logs, Generate Log, Report Log.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.loguploaderproxy",
+    "label": "Loguploaderproxy",
+    "description": "Bug Reporter Proxy Logs without activity. Not needed another logs from loguploader.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.mlmodel",
+    "label": "Mlmodel",
+    "description": "Unused frameworks? AI optimization? Resources have vision_model and something encrypted. This app is large (338MB).",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.mobilemanager",
+    "label": "Mobilemanager",
+    "description": "Mobile Manager Not sure to keep it or not. https://play.google.com/store/apps/details?id=com.asus.mobilemanager",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.mobilemanagerservice",
+    "label": "Mobilemanagerservice",
+    "description": "Mobile Manager Service Looks like a unused framework, but not sure.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.nextapp",
+    "label": "Nextapp",
+    "description": "NextApp Unused frameworks? It has something to training AI? everything is encrypted.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.nextappcore",
+    "label": "Nextappcore",
+    "description": "NextAppCore Useless frameworks? It has something to training AI? everything is encrypted.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.openbeta2",
+    "label": "Openbeta2",
+    "description": "OpenBeta2 Beta program server that collects a lot of data.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.powersaver",
+    "label": "Powersaver",
+    "description": "Power Master It's for power-saving and may be important. Important app to powersaving.",
+    "safety": "danger",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.sarprotection",
+    "label": "Sarprotection",
+    "description": "SAR Protection Security thing.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.screenrecorder",
+    "label": "Screenrecorder",
+    "description": "Screen recorder App for screen recording.",
+    "safety": "advanced",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.setupwizard",
+    "label": "Setupwizard",
+    "description": "Setup Wizard It's needed only for first-boot setup.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.smartcover",
+    "label": "Smartcover",
+    "description": "SmartCover Used for smart features.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.smartkey",
+    "label": "Smartkey",
+    "description": "Smart key Used for smart features.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.smartreading",
+    "label": "Smartreading",
+    "description": "Smart Reading It's app for smart reading",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.soundrecorder",
+    "label": "Soundrecorder",
+    "description": "ASUS Sound recorder (https://play.google.com/store/apps/details?id=com.asus.soundrecorder) Connects to Google Analytics and some Asus servers, which is a bit sketchy for a sound recording app.. https://beta.pithus.org/report/f4cf38e1c35a04c3579fa198d2abd3ef1ff7be79633d6d3f2bc69c8a69164e1d",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.splendid",
+    "label": "Splendid",
+    "description": "Asus Splendid Optional app for adjust your screen for your own viewing pleasure. https://play.google.com/store/apps/details?id=com.asus.splendid",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.stitchimage.service",
+    "label": "Service",
+    "description": "Stitch image It's for the stock gallery app.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.sysmonitor",
+    "label": "Sysmonitor",
+    "description": "Device Health Device Health? It collects your data.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.system.api",
+    "label": "Api",
+    "description": "AsusBoost It's probably an important app. It has booster services and memory cleaner service.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.systemcolor",
+    "label": "Systemcolor",
+    "description": "System color scheme Needed for changing wallpapers?",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.taskwidget",
+    "label": "Taskwidget",
+    "description": "ASUS Task Manager widget Task manager widget to System optimization",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.teleserv.overlay.odm",
+    "label": "Odm",
+    "description": "overlay to default config ims.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.theme.color.asusui",
+    "label": "Asusui",
+    "description": "Theme AsusUI Stock System Theme System may not work after removing it.",
+    "safety": "danger",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.theme.color.rog",
+    "label": "Rog",
+    "description": "Rog Theme Stock System Theme System may not work after removing it.",
+    "safety": "danger",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.themeservice",
+    "label": "Themeservice",
+    "description": "Needed for change theme apps?",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.tips",
+    "label": "Tips",
+    "description": "Tips Tips for smart features and more.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.twinapps",
+    "label": "Twinapps",
+    "description": "Twin Apps for duplicate apps.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.twinappsservice",
+    "label": "Twinappsservice",
+    "description": "Twin Apps Service Needed for Twin Apps for duplicate apps.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.userfeedback",
+    "label": "Userfeedback",
+    "description": "ZenUI Help (https://play.google.com/store/apps/details?id=com.asus.userfeedback) Customer service app that provides FAQs, Mobile care service, user feedback, and public forums. Lots of telemetry (insecure on top of that): https://beta.pithus.org/report/e80a1fa70adc097fc9817720b5c8c81cfd156a76e6d062759b2bc3d6937a97e7",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.visualmaster",
+    "label": "Visualmaster",
+    "description": "Tru2Life it's app for color modes.",
+    "safety": "unsafe",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.weathertime",
+    "label": "Weathertime",
+    "description": "ASUS Weather it's for weather. Have Firebase Analytics.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.wifi.resources.overlay",
+    "label": "Overlay",
+    "description": "overlay to wifi configs better dont risk. Important configs to WiFi.",
+    "safety": "danger",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.asus.zenmotion",
+    "label": "Zenmotion",
+    "description": "Gestures Needed for Gestures.",
+    "safety": "recommended",
+    "category": "asus",
+    "oems": [
+      "asus"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

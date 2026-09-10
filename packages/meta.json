@@ -1,0 +1,100 @@
+[
+  {
+    "name": "com.facebook.appmanager",
+    "label": "Manager",
+    "description": "Facebook app manager handles Facebook apps updates.",
+    "safety": "recommended",
+    "category": "meta",
+    "oems": [
+      "meta"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.facebook.katana",
+    "label": "Katana",
+    "description": "Facebook app (https://play.google.com/store/apps/details?id=com.facebook.katana)",
+    "safety": "recommended",
+    "category": "meta",
+    "oems": [
+      "meta"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.facebook.lite",
+    "label": "Lite",
+    "description": "Facebook Lite app (https://play.google.com/store/apps/details?id=com.facebook.lite)",
+    "safety": "recommended",
+    "category": "meta",
+    "oems": [
+      "meta"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.facebook.orca",
+    "label": "Orca",
+    "description": "Facebook Messenger (https://play.google.com/store/apps/details?id=com.facebook.orca)",
+    "safety": "recommended",
+    "category": "meta",
+    "oems": [
+      "meta"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.facebook.services",
+    "label": "S",
+    "description": "Facebook Services is a tool that lets you manage different Facebook services automatically using your Android device. In particular, the tool focuses on searching for nearby shops and establishments based on your interests. I don't know if this a dependency for com.facebook.katana but nobody cares because we all want to delete all the Facebook stuff right ?!!",
+    "safety": "recommended",
+    "category": "meta",
+    "oems": [
+      "meta"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.facebook.system",
+    "label": "System",
+    "description": "Facebook App Installer (empty shell app which incites you to install the Facebook app)",
+    "safety": "recommended",
+    "category": "meta",
+    "oems": [
+      "meta"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.instagram.android",
+    "label": "Android",
+    "description": "Instagram (https://play.google.com/store/apps/details?id=com.instagram.android)",
+    "safety": "recommended",
+    "category": "meta",
+    "oems": [
+      "meta"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

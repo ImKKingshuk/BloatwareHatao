@@ -1,0 +1,338 @@
+[
+  {
+    "name": "com.nothing.OfflineOTAUpgradeApp",
+    "label": "Offline Otaupgrade App",
+    "description": "Hidden offline OTA update. You can get it by typing in dialer: *#*#682*#*#",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.agreement",
+    "label": "Agreement",
+    "description": "Nothing agreement privacy policy. I'm not sure when it will be needed.",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.applocker",
+    "label": "Locker",
+    "description": "App locker Optional app for locking apps.",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.appservice",
+    "label": "Service",
+    "description": "Nothing System Service Not sure if you need this.",
+    "safety": "unsafe",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.bpf",
+    "label": "Bpf",
+    "description": "Needed for connection?",
+    "safety": "unsafe",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.camera",
+    "label": "Camera",
+    "description": "Camera Nothing stock camera",
+    "safety": "advanced",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.cardservice",
+    "label": "Cardservice",
+    "description": "NothingCardService WARNING: breaks Nothing Widgets when switching to dark or light mode.",
+    "safety": "advanced",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.dirac",
+    "label": "Dirac",
+    "description": "Audio EQ (equalizer). Some 3rd-party music apps can use it to provide you EQ features.",
+    "safety": "advanced",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.dirac.DMP",
+    "label": "Dmp",
+    "description": "Audio EQ (equalizer). Some 3rd-party music apps can use it to provide you EQ features.",
+    "safety": "advanced",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.enginnerservice",
+    "label": "Enginnerservice",
+    "description": "Hidden diagnostics without activity frameworks with Qualcomm.",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.experience",
+    "label": "Experience",
+    "description": "Useless frameworks and collection data.",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.experimental",
+    "label": "Experimental",
+    "description": "Experimental features like CONNECT TO TESLA",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.glyphnotification",
+    "label": "Glyphnotification",
+    "description": "Needed for glyph notifications?",
+    "safety": "unsafe",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.hearthstone",
+    "label": "Hearthstone",
+    "description": "Nothing Widgets Widgets that can be found in homescreen.",
+    "safety": "advanced",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.launcher",
+    "label": "Launcher",
+    "description": "Launcher Stock launcher",
+    "safety": "unsafe",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.launcher.overlay.config",
+    "label": "Config",
+    "description": "Useless overlay to recent activity",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.logkit",
+    "label": "Logkit",
+    "description": "Hidden tool for logs.",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.proxy",
+    "label": "Proxy",
+    "description": "It's for battery optimization",
+    "safety": "unsafe",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.smartcenter",
+    "label": "Smartcenter",
+    "description": "Nothing X It's something for earphones and testing.",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.soundrecorder",
+    "label": "Soundrecorder",
+    "description": "Sound recorder Sound recorder app.",
+    "safety": "advanced",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.systemuitool",
+    "label": "Systemuitool",
+    "description": "I think it's an important app",
+    "safety": "danger",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.thirdparty",
+    "label": "Thirdparty",
+    "description": "Breaks the Glyph API, Composer and other apps that rely on the Glyph feature will not work anymore.",
+    "safety": "unsafe",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.wallpapersstub",
+    "label": "Wallpapersstub",
+    "description": "Needed for basic wallpapers",
+    "safety": "advanced",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.nothing.weather",
+    "label": "Weather",
+    "description": "Weather Nothing Weather",
+    "safety": "recommended",
+    "category": "nothing",
+    "oems": [
+      "nothing"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

@@ -1,0 +1,22 @@
+[package]
+name = "bloatwarehatao-tui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Terminal UI for BloatwareHatao - Beautiful Ratatui-based interface"
+
+[[bin]]
+name = "bloatwarehatao"
+path = "src/main.rs"
+
+[dependencies]
+bloatwarehatao-core = { path = "../bloatwarehatao-core" }
+tokio.workspace = true
+ratatui.workspace = true
+crossterm.workspace = true
+clap.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+anyhow.workspace = true
+arboard = "3.6.1"

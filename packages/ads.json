@@ -1,0 +1,516 @@
+[
+  {
+    "name": "cn.nubia.forbid.selfstart.provider",
+    "label": "Provider",
+    "description": "Mainly used to manage application self-startup, convenient for users to adjust the policy of application self-startup.",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "cn.nubia.gallery3d",
+    "label": "Gallery3D",
+    "description": "Gallery Stock gallery with Chinese trackers.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "cn.nubia.hybrid",
+    "label": "Hybrid",
+    "description": "Quick Apps Preview for ads 3d. Has a lot of Chinese components.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "cn.nubia.quickappwebserver",
+    "label": "Quickappwebserver",
+    "description": "Another component of Quick Apps Preview for ads 3d.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.cellbroadcastreceiver",
+    "label": "Cellbroadcastreceiver",
+    "description": "Cell broadcast is designed to deliver messages to multiple users in an area. This is notably used by ISPs to send Emergency/Government alerts. Runs at boot time and is also triggered after exiting airplane mode. https://en.wikipedia.org/wiki/Cell_Broadcast https://www.androidcentral.com/amber-alerts-and-android-what-you-need-know https://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver",
+    "safety": "unsafe",
+    "category": "ads",
+    "oems": [
+      "aosp"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.emergency",
+    "label": "Emergency",
+    "description": "Emergency rescue Shows emergency info on lockscreen and power menu. Safe to disable if you don't want it. Loads on device unlock/lockscreen and power menu, so it's basically always cached in RAM, but shouldn't use much/any battery, so the main thing gained from disabling this package is the ~9MB RAM it uses. Removing this will break Safety and Emergency in Settings and you will miss SOS alerts.",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [
+      "aosp"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.providers.downloads",
+    "label": "Downloads",
+    "description": "Downloads Manager Provider for downloaded files. Content providers encapsulate data, providing centralized management of data shared between apps. https://developer.android.com/guide/topics/providers/content-providers.html",
+    "safety": "danger",
+    "category": "ads",
+    "oems": [
+      "aosp"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.providers.downloads.ui",
+    "label": "Ui",
+    "description": "Downloads User interface for downloads. On some OEM's this app has ads, tracking things.",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [
+      "aosp"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.systemui.clocks.numoverlap",
+    "label": "Numoverlap",
+    "description": "Adjustable number overlap for system clock display.",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [
+      "aosp"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.android.thememanager",
+    "label": "Thememanager",
+    "description": "MIUI Themes (manager) Xiaomi seems to love confusing package names. Lets you select and apply themes provided by Xiaomi. NOTE: Disabling will break the ability to change the lock-screen wallpaper and ringtones in the OEM clock app. Has a lot trackers. Running in the background.",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [
+      "aosp"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.applovin.array.apphub.vincere",
+    "label": "Vincere",
+    "description": "AppHub Is known as tracker company, potentially adware!",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.evenwell.AprUploadService",
+    "label": "Apr Upload Service",
+    "description": "Apr Upload Service ???? [MORE INFO NEEDED]",
+    "safety": "unsafe",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.evenwell.AprUploadService.data.overlay.base",
+    "label": "Base",
+    "description": "Theme overlay for Apr Upload Service?",
+    "safety": "unsafe",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.evenwell.AprUploadService.data.overlay.base.s600id",
+    "label": "S600Id",
+    "description": "Theme overlay for Apr Upload Service?",
+    "safety": "unsafe",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.evenwell.AprUploadService.data.overlay.base.s600ww",
+    "label": "S600Ww",
+    "description": "Theme overlay for Apr Upload Service?",
+    "safety": "unsafe",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.evenwell.providers.downloads.overlay.base.s600ww",
+    "label": "S600Ww",
+    "description": "Theme overlay for the downloads app?",
+    "safety": "unsafe",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.evenwell.providers.downloads.ui.overlay.base.s600ww",
+    "label": "S600Ww",
+    "description": "Theme overlay for the downloads app?",
+    "safety": "unsafe",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.facemoji.lite.xiaomi",
+    "label": "Xiaomi",
+    "description": "Xiaomi keyboard Have ads and analytics. Better alternative: https://f-droid.org/en/packages/dev.patrickgold.florisboard/",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.futuredial.asuslocalbackup",
+    "label": "Asuslocalbackup",
+    "description": "ASUS Device backup Contains Google Analytics and numerous permissions.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.haokan.pictorial",
+    "label": "Pictorial",
+    "description": "92 Lock Screen for RealMe 92 is pronounce in Chinese as 'Hao Kan' (it's the company name), so it's a Chinese app. This not related to 'Lock Screen Magazine' and potentially inject ads in lock screen.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.huaqin.sar",
+    "label": "Sar",
+    "description": "SetTransmitPower I can't access the apk but I'm pretty sure it is another hidden test app not meant to be used by end-user Given its name it could be used to adjust the transmit power of the cell phone antennas SAR = Specific Absorption Rate (https://en.wikipedia.org/wiki/Specific_absorption_rate) XDA users removed this without any issues. To be 100% sure it would be good to test the SAR without this package (just in case)",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.ldmnq.launcher3",
+    "label": "Launcher3",
+    "description": "Built in launcher Full of ads but not safe to disable unless you have another launcher",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mitv.download.service",
+    "label": "Service",
+    "description": "DownloadService Unknown app that has many mitv frameworks. But safe to remove.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.mitv.videoplayer",
+    "label": "Videoplayer",
+    "description": "Mi TV Video Player It's video player with google ads.",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.opos.ads",
+    "label": "Ads",
+    "description": "Chinese ads click tracking",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.osp.app.signin",
+    "label": "Signin",
+    "description": "Samsung Account app Lots of trackers in this app. Has a huge list of permissions. It is an essential app for a lot of samsung apps (which will be removed with the default selection in this list) Settings app will crash if removed on Android 11/OneUI 3.0+ (https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/39) This issue happens only if you are running Android 11. If not, you can can (and should) remove this package!",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.qti.qcc",
+    "label": "Qcc",
+    "description": "QCC Have a lot of stuff about logs, testing framework for Android with Robolectric, LTE Broadcast. Introduced in android 13. Have png file qdma = Qualcomm Device Management and Analytics. So it's only spyware.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [
+      "qualcomm"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.qti.slaservice",
+    "label": "Slaservice",
+    "description": "Service Level Agreement (SLA) protocol that analyzes network performance, quality of service, and provides users with various parameters of network quality of service, such as: jitter delay, file transfer rate, TCP latency. BUT it's placebo. uses permission com.miui.analytics.onetrack.TRACK_EVENT also have a lot chinese stuff.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [
+      "qualcomm"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.qualcomm.cabl",
+    "label": "Cabl",
+    "description": "Content Adaptative Backlight Settings CABL will try to adjust the image being displaye by changing the contrast/quality/image backlight depending on the content on the screen. Downside to this is loss of dynamic range which results in some colors being washed out/clipped. CABL != Auto brightness (which doesn't change the content of the screen, only the brightness) NOTE: You may want to remove this. It does not work very well on many phones https://mobileinternist.com/disable-adaptive-brightness-android",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [
+      "qualcomm"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.qualcomm.qti.qccnetstat",
+    "label": "Qccnetstat",
+    "description": "useless network statistics also QCC in name qualcomm app is for analytics.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [
+      "qualcomm"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.qualcomm.qti.server.qtiwifi",
+    "label": "Qtiwifi",
+    "description": "it's made for analytics. This service can be used to have OEM specific feature development. Currently this service is being used to collect CSI data from cfrtool via hidl and then pass the data to application(user level).",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [
+      "qualcomm"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.sonyericsson.android.drm.drmlicenseservice",
+    "label": "Drmlicenseservice",
+    "description": "Theres only Drm License Activity, only downloads license, also japanese",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.sonyericsson.unsupportedheadsetnotifier",
+    "label": "Unsupportedheadsetnotifier",
+    "description": "Given its name, I think it displays a notification when you insert a headset not compatible with your phone.",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.taboola.mip",
+    "label": "Mip",
+    "description": "Intrusive background module (Taboola) that keeps pushing a lock-screen stories feed — spam-ads and irrelevant articles (often from foreign/hostile sources). Runs in background, uses data, nags user until it is enabled. No system function — safe to remove. https://techissuestoday.com/motorola-lock-screen-ads-articles/",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.test.logcollect",
+    "label": "Logcollect",
+    "description": "Bigme HiBreak Pro app to submit log reports when user requests it. Uploads Android and kernel logs to a Chinese cloud (Baidu). If uninstalled, Log Report button in the settings will not open a pop-up. Check that you have this phone before disabling! The package name is generic.",
+    "safety": "advanced",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.tracker.t",
+    "label": "T",
+    "description": "WTF is this ?? Given its name I think you can take the risk to delete it.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.visionobjects.resourcemanager",
+    "label": "Resourcemanager",
+    "description": "Handwriting DB Updater (discontinued?) Language Updater from site http://samsungresources.visionobjects.com/ But it's tracker. I guess it's to Handwriting Service but not needed.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.xy.smartmmsplugin.remote",
+    "label": "Remote",
+    "description": "SmartMmsPlugin Connects to Chinese maps. Loads Flight, Train, Movie information. It's only for China.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.zui.browser",
+    "label": "Browser",
+    "description": "Lenovo Browser Stock Lenovo Browser with Chinese trackers.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.zui.deviceidservice",
+    "label": "Deviceidservice",
+    "description": "Analytics and logs.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "fr.bouyguestelecom.agent.custo",
+    "label": "Custo",
+    "description": "This app wanna include ads to your gallery only. Founded only ads and crashlytics components.",
+    "safety": "recommended",
+    "category": "ads",
+    "oems": [],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

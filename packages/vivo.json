@@ -1,0 +1,2088 @@
+[
+  {
+    "name": "com.bbk.SuperPowerSave",
+    "label": "Super Power Save",
+    "description": "Super Battery Saver Not sure if it's useful or not. Super power save.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.account",
+    "label": "Account",
+    "description": "Vivo account Vivo privacy policy is really bad: https://privacy.vivo.com/privacy Note: Removing this will obviously break fuctions that require Vivo account authentication: accessibility, data backup etc.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.appstore",
+    "label": "Store",
+    "description": "Vivo app store. Note: apps from this store can still be upgraded with the built-in check upgrade feature even with this package removed",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.calendar",
+    "label": "Calendar",
+    "description": "Default calendar app. 50 permissions for a calendar app. What could go wrong? Pithus analysis: https://beta.pithus.org/report/db107cb828a1ec9b7cbcd9fd86542da877fdf4cf947c18c8a48a2b09e568ad10",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.cloud",
+    "label": "Cloud",
+    "description": "vivoCloud Vivo cloud services.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.facewake",
+    "label": "Facewake",
+    "description": "FaceWake It's used for face unlock.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.iqoo.logsystem",
+    "label": "Logsystem",
+    "description": "User experience service Telemetry app. Note:Disabling this will break trial version system upgrade feature.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.launcher2",
+    "label": "Launcher2",
+    "description": "Vivo launcher.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.photoframewidget",
+    "label": "Photoframewidget",
+    "description": "Photo frame Photo widget.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.scene.databaseprovider",
+    "label": "Databaseprovider",
+    "description": "May be needed for the launcher, not sure.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.scene.launcher.theme",
+    "label": "Theme",
+    "description": "SceneThemeLauncher May be needed for the launcher, not sure.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.theme",
+    "label": "Theme",
+    "description": "Vivo theme (https://play.google.com/store/apps/details?id=com.bbk.theme) Lets you add new themes, fonts and wallpapers. It has annoying notifications that cannot be disabled by going to the app settings. This app use 50 permissions and can install packages (REQUEST_INSTALL_PACKAGES) Note: Removing this app will prevent you to change themes. Pithus analysis: https://beta.pithus.org/report/0f15055131637d3dbc55d3a49b8e79b4f76ca09871abf9eb43b5f88afde11800",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.theme.resources",
+    "label": "Resources",
+    "description": "WallpaperRes Vivo wallpapers. A lot of PNG wallpapers. Safe to remove if you don't need theme resources.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.bbk.updater",
+    "label": "Updater",
+    "description": "System update Provides system updates.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.iqoo.aftersale.engineermode",
+    "label": "Engineermode",
+    "description": "Testing things. This app is for testing phone components.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.iqoo.engineermode",
+    "label": "Engineermode",
+    "description": "Factory test Testing things, AT Commands - no one uses them.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.iqoo.powersaving",
+    "label": "Powersaving",
+    "description": "Battery Power-saving app. May not be a good idea to remove it.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.iqoo.secure",
+    "label": "Secure",
+    "description": "i Manager Removing this removes the traffic speed indicator in the notification bar. Be cautious about removing it.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.iqoo.user.engineermode",
+    "label": "Engineermode",
+    "description": "Factory test It's for testing phone components.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.iqoo.website",
+    "label": "Website",
+    "description": "iQOO.com Shows iQOO website.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.SmartKey",
+    "label": "Smart Key",
+    "description": "Quick action Chinese smart things.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.abe",
+    "label": "Abe",
+    "description": "Audio EQ(equalizer) Some 3rd-party music apps can use it to provide you EQ features.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.alphacamera",
+    "label": "Alphacamera",
+    "description": "AlphaCamera Engineering Mode, Log, Debugging service camera.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.android.connectivity.common.resources.overlay",
+    "label": "Overlay",
+    "description": "Better keep for connectivity.",
+    "safety": "danger",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.android.connectivity.mainline.common.resources.overlay",
+    "label": "Overlay",
+    "description": "Better keep for connectivity.",
+    "safety": "danger",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.android.connectivity.mainline.manufacturer.resources.overlay",
+    "label": "Overlay",
+    "description": "Better keep for connectivity.",
+    "safety": "danger",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.android.connectivity.manufacturer.resources.overlay",
+    "label": "Overlay",
+    "description": "Better keep for connectivity.",
+    "safety": "danger",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.android.wifi.common.resources.overlay",
+    "label": "Overlay",
+    "description": "Better keep for connectivity.",
+    "safety": "danger",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.android.wifi.mainline.common.resources.overlay",
+    "label": "Overlay",
+    "description": "Better keep for connectivity.",
+    "safety": "danger",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.android.wifi.mainline.manufacturer.resources.overlay",
+    "label": "Overlay",
+    "description": "Better keep for connectivity.",
+    "safety": "danger",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.android.wifi.manufacturer.resources.overlay",
+    "label": "Overlay",
+    "description": "Better keep for connectivity.",
+    "safety": "danger",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.appfilter",
+    "label": "Filter",
+    "description": "AppFilter Has something to powersaving like prevent autostart apps.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.appstore",
+    "label": "Store",
+    "description": "V-Appstore vivo app store.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.assistant",
+    "label": "Assistant",
+    "description": "Vivo assistant Assistant for vivo phones.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.assistantfunction",
+    "label": "Assistantfunction",
+    "description": "Steps Jovi Home kit. Record walk sport app.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.audiofx",
+    "label": "Audiofx",
+    "description": "Audio effect Needed for sound effects.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.browser",
+    "label": "Browser",
+    "description": "Vivo browser full of trackers (https://play.google.com/store/apps/details?id=com.vivo.browser)",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.bsptest",
+    "label": "Bsptest",
+    "description": "BSPTest Hidden app for testing things.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.calculator",
+    "label": "Calculator",
+    "description": "Calculator Vivo calculator app",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.camera.action",
+    "label": "Action",
+    "description": "Maybe it's needed for the camera app.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.card",
+    "label": "Card",
+    "description": "Smart sidebar",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.compass",
+    "label": "Compass",
+    "description": "Compass Vivo compass app",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.contentcatcher",
+    "label": "Contentcatcher",
+    "description": "Unused frameworks.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.cota",
+    "label": "Cota",
+    "description": "COTA Useless logs and ads. It's for recommendations.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.crontab",
+    "label": "Crontab",
+    "description": "Task timer It's for scheduling tasks.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.daemonService",
+    "label": "Daemon Service",
+    "description": "vivoService Security thing.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.demovideo",
+    "label": "Demovideo",
+    "description": "Video Demo Demo Video, Demo Switch, and have verify activity",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.desktopstickers",
+    "label": "Desktopstickers",
+    "description": "Stickers Customize widgets with favorite images.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.devicereg",
+    "label": "Devicereg",
+    "description": "Hidden debugging app ims.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.doubleinstance",
+    "label": "Doubleinstance",
+    "description": "App Clone It's for clone app.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.doubletimezoneclock",
+    "label": "Doubletimezoneclock",
+    "description": "i Widget Double Timezone Clock Widget",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.dream.clock",
+    "label": "Clock",
+    "description": "Clock Screensaver clock",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.dream.music",
+    "label": "Music",
+    "description": "i Music Screensaver music",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.dream.weather",
+    "label": "Weather",
+    "description": "Weather Screensaver weather",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.easyshare",
+    "label": "Easyshare",
+    "description": "Easy share Sharing apps to another phone. https://play.google.com/store/apps/details?id=com.vivo.easyshare",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.email",
+    "label": "Email",
+    "description": "Email closed-source Email app",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.engineercamera",
+    "label": "Engineercamera",
+    "description": "EngineerCamera Testing camera things.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.epm",
+    "label": "Epm",
+    "description": "EPM Useless crash app notify.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.ewarranty",
+    "label": "Ewarranty",
+    "description": "E-warranty card Only for China.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.faceui",
+    "label": "Faceui",
+    "description": "FaceUI It's used for face unlock.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.faceunlock",
+    "label": "Faceunlock",
+    "description": "Facial recognition It's used for face unlock.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.favorite",
+    "label": "Favorite",
+    "description": "Favorites It's used to add text from the clipboard to favorites. Probably requires cloud. Contains untranslated Chinese things.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.feedback",
+    "label": "Feedback",
+    "description": "Feedback Lets you rate your device and share feedback.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.findphone",
+    "label": "Findphone",
+    "description": "Find It's used for finding the phone. Log out from account before removing.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.fingerprint",
+    "label": "Fingerprint",
+    "description": "Fingerprints and passwords Needed for fingerprint settings.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.fingerprintengineer",
+    "label": "Fingerprintengineer",
+    "description": "Fingerprint test Hidden Fingerprint testing not available for normal users.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.fingerprintui",
+    "label": "Fingerprintui",
+    "description": "FingerprintUI Fingerprint test? Contains payment functionality for China. May be needed for fingerprint lockscreen.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.fingerprintvit",
+    "label": "Fingerprintvit",
+    "description": "Fingerprint testing.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.floatingball",
+    "label": "Floatingball",
+    "description": "Floating ball Contains a lot of Chinese code.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.fuelsummary",
+    "label": "Fuelsummary",
+    "description": "FuelSummary Battery testing.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.gallery",
+    "label": "Gallery",
+    "description": "Gallery Vivo gallery app with Chinese trackers.",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.game",
+    "label": "Game",
+    "description": "Game Space. Not sure if its useful for gaming.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.gamecube",
+    "label": "Gamecube",
+    "description": "Ultra Game Mode Used for game optimization. Questionable if anyone is using this.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.gamewatch",
+    "label": "Gamewatch",
+    "description": "GameWatch Contains a lot of Chinese code and it's hidden?",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.globalanimation",
+    "label": "Globalanimation",
+    "description": "Global dynamic effects This is for effects and animations.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.globalanimation.resources",
+    "label": "Resources",
+    "description": "GlobalanmationResources Has animation booting probably, safe to remove.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.globalsearch",
+    "label": "Globalsearch",
+    "description": "Global Search it's chinese searching.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.healthwidget",
+    "label": "Healthwidget",
+    "description": "Health kit it's only widgets.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.heduohao",
+    "label": "Heduohao",
+    "description": "Used for Chinese SIM.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.hiboard",
+    "label": "Hiboard",
+    "description": "Smart Launcher Keyboard app with 62 permissions.",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.hybrid",
+    "label": "Hybrid",
+    "description": "Quick App Provides Quick App support. Quick Apps are Javascript+CSS apps that don't need any installation. This technology has its uses but I'm personally not a huge fan on having to rely on a JS engine to run an application This system app has a lot of permissions (including SEND_SMS, CAMERA, READ_EXTERNAL_STORAGE, RECORD_AUDIO... why?) More information: https://www.xda-developers.com/huawei-quick-apps-alternative-google-instant-apps/ OW2 Quick App whitepaper: https://quick-app-initiative.ow2.io/docs/Quick_App_White_Paper.pdf",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.imanager",
+    "label": "Imanager",
+    "description": "iManager A vivo app consists of Phone Management includes Space Cleanup, Security Scan, Data Traffic Management, Apps & Notifications & Utility Tools includes App encryption, Battery Management, App Clone, Network Management etc.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.iotserver",
+    "label": "Iotserver",
+    "description": "Related to Jovi Chinese.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.livewallpaper.behavior",
+    "label": "Behavior",
+    "description": "Live Wallpaper Behavior.",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.livewallpaper.behavior.resources",
+    "label": "Resources",
+    "description": "WallpaperResources Has live wallpapers.",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.livewallpaper.coffeetime",
+    "label": "Coffeetime",
+    "description": "Specific Live wallpaper",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.livewallpaper.coralsea",
+    "label": "Coralsea",
+    "description": "Specific Live wallpaper",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.livewallpaper.floatingcloud",
+    "label": "Floatingcloud",
+    "description": "com.vivo.livewallpaper.coffeetime Specific Live wallpaper",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.livewallpaper.ocean",
+    "label": "Ocean",
+    "description": "Live Wallpaper Ocean.",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.livewallpaper.oceanvertical",
+    "label": "Oceanvertical",
+    "description": "Live Wallpaper Oceanvertical.",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.livewallpaper.plant",
+    "label": "Plant",
+    "description": "Plant live wallpaper Specific live wallpaper.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.livewallpaper.silk",
+    "label": "Silk",
+    "description": "com.vivo.livewallpaper.coffeetime Specific Live wallpaper",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.magazine",
+    "label": "Magazine",
+    "description": "Lockscreen Poster Service Useless things to lockscreen also it has trackers",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.minscreen",
+    "label": "Minscreen",
+    "description": "Small screen mode This feature is available on settings.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.monochromeicons",
+    "label": "Monochromeicons",
+    "description": "MonochromeIcons In code found something to vivo icons. In Android 14.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.motionrecognition",
+    "label": "Motionrecognition",
+    "description": "Smart motion Gestures and smart things.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.multinlp",
+    "label": "Multinlp",
+    "description": "LocationServices Chinese and Google location. Not sure if it's useless or not.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.musicwidgetmix",
+    "label": "Musicwidgetmix",
+    "description": "Origin Player Music Widget Mix",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.networkimprove",
+    "label": "Networkimprove",
+    "description": "NetworkImprove May be only for China because of non-English words. Also has logs.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.networkstate",
+    "label": "Networkstate",
+    "description": "NetworkState Virtual sim things. Only for China.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.nightpearl",
+    "label": "Nightpearl",
+    "description": "Always on Display Always on display, it's available in settings.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.notes",
+    "label": "Notes",
+    "description": "Notes Vivo notes",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.nps",
+    "label": "Nps",
+    "description": "iQOO, vivo experience assessment. This app has nothing necessary in the code.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.numbermark",
+    "label": "Numbermark",
+    "description": "Number mark Contains a lot of Chinese code.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.omacp",
+    "label": "Omacp",
+    "description": "Configuration SMS",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.pem",
+    "label": "Pem",
+    "description": "Power guardian For power-saving, probably. Also has something to google.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.phoneinstructions",
+    "label": "Phoneinstructions",
+    "description": "Phone Instructions it's used to app clone for phone instructions.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.puresearch",
+    "label": "Puresearch",
+    "description": "Search Widget Desktop search bar",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.pushservice",
+    "label": "Pushservice",
+    "description": "Push Notification Engine Not needed for notifications. Requires Google Play Services, and it's for VPUSH. Contains trackers and permissions.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.quickpay",
+    "label": "Quickpay",
+    "description": "Quick Pay Chinese pay.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.safecenter",
+    "label": "Safecenter",
+    "description": "Security Center Useless security.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.sdkplugin",
+    "label": "Sdkplugin",
+    "description": "Needed for Vivo account and Vivo payment. Everything is in Chinese, but not sure how much will not work after removal.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.secime.service",
+    "label": "Service",
+    "description": "SecIME Talkback Chinese.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.setupwizard",
+    "label": "Setupwizard",
+    "description": "It's only for first-boot setup.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.share",
+    "label": "Share",
+    "description": "Vivo share Transfer data between vivo device & PC",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.simplelauncher",
+    "label": "Simplelauncher",
+    "description": "Simple launcher, Simple View.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.singularity",
+    "label": "Singularity",
+    "description": "vivo system webview Multidexapplication?",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.smartLife",
+    "label": "Smart Life",
+    "description": "Jovi InLife service home devices and smart interconnectivity.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.smartanswer",
+    "label": "Smartanswer",
+    "description": "smart answer A lot of bloated smart answer.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.smartmultiwindow",
+    "label": "Smartmultiwindow",
+    "description": "Smart Split Smart multiwindow.",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.smartshot",
+    "label": "Smartshot",
+    "description": "S-capture Used for screenshots?",
+    "safety": "unsafe",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.smartunlock",
+    "label": "Smartunlock",
+    "description": "smart unlock device it's used for unlock device using bluetooth devices probably.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.soundrecorder",
+    "label": "Soundrecorder",
+    "description": "Recorder Vivo sound recorder",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.space",
+    "label": "Space",
+    "description": "Open Vivo official website. Useless app",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.sps",
+    "label": "Sps",
+    "description": "SuperProcessSystem Useless app statistics, logs, crash handler, security, error memory management. Also have something to com.vivo.abe but some phones don't have com.vivo.sps installed. And where is the optimization code?",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.stepcount",
+    "label": "Stepcount",
+    "description": "Step Count Application it's hard to say what app actually doing looks like a useless frameworks to widgets and swipe menu",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.systemblur.server",
+    "label": "Server",
+    "description": "System blur render engine System blur render engine, logs",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.timerwidget",
+    "label": "Timerwidget",
+    "description": "Alarm widget Widget clock in launcher, home screen.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.unionpay",
+    "label": "Unionpay",
+    "description": "Payment v-Coin it's for china probably.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.upnpserver",
+    "label": "Upnpserver",
+    "description": "Phone Mirroring Smart things and needed for broadcast?",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.upslide",
+    "label": "Upslide",
+    "description": "System navigation Needed for secure and smart things.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.vhome",
+    "label": "Vhome",
+    "description": "Smart Remote it's for smart things.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.vhomeguide",
+    "label": "Vhomeguide",
+    "description": "VHome Not needed vhome guide suggestions.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.vibrator4d",
+    "label": "Vibrator4D",
+    "description": "vibrator4d Used for games? Contains a lot of feedback things.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.video.floating",
+    "label": "Floating",
+    "description": "Face beauty for video call it's a features for video call vivo.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.videoeditor",
+    "label": "Videoeditor",
+    "description": "Video Trim Video editor",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.virtuallight",
+    "label": "Virtuallight",
+    "description": "Ambient light effect It's music light effect (Settings: Dynamic Effects: Ambient Light Effect)",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.vivo3rdalgoservice",
+    "label": "Vivo3Rdalgoservice",
+    "description": "ImageAlgoService HDR and High contrast in the camera? Probably safe to remove, so it's debugging app?",
+    "safety": "advanced",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.vivokaraoke",
+    "label": "Vivokaraoke",
+    "description": "Mobile KTV Vivo karaoke.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.vms",
+    "label": "Vms",
+    "description": "Unused frameworks. Chinese.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.voicewakeup",
+    "label": "Voicewakeup",
+    "description": "Voice wake-up. Has a lot of permissions (REQUEST_INSTALL_PACKAGES, READ_EXTERNAL_STORAGE, RECORD_AUDIO...). Kind of a \"smart assistant\" ? It is constantly listening waiting for a trigger word [MORE INFO NEEDED]",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.vtouch",
+    "label": "Vtouch",
+    "description": "Smart Vision Spying a lot. Smart things.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.wallet",
+    "label": "Wallet",
+    "description": "Vivo wallet Everything is in Chinese.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.weather",
+    "label": "Weather",
+    "description": "Weather Vivo weather app, have Chinese trackers.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.weather.provider",
+    "label": "Provider",
+    "description": "Weather storage Vivo weather app, has Chinese trackers.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.widget.cleanspeed",
+    "label": "Cleanspeed",
+    "description": "Clean up acceleration components Clean speed widget",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.widget.gallery",
+    "label": "Gallery",
+    "description": "Album Highlights Gallery widget",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.widgetweather",
+    "label": "Widgetweather",
+    "description": "Weather components Weather widget",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.vivo.wifiengineermode",
+    "label": "Wifiengineermode",
+    "description": "Needed for WiFi info? it's engineermode so probably not.",
+    "safety": "recommended",
+    "category": "vivo",
+    "oems": [
+      "vivo"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

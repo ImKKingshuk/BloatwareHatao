@@ -1,0 +1,98 @@
+name: pre-release checks
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+      - name: Install cargo-deny
+        run: cargo install cargo-deny --version 0.20.2 --locked
+      - uses: Swatinem/rust-cache@49a0bdc70d2e1b713ca9e2869b211fcce03d3c1c # v2
+      - name: Run tests
+        run: cargo test --workspace --locked
+      - name: Check formatting
+        run: cargo fmt --all --check
+      - name: Run clippy
+        run: cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+      - name: Run cargo-deny
+        run: cargo deny --locked check
+
+  build-check:
+    name: Build Check - ${{ matrix.target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+            use_cross: false
+          - os: ubuntu-latest
+            target: aarch64-unknown-linux-gnu
+            use_cross: true
+          - os: macos-latest
+            target: aarch64-apple-darwin
+            use_cross: false
+          - os: windows-latest
+            target: x86_64-pc-windows-msvc
+            use_cross: false
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+          targets: ${{ matrix.target }}
+      - uses: Swatinem/rust-cache@49a0bdc70d2e1b713ca9e2869b211fcce03d3c1c # v2
+        with:
+          key: ${{ matrix.target }}
+      - name: Configure release path remapping
+        shell: bash
+        run: |
+          echo "RUSTFLAGS=--remap-path-prefix=${GITHUB_WORKSPACE}=. --remap-path-prefix=${HOME}/.cargo/registry/src=registry/src --remap-path-prefix=${HOME}/.cargo/git/checkouts=cargo/git/checkouts --remap-path-prefix=${HOME}/.rustup/toolchains=rustup/toolchains" >> "$GITHUB_ENV"
+      - name: Install cross
+        if: matrix.use_cross
+        run: cargo install cross --version 0.2.5 --locked
+      - name: Build release
+        run: |
+          if [ "${{ matrix.use_cross }}" = "true" ]; then
+            cross build --release --locked --target ${{ matrix.target }}
+          else
+            cargo build --release --locked --target ${{ matrix.target }}
+          fi
+        shell: bash
+      - name: Verify built binary exists
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            test -f ./target/${{ matrix.target }}/release/bloatwarehatao.exe
+          else
+            test -f ./target/${{ matrix.target }}/release/bloatwarehatao
+          fi
+        shell: bash
+      - name: Run native binary
+        if: matrix.use_cross == false
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            ./target/${{ matrix.target }}/release/bloatwarehatao.exe --help
+          else
+            ./target/${{ matrix.target }}/release/bloatwarehatao --help
+          fi
+        shell: bash
+      - name: Skip cross-compiled binary execution
+        if: matrix.use_cross == true
+        run: echo "Skipping runtime smoke test for ${{ matrix.target }} because it cannot run on ${{ runner.os }}."

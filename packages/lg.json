@@ -1,0 +1,2536 @@
+[
+  {
+    "name": "com.lge.LGSetupView",
+    "label": "Lgsetup View",
+    "description": "Setup View LG first setup (related to com.android.LGSetupWizard). The first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.NfcSettings",
+    "label": "Nfc Settings",
+    "description": "NFC settings Likely in the settings.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.android.atservice",
+    "label": "Atservice",
+    "description": "Software Update It's probably the only component of software updates.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.animal.resource",
+    "label": "Resource",
+    "description": "AnimalResource Another thing for avatars.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.app.floating.res",
+    "label": "Res",
+    "description": "Multitasking framework Allows you to use multitasking features like multiple apps in one screen. Does not remove screen pinning feature. I don't know if this removes the floating windows feature that you have to enable with ADB (to make it look more like a desktop)",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.appbox.client",
+    "label": "Client",
+    "description": "LG Application manager Installs/Updates LG related apps?",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.appwidget.runningtaskbar",
+    "label": "Runningtaskbar",
+    "description": "Recent Task App Widget.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.arcamera",
+    "label": "Arcamera",
+    "description": "ARCamera This application requires google play services for ar. Not sure what for it is but probably for VR.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.auto_generated_rro_product__",
+    "label": "Auto Generated Rro Product",
+    "description": "It has important configs. Better don't risk.",
+    "safety": "danger",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.autosimlockservice",
+    "label": "Autosimlockservice",
+    "description": "Has reboot permissions and can check when SIM state is changed. Possibly used for carrier locking devices? No issues when removed.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.bluetoothsetting",
+    "label": "Bluetoothsetting",
+    "description": "Needed for Bluetooth.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.bnr",
+    "label": "Bnr",
+    "description": "LG Backup Can backup your mobile devices LG Home screen, device settings, apps, and contacts to your computer. https://www.lg.com/us/support/help-library/lg-android-backup-CT10000025-20150104708841",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.bnr.launcher",
+    "label": "Launcher",
+    "description": "LG Mobile Switch Launcher This doesn't remove the default launchers. It is most likely to backup/restore the user's launcher configuration.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.calligraphydictionary",
+    "label": "Calligraphydictionary",
+    "description": "Calligraphy dictionary Looks useless.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.camera",
+    "label": "Camera",
+    "description": "Camera Stock camera app.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.camerasolution",
+    "label": "Camerasolution",
+    "description": "Needed for Stock camera app.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.cic.eden.service",
+    "label": "Service",
+    "description": "Memories album Gallery automatically creates a Memories album with pictures and videos saved in the phone. Memories is a virtual album of pictures saved in the phone or SD card. Source : https://www.lg.com/hk_en/support/product-help/CT30019000-1433767985158-others",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.cinemagraph",
+    "label": "Cinemagraph",
+    "description": "Cine shot I think it's an optional app.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.clock",
+    "label": "Clock",
+    "description": "LG Clock app",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.cmas",
+    "label": "Cmas",
+    "description": "Emergency Alerts it's only for alerts so it's safe to remove.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.concierge",
+    "label": "Concierge",
+    "description": "LG Smart Notice Provides a widget which has a clock, weather, lists notifications and much more, it's LG's version of Google Now.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.cota.blm.sf340_enabler",
+    "label": "Sf340 Enabler",
+    "description": "I can't find any purpose for this app. Titled 'LG Conference Call Update', 'sf340' is part of the codename for the LG Stylo 3 Plus (full codename is sf340n), likely related to some discontinued LG service designed specifically for the Stylo 3 Plus.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.covertools",
+    "label": "Covertools",
+    "description": "Dual Screen Tool Needed for dual-screen I guess.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.displayfingerprint",
+    "label": "Displayfingerprint",
+    "description": "It's fingerprint testing. Secret code 346437.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.drive.activator",
+    "label": "Activator",
+    "description": "This app used to give you a free 100GB Google Drive storage for 5 years after buying an LG phone, however, Google no longer does this offer, and the app just gives an error now.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.drmservice",
+    "label": "Drmservice",
+    "description": "DRM Service Probably required for some forms of DRM; disabling might break things like Netflix streaming, which relies on DRM to function. https://en.wikipedia.org/wiki/Digital_rights_management",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.dsmanager",
+    "label": "Dsmanager",
+    "description": "Dual Screen Updater If you dont use dual screen feature then it's safe to remove?",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.dualscreenfirmware",
+    "label": "Dualscreenfirmware",
+    "description": "Shows error dialog for dual-screen firmware update.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.easyhome",
+    "label": "Easyhome",
+    "description": "LG EasyHome EasyHome is a more simplified version of the Home screen that you can choose to use on your phone. It displays the Home screen like a remote control device. T Source : https://www.lg.com/us/mobile-phones/VS985/Userguide/048.html",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.effect",
+    "label": "Effect",
+    "description": "It's for lock screen effect.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ellievision",
+    "label": "Ellievision",
+    "description": "Smart Cam & AI Tips Delete if not using default camera.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.eltest",
+    "label": "Eltest",
+    "description": "ELTest Device hardware tests settings",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.email",
+    "label": "Email",
+    "description": "LG Email app",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.entitlementcheckservice",
+    "label": "Entitlementcheckservice",
+    "description": "It's for miracast and wifi hotspot probably.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.equalizer",
+    "label": "Equalizer",
+    "description": "Equalizer settings.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.eula",
+    "label": "Eula",
+    "description": "LG EULA (Terms of Use) accessible in the settings. EULA = https://en.wikipedia.org/wiki/End-user_license_agreement Needed by LG HD Audio Recorder or it will force close (maybe used by some other stock app?)",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.eula.downloader",
+    "label": "Downloader",
+    "description": "Privacy Policy Update Not tested but probably safe to remove.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.eulaprovider",
+    "label": "Eulaprovider",
+    "description": "License Provider Needed by com.lge.eula. Needed by LG HD Audio Recorder or it will force close (maybe used by some other stock app?)",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.exchange",
+    "label": "Exchange",
+    "description": "It looks like the Microsoft outlook/email in the logo. Believe this is some sort of microsoft integration. I don't 100% remember if I was able to add accounts to the phone still (eg. Nextcloud), I need to test that soon.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.faceglance.trustagent",
+    "label": "Trustagent",
+    "description": "Face Recognition Remove if you don't need it. If you want security I don't think this is a good idea to use it.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.filemanager",
+    "label": "Filemanager",
+    "description": "Stock file manager",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.floatingbar",
+    "label": "Floatingbar",
+    "description": "LG Floating bar Lets you put shortcuts to apps or features, as well as quick access to contacts and music player controls on a \"floating bar\" on the Home screen. https://www.neowin.net/news/lg-v30-closer-look-floating-bar/",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.fmradio",
+    "label": "Fmradio",
+    "description": "FM radio app",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.friendsmanager",
+    "label": "Friendsmanager",
+    "description": "LG Friends Manager (https://play.google.com/store/apps/details?id=com.lge.friendsmanager) WTF ? Completely useless app. Not sure but I think it enables you to download an app for a friend LG user.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gallery.aodimagewidget",
+    "label": "Aodimagewidget",
+    "description": "Always-on display image LG Always-on display image",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gallery.collagewallpaper",
+    "label": "Collagewallpaper",
+    "description": "LG Collage Wallpapers Allows you to create patchwork wallpaper from several photos. https://www.lg.com/uk/support/product-help/CT00008356-20150332136499-others",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gallery.studio",
+    "label": "Studio",
+    "description": "GalleryStudio It's needed for gallery app probably.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gallery.vr.wallpaper",
+    "label": "Wallpaper",
+    "description": "LG 360 Image Wallpaper Provides VR (360°) wallpapers.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gamepad",
+    "label": "Gamepad",
+    "description": "LG Game Pad It's probably for TV. Not useful for games.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gametools",
+    "label": "Gametools",
+    "description": "GameTools Not tested it's for probably useful for games.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gametools.gamerecorder",
+    "label": "Gamerecorder",
+    "description": "Screen recording Screen recording for game tools.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gametuner",
+    "label": "Gametuner",
+    "description": "Settings/features for games, such as resolution and frame rate limiting. A little side note, any games installed in the work profile can't use gametuner (maybe if you install this package into the work profile it'll work)",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gba.android",
+    "label": "Android",
+    "description": "Needed for proper VoLTE functionality on LG devices.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gcuv",
+    "label": "Gcuv",
+    "description": "GCUV Not 100% sure but @siraltus from XDA thinks it refers to \"Gauce Components\" which seems to be the LG's version of CSC (carrier sales code - automatic carrier-specific customization). It gets run on first boot after factory reset, sets up the ROM features based on which carrier and country code is specified in the build.prop, and then gets frozen so it doesn't reconfigure things on subsequent boots. It's basically the only person to mention \"Gauce components\" on the web (other than restricted LG webpages when using Google dorks). https://forum.xda-developers.com/tmobile-lg-v10/development/rom-lg-v10-h901-10c-debranded-debloated-t3277305/page12/page12",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gdec.client",
+    "label": "Client",
+    "description": "Another component of OTA Updates but here I found it's for App Updates.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gestureanswering",
+    "label": "Gestureanswering",
+    "description": "Answer me 2.0 Allows you to bring the phone to your ear to answer an incoming call automatically. https://www.lg.com/us/mobile-phones/VS980/Userguide/109-1.html",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gnss.airtest",
+    "label": "Airtest",
+    "description": "GNSS Air Test GNSS test, used to test... GNSS. Not needed, and GPNSS will continue to work. NOTE : GNSS = Global Navigation Satellite System and is the standard generic term for satellite navigation systems. This term includes e.g. the GPS, GLONASS, Galileo, Beidou and other regional systems.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gnsslogcat",
+    "label": "Gnsslogcat",
+    "description": "GNSS Logcat Used to dump GNSS logs.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gnsslogsetting",
+    "label": "Gnsslogsetting",
+    "description": "GNSS LOG LEVEL SETTING. It's for debug.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gnsspostest",
+    "label": "Gnsspostest",
+    "description": "GNSS Position test GNSS test again.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.gnsstest",
+    "label": "Gnsstest",
+    "description": "GNSS Test Woh ! Why does LG need so many GNSS test packages?!",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.hiddenmenu",
+    "label": "Hiddenmenu",
+    "description": "Hidden testing menu on LG devices.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.hiddenpersomenu",
+    "label": "Hiddenpersomenu",
+    "description": "Used to unlock LG phones remotely, from carriers like Sprint.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.hifirecorder",
+    "label": "Hifirecorder",
+    "description": "LG Audio Recorder",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.homeselector",
+    "label": "Homeselector",
+    "description": "LG Home selector This is the settings menu for the home launcher (present in the settings app as \"Home launcher\") If you remove this app, the Home screen settings menu is gone from settings app. (not needed if you use external launcher) You can still switch between installed launchers, the package name is a bit misleading.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.hotspotlauncher",
+    "label": "Hotspotlauncher",
+    "description": "LG Mobile Hotspot Provides hotspot feature enabling you to share the phone’s 4G data connection with any Wi-Fi capable devices.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.hotspotprovision",
+    "label": "Hotspotprovision",
+    "description": "Needed for hotspot 3G?",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ia.task.incalagent",
+    "label": "Incalagent",
+    "description": "InCalAgent Related to interface while you're in a call. Seems also related to tasks list stuff. Can someone tell me what happens when you delete it ? I think it is safe.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ia.task.informant",
+    "label": "Informant",
+    "description": "I only found that it's for feed favorite contacts and this app uses Korean language. Hidden, useless.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ia.task.smartcare",
+    "label": "Smartcare",
+    "description": "LIA SmartDoctor Engine Needed by SmartDoctor (com.lge.phonemanagement) ?",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ia.task.smartsetting",
+    "label": "Smartsetting",
+    "description": "SmartSetting Turns on/off or changes features, settings and more according to where you are or what you do. https://www.lg.com/us/support/help-library/lg-android-smart-settings-CT10000025-20150103623722",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.icecontacts",
+    "label": "Icecontacts",
+    "description": "Emergency and video calling things.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.iftttmanager",
+    "label": "Iftttmanager",
+    "description": "LG Smart settings IFTTT = “if this, then that.”. Smart Settings can be seens as IFTTT. Some events automatically triggers actions.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ime",
+    "label": "Ime",
+    "description": "LG Stock Keyboard Do not remove if you don't have an alternate keyboard available. Personally, I keep the stock keyboard just in case the keyboard app crash/fails (this happened to me once) locking me out of entering password.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ime.solution.handwriting",
+    "label": "Handwriting",
+    "description": "Handwriting feature on the LG keyboard",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ime.solution.text",
+    "label": "Text",
+    "description": "XT9 Text predicting and correction for the LG keyboard. For your culture (if you're young) : https://en.wikipedia.org/wiki/XT9 WARNING: On LG G6 (and maybe on other LG phones) removing this may cause the LG keyboard to stop inputing characters. Make sure to use another keyboard before removing this package.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ims",
+    "label": "Ims",
+    "description": "LG IMS It's not a good app because it has a lot of debugging stuff. Breaks calls.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ims.chatbotinfoprovider",
+    "label": "Chatbotinfoprovider",
+    "description": "It's a component of (com.lge.ims), not very useful because it's for debugging app.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ims.rcsprovider",
+    "label": "Rcsprovider",
+    "description": "Needed for IMS, RCS but com.lge.ims = debugging app.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.imsvt",
+    "label": "Imsvt",
+    "description": "Video Call, another component of com.lge.ims = debugging app.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.inputdevices",
+    "label": "Inputdevices",
+    "description": "Completely empty package. Safe to remove",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ipprovider",
+    "label": "Ipprovider",
+    "description": "Completely empty package. Safe to remove",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.ipservice",
+    "label": "Ipservice",
+    "description": "Needed for Wi-Fi calling on LG T-Mobile devices.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.launcher2",
+    "label": "Launcher2",
+    "description": "LG Home (v2) Stock launcher It's basically the home screen, the way icons apps are organized and displayed. DON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER! NOTE : Yeah there is another package described as \"launcher\". Normally, you only have one of them on your phone.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.launcher2.theme.optimus",
+    "label": "Optimus",
+    "description": "\"Optimus\" theme for the LG launcher (v2)",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.launcher3",
+    "label": "Launcher3",
+    "description": "LG Home (v3) Stock launcher It's basically the home screen, the way icons apps are organized and displayed. DON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER! NOTE : Yeah there is 3 packages described as \"launcher\". Normally, you only have one of them on your phone.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.leccp",
+    "label": "Leccp",
+    "description": "LG Connectivity Service It has only Alert Dialogs.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgaccount",
+    "label": "Lgaccount",
+    "description": "LG Account Enables you to create and manage your completely useless LG account.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgbroadcastradioservice",
+    "label": "Lgbroadcastradioservice",
+    "description": "Broadcast radio? No one needs that.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgcontentsetting",
+    "label": "Lgcontentsetting",
+    "description": "Wallpaper & theme Needed for theme settings.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgdataphone",
+    "label": "Lgdataphone",
+    "description": "It's for test and debug Data connection.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgdmsclient",
+    "label": "Lgdmsclient",
+    "description": "Actual \"Software Update\" App client I think you won't receive updates without this.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgdrm.permission",
+    "label": "Permission",
+    "description": "Handle permissions for LG DRM (com.lge.drmservice). Why does LG need a whole package for this?",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgfmservice",
+    "label": "Lgfmservice",
+    "description": "Wifi Hotspot service REMINDER : Hotspot enable you to share the phone’s 4G data connection with any Wi-Fi capable devices. It is not the Hotspot feature. Only the widget ! Dual SIM status widget Probably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality. Service menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?) LG support App remote access You probably don't want that to happen LAOP test [MORE INFO NEEDED] I don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgfota.permission",
+    "label": "Permission",
+    "description": "FOTA Test.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lginstallservies",
+    "label": "Lginstallservies",
+    "description": "LG Install Service Used by LG to install some of its apps on the phone. Not needed unless you use the LG apps manager.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgmapui",
+    "label": "Lgmapui",
+    "description": "LGMapUI User Interface (UI) for displaying location tracking reccord on the Health app (com.lge.lifetracker) ?",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lgworld",
+    "label": "Lgworld",
+    "description": "LG SmartWorld LG Store. Enables you to install LG apps, theme, keyboard layout, fonts...",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lifetracker",
+    "label": "Lifetracker",
+    "description": "LG Health (https://play.google.com/store/apps/details?id=com.lge.lifetracker) According to users reviews, it is a very bad activity tracking app. Privacy wise, you should never use this kind of thing obviously. https://www.lg.com/us/support/help-library/lg-android-lg-health-CT30013120-20150103629401",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.livemessage",
+    "label": "Livemessage",
+    "description": "Draw chat Not needed for chats.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lms2",
+    "label": "Lms2",
+    "description": "Needed for LG account.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lockscreen.livewallpaper.kaleidoscope",
+    "label": "Kaleidoscope",
+    "description": "The Kaleidoscope Live Wallpaper used in the lockscreen. Safe to remove but make sure it's not set as the Wallpaper.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.lockscreensettings",
+    "label": "Lockscreensettings",
+    "description": "LockScreenSettings Lock Screen Settings.",
+    "safety": "danger",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.mirrorlink",
+    "label": "Mirrorlink",
+    "description": "MirrorLink Enables you to connect your phone to a car to provide audio streaming, GPS navigation... https://www.lg.com/ca_en/support/product-help/CT30014940-1440413573040-others https://mirrorlink.com/",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.mlt",
+    "label": "Mlt",
+    "description": "LG MLT Run in background all the time and probably serves purpose to help LG remote support. The thing is this acts as a good spyware. It tries to track all your activity and logs GPS position together with the details gathered, and that includes calls, apps starting etc... All data is collected and placed on /mpt partition, it seems not to be per reboot, but actually kept during flash and upgrades. # https://forum.xda-developers.com/showthread.php?t=2187920",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.mtalk.sf",
+    "label": "Sf",
+    "description": "Voice Mate Speech Pack Voice Mate (now Q Vocie) is the LG Personal assistant (https://en.wikipedia.org/wiki/Voice_Mate) This package provides speech pack. Is it the main Q-voice package ? I don't think so but I need confirmation.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.music",
+    "label": "Music",
+    "description": "Stock music player",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.musiccontroller",
+    "label": "Musiccontroller",
+    "description": "Music controller widget also Test activity.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.musicpicker",
+    "label": "Musicpicker",
+    "description": "Audio It has Drm Popup, Music Picker, Audio Preview.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.musicshare",
+    "label": "Musicshare",
+    "description": "LG Audio Share Enables you to connect two devices so that you can share the sound from music or video files with another LG devices. https://www.lg.com/hk_en/support/product-help/CT30007700-20150123957406-others",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.myplace",
+    "label": "Myplace",
+    "description": "My Place Analyses the place you stay the most and recognises it as My Place (or your home) automatically. https://www.lg.com/uk/support/product-help/CT00008356-1433767701724-setting",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.myplace.engine",
+    "label": "Engine",
+    "description": "My Places Engine Needed by com.lge.myplace. See above.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.networksettings",
+    "label": "Networksettings",
+    "description": "Sim network settings It can be found in settings.",
+    "safety": "danger",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.nextcapture",
+    "label": "Nextcapture",
+    "description": "Needed for screenshots?",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.onehandcontroller",
+    "label": "Onehandcontroller",
+    "description": "Needed for One-Handed Controller, Miniview.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.operator.hiddenmenu",
+    "label": "Hiddenmenu",
+    "description": "Operator HiddenMenu Hidden tests.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.penprime",
+    "label": "Penprime",
+    "description": "Pen settings No one using them.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.phonemanagement",
+    "label": "Phonemanagement",
+    "description": "Smart Doctor App Enables you to shut down idle apps and delete temporary files. Lets you also see phone battery, mobile data, apps, network status and usage patterns. On the paper it seems good but in practise, Android handle 8+ handles very well idles apps. https://www.lg.com/ca_en/support/product-help/CT20098088-20150129256824-others",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.pickme",
+    "label": "Pickme",
+    "description": "PickMe Needed for camera app or face unlock?",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.privacylock",
+    "label": "Privacylock",
+    "description": "LG Content lock You can lock the LG Gallery with a password or pattern. When connected to a PC, Content Lock prevents file previews. https://www.lg.com/us/support/help-library/lg-g4-content-lock-CT10000027-1432774759427",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.provider.lockscreensettings",
+    "label": "Lockscreensettings",
+    "description": "Needed for lock screen.",
+    "safety": "danger",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.provider.signboard",
+    "label": "Signboard",
+    "description": "Needed for Always on display. NOTE: May crash Settings app after removal.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.provider.systemui",
+    "label": "Systemui",
+    "description": "Not sure if iths important app.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.qhelp",
+    "label": "Qhelp",
+    "description": "Quick Help App which provides you with support articles (FAQ section that walks you through most of the major features of the phone). You can request support via email or request a call from LG. https://www.lg.com/us/support/help-library/lg-android-quick-help-CT10000026-20150103624836",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.qhelp.application",
+    "label": "Lication",
+    "description": "Quick Help application I think this package is the real Quick Help app. The package above only provides help contents IMO.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.qmemoplus",
+    "label": "Qmemoplus",
+    "description": "LG QuickMemo+ Allows you to capture screen shots and use them to create memos. You can also insert a reminder, location information, image, video, and audio. https://www.lg.com/us/support/help-library/lg-android-quickmemo-CT10000025-20150103629575",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.quicktools",
+    "label": "Quicktools",
+    "description": "Quick Tools Quick Tools widget configure.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.rcs.sharedsketch",
+    "label": "Sharedsketch",
+    "description": "I have no idea what it is, maybe some drawing program related to rcs. I removed it.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.remote.lgairdrive",
+    "label": "Lgairdrive",
+    "description": "LG AirDrive Lets you to control files in your device via a wireless connection. To use it, you need to sign in to your LG account on both the PC and mobile device. https://www.lg.com/africa/support/product-help/CT20080025-1436354408798-others LG AirDrive settings See package below.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.remote.setting",
+    "label": "Setting",
+    "description": "LG AirDrive Lets you to control files in your device via a wireless connection. To use it, you need to sign in to your LG account on both the PC and mobile device. https://www.lg.com/africa/support/product-help/CT20080025-1436354408798-others LG AirDrive settings See package above.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.screenplus.touchpad",
+    "label": "Touchpad",
+    "description": "Screen+ Desktop Touchpad.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.screenplus.uiservice",
+    "label": "Uiservice",
+    "description": "Screen+ I don't know what Screen+ probably connects to PC screen.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.sdencryption",
+    "label": "Sdencryption",
+    "description": "Encryption devices like SD card.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.seamlesswallpaper.circular.reactive.darkspace",
+    "label": "Darkspace",
+    "description": "Live wallpapers resources.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.seamlesswallpaper.circular.reactive.space",
+    "label": "Space",
+    "description": "Live wallpapers resources.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.secondlauncher",
+    "label": "Secondlauncher",
+    "description": "It's needed for wallpaper choose and multi-app.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.servicemenu",
+    "label": "Menu",
+    "description": "Hidden testing hardware things.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.shutdownmonitor",
+    "label": "Shutdownmonitor",
+    "description": "Shows the shut down animation when powering off or rebooting LG devices.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.signboard",
+    "label": "Signboard",
+    "description": "Always On Display. Probably a battery killer without an OLED screen. Disabling will remove the connected menu in the settings app.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.sizechangable.musicwidget.music",
+    "label": "Music",
+    "description": "Music widget It breaks when LG Music is removed.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.sizechangable.musicwidget.widget",
+    "label": "Widget",
+    "description": "LG Music widget. There are much better music apps available.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.sizechangable.weather",
+    "label": "Weather",
+    "description": "Music widget Not sure if it only manages Music widget for the launcher or also for the lockscreen. Weather widget for the home screen.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.sizechangable.weather.platform",
+    "label": "Platform",
+    "description": "Weather Service Provide weather data for the weather app/widget.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.sizechangable.weather.theme.optimus",
+    "label": "Optimus",
+    "description": "\"Optimus\" theme for the weather app/widget.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.smartdoctor.webview",
+    "label": "Webview",
+    "description": "Smart Doctor Webview REMINDER : A WebView is acomponent that allows Android apps to display content from the web directly inside an application.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.smartenabler",
+    "label": "Smartenabler",
+    "description": "It's for OTA Updates.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.smartshare",
+    "label": "Smartshare",
+    "description": "SmartShare Feature that uses DLNA technology to stream multimedia contents between DLNA devices. DLNA is a non-profit trade organisation which defines standards that enable devices to share stuff with each other. Basically LG provides a way to stream multimedia contents from your phone to your smart TV (or via a DLNA plugin) https://www.lg.com/ca_en/support/product-help/CT31903570-1428542236040-file-media-transfer-pictures-music-etc",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.smartshare.provider",
+    "label": "Provider",
+    "description": "Provider for Smart Share. Needed by com.lge.smartshare. REMINDER : content providers help an application manage access to data stored by itself, stored by other apps, and provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.smartsharepush",
+    "label": "Smartsharepush",
+    "description": "Smart Share Push Obviously related to Smart Share but I don't know its exact purpose.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.snappage",
+    "label": "Snappage",
+    "description": "Snap Page Part of the QuickMemo+ app, lets you capture the text/images/URL from a web page without grabbing ads. It’s much like instapaper or pocket app, but it works locally, like reading mode on some browsers, saving only the body of the article. http://www.lg.com/us/mobile-phones/g4/display",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.springcleaning",
+    "label": "Springcleaning",
+    "description": "Smart cleaning Displays the space in use and free space in your phone and allows you to selectively clean up your files. https://www.lg.com/us/mobile-phones/VS986/Userguide/339.html",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.sui.widget",
+    "label": "Widget",
+    "description": "Removing this package causes the clock app to crash when trying to set an alarm for a specific date instead of a day of the week.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.sync",
+    "label": "Sync",
+    "description": "LG Bridge Service Used to backup, restore, update your LG phone, and transfer files wirelessly between computer and LG phone. You will need to install LG Bridge software on your PC. NOTE: causes noticeable battery drain.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.systemservice",
+    "label": "Systemservice",
+    "description": "System Server Not sure if iths important app.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.task",
+    "label": "Task",
+    "description": "LG Tasks Needed by LG Calendar or it will force close.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.theme.black",
+    "label": "Black",
+    "description": "LG Black theme. Safe to remove, but also probably pointless to do so as most theme packages are just data containers. Make sure you don't delete the package for the theme you're currently using, I don't know what will happen then.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.theme.blackgold",
+    "label": "Blackgold",
+    "description": "LG Black Bold theme. Safe to remove, but also probably pointless to do so as most theme packages are just data containers. Make sure you don't delete the package for the theme you're currently using. I don't know what will happen then.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.theme.highcontrast",
+    "label": "Highcontrast",
+    "description": "LG High Contrast theme. Safe to remove, but also probably pointless to do so as most theme packages are just data containers. Make sure you don't delete the package for the theme you're currently using, I don't know what will happen then.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.theme.titan",
+    "label": "Titan",
+    "description": "LG Titan theme (labelled 'Platinum' in the theming app). Safe to remove, but also probably pointless to do so as most theme packages are just data containers. Make sure you don't delete the package for the theme you're currently using. I don't know what will happen then.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.theme.white",
+    "label": "White",
+    "description": "LG White theme. Safe to remove, but also probably pointless to do so as most theme packages are just data containers. Make sure you don't delete the package for the theme you're currently using, I don't know what will happen then.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.themeinstaller",
+    "label": "Themeinstaller",
+    "description": "Needed to install themes.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.themeservice",
+    "label": "Themeservice",
+    "description": "Needed to apply themes.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.themesquare",
+    "label": "Themesquare",
+    "description": "Change the theme on LG UX.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.touchcontrol",
+    "label": "Touchcontrol",
+    "description": "I have never seen this menu in the settings app. I say it's safe to remove. I can't think of any use case for this setting, it just allows you to change where you're allowed to touch the screen",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.updatecenter",
+    "label": "Updatecenter",
+    "description": "LG Update Center Provide Android upgrade and LG updates (Settings --> System --> Update Center) I believe you won't receive any updates if this packages is deleted.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.upsell",
+    "label": "Upsell",
+    "description": "Contains dialogs from different carriers about upgrading the mobile plan Should be safe to remove?",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.video.vr.wallpaper",
+    "label": "Wallpaper",
+    "description": "Video Wallpaper LG 360° VR Wallpapers",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.videoplayer",
+    "label": "Videoplayer",
+    "description": "LG Video Player NB : This is a bad one. VLC is much better.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.videostudio",
+    "label": "Videostudio",
+    "description": "Quick Video Editor Allows you to create and edit video files using the videos (and photos) stored on the phone. https://www.lg.com/us/mobile-phones/VS980/Userguide/281.html",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.voicecare",
+    "label": "Voicecare",
+    "description": "LG Voice care Allows you to use your device if the touch screen or display is damaged. You must agree to location-based information use and personal information collection to use Voice Care. https://www.lg.com/hk_en/support/product-help/CT20136018-20150122834174-others",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.voicerecorder",
+    "label": "Voicerecorder",
+    "description": "LG Voice Recorder Simple voice recording app. Safe to remove.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.vrplayer",
+    "label": "Vrplayer",
+    "description": "LG VR player Enables you to watch 360° pictures/videos.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.wallpaperpicker",
+    "label": "Wallpaperpicker",
+    "description": "Wallpaper Needed for wallpaper preview.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.wapservice",
+    "label": "Wapservice",
+    "description": "Icon looks like email configuration. I'd say it's safe to remove. Probably related to the stock email app.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.wernicke",
+    "label": "Wernicke",
+    "description": "QVoice Engine Needed by Q-voice (the LG Q Voice voice assistant) to work.",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.wernicke.nlp",
+    "label": "Nlp",
+    "description": "Natural-language processing for LG intelligent assistant. Used to understand what a human is saying when they speak. Needed by QVoice",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.wfd.spmirroring.source",
+    "label": "Source",
+    "description": "Provide wifi-direct feature Note : Wifi-direct is Wi-Fi standard enabling devices to easily connect with each other without requiring a wireless access point. It allows allows two devices to establish a direct Wi-Fi connection without requiring a wireless router https://en.wikipedia.org/wiki/Wi-Fi_Direct spmirroring = ??? screen p... mirroring ?",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.wfds.service.v3",
+    "label": "V3",
+    "description": "Wifi-direct service (v3) See above.",
+    "safety": "advanced",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.wifi.p2p",
+    "label": "P2P",
+    "description": "LG P2p Service Wifi-drect P2P allows the device to discover the services of nearby devices directly, without being connected to a network. Needed for LG Wifi-direct feature. https://developer.android.com/training/connect-devices-wirelessly/nsd-wifi-direct",
+    "safety": "recommended",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.wificall",
+    "label": "Wificall",
+    "description": "Needed for Wi-Fi Calling on LG devices.",
+    "safety": "unsafe",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.lge.wifisettings",
+    "label": "Wifisettings",
+    "description": "WiFi settings It can be found in settings.",
+    "safety": "danger",
+    "category": "lg",
+    "oems": [
+      "lg"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]

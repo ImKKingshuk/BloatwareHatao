@@ -1,0 +1,548 @@
+[
+  {
+    "name": "com.meizu.account",
+    "label": "Account",
+    "description": "Flyme Log out before remove",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.account.pay",
+    "label": "Pay",
+    "description": "Pay Center chinese payment.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.activeviewlivewallpaper",
+    "label": "Activeviewlivewallpaper",
+    "description": "Needed for live wallpapers",
+    "safety": "advanced",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.alphame",
+    "label": "Alphame",
+    "description": "for digital health work",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.assistant",
+    "label": "Assistant",
+    "description": "Aicy Glance meizu assistant Probably Chinese assistant.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.battery",
+    "label": "Battery",
+    "description": "Needed for Battery Manager.",
+    "safety": "unsafe",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.callsetting",
+    "label": "Callsetting",
+    "description": "Additional call settings.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.cloud",
+    "label": "Cloud",
+    "description": "Useless push service",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.customizecenter",
+    "label": "Customizecenter",
+    "description": "Needed for themes but it's so bloated.",
+    "safety": "advanced",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.dataservice",
+    "label": "Dataservice",
+    "description": "A lot of permissions and collects user data.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.ems",
+    "label": "Ems",
+    "description": "Useless frameworks.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.facerecognition",
+    "label": "Facerecognition",
+    "description": "Needed for face recognition, face unlock lock screen.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.flyme.easylauncher",
+    "label": "Easylauncher",
+    "description": "Easy Mode it's for launcher in easy mode.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.flyme.launcher",
+    "label": "Launcher",
+    "description": "System launcher Needed for launcher.",
+    "safety": "unsafe",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.flyme.sdkstage",
+    "label": "Sdkstage",
+    "description": "It's for Night Mode settings. Not sure if it's important.",
+    "safety": "unsafe",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.flyme.service.find",
+    "label": "Find",
+    "description": "Phone locating service This app will probably help you find the device.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.flyme.update",
+    "label": "Update",
+    "description": "System updates Provides System updates.",
+    "safety": "unsafe",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.flymelab",
+    "label": "Flymelab",
+    "description": "Flyme Lab it's something for video window or full screen.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.media.camera",
+    "label": "Camera",
+    "description": "Camera Stock Camera app meizu.",
+    "safety": "advanced",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.media.gallery",
+    "label": "Gallery",
+    "description": "Gallery Meizu gallery app.",
+    "safety": "advanced",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.media.imageservice",
+    "label": "Imageservice",
+    "description": "PhotoService Probably needed for Photos app.",
+    "safety": "advanced",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.media.music",
+    "label": "Music",
+    "description": "Music Stock Music app.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.media.video",
+    "label": "Video",
+    "description": "Video Player Stock Video Player app",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.mstore",
+    "label": "Mstore",
+    "description": "App Store A lot of ads components.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.mzbasestationsafe",
+    "label": "Mzbasestationsafe",
+    "description": "Base Station Guard Useless location things.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.mznfcpay",
+    "label": "Mznfcpay",
+    "description": "Meizu chinese payment.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.mzsyncservice",
+    "label": "Mzsyncservice",
+    "description": "Flyme cloud service",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.net.nativelockscreen",
+    "label": "Nativelockscreen",
+    "description": "NativeLockScreen I guess it's needed for lockscreen.",
+    "safety": "danger",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.net.search",
+    "label": "Search",
+    "description": "Chinese Search",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.picker",
+    "label": "Picker",
+    "description": "Aicy Touch Another chinese payment.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.powersave",
+    "label": "Powersave",
+    "description": "Power Saving Mode.",
+    "safety": "unsafe",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.pps",
+    "label": "Pps",
+    "description": "One Mind Discharge schedule in the security annex.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.safe",
+    "label": "Safe",
+    "description": "Looks like an important app. It has more things than security.",
+    "safety": "unsafe",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.setup",
+    "label": "Setup",
+    "description": "It's needed only on first-boot setup.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.share",
+    "label": "Share",
+    "description": "It's maybe useful for Bluetooth",
+    "safety": "unsafe",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.suggestion",
+    "label": "Suggestion",
+    "description": "Aicy Suggestion Only suggestions.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.telephonyengineermode",
+    "label": "Telephonyengineermode",
+    "description": "SIM things testing also logs.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.voiceassist",
+    "label": "Voiceassist",
+    "description": "Aicy Voice Another smart thing",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  },
+  {
+    "name": "com.meizu.wifiadmin",
+    "label": "Wifiadmin",
+    "description": "WLAN Assistant Additional WLAN things.",
+    "safety": "recommended",
+    "category": "meizu",
+    "oems": [
+      "meizu"
+    ],
+    "dependencies": [],
+    "alternatives": [],
+    "tags": [],
+    "votes": 0
+  }
+]
