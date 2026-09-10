@@ -280,7 +280,7 @@ impl PackageBrowserScreen {
             Line::from(vec![
                 Span::styled(" 🔍 ", Style::default().fg(Color::Yellow)),
                 Span::styled(
-                    format!("\"{}\"", &browser.filter.search),
+                    format!("\"{}\"", browser.filter.search),
                     Style::default().fg(Color::Yellow),
                 ),
                 Span::styled(
