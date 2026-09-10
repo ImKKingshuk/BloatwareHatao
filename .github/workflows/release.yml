@@ -58,7 +58,7 @@ jobs:
             exit 1
           fi
 
-          PACKAGE_VERSION="$(cargo metadata --locked --no-deps --format-version 1 | jq -r '.packages[] | select(.name == "bloatwarehatao") | .version')"
+          PACKAGE_VERSION="$(cargo metadata --locked --no-deps --format-version 1 | jq -er '.packages[] | select(.name == "bloatwarehatao-tui") | .version')"
           if [ "v${PACKAGE_VERSION}" != "$RELEASE_TAG" ]; then
             echo "::error::Tag ${RELEASE_TAG} does not match package version v${PACKAGE_VERSION}"
             exit 1
